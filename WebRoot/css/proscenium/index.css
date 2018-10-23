@@ -1,0 +1,175 @@
+#index_category{
+	width: 80%;
+	margin: 5px 10%;
+	height: 300px;
+}
+
+#index_category_left{
+	width: 19%;
+	border: 1px solid #E2E2E2;
+	float: left;
+	height: 300px;
+}
+
+#index_category_right{
+	width: 79.5%;
+	float: right;
+	height: 300px;
+	border: 1px solid #E2E2E2;
+}
+
+#index_brand{
+	width: 80%;
+	margin: 10px 10%;
+	height: 164px;
+	border: 1px solid #E2E2E2;
+	float: left;
+}
+
+#brands_table{
+	width: 100%;
+	height: 100%;
+}
+
+#brands_table td{
+	border-bottom: 1px solid #E2E2E2;
+	border-left: 1px solid #E2E2E2;
+}
+
+#index_sneaker,#index_manShoes,#index_womanShoes,#index_childrenShoes,#index_outdoorShoes{
+	width: 80%;
+	margin: 40px 10%;
+	height: 500px;
+	float: left;
+}
+
+#index_recommend{
+	width: 80%;
+	margin: 40px 10%;
+	height: 490px;
+	float: left;
+}
+
+#indexGoods_table{
+	width:99%;
+	margin:0px 0.5%;
+}
+
+#goodsImg{
+	width: 206px;
+	height: 178px;
+}
+
+#index_showTop{
+	width: 100%;
+	height: 9%;
+}
+
+#index_showTop_top{
+	width:100%;
+	height:70%;
+}
+
+#index_showTop_top_left{
+	width:30%;
+	float:left;
+}
+
+#index_showTop_top_right{
+	width:48.4%;
+	float:right;
+	text-align: right;
+}
+
+#index_showTop_hr{
+	width:100%;
+	height:30%;
+}
+
+#index_showTop_hr img{
+	width: 100%;
+}
+
+#index_showGoods{
+	width: 100%;
+	height: 96%;
+	border: 1px solid #E2E2E2;
+}
+
+#indexGoods_table td{
+	font-size: 16px;
+}
+
+#index_paixiePrice{
+	font-weight:bold;
+	color: #FF4F30;
+}
+li {
+	list-style: none;
+}
+
+.list {
+	width: 100%;
+	height:475px;
+}
+
+.tab {
+	width: 100%;
+	height: 30px;
+	border: 1px  solid #E2E2E2;
+	border-bottom: 0px;
+	background-color: #F9F9F9;
+}
+
+.tab ul {
+	margin: 0;
+	padding: 0;
+}
+
+.tab li {
+	font-size:16px;
+	float: left;
+	padding: 0 30px;
+	height: 34px;
+	line-height: 34px;
+	text-align: center;
+	border-right: 1px #E2E2E2 solid;
+	cursor: pointer;
+}
+
+.tab li.now {
+	color: #666666;
+	background: #FFFFFF;
+	font-weight: bold;
+}
+
+.block {
+	display: block;
+}
+	
+#tabli{
+	font-size:16px;
+	float: left;
+	padding: 0 30px;
+	height: 34px;
+	line-height: 34px;
+	text-align: center;
+	cursor: pointer;
+	border-right: 1px #E2E2E2 solid;
+	border-left: 1px #E2E2E2 solid;
+}
+
+#recommendGoods_table{
+	width: 100%;
+	margin: 0px;
+}
+
+
+#one_con2,#one_con1,#one_con3,#one_con4,#one_con5{
+	border:1px solid #E2E2E2;
+	width: 100%;
+	height: 100%;
+}
+
+
+	

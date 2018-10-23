@@ -1,0 +1,433 @@
+.FO_main{
+	width:100%;
+	float: left;
+}
+.payStyle,.order{
+	border: 1px solid #E2E2E2;
+	width:100%;
+	float: left;
+	margin: 10px 0px;
+}
+
+.ps_address,.ps_pay{
+	width: 98%;
+	float: left;
+	margin: 5px 1%;
+}
+.ps_address .title,.ps_address .content,.ps_pay .title,.ps_pay .content{
+	width:100%;
+	margin: 0px 0px;
+	float: left;
+}
+
+.ps_address .title span,.ps_pay .title span{
+	float: left;
+	font-size: 14px;
+	color: #333333;
+	font-weight: bold;
+	margin:10px 0px 0px 20px; 
+	
+}
+
+.ps_address .title a{
+	float:right;
+	font-size: 12px;
+	color: #3366cc;
+	text-decoration: none;
+	margin: 10px 40px;
+}
+
+.ps_address .title a:hover{
+	color:#FF3300;
+}
+.addAddress{
+	display: none;
+}
+
+.addAddress table{
+	width: 80%;
+	margin: 10px 20px;
+}
+
+.addAddress table td{
+	font-size: 12px;
+}
+
+.addAddress table td input[class='addressText']{
+	width: 250px;
+	height: 30px;
+	font-size: 16px;
+	border: 1xp solid #CECECE;
+}
+
+.addAddress table td select{
+	width: 75px;
+	margin: 0px 12px;
+}
+
+.addAddress table td select:first-child,.addAddress table td select:last-child{
+	margin: 0px 0px;
+}
+
+.ps_address .content .address{
+	float:left;
+	width:auto;
+	border: 1px solid #FEE581;
+	background-color: #FFF5CC;
+	margin:10px 20px;
+}
+
+.ps_address .content .address ul{
+	width: 100%;
+	margin: 0px 10px;
+}
+
+.ps_address .content .oldAddress{
+	display:none;
+	float:left;
+}
+
+.ps_address .content .address ul li{
+	font-size: 12px;
+	margin: 5px 0px;
+}
+
+.ps_address .content .newAddress{
+	margin:15px 20px;
+}
+
+.ps_pay .title{
+	border-top: 1px dashed #E2E2E2;
+}
+
+.ps_pay .content ul{
+	margin: 10px 15px;
+}
+
+.ps_pay .content ul li{
+	margin: 10px 20px;
+	font-size: 12px;
+}
+
+.ps_pay .content ul li[class="liTitle"]{
+	margin: 15px 20px;
+}
+
+.ps_pay .content ul li[class="liTitle"] span{
+	font-size: 12px;
+	color: #333333;
+	font-weight: bold;
+}
+
+.order .title{
+	float: left;
+	font-size: 14px;
+	color: #333333;
+	font-weight: bold;
+	margin:10px 0px 0px 25px; 
+}
+
+.order .content{
+	float:left;
+	width:100%;
+}
+
+.order .content .car_title{
+	height: 35px;	
+	border-bottom: 3px solid #B2D1FF;
+	border-top:1px solid #E2E2E2;
+	background-color: #F6F6F6;
+	width: 99.2%;
+	margin: 5px 0.4%;
+	float:left;
+}
+
+.car_title ul{
+	width: 98.6%;
+	margin: 0px 0.7%;
+}
+
+.car_title li{
+	float: left;
+	width: 12.5%;
+}
+
+.car_title li[class="goodsName"]{
+	width: 50%;
+}
+
+.car_title li{
+	font-size: 12px;
+	text-align: center;
+	line-height: 30px;
+}
+
+.car_content{
+	float:left;
+	width: 98.6%;
+	margin:0px 0.7%;
+}
+
+.car_content ul{
+	width: 98.6%;
+	margin: 10px 0.7%;
+}
+
+.car_content li[class="goods"]{
+	border-bottom:1px dashed #EAE8E8;
+	margin: 0px 0px;
+}
+
+.car_content li[class="goods"]:last-child{
+	border:0px;
+}
+
+.car_content li:last-child span{
+	font-size: 12px;
+	line-height: 16px;
+	display: inline-block
+}
+
+.car_content table{
+	width: 100%;
+}
+
+.car_content table input{
+	width: 30px;
+}
+
+.car_content table td{
+	font-size: 12px;
+	color: #333333;
+}
+
+.car_content a[class="goods"]{
+	font-size: 12px;
+	text-decoration: none;
+	color: #333333;
+}
+
+.car_content span{
+	color: #7F7F7F;
+}
+
+.car_content span[class="carNumber"]{
+	border:1px solid #EAE8E8;
+	background-color:#F6F6F6;
+	width: 10px;
+	height:10px;
+	display: inline-block;
+}
+
+.car_content a[class="aa"]{
+	font-size: 12px;
+	text-decoration: none;
+	color: #3366CC;
+}
+
+.car_content a[class="aa"]:hover{
+	color: #FF3300;
+	text-decoration: none;
+}
+
+.car_content span[class="thisSum"]{
+	font-size: 12px;
+	color: #FF3300;
+}
+
+.car_content img[class="freight"]{
+	vertical-align: middle;
+}
+
+.car_submit{
+	width:100%;
+	float: left;
+}
+
+.car_submit .infor{
+	border-top: 1px solid #B4D0FF;
+	background-color: #F2F6FF;
+	width: 99.2%;
+	margin: 5px 0.4%;
+	float: left;
+}
+
+.car_submit .infor .left{
+	float: left;
+	width: 40%;
+	font-size: 12px;
+	margin: 20px 10px;
+}
+
+.car_submit .infor .left ul {
+	float:left;
+	margin:0px;
+	padding: 0px;
+}
+
+.car_submit .infor .left ul li{
+	float:left;
+	line-height: 15px;
+}
+
+.ddbc{
+	overflow: auto;
+	resize:none;
+	width: 250px;
+	height: 20px;
+	font-size: 12px;
+	color: #999999;
+	vertical-align: middle;
+}
+
+.ddbc_1{
+	overflow: auto;
+	resize:none;
+	width: 250px;
+	height: 50px;
+	font-size: 12px;
+	color: #999999;
+	border: 1px solid #FEE581;
+}
+
+.car_submit .infor .right{
+	float: right;
+	margin: 20px 10px;
+	font-size: 12px;
+	text-align: right;
+}
+
+.car_submit .infor .right li{
+	margin: 0px 0px 10px 0px;
+}
+
+.car_submit .infor .right font[class='youhui']{
+	font-size: 12px ;
+	color: #CC0000;
+	font-weight: bold;
+	font-family: Helv;
+}
+
+.car_submit .infor .right font[class='zje']{
+	font-size: 20px ;
+	color: #CC0000;
+	font-weight: bold;
+	font-family: Helv;
+}
+
+.car_submit .infor .right font[class='yf']{
+	font-size:16px;
+	color:#CC0000;
+	font-weight:bold;
+}
+
+.car_submit .submit{
+	float: right;
+	width: 99.2%;
+	margin: 10px 0.4%;
+}
+
+.car_submit .submit .infors{
+	width:100%;
+	float:right;
+	border-bottom:1px dashed #888888;
+}
+
+.car_submit .submit ul{
+	width: 26%;
+	float: right;
+}
+
+.jsypxb{
+	float:right;
+	line-height: 22px;
+}
+
+.jsypxb font{
+	color:#CC0000;
+}
+
+.car_submit .submit ul li{
+	font-size: 12px;
+	margin:  10px 0px;
+	color: #999999;
+}
+
+.car_submit .submit ul li input[class='sypxb']{
+	width:50px;
+	height:20px;
+}
+
+.car_submit .submit .btn{
+	float: right;
+	margin: 10px 10px;
+}
+
+.car_submit .submit li font[class="sfk"]{
+	font-size: 30px;
+	color: #CC0000;
+	font-weight: bold;
+}
+
+.car_submit .submit li font[class="khdpxb"]{
+	font-size: 14px;
+	color: #333333;
+}
+
+.ps_pay .title .paytype,.qr_address{
+	font-size: 20px;
+	color: red;
+	margin: 5px 0px 0px 100px;
+	float: left;
+	font-weight: bold;
+}
+
+.shoucang{
+	z-index: 100;
+	position: absolute;
+	left: 1050px;
+	top: 250px;
+	border: 1px solid #F54F6A;
+	width:80px;
+	height: 20px;
+	display: none;
+}
+
+.shoucang font,.yjscl font{
+	font-size: 12px;
+	margin: 2px 5px;
+	color: #7F7F7F;
+}
+
+.shoucang a,.yjscl a{
+	color: #F54F6A;
+	text-decoration: none;
+	font-size: 12px;
+}
+
+.yjscl{
+	z-index: 100;
+	position: absolute;
+	left: 1030px;
+	top: 250px;
+	border: 1px solid #F54F6A;
+	width:130px;
+	height: 20px;
+	display: none
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

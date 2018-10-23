@@ -1,0 +1,28 @@
+#dfkTable{
+	width: 80%;
+	margin: 10px 10%;
+}
+
+#orderDetailJBXX{
+	width:60%;
+	margin:10px 20%;
+	font-size: 14px;
+}
+
+.orderTitle{
+	font-size: 16px;
+	font-weight: bolder;
+	color: #6595D6;
+}
+
+#orderDetailXXXX{
+	width: 90%;
+	margin: 10px 5% 20px 5%;
+}
+
+#qrImage{
+	width: 100%;
+	text-align: center;
+	margin: 10px 0px 40px 0px;
+	float: left;
+}

@@ -1,0 +1,103 @@
+  
+#main_content{
+	width:100%;
+	margin:15px 0px;
+	float:left;
+}
+table[id="addGoods"]{
+	width: 90%;
+	height: 100%;
+	border: 1px solid #D3DBE4;
+	margin: 0px 5%;
+}
+
+table[id="addGoods"] tr{
+	height: 35px;
+}
+
+table[id="addGoods"] td{
+	font-size: 14px;
+	border-bottom: 1px solid #D3DBE4;
+}
+
+table[id="addGoods"] td[id="btn"]{
+	border-bottom:0px;
+}
+
+.addGoodsInput{
+	width: 200px;
+	height: 25px;
+}
+
+#addGoodsDetail{
+	width: 80%;
+	height: 50px;
+	margin: 0px 15%;
+}
+
+#addGoodsDetail span{
+	font-size: 14px;
+	color: #6595D6;
+}
+
+#showTable{
+	width: 80%;
+	margin: 20px 15%;
+}
+
+table[id="goodsDetailTable"]{
+	border: 1px solid #6595D6;
+	width: 80%;
+	border-collapse: collapse;
+}
+
+table[id="goodsDetailTable"] tr{
+	height:25px;
+	border-bottom: 1px solid #D3DBE4;
+}
+
+table[id="goodsDetailTable"] td{
+	font-size: 14px;
+	border-left: 1px solid #D3DBE4;
+}
+
+table[id="goodsDetailTable"] td span{
+	font-size: 14px;
+	color: #6595D6;
+}
+
+#goodsId{
+	background-color:#EEF2FB;
+	border: 1px solid #D3DBE4;
+	cursor: pointer;
+}
+
+#saveBtn{
+	width: 150px;
+	float: right;
+	margin: 30px 130px;
+	cursor: pointer;
+}
+
+.addInput{
+	border: 0px;
+	background-color:#F7F8F9;
+	width: 50px;	
+	text-align: center;
+}
+
+#GoodsDetailTips{
+	width:70%;
+	margin:100px 15%;
+}
+
+#GoodsDetailTips span{
+	font-size:20px;
+	color:#6595D6;
+}
+
+#GoodsDetailTips span[id="tips"]{
+	color:red;
+}
+
+

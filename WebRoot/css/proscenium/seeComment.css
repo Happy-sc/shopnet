@@ -1,0 +1,149 @@
+.comment_title{
+	border: 1px solid #DDDDDD;
+	border-bottom: 1px solid #FF0002;
+	height: 30px;
+	width: 94.5%;
+}
+
+.comment_title span{
+	font-size: 16px;
+	font-weight: bold;
+	color: #CC0000;
+	margin: 5px 20px;
+	line-height: 35px;
+}
+
+.comment_content{
+	width: 94.5%;
+	float: left;
+	margin: 10px 0px;
+}
+
+.comment_content .title ul{
+	padding: 0px;
+	float: left;
+	margin: 0px 0px 0px 8px;
+}
+
+.comment_content .title ul li{
+	width: 100px;
+	height: 35px;
+	text-align: center;
+	float: left;
+	margin: 0px 5px;
+	border: 1px solid #E2E2E2;
+	border-bottom:0px;
+	background-color: #F0F0F0;
+	color: #797979;
+	font-size: 14px;
+	line-height: 40px;
+	cursor: pointer;
+}
+
+.comment_content .title ul li[class="now"]{
+	font-weight: bold;
+	color: #000000;
+	background-color: #FFFFFF;
+}
+
+.comment_content .content{
+	width: 100%;
+	float: left;
+	border: 1px solid #E2E2E2;
+}
+
+.Ctitle{
+	height:32px;
+	border-bottom:1px solid #E2E2E2;
+	width: 100%;
+}
+
+.Ctitle ul{
+	float: left;
+	padding: 0px;
+	width: 100%;
+	margin: 8px 0px;
+	height: 18px;
+}
+
+.Ctitle ul li{
+	float: left;
+	padding: 0px;
+	border-left: 1px solid #E2E2E2;
+	text-align: center;
+	font-size: 12px;
+	color: #444444;
+	font-weight: bold;
+}
+
+.Ctitle ul li:first-child{
+	border: 0px;
+}
+
+.kongbai{
+	z-index: 99;
+	position: absolute;
+	width: 100px;
+	height: 3px;
+	top: 285px;
+	background-color: #FFFFFF;
+
+}
+
+a[class="commentA"]{
+	color: #4378D1;
+}
+
+a[class="commentA"]:hover{
+	color: #FF3300;
+}
+
+.mypjsp{
+	font-size:12px;
+	width: 100%;
+	float: left;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+}
+
+.Ccontent{
+	width:100%;
+	margin:0px;
+	padding:0px;
+}
+
+.Ccontent table{
+	width: 100%;
+	float: left;
+	border-collapse: collapse;
+}
+
+.Ccontent table img[class="dpj"]{
+	float:right;
+}
+
+.Ccontent table img[class="df"]{
+	margin: 0px -3px;
+}
+
+font[class="goodsName"]{
+	font-size: 12px;
+	color: #444444;
+	line-height: 70px;
+}
+
+.Ccontent table td{
+	font-size: 12px;
+	color: #444444;
+	line-height: 22px;
+}
+
+.Ccontent table tr{
+	border-bottom:1px solid #E2E2E2;
+}
+
+.Ccontent table td font{
+	font-weight: bold;
+	color: #FF4B2B;
+}

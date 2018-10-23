@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	<!-- 配置常量参数 -->
+	<constant name="struts.objectFactory" value="spring" />
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<constant name="struts.ui.theme" value="simple" />
+	<constant name="struts.multipart.saveDir" value="/tmp"/>
+
+	<!--后台管理的Struts配置文件  -->
+	<include file="struts-backstage.xml" />
+	<!-- 前台管理的Struts配置文件 -->
+	<include file="struts-proscenium.xml" />
+	<!-- 验证码的Struts配置文件 -->
+	<include file="struts-authImage.xml" />
+	<!-- 邮件的Struts 配置文件 -->
+	<include file="struts-email.xml" />
+
+</struts>

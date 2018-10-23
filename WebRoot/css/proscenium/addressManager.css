@@ -1,0 +1,124 @@
+.address_title{
+	border: 1px solid #DDDDDD;
+	border-bottom: 1px solid #FF0002;
+	height: 30px;
+	width: 94.5%;
+}
+
+.address_title span{
+	font-size: 16px;
+	font-weight: bold;
+	color: #CC0000;
+	margin: 5px 20px;
+	line-height: 35px;
+}
+
+.address_content{
+	width: 100%;
+	float: left;
+	margin: 10px 0px;
+}
+
+.addAddress,.showAddress{
+	float:left;
+	width: 94.5%;
+	margin: 5px 0px;
+}
+.addAddress img{
+	float:left;
+}
+
+.addAddress span{
+	font-size: 12px;
+	color:#333333;
+	line-height: 30px;
+	margin: 0px 10px;
+}
+
+.addAddress span[class="number"]{
+	color:#FF4F30;
+	margin: 0px 0px;
+}
+
+.showAddress table{
+	border: 1px solid #CCCCCC;
+	width: 100%;
+	border-collapse:collapse;
+}
+
+.showAddress table tr{
+	border-bottom:1px solid #DDDDDD;
+}
+
+.showAddress table tr[class="title"] td{
+	font-size: 12px;
+	color: #666666;
+	text-align: center;
+	font-weight: bold;
+	border-right: 1px solid #DDDDDD;
+	height: 28px;
+}
+
+.showAddress table tr[class="title"] td:first-child{
+	border-left: 0px;
+}
+
+.showAddress table tr td:last-child{
+	border-right:0px;
+}
+
+.showAddress table tr td{
+	font-size: 12px;
+	color: #333333;
+	text-align: center;
+	border-bottom: 1px #CCCCCC solid ;
+	height: 35px;
+}
+
+.newAddress{
+	display: none;
+}
+
+.newAddress table td{
+	font-size: 12px;
+	color:#666666;
+}
+
+.newAddress table{
+	width: 96%;
+	margin: 10px 2%;
+}
+
+.newAddress input[class="addressText"]{
+	width: 250px;
+	height:27px;
+}
+
+.newAddress select{
+	width: 77px;
+	margin: 0px 8px 0px 0px;
+}
+
+.newAddress select:last-child{
+	margin: 0px;
+}
+
+.showAddress a{
+	color:#3A5985;
+}
+
+.showAddress a:hover{
+	color:#FF3300;
+}
+
+.showAddress a[class="setDefault"]{
+	color:#666666;
+}
+
+.showAddress a[class="setDefault"]:hover{
+	color: #FF3300;
+}
+
+.showAddress span[class="default"]{
+	color: #107B10;
+}

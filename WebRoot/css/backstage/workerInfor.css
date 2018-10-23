@@ -1,0 +1,51 @@
+#content{
+	float: left;
+	width: 100%;
+}
+
+#workerInfor{
+	width: 70%;
+	margin: 30px 15%;
+	border: 1px solid #9EAEB9;
+	border-bottom: 0px;
+}
+
+#workerInfor td{
+	font-size: 14px;
+	height: 40px;
+	border-bottom: 1px solid #9EAEB9;
+}
+
+.hrBorder{
+	border-right: 1px solid #9EAEB9;
+}
+
+#main_image img{
+	border: 0px;
+}
+
+.addhr1{
+	border-bottom: 0px;
+}
+
+.addhr{
+	border-bottom: 0px;
+	border-right: 1px solid #9EAEB9;
+}
+
+.titlebt {
+	font-size: 12px;
+	line-height: 26px;
+	font-weight: bold;
+	color: #000000;
+	background-image: url("../../images/backstage/top_bt.jpg");
+	background-repeat: no-repeat;
+	display: block;
+	text-indent: 15px;
+	padding-top: 5px;
+}
+
+#main_image img{
+	display: block;
+	margin: 5% auto;
+}

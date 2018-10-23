@@ -1,0 +1,88 @@
+table[id="notice"]{
+	width: 90%;
+	margin: 10px 5%;
+}
+
+#editorNotice{
+	width: 90%;
+	margin: 5px 5%;
+}
+
+.noticeUL{
+	margin: 10px;
+	padding: 5px;
+	
+}
+
+.noticeUL li{
+	list-style-type: none;
+	font-size: 12px;
+	font-weight: bold;
+	color: #999999;
+	padding: 5px 0px;
+}
+
+li[class="title"]{
+	border-bottom: 1px solid #F0F0F0;
+}
+
+li input,li select{
+	border: 1px solid #CCCCCC;
+}
+
+input[class="noticeTitle"]{
+	width:500px;
+	height:25px;
+}
+
+#addNoticeBtn{
+	background-image: url("../../images/backstage/addNotice.jpg");
+	width: 120px;
+	height: 31px;
+	border: 0px;
+	cursor: pointer;
+}
+
+#fbggBtn{
+	width: 120px;
+	height: 31px;
+	border: 0px;
+	cursor: pointer;
+}
+
+
+#noticePrompt{
+	float: right;
+	width: 60%;
+}
+
+.showNotice{
+	width: 90%;
+	margin: 10px 8% 10px 2%;
+}
+
+.showNotice li{
+	list-style-type: none;
+	margin: 5px 0px;
+}
+
+.SNTitle{
+	font-size: 20px;
+	color: #333333;
+	font-weight: bold;
+}
+
+.fbsj{
+	font-size: 12px;
+	font-weight: bold;
+	color: #999999;
+}
+
+.xyjz{
+	text-align: center;
+}
+
+.fbnr{
+	font-size: 14px;
+}
+	

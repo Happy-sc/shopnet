@@ -1,0 +1,162 @@
+#main{
+	width: 80%;
+	margin: 10px 10%;
+	float: left;
+}
+
+.location span{
+	font-size:12px;
+	color: #666666;
+}
+	
+
+.content{
+	width:100%;
+	float:left;
+}
+
+.location{
+	width:100%;
+	float:left;
+}
+
+.content_left{
+	float:left;
+	width: 13.95%;
+	margin:10px 0px;
+}
+
+.content_right{
+	float: right;
+	width: 81.5%;
+	margin: 10px 2%;
+}
+.content_left_main{
+	width: 100%;
+	float: left;
+	border: 1px solid #DDDDDD;
+}
+.content_left_main ul{
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+
+.content_left_main ul li{
+	margin: 0px 0px;
+}
+
+.content_left_main div span{
+	font-size: 14px;
+	font-weight: bold;
+	margin: 0px 20px;
+	color: #333333;
+	line-height: 35px;
+}
+
+.content_left_main div[class$="Manager_title"]{
+	border-bottom: 1px solid #C3C3C2;
+	border-top: 1px solid #C3C3C2;
+	background-color: #F8F8F8;
+	height: 35px;
+}
+
+.content_left_main div[class$="Manager_content"] li{
+	margin: 10px 30px;
+}
+
+.content_left_main div[class$="Manager_content"] li a{
+	color: #4378D1;
+}
+
+.content_left_main div[class$="Manager_content"] li a:HOVER {
+	color: #FF3300;
+}
+
+.mypaixie{
+	height: 35px;
+}
+
+.paixieunion{
+	height: 40.8px;
+	margin: 10px 0px;
+	width: 13.95%;
+	float: left;
+}
+
+.content_order{
+	width: 100%;
+	margin: 15px 0px;
+}
+.content_base{
+	margin:0px 0px;
+	width:100%;
+}
+
+.content_right .tips{
+	font-size: 18px;
+	color: #FF4F30;
+	font-weight: bold;
+	margin: 20px 40%;
+}
+
+.content_right .tipsHR{
+	height: 100px;
+	width: 100%;
+	float: left;
+}
+	
+/*
+ *updateSuccess.jsp
+ */
+.updateSuccess_title{
+	border: 1px solid #DDDDDD;
+	border-bottom: 1px solid #FF0002;
+	height: 30px;
+	width: 100%;
+}
+
+.updateSuccess_title span{
+	font-size: 16px;
+	font-weight: bold;
+	color: #404040;
+	margin: 5px 20px;
+	line-height: 35px;
+}
+
+.updateSuccess_content{
+	width: 100%;
+	border: 1px solid #DDDDDD;
+	float: left;
+	margin: 20px 0px;
+	height: 70px;
+}
+
+.updateSuccess_content span{
+	font-size: 20px;
+	font-weight: bold;
+	color:#009900;
+}
+
+.updateSuccess_content img{
+	margin: 10px 0px 0px 80px;
+}
+
+.page{
+	float:right;
+	margin: 10px;
+}
+
+.page span{
+	display: inline-block;
+	width: 25px;
+	height: 20px;
+	text-align: center;
+	border: 1px solid #DDDDDD;
+	font-size: 12px;
+	line-height: 20px;
+}
+
+.page span[class="sxyy"]{
+	width: 60px;
+}

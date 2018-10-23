@@ -1,0 +1,410 @@
+.order_main{
+	width: 74%;
+	margin:10px 13%;
+	float: left;
+}
+
+.carContent,.recommend{
+	width:100%;
+	float:left;
+}
+
+.title span{
+	float:right;
+	font-size: 12px;
+	color: #999999;
+	line-height: 50px;
+}
+
+.carContent .main{
+	float: left;
+	width:100%;
+	border: 1px solid #EaE8E8;
+}
+
+.main .car_title{
+	height: 35px;
+	border-bottom: 1px solid #CCCCCC;
+	background-color: #F6F6F6;
+	width: 99.6%;
+	margin: 0px 2px;
+	float:left;
+}
+
+.car_title ul{
+	width: 98.6%;
+	margin: 0px 0.7%;
+}
+
+.car_title li{
+	float: left;
+	width: 12.5%;
+}
+
+.car_title li[class="goodsName"]{
+	width: 50%;
+}
+
+.car_title li{
+	font-size: 12px;
+	text-align: center;
+	line-height: 30px;
+}
+
+.car_content{
+	float:left;
+	width: 98.6%;
+	margin: 10px 0.7%;
+	border-top: 1px solid #F54A6F;
+}
+
+.car_content ul{
+	width: 98.6%;
+	margin: 10px 0.7%;
+}
+
+.car_content li{
+	border-bottom:1px dashed #EAE8E8;
+	margin: 5px 0px;
+}
+
+.car_content li:last-child{
+	border-bottom:0px;
+	margin: 15px;
+}
+
+.car_content li:last-child span{
+	font-size: 12px;
+	line-height: 16px;
+	display: inline-block
+}
+
+.car_content table{
+	width: 100%;
+}
+
+.car_content table input{
+	width: 30px;
+}
+
+.car_content table td{
+	font-size: 12px;
+	color: #333333;
+}
+
+.car_content a[class="goods"]{
+	font-size: 12px;
+	text-decoration: none;
+	color: #333333;
+}
+
+.car_content span{
+	color: #7F7F7F;
+}
+
+.car_content span[class="carNumber"]{
+	border:1px solid #EAE8E8;
+	background-color:#F6F6F6;
+	width: 10px;
+	height:10px;
+	display: inline-block;
+}
+
+.car_content a[class="aa"]{
+	font-size: 12px;
+	text-decoration: none;
+	color: #3366CC;
+}
+
+.car_content a[class="aa"]:hover{
+	color: #FF3300;
+	text-decoration: none;
+}
+
+.car_content span[class="thisSum"]{
+	font-size: 12px;
+	color: #FF3300;
+}
+
+.car_content img[class="freight"]{
+	vertical-align: middle;
+}
+
+.car_youhuiquan{
+	float:left;
+	width: 98.6%;
+	margin: 10px 0.7%;
+	border-top: 1px solid #D5D5D6;
+	border-bottom:1px dashed #D5D5D6;
+	background-color: #F7F7F7;
+}
+
+.car_youhuiquan .left{
+	float:left;
+	width: 38%;
+}
+
+.car_youhuiquan .right{
+	float:right;
+	width: 50%;
+}
+
+.car_youhuiquan ul{
+	margin: 15px 20px;
+}
+
+.car_youhuiquan li{
+	margin: 15px 0px;
+	font-size: 12px;
+	color: #7F7F7F;
+}
+
+.car_youhuiquan li span{
+	font-size: 16px;
+	color: #333333;
+	font-weight: bold;
+}
+
+.car_youhuiquan li a{
+	font-size: 12px;
+	text-decoration: none;
+	color: #3366CC;
+	vertical-align: middle;
+	line-height: 21px;
+}
+
+.car_youhuiquan li a:hover{
+	font-size: 12px;
+	text-decoration: underline;
+	color: #3366CC;
+}
+
+.car_youhuiquan li img[class="shiyong"]{
+	float: right;
+}
+
+.car_youhuiquan li input{
+	height: 25px;
+	width: 200px;
+	border: 1px solid #CACACA;
+}
+
+.car_youhuiquan .left li div:first-child{
+	float: left;
+}
+
+.car_youhuiquan .left li div:lasr-child{
+	float:right;
+}
+
+.car_youhuiquan .left li div img{
+	float: left;
+}
+
+.car_youhuiquan .right li{
+	height: 20px;
+}
+
+.car_youhuiquan .right li span{
+	font-size: 12px;
+	color: #7F7F7F;
+	font-weight: normal;
+	float: right;
+}
+
+.car_youhuiquan .right li select{
+	border: 1px solid #CACACA;
+	width: 200px;
+	color: #7F7F7F;
+	float:right;
+}
+
+.car_bottom{
+	float:left;
+	width: 94%;
+	margin: 10px 3%;
+}
+
+.car_bottom .left{
+	float: left;
+	width: 40%;
+}
+
+.car_bottom .right{
+	float: right;
+	width: 40%;
+}
+
+.car_bottom .right li{
+	font-size: 12px;
+	color: #333333;
+	font-weight: bold;
+	margin: 10px 0px 0px 0px;
+	width: 100%;
+	float: right;
+	text-align: right;
+}
+
+.car_bottom .right li span[class="sum"]{
+	font-size: 22px;
+	font-weight: bold;
+	color: #FA0505;
+}
+
+.car_bottom .right li span[class="number"]{
+	color: #FA0505;
+}
+
+.car_bottom .right li .yunfei{
+	float: right;
+}
+
+.rhsyyhqDIV{
+	position:absolute;
+	top:555px;
+	left:200px;
+	font-size: 9pt;
+	display:block;
+	height:335px;
+	width:405px;
+	background-color:transparent;
+	display: none;
+}
+
+s{
+	position:absolute;
+	top:-20px;
+	left:50px;
+	display:block;
+	height:0;
+	width:0;
+	font-size: 0; 
+	line-height: 0;
+	border-color:transparent transparent #FA0505 transparent;
+	border-style:dashed dashed solid dashed;
+	border-width:10px;
+}
+
+i{
+	position:absolute;
+	top:-9px;
+	*top:-9px;
+	left:-10px;
+	display:block;
+	height:0;
+	width:0;
+	font-size: 0;
+	line-height: 0;
+	border-color:transparent transparent #FFFFFF transparent;
+	border-style:dashed dashed solid dashed;
+	border-width:10px;
+}
+
+.rhsyyhqDIV .content{
+	border:1px solid #FA0505;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	position:absolute;
+	background-color:#FEFEF4;
+	width:100%;
+	height:100%;
+	padding:5px;
+	*top:-2px;
+	*border-top:1px solid #FA0505;
+	*border-top:1px solid #FA0505;
+	*border-left:none;
+	*border-right:none;
+	*height:102px;
+}
+
+.rhsyyhqDIV .content .title,.rhsyyjbddyhqDIV .content .title{
+	height:20px;
+	border-bottom: 1px solid #D5D6D6;
+	margin: 15px 0px;
+}
+
+.rhsyyhqDIV .content .title font,.rhsyyjbddyhqDIV .content .title font{
+	font-size: 12px;
+	font-weight: bold;
+	color: #FA0505;
+	float: left;
+	margin: 0px 13px;
+}
+
+.rhsyyhqDIV .content .main ,.rhsyyjbddyhqDIV .content .main{
+	width: 96%;
+	margin: 0px 2%;
+}
+
+.rhsyyhqDIV .content .main li,.rhsyyjbddyhqDIV .content ,main li{
+	margin: 5px 0px;
+}
+
+.rhsyyjbddyhqDIV{
+	position:absolute;
+	top:555px;
+	left:350px;
+	font-size: 9pt;
+	display:block;
+	height:365px;
+	width:425px;
+	background-color:transparent;
+	display: none;
+}
+
+.rhsyyjbddyhqDIV .content{
+	border:1px solid #FA0505;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	position:absolute;
+	background-color:#FEFEF4;
+	width:100%;
+	height:100%;
+	padding:5px;
+	*top:-2px;
+	*border-top:1px solid #FA0505;
+	*border-top:1px solid #FA0505;
+	*border-left:none;
+	*border-right:none;
+	*height:102px;
+}
+
+.rhsyyjbddyhqDIV s{
+	top:-15px;
+	left:50px;
+}
+
+.shoucang{
+	z-index: 100;
+	position: absolute;
+	left: 1050px;
+	top: 250px;
+	border: 1px solid #F54F6A;
+	width:80px;
+	height: 20px;
+	display: none;
+}
+
+.shoucang font,.yjscl font{
+	font-size: 12px;
+	margin: 2px 5px;
+	color: #7F7F7F;
+}
+
+.shoucang a,.yjscl a{
+	color: #F54F6A;
+	text-decoration: none;
+	font-size: 12px;
+}
+
+.yjscl{
+	z-index: 100;
+	position: absolute;
+	left: 1030px;
+	top: 250px;
+	border: 1px solid #F54F6A;
+	width:130px;
+	height: 20px;
+	display: none;
+}
+	

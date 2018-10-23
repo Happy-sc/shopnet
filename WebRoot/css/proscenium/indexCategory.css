@@ -1,0 +1,112 @@
+#index_category_left ul{
+	margin:0;
+	padding:0;
+}
+
+.indexCategory_sneaker,.indexCategory_woman,.indexCategory_man,.indexCategory_children,.indexCategory_outdoor{
+	width: 100%;
+	height: 17%;
+	margin: 0px 0px;
+}
+
+.indexCategory_title{
+	background-color: #F2F2F2;
+	height: 15%;
+	width: 100%;
+}
+
+.indexCategory_title span{
+	font-size: 18px;
+	font-weight: bold;
+	text-align:center;
+	color: #333333;
+	line-height: 50px;
+}
+
+li[class^="indexCategory"] table{
+	width: 100%;
+}
+
+.categoryTitle{
+	font-size: 14px;
+	font-weight: bold;
+	color: #333333;
+}
+.sneaker_title,.woman_title,.man_title,.children_title{
+	border-bottom:1px dashed #CCCCCC;
+}
+.categoryA{
+	font-size: 14px;
+	color:#666666;
+	text-decoration: none;
+}
+
+.categoryA:HOVER {
+	color: #FF4F30;
+	text-decoration: none;
+}
+ 
+                
+.sneakerDetail,.womanDetail,.manDetail,.childrenDetail,.outdoorDetail{
+	display: none;
+	width: 400px;
+	height: 330px;
+	border: 1px solid #CCCCCC;
+	background-color:#F7F7F7;
+	position: absolute;
+	z-index: 1;
+	left:345.5px;
+}
+
+.sneakerDetail,.womanDetail,.manDetail{
+	top: 167px;
+}
+
+.childrenDetail,.outdoorDetail{
+	top:210px;
+}
+
+.detailLeft{
+	float:left;
+	width: 49%;
+}
+
+.detailRight{
+	float:right;
+	width: 45%;
+	margin: 0px 2.5%;
+	border-left: 1px solid #CCCCCC;
+}
+
+.left_style,.left_price{
+	width: 90%;
+	margin: 0px 5%
+
+}
+
+div[class$="Detail"] table{
+	width: 100%;
+}
+
+.style_title,.price_title,.brand_title{
+	border-bottom: 1px dashed #CCCCCC;
+}
+
+.style_content,.price_content,.brand_content{
+	margin: 5px 0px;
+}
+
+div[class$='Detail'] div[class$="title"]{
+	margin:10px 0px 5px 5px;
+	height: 20px;
+}
+	
+div[class$="title"] span{
+	font-size: 14px;
+	font-weight: bold;
+	color:#333333;
+}
+
+
+
+	

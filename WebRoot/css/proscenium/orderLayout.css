@@ -1,0 +1,132 @@
+.order_main{
+	width: 74%;
+	margin: 5px 13%;
+	float: left;
+}
+
+.order_top{
+	width:100%;
+	border-bottom: 1px solid #DDDDDD;
+	float: left;
+}
+
+.order_bottom{
+	width:100%;
+	border-top: 1px solid #DDDDDD;
+	float: left;
+	margin: 20px 0px;
+}
+
+ul{
+	padding: 0px;
+	margin: 0px;
+}
+
+li{
+	list-style-type: none;
+}
+
+/*
+ *orderTop.jps
+ */
+ .orderTop_main{
+	width: 74%;
+	margin: 10px 13%;
+}
+
+.orderTop_left{
+	float: left;
+	width: 24%;
+}
+
+.orderTop_right{
+	float: right;
+	width: 70%;
+	margin: 15px 0px 0px 0px;
+}
+
+.orderTop_right li{
+	float: right;
+}
+
+.orderTop_right span{
+	font-size: 12px;
+}
+
+.orderTop_right a{
+	font-size: 12px;
+	color: #3366CC;
+	text-decoration: none;
+}
+
+.orderTop_right a:hover{
+	font-size: 12px;
+	color:#3366CC;
+	text-decoration: underline;
+}
+
+.orderTop_right li[class="text"]{
+	margin: 0px 0px 10px 0px;
+}
+
+/*
+ *orderBottom.jsp
+ */
+.order_bottom ul{
+	width: 74%;
+	margin: 20px 13% 25px 13%;
+	float: left;
+}
+
+.order_bottom ul li{
+	float:left;
+	width: 23%;
+}
+
+.order_bottom ul li[class="left"]{
+	margin:0px 9% 0px 5%;
+	
+}
+
+.order_bottom ul li[class="right"]{
+	margin: 0px 5% 0px 9%;
+	width: 25%;
+}
+
+.order_bottom table{
+	width: 100%;
+	float: left;
+}
+
+.order_bottom table td{
+	font-size: 12px;
+}
+
+.order_bottom table td a{
+	margin: 5px 0px;
+	color: #3366CC;
+	float: left;
+	text-decoration: none;
+}
+
+.order_bottom table td a:hover{
+	margin: 5px 0px;
+	color: #FF3300;
+	float: left;
+	text-decoration: none;
+}
+
+.order_bottom table span[class="title"]{
+	font-size: 14px;
+	color: #404040;
+	font-weight: bold;
+}
+
+.order_bottom table span[class="phone"]{
+	font-size: 12px;
+	color: #FF3300;
+	font-weight: bold;
+}
+
+
+

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+
+	<package name="authImage" namespace="/authImage" extends="struts-default">
+		<!-- 
+			验证码参数：
+			IMG_WIDTH :图片的长度
+			IMG_HEIGTH：图片的高度
+			AUTH_NUMBER :验证码的个数
+		 -->
+		<action name="authImage_1" class="authImageAction" method="execute">
+	 		<!-- 设置参数 -->
+	 		<param name="IMG_WIDTH">60</param>
+	 		<param name="IMG_HEIGTH">22</param>
+	 		<param name="AUTH_NUMBER">4</param>
+	 		<param name="FONT_SIZE">20</param>
+	 		<param name="FONT_JBZ">13</param>
+	 		<param name="FONT_jj">5</param>
+	 		<param name="FONT_GD">20</param>
+	 	</action>
+	 	
+	 	<!-- 用户注册验证码-->
+	 	 <action name="authImage_2" class="authImageAction" method="execute">
+	 	 	<!-- 设置参数 -->
+	 		<param name="IMG_WIDTH">200</param>
+	 		<param name="IMG_HEIGTH">50</param>
+	 		<param name="AUTH_NUMBER">6</param>
+	 		<param name="FONT_SIZE">40</param>
+	 		<param name="FONT_JBZ">25</param>
+	 		<param name="FONT_jj">20</param>
+	 		<param name="FONT_GD">40</param>
+	 	 </action>
+	</package>
+</struts>

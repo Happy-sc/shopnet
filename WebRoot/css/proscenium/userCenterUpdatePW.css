@@ -1,0 +1,65 @@
+.updatePW_title{
+	border: 1px solid #DDDDDD;
+	border-bottom: 1px solid #FF0002;
+	height: 30px;
+	width: 100%;
+}
+
+.updatePW_title span{
+	font-size: 16px;
+	font-weight: bold;
+	color: #CC0000;
+	margin: 5px 20px;
+	line-height: 35px;
+}
+
+.updatePW_content{
+	width: 100%;
+	border: 1px solid #DDDDDD;
+	float: left;
+	margin: 10px 0px;
+}
+
+.updatePW_content table{
+	width: 90%;
+	margin: 20px 5%;
+}
+
+.updatePW_content table td{
+	font-size:12px;
+	color:#999999;
+}
+
+.updatePW_content ul{
+	padding: 0px;
+	margin: 0px;
+}
+
+.updatePW_content ul li{
+	float: left;
+	list-style-type:none;
+	margin: 0px 0px 0px 7px;
+	width: 70px;
+	height: 23px;
+}
+
+.updatePW_content ul li:first-child{
+	margin: 0px;
+}
+
+
+input[class="PWText"]{
+	width: 230px;
+	height: 30px;
+	font-size: 10px;
+}
+
+.updatePW_content td div span{
+	color: red;
+}
+
+.error_prompt{
+	font-size: 12px;
+	color: #FF4F30;
+}
+

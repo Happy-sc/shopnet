@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	<package name="email" namespace="/email" extends="struts-default">
+		<!-- 定义拦截器实现权限控制 -->
+		<interceptors>
+			<interceptor name="userAuthory" class="com.paixie.interceptor.UserAuthorityInterceptor" />
+		</interceptors>
+		
+		<action name="sendEmail_*" class="emailAction" method="{1}">
+			<result name="registEmail">/WEB-INF/page/proscenium/user/userRegist_success.jsp</result>
+			<result name="inputEmail">/WEB-INF/page/proscenium/user/checkEmail_checkEmail.jsp</result>
+		</action>
+		
+		<action name="checkEmail_*" class="emailAction" method="{1}">
+			<result name="checkFail">/WEB-INF/page/proscenium/user/checkEmailFail.jsp</result>
+			<result name="checkSuccess">/WEB-INF/page/proscenium/user/checkEmailSuccess.jsp</result>
+			<result name="toInputEmail">/WEB-INF/page/proscenium/user/checkEmail_inputEmail.jsp</result>
+			<result name="toInputPassword">/WEB-INF/page/proscenium/user/fgetPW_setPassword.jsp</result>
+		</action>
+	</package>
+</struts>

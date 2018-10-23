@@ -1,0 +1,135 @@
+/*
+ *showAllBrands.jsp的样式
+ */
+#main{
+	width: 83%;
+	margin: 0px 8.5%;
+}
+
+.brand_category{
+	float: left;
+	width: 18%;
+}
+
+.brand_category ul{
+	margin:0px;
+	padding:0px;
+}
+
+.brand_category li{
+	list-style-type: none;
+	margin: 4px 0px;
+	cursor: pointer;
+}
+
+.brand_category li.daquan{
+	margin: 1px 0px;
+}
+
+.brand_tips{
+	width:100%;
+	float:left;
+	font-size: 12px;
+	color: #C2C2C2;
+	margin: 0px 10px;
+	line-height: 20px;
+}
+
+.brand_main{
+	float: right;
+	width: 80%;
+	margin: 0px 0px;
+}
+
+.brand_main li{
+	text-align: center;
+}
+
+.brandHr{
+	width:100%;
+	margin:20px 0px 0px 0px ;
+	height:10px;
+	float:left;
+	background-image:url("../../images/proscenium/brands/brands_hr2.jpg");
+	background-repeat:repeat-x;
+}
+
+.brand_main table{
+	width:100%;
+}
+
+.categoryBrandsTitle{
+	float: left;
+	width: 12%;
+	font-weight:bold;	
+	color:#666666;
+	font-size: 26px;
+	margin: 15px 0px;
+}
+
+
+.categoryBrandsMain{
+	float:right;
+	width: 88%;
+}
+
+.categoryBrandMain table{
+	width:100%;
+}
+
+.categoryBrandsMain li {
+	list-style-type:none;
+}
+
+.categoryBrandsHr{
+	margin: 0px 0px;
+}
+
+.sneakerBrands,.manBrands,.womanBrands,.childrenBrands,.outdoorBrands{
+	display:none;
+}
+
+.brands td{
+	width:25%;
+}
+
+.brandImgUL{
+	cursor:pointer
+}
+/*
+ *showAllBrandsSpell.jsp的样式
+ */
+
+.brandsSpell .spell table{
+	width: 100%;	
+}
+
+.spellBrandsHr,.categoryBrandsHr{
+	width:100%;
+	margin:8px 0px;
+	height:10px;
+	float:left;
+	background-image:url("../../images/proscenium/brands/brands_hr.jpg");
+	background-repeat:repeat-x;
+}
+
+
+
+.spellLeft{
+	float: left;
+	width: 8%;
+}
+
+.spellBrands li{
+	list-style-type: none;
+	text-align: center;
+}
+
+.spellBrands{
+	float: right;
+	width: 90%
+}
+
+.brandsSpell .spell img{
+	cursor: pointer;
+}

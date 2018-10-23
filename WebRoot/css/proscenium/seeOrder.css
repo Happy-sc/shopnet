@@ -1,0 +1,125 @@
+.order_title{
+	border: 1px solid #DDDDDD;
+	border-bottom: 1px solid #FF0002;
+	height: 30px;
+	width: 94.5%;
+}
+
+.order_title span{
+	font-size: 16px;
+	font-weight: bold;
+	color: #CC0000;
+	margin: 5px 20px;
+	line-height: 35px;
+}
+
+.order_content{
+	width: 94.5%;
+	float: left;
+	margin: 5px 0px;
+}
+
+.option ul{
+	margin:5px 0px;
+	padding:0px;
+	float: left;
+	width: 100%;
+}
+
+.option ul li{
+	float:left;
+}
+
+.option ul li[class="select"]{
+	width: 60%;
+	margin: 0px 20px;
+}
+
+.option ul li[class="select"] select{
+	height: 25px;
+	width: 120px;
+}
+.option ul li[class="search"]{
+	float:right;
+	width: 33.5%;
+}
+
+.option ul li[class="search"] input[type="text"]{
+	width: 200px;
+	height: 30px;
+	vertical-align: middle;
+}
+
+.option ul li[class="search"] input[type="image"]{
+	vertical-align: middle;
+	float: right;
+}
+.order_content .title ul{
+	margin: 5px 0px 0px 15px;
+	padding: 0px;
+	float: left;
+}
+
+.order_content .title ul li{
+	width: 85px;
+	height: 35px;
+	text-align: center;
+	float: left;
+	margin: 0px 5px;
+	border: 1px solid #E2E2E2;
+	border-bottom:0px;
+	background-color: #F0F0F0;
+	color: #797979;
+	font-size: 14px;
+	line-height: 40px;
+	cursor: pointer;
+}
+
+.order_content .title ul li[class="now"]{
+	font-weight: bold;
+	color: #000000;
+	background-color: #FFFFFF;
+}
+
+.order_content .content{
+	width: 100%;
+	float: left;
+}
+
+.order_content .content .kongbai{
+	z-index: 99;
+	position: absolute;
+	width: 85px;
+	height: 3px;
+	top: 325px;
+	left: 339px;
+	background-color: #FFFFFF;
+}
+
+.tabTitle{
+	width: 100%;
+	float: left;
+	border: 1px solid #E2E2E2;
+}
+
+.tabTitle ul{
+	margin: 8px 0px;
+	padding: 0px;
+	float: left;
+	width: 100%;
+}
+
+.tabTitle ul li{
+	float: left;
+	text-align: center;
+	font-size: 12px;
+	color: #444444;
+	font-weight: bold;
+	height:15px;
+	line-height: 15px;
+	border-right: 1px solid #D2D2D2;
+}
+
+.tabTitle ul li:last-child{
+	border: 0px;
+}

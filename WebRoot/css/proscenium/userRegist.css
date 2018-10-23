@@ -1,0 +1,169 @@
+/*
+ *userRgist.jsp“≥√Ê
+ */
+#userRegist {
+	width: 80%;
+	margin: 15px 10%;
+	border: 1px solid #E2E2E2;
+	height: 500px;
+}
+
+#regist_title {
+	width: 60%;
+	margin: 0px 100px;
+}
+
+#regist_image{
+	height: 50px;
+	width: 100%;
+}
+
+
+.title_text {
+	font-size: 30px;
+	font-weight: bolder;
+	color: #CE5020;
+}
+
+#regist_image li{
+	float:left;
+	list-style-type:none;
+}
+
+#regist_image_left{
+	height: 32px;
+	width: 200px;
+	background-repeat: no-repeat;
+	padding: 0px 0px 0px 0px;
+}
+
+#regist_image_mid{
+	height: 32px;
+	width: 230px;
+	background-repeat: no-repeat;
+	padding: 0px 0px 0px 108px;
+}
+
+#regist_image_right{
+	height: 32px;
+	width: 320px;
+	background-repeat: no-repeat;
+	padding: 0px 0px 0px 98px;
+}
+
+#regist_content{
+	width: 93%;
+	margin: 0px 45px;
+}
+
+#regist_table {
+	width: 100%;	
+}
+
+#regist_table td{
+	height:50px;
+	font-size:14px;
+}
+
+.regist_input{
+	width: 250px;
+	height: 30px;
+}
+
+#registSubmit_btn{
+	width: 145px;
+	height: 35px;
+}
+
+.tips_prompt{
+	font-size: 14px;
+	color: #92C002;
+}
+
+.error_prompt{
+	font-size: 14px;
+	color: red;
+}
+
+.ok_prompt{
+	background-image:url(../../images/proscenium/register_ok.gif);
+	background-repeat:no-repeat;
+	width:15px;
+	height:11px;
+	margin:5px 0px 0px 5px;
+}
+
+/*
+ *emailAuth.jsp
+ */
+.emailAuth{
+ 	width: 80%;
+	margin: 15px 10%;
+	border: 1px solid #E2E2E2;
+	height: 300px;
+}
+
+#email_content{
+	width: 70%;
+	margin: 10px 15%;
+}
+#email_content table{
+	width: 100%;
+}
+
+#email{
+	width: 300px;
+	height: 30px;
+}
+
+#email_content table td span{
+	font-size: 14px;
+	color: #888888;
+}
+
+.authCode{
+	display: none;
+}
+
+/*
+ *registSuccess.jsp
+ */
+ 
+ .registSuccess{
+ 	width: 80%;
+	margin: 15px 10%;
+	border: 1px solid #E2E2E2;
+	height: 300px;
+ }
+ #registSuccess{
+ 	width: 50%;
+ 	margin: 10px 30%;
+ }
+ 
+ #registSuccess table td{
+ 	font-size: 14px;
+ 	color: #666666
+ }
+ 
+ #registSuccess table td span{
+ 	font-size: 14px ;
+ 	color: #FF6600;
+ }
+ 
+.successText{
+ 	font-size: 18px;
+ 	color: #666666;
+ 	font-weight: bold;
+}
+ 
+ .indexA{
+ 	font-size: 14px;
+ 	color: #3780AD;
+ 	text-decoration: none;
+ }
+ 
+ .indexA:hover{
+ 	font-size: 14px;
+ 	color: #FF6600;
+ 	text-decoration: underline;
+ } 

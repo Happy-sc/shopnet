@@ -1,0 +1,3 @@
+后台URL：http://localhost:8080/paixieNet/manager/manager_enterLoginUI.action
+
+前台URL：http://localhost:8080/paixieNet/goods/goods_goodsIndexUI.action

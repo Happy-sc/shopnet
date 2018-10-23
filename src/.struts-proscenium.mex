@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="goods" location="49,3755" size="280,805">
+    <action name="goods_*" location="65,47" size="150,62">
+      <result name="goodsIndexUI">
+        <resourceEdge source="goodsIndexUI" routing="0" target="paixieIndex.jsp" />
+      </result>
+      <result name="showGoods">
+        <resourceEdge source="showGoods" routing="0" target="showGoodsDetail.jsp" />
+      </result>
+    </action>
+    <action name="categoryCoods_*" location="65,232" size="150,41">
+      <result name="showCategoryGoods">
+        <resourceEdge source="showCategoryGoods" routing="0" target="showCategoryGoods.jsp" />
+      </result>
+    </action>
+    <action name="brand_*" location="65,407" size="150,41">
+      <result name="showAllBrands">
+        <resourceEdge source="showAllBrands" routing="0" target="showAllBrands.jsp" />
+      </result>
+    </action>
+    <action name="car_*" location="65,513" size="150,40" />
+    <action name="comment_*" location="65,617" size="150,41">
+      <result name="goodsComment">
+        <resourceEdge source="goodsComment" routing="0" target="goodsComment.jsp" />
+      </result>
+    </action>
+    <action name="paixieB_*" location="65,723" size="150,40" />
+  </package>
+  <package name="searchGoods" location="0,0" size="0,0">
+    <action name="searchGoods" location="0,0" size="0,0">
+      <result name="searchResults">
+        <resourceEdge source="searchResults" routing="0" target="searchGoods.jsp" />
+      </result>
+    </action>
+  </package>
+  <package name="users" location="386,2705" size="1120,665">
+    <action name="usersRegist_*" location="65,572" size="150,62">
+      <result name="userRegistUI">
+        <resourceEdge source="userRegistUI" routing="0" target="userRegist_info.jsp" />
+      </result>
+      <result name="testEmail">
+        <resourceEdge source="testEmail" routing="0" target="userRegist_checkEmail.jsp" />
+      </result>
+    </action>
+    <action name="usersLogin_*" location="65,351" size="150,83">
+      <result name="userLoginUI">
+        <resourceEdge source="userLoginUI" routing="0" target="userLogin.jsp" />
+      </result>
+      <result name="loginError">
+        <resourceEdge source="loginError" routing="0" target="userLogin.jsp" />
+      </result>
+      <result name="userExit">
+        <resourceEdge source="userExit" routing="0" target="userLogin.jsp" />
+      </result>
+    </action>
+    <action name="forgetPassword_*" location="765,309" size="150,167">
+      <result name="checkIdentity">
+        <resourceEdge source="checkIdentity" routing="0" target="fgetPW_checkIdentity.jsp" />
+      </result>
+      <result name="checkIdentityFail">
+        <resourceEdge source="checkIdentityFail" routing="0" target="fgetPW_checkIdentity.jsp" />
+      </result>
+      <result name="checkIdentitySuccess">
+        <resourceEdge source="checkIdentitySuccess" routing="0" target="fgetPW_sendCheckEmail.jsp" />
+      </result>
+      <result name="sendCheckEmail">
+        <resourceEdge source="sendCheckEmail" routing="0" target="fgetPW_checkEmail.jsp" />
+      </result>
+      <result name="setNewPassword">
+        <resourceEdge source="setNewPassword" routing="0" target="fgetPW_setPasswordSuccess.jsp" />
+      </result>
+    </action>
+  </package>
+  <package name="userCenter" location="4061,185" size="1505,2205">
+    <action name="managerCenter_*" location="905,57" size="150,41">
+      <result name="mangerCenter">
+        <resourceEdge source="mangerCenter" routing="0" target="userCenter.jsp" />
+      </result>
+    </action>
+    <action name="userInfor_*" location="1290,1776" size="150,104">
+      <result name="enterUserInfor">
+        <resourceEdge source="enterUserInfor" routing="0" target="userCenterInfor.jsp" />
+      </result>
+      <result name="userInforSuccess" />
+      <result name="enterSafeCenter">
+        <resourceEdge source="enterSafeCenter" routing="0" target="safeCenter.jsp" />
+      </result>
+      <result name="enterAddressManager">
+        <resourceEdge source="enterAddressManager" routing="0" target="addressManager.jsp" />
+      </result>
+    </action>
+    <action name="safeCenter_*" location="485,1650" size="150,356">
+      <result name="enterPassword">
+        <resourceEdge source="enterPassword" routing="0" target="userCenterUpdatePW.jsp" />
+      </result>
+      <result name="updatePWFaile">
+        <resourceEdge source="updatePWFaile" routing="0" target="userCenterUpdatePW.jsp" />
+      </result>
+      <result name="updateSuccess">
+        <resourceEdge source="updateSuccess" routing="0" target="safeCenterSuccess.jsp" />
+      </result>
+      <result name="checkIdentity">
+        <resourceEdge source="checkIdentity" routing="0" target="checkEmail_identity.jsp" />
+      </result>
+      <result name="checkIndentityFail">
+        <resourceEdge source="checkIndentityFail" routing="0" target="checkEmailIdentity.jsp" />
+      </result>
+      <result name="inputEmail">
+        <resourceEdge source="inputEmail" routing="0" target="checkEmail_inputEmail.jsp" />
+      </result>
+      <result name="enterScreteSccurity">
+        <resourceEdge source="enterScreteSccurity" routing="0" target="secretSecurity.jsp" />
+      </result>
+      <result name="secretSuccess">
+        <resourceEdge source="secretSuccess" routing="0" target="safeCenterSuccess.jsp" />
+      </result>
+      <result name="updateEmailUI">
+        <resourceEdge source="updateEmailUI" routing="0" target="checkEmail_updateIdentity.jsp" />
+      </result>
+      <result name="updateIndentityFail">
+        <resourceEdge source="updateIndentityFail" routing="0" target="updateEmailIndentity.jsp" />
+      </result>
+      <result name="updateIndentitySuccess">
+        <resourceEdge source="updateIndentitySuccess" routing="0" target="checkEmail_checkEmail.jsp" />
+      </result>
+      <result name="updateCheckEmailSuccess">
+        <resourceEdge source="updateCheckEmailSuccess" routing="0" target="updateInputEmail.jsp" />
+      </result>
+      <result name="updateSendEmailSuccess">
+        <resourceEdge source="updateSendEmailSuccess" routing="0" target="checkEmail.jsp" />
+      </result>
+    </action>
+    <action name="address_*" location="310,1283" size="150,40">
+      <result name="adderssUI" />
+    </action>
+    <action name="collect_*" location="65,1282" size="150,41">
+      <result name="seeCollect">
+        <resourceEdge source="seeCollect" routing="0" target="seeCollect.jsp" />
+      </result>
+    </action>
+    <action name="order_*" location="65,1097" size="150,62">
+      <result name="seeOrder">
+        <resourceEdge source="seeOrder" routing="0" target="seeOrder.jsp" />
+      </result>
+      <result name="cancelOrder" />
+      <result name="qrsh" />
+    </action>
+    <action name="comment_*" location="65,932" size="150,41">
+      <result name="seeComment">
+        <resourceEdge source="seeComment" routing="0" target="seeComment.jsp" />
+      </result>
+      <result name="commentUI">
+        <resourceEdge source="commentUI" routing="0" target="commentGoods.jsp" />
+      </result>
+      <result name="commentSuccess">
+        <resourceEdge source="commentSuccess" routing="0" target="userCenter.jsp" />
+      </result>
+    </action>
+    <action name="paixieB_*" location="65,757" size="150,41">
+      <result name="seePaixieB">
+        <resourceEdge source="seePaixieB" routing="0" target="seePaixieB.jsp" />
+      </result>
+    </action>
+    <action name="discountCoupon_*" location="65,582" size="150,41">
+      <result name="seeDiscountCoupon">
+        <resourceEdge source="seeDiscountCoupon" routing="0" target="seeDiscountCoupon.jsp" />
+      </result>
+    </action>
+  </package>
+  <package name="order" location="1209,3615" size="280,245">
+    <action name="orderCar_*" location="65,57" size="150,41">
+      <result name="showCar">
+        <resourceEdge source="showCar" routing="0" target="showCar.jsp" />
+      </result>
+    </action>
+    <action name="orderAccounts_*" location="65,152" size="150,62">
+      <result name="firmOrder">
+        <resourceEdge source="firmOrder" routing="0" target="firmOrder.jsp" />
+      </result>
+      <result name="submitSuccess">
+        <resourceEdge source="submitSuccess" routing="0" target="orderSuccess.jsp" />
+      </result>
+    </action>
+  </package>
+  <webResource name="paixieIndex.jsp" path="/WEB-INF/page/proscenium/paixieIndex.jsp" location="364,3775" size="150,55" />
+  <webResource name="showGoodsDetail.jsp" path="/WEB-INF/page/proscenium/goods/showGoodsDetail.jsp" location="9,3600" size="150,55" />
+  <webResource name="showCategoryGoods.jsp" path="/WEB-INF/page/proscenium/goods/showCategoryGoods.jsp" location="384,3950" size="150,55" />
+  <webResource name="showAllBrands.jsp" path="/WEB-INF/page/proscenium/goods/showAllBrands.jsp" location="368,4125" size="150,55" />
+  <webResource name="goodsComment.jsp" path="/WEB-INF/page/proscenium/goods/goodsComment.jsp" location="398,4335" size="150,55" />
+  <webResource name="userRegist_info.jsp" path="/WEB-INF/page/proscenium/user/userRegist_info.jsp" location="10,3250" size="150,55" />
+  <webResource name="userRegist_checkEmail.jsp" path="/WEB-INF/page/proscenium/user/userRegist_checkEmail.jsp" location="339,3425" size="150,55" />
+  <webResource name="userLogin.jsp" path="/WEB-INF/page/proscenium/user/userLogin.jsp" location="25,3040" size="150,55" />
+  <webResource name="fgetPW_CheckIdentity.jsp" path="/WEB-INF/page/proscenium/user/fgetPW_CheckIdentity.jsp" location="796,3425" size="150,55" />
+  <webResource name="fgetPW_sendCheckEmail.jsp" path="/WEB-INF/page/proscenium/user/fgetPW_sendCheckEmail.jsp" location="1278,3425" size="150,55" />
+  <webResource name="fgetPW_checkEmail.jsp" path="/WEB-INF/page/proscenium/user/fgetPW_checkEmail.jsp" location="1573,3040" size="150,55" />
+  <webResource name="checkEmailFail.jsp" path="/WEB-INF/page/proscenium/user/checkEmailFail.jsp" location="1062,2550" size="150,55" />
+  <webResource name="fgetPW_setPassword.jsp" path="/WEB-INF/page/proscenium/user/fgetPW_setPassword.jsp" location="1569,2865" size="150,55" />
+  <webResource name="fgetPW_setPasswordSuccess.jsp" path="/WEB-INF/page/proscenium/user/fgetPW_setPasswordSuccess.jsp" location="1546,2690" size="150,55" />
+  <webResource name="checkEmailSuccess.jsp" path="/WEB-INF/page/proscenium/user/checkEmailSuccess.jsp" location="4444,30" size="150,55" />
+  <webResource name="userCenter.jsp" path="/WEB-INF/page/proscenium/user/userCenter.jsp" location="4887,30" size="150,55" />
+  <webResource name="userCenterInfor.jsp" path="/WEB-INF/page/proscenium/user/userCenterInfor.jsp" location="5258,2445" size="150,55" />
+  <webResource name="safeCenter.jsp" path="/WEB-INF/page/proscenium/user/safeCenter.jsp" location="5623,1955" size="150,55" />
+  <webResource name="addressManager.jsp" path="/WEB-INF/page/proscenium/user/addressManager.jsp" location="5254,30" size="150,55" />
+  <webResource name="userCenterUpdatePW.jsp" path="/WEB-INF/page/proscenium/user/userCenterUpdatePW.jsp" location="3176,625" size="150,55" />
+  <webResource name="safeCenterSuccess.jsp" path="/WEB-INF/page/proscenium/user/safeCenterSuccess.jsp" location="2730,520" size="150,55" />
+  <webResource name="checkEmailIdentity.jsp" path="/WEB-INF/page/proscenium/user/checkEmailIdentity.jsp" location="2275,415" size="150,55" />
+  <webResource name="checkEmailInputEmail.jsp" path="/WEB-INF/page/proscenium/user/checkEmailInputEmail.jsp" location="3631,1710" size="150,55" />
+  <webResource name="checkEmail.jsp" path="/WEB-INF/page/proscenium/user/checkEmail.jsp" location="1877,310" size="150,55" />
+  <webResource name="secretSecurity.jsp" path="/WEB-INF/page/proscenium/user/secretSecurity.jsp" location="3689,2200" size="150,55" />
+  <webResource name="updateEmailIndentity.jsp" path="/WEB-INF/page/proscenium/user/updateEmailIndentity.jsp" location="1428,170" size="150,55" />
+  <webResource name="updateInputEmail.jsp" path="/WEB-INF/page/proscenium/user/updateInputEmail.jsp" location="4448,2445" size="150,55" />
+  <webResource name="seeCollect.jsp" path="/WEB-INF/page/proscenium/user/seeCollect.jsp" location="3699,1430" size="150,55" />
+  <webResource name="seeOrder.jsp" path="/WEB-INF/page/proscenium/user/seeOrder.jsp" location="3701,1255" size="150,55" />
+  <webResource name="seeComment.jsp" path="/WEB-INF/page/proscenium/user/seeComment.jsp" location="3691,1080" size="150,55" />
+  <webResource name="seePaixieB.jsp" path="/WEB-INF/page/proscenium/user/seePaixieB.jsp" location="3698,905" size="150,55" />
+  <webResource name="seeDiscountCoupon.jsp" path="/WEB-INF/page/proscenium/user/seeDiscountCoupon.jsp" location="3636,730" size="150,55" />
+  <webResource name="showCar.jsp" path="/WEB-INF/page/proscenium/order/showCar.jsp" location="848,3635" size="150,55" />
+  <webResource name="firmOrder.jsp" path="/WEB-INF/page/proscenium/order/firmOrder.jsp" location="1544,3740" size="150,55" />
+  <webResource name="orderSuccess.jsp" path="/WEB-INF/page/proscenium/order/orderSuccess.jsp" location="1184,3915" size="150,55" />
+  <webResource name="checkEmail_identity.jsp" path="/WEB-INF/page/proscenium/user/checkEmail_identity.jsp" location="0,0" size="0,0" />
+  <webResource name="checkEmail_inputEmail.jsp" path="/WEB-INF/page/proscenium/user/checkEmail_inputEmail.jsp" location="0,0" size="0,0" />
+  <webResource name="checkEmail_updateIdentity.jsp" path="/WEB-INF/page/proscenium/user/checkEmail_updateIdentity.jsp" location="0,0" size="0,0" />
+  <webResource name="checkEmail_checkEmail.jsp" path="/WEB-INF/page/proscenium/user/checkEmail_checkEmail.jsp" location="0,0" size="0,0" />
+  <webResource name="fgetPW_checkIdentity.jsp" path="/WEB-INF/page/proscenium/user/fgetPW_checkIdentity.jsp" location="0,0" size="0,0" />
+  <webResource name="searchGoods.jsp" path="/WEB-INF/page/proscenium/goods/searchGoods.jsp" location="0,0" size="0,0" />
+  <webResource name="commentGoods.jsp" path="/WEB-INF/page/proscenium/goods/commentGoods.jsp" location="0,0" size="0,0" />
+</Struts2Diagram>
+

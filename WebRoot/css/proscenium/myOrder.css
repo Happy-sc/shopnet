@@ -1,0 +1,91 @@
+.noOrder{
+	float: left;
+	width: 100%;
+	height:50px;
+	text-align:center;
+	line-height:50px;
+	font-size: 12px;
+	margin: 10px 0px;
+	border: 1px solid #E2ECFC;
+}
+
+.myOrder{
+	float: left;
+	width: 100%;
+	border: 1px solid #E2ECFC;
+	margin: 5px 0px;
+}
+
+.myOrder .orderIdT{
+	background-color: #F4F8FF;
+	width: 100%;
+	float: left;
+	border-bottom: 1px solid #E2ECFC;
+}
+
+.myOrder .orderIdT ul{
+	padding: 0px;
+	margin: 0px;
+	height: 35px;
+}
+
+.myOrder .orderIdT ul li{
+	float: left;
+	font-size: 12px;
+	margin: 10px 0px;
+	color: #4378D1;
+}
+
+.dyg,.deg,.dsg{
+	width: 33%;
+}
+
+.dyg{
+	text-align: left;
+}
+
+.dsg{
+	text-align: right;
+}
+
+.myOrder .orderGB{
+	float: left;
+	width: 100%;
+}
+
+.myOrder .orderGB table{
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+}
+
+.myOrder .orderGB table td{
+	border-right: 1px solid #E2ECFC;
+	text-align: center;
+	font-size: 12px;
+	color: #666666;
+}
+
+.myOrder .orderGB table td:last-child{
+	border:0px;
+}
+
+.myOrder .orderGB table td img{
+	float:left;
+	margin: 10px 20px ;
+	width: 80px;
+	height: 60px;
+}
+
+.myOrder .orderGB table td font{
+	color: red;
+	font-weight: bold;
+}
+
+.myOrder a{
+	color: #4378D1;
+}
+
+.myOrder a:hover{
+	color: red;
+}

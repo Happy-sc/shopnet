@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	<!-- 前台 ：商品-->
+	<package name="goods" namespace="/goods" extends="struts-default">
+		<action name="goods_*" class="goodsAction" method="{1}">
+			<result name="goodsIndexUI">/WEB-INF/page/proscenium/index.jsp</result>
+			<result name="showGoods">/WEB-INF/page/proscenium/goods/showGoodsDetail.jsp</result>
+		</action>
+		
+		<!-- 分类 -->
+		<action name="categoryCoods_*" class="categoryAction" method="{1}">
+			<result name="showCategoryGoods">/WEB-INF/page/proscenium/goods/showCategoryGoods.jsp</result>
+		</action>
+		
+		<!-- 品牌 -->
+		<action name="brand_*" class="brandAction" method="{1}">
+			<result name="showAllBrands">/WEB-INF/page/proscenium/goods/showAllBrands.jsp</result>
+		</action>
+		
+		<!-- 购物车 -->
+		<action name="car_*" class="shoppingCarAction" method="{1}">
+		</action>
+		
+		<!-- 商品评价 -->
+		<action name="comment_*" class="commentAction" method="{1}">
+			<result name="goodsComment">/WEB-INF/page/proscenium/goods/goodsComment.jsp</result>
+		</action>
+		
+		<!-- 拍鞋币 -->
+		<action name="paixieB_*" class="paixieBAction" method="{1}"></action>
+	</package>
+	
+	<!-- 搜索商品 -->
+	 <package name="searchGoods" namespace="/search" extends="struts-default">
+	 	<action name="searchGoods" class="searchGoodsAction" method="searchGoods">
+	 		<result name="searchResults">/WEB-INF/page/proscenium/goods/searchGoods.jsp</result>
+	 	</action>
+	 </package>
+	
+	<!-- 前台：会员 -->
+	<package name="users" namespace="/users" extends="struts-default">
+		<!-- 用户注册 -->
+		<action name="usersRegist_*" class="userRegistAction" method="{1}">
+			<result name="userRegistUI">/WEB-INF/page/proscenium/user/userRegist_info.jsp</result>
+			<result name="testEmail">/WEB-INF/page/proscenium/user/userRegist_checkEmail.jsp</result>
+		</action>
+		
+		<!--用户登录  -->
+		<action name="usersLogin_*" class="userLoginAction" method="{1}">
+			<result name="userLoginUI">/WEB-INF/page/proscenium/user/userLogin.jsp</result>
+			<result name="loginError">/WEB-INF/page/proscenium/user/userLogin.jsp</result>
+			<result name="userExit">/WEB-INF/page/proscenium/user/userLogin.jsp</result>
+		</action>
+		
+		<!-- 忘记密码 -->
+		<action name="forgetPassword_*" class="forgetPasswordAction" method="{1}">
+			<result name="checkIdentity">/WEB-INF/page/proscenium/user/fgetPW_checkIdentity.jsp</result>
+			<result name="checkIdentityFail">/WEB-INF/page/proscenium/user/fgetPW_checkIdentity.jsp</result>
+			<result name="checkIdentitySuccess">/WEB-INF/page/proscenium/user/fgetPW_sendCheckEmail.jsp</result>
+			<result name="sendCheckEmail">/WEB-INF/page/proscenium/user/fgetPW_checkEmail.jsp</result>
+			<result name="setNewPassword">/WEB-INF/page/proscenium/user/fgetPW_setPasswordSuccess.jsp</result>
+		</action>
+	</package>
+
+	
+	<!-- 前台：会员：会员管理中心 -->
+	<package name="userCenter" namespace="/userCenter" extends="struts-default">
+		<!-- 使用拦截器栈进行权限控制 -->
+		<interceptors>
+			<interceptor name="userAuthory" class="com.paixie.interceptor.UserAuthorityInterceptor" />
+			<interceptor-stack name="userAuthoryStack">
+				<interceptor-ref name="userAuthory" />
+				<interceptor-ref name="defaultStack" />
+			</interceptor-stack>
+		</interceptors>
+		
+		<default-interceptor-ref name="userAuthoryStack" />
+		<global-results >
+			<result name="login">/WEB-INF/page/proscenium/user/userLogin.jsp</result>
+		</global-results>
+		
+		<!-- 个人中心管理 -->
+		<action name="managerCenter_*" class="userManagerAction" method="{1}">
+			<result name="mangerCenter">/WEB-INF/page/proscenium/user/userCenter.jsp</result>
+		</action>
+		
+		<!-- 账户管理 -->
+		<action name="userInfor_*" class="userInformationAction" method="{1}">
+			<result name="enterUserInfor">/WEB-INF/page/proscenium/user/userCenterInfor.jsp</result>
+			<result name="userInforSuccess" type="chain">userInfor_enterUserInfor</result>
+			<result name="enterSafeCenter">/WEB-INF/page/proscenium/user/safeCenter.jsp</result>
+			<result name="enterAddressManager">/WEB-INF/page/proscenium/user/addressManager.jsp</result>
+		</action>
+		
+		<!-- 安全中心 -->
+		<action name="safeCenter_*" class="safeCenterAction" method="{1}">
+			<result name="enterPassword">/WEB-INF/page/proscenium/user/userCenterUpdatePW.jsp</result>
+			<result name="updatePWFaile">/WEB-INF/page/proscenium/user/userCenterUpdatePW.jsp</result>
+			<result name="updateSuccess">/WEB-INF/page/proscenium/user/safeCenterSuccess.jsp</result>
+			<result name="checkIdentity">/WEB-INF/page/proscenium/user/checkEmail_identity.jsp</result>
+			<result name="checkIndentityFail">/WEB-INF/page/proscenium/user/checkEmailIdentity.jsp</result>
+			<result name="inputEmail">/WEB-INF/page/proscenium/user/checkEmail_inputEmail.jsp</result>
+			<result name="enterScreteSccurity">/WEB-INF/page/proscenium/user/secretSecurity.jsp</result>
+			<result name="secretSuccess">/WEB-INF/page/proscenium/user/safeCenterSuccess.jsp</result>
+			
+			<result name="updateEmailUI">/WEB-INF/page/proscenium/user/checkEmail_updateIdentity.jsp</result>
+			<result name="updateIndentityFail">/WEB-INF/page/proscenium/user/updateEmailIndentity.jsp</result>
+			<result name="updateIndentitySuccess">/WEB-INF/page/proscenium/user/checkEmail_checkEmail.jsp</result>
+			<result name="updateCheckEmailSuccess">/WEB-INF/page/proscenium/user/updateInputEmail.jsp</result>
+			<result name="updateSendEmailSuccess">/WEB-INF/page/proscenium/user/checkEmail.jsp</result>
+		</action>
+		
+		<!-- 收货地址管理 -->
+		<action name="address_*" class="addressManagerAction" method="{1}">
+			<result name="adderssUI" type="redirectAction">userCenter/userInfor_enterAddressManager.action</result>
+		</action>
+		
+		<!-- 收藏 -->
+		<action name="collect_*" class="collectionAction" method="{1}">
+			<result name="seeCollect">/WEB-INF/page/proscenium/user/seeCollect.jsp</result>
+		</action>
+		
+		<!-- 我的订单 -->
+		<action name="order_*" class="orderAction" method="{1}">
+			<result name="seeOrder">/WEB-INF/page/proscenium/user/seeOrder.jsp</result>
+			<result name="cancelOrder" type="redirectAction">
+				<param name="actionName">order_seeOrder</param>
+				<param name="page">${page}</param>
+				<param name="type">${type}</param>
+			</result>
+			<result name="qrsh" type="redirectAction"> 
+				<param name="actionName">comment_commentUI</param>
+				<param name="orderDetailId">${orderDetailId }</param>
+			</result>
+		</action>
+		
+		<!-- 我的评价 -->
+		<action name="comment_*" class="commentAction" method="{1}">
+			<result name="seeComment">/WEB-INF/page/proscenium/user/seeComment.jsp</result>
+			<result name="commentUI">/WEB-INF/page/proscenium/goods/commentGoods.jsp</result>
+			<result name="commentSuccess" type="redirectAction">managerCenter_enterManagerCenter.action</result>
+		</action>
+		
+		<!-- 拍鞋币记录 -->
+		<action name="paixieB_*" class="paixieBAction" method="{1}">
+			<result name="seePaixieB">/WEB-INF/page/proscenium/user/seePaixieB.jsp</result>
+		</action>
+		
+		<!-- 我的优惠 -->
+		<action name="discountCoupon_*" class="discountCouponAction" method="{1}">
+			<result name="seeDiscountCoupon">/WEB-INF/page/proscenium/user/seeDiscountCoupon.jsp</result>
+		</action>
+	</package>
+	
+	
+	<!-- 前台：订单 -->
+	<package name="order" namespace="/order" extends="struts-default">
+		<!-- 配置权限拦截器 -->
+		<interceptors>
+			<interceptor name="userAuthory" class="com.paixie.interceptor.UserAuthorityInterceptor" />
+			<interceptor-stack name="userAuthoryStack">
+				<interceptor-ref name="userAuthory" />
+				<interceptor-ref name="defaultStack" />
+			</interceptor-stack>
+		</interceptors>
+		
+		<default-interceptor-ref name="userAuthoryStack" />
+		<global-results >
+			<result name="login">/WEB-INF/page/proscenium/user/userLogin.jsp</result>
+		</global-results>
+		
+		<!-- 购物车 -->
+		<action name="orderCar_*" class="shoppingCarAction" method="{1}">
+			<result name="showCar">/WEB-INF/page/proscenium/order/showCar.jsp</result>
+		</action>
+		
+		<action name="orderAccounts_*" class="orderAction" method="{1}">
+			<result name="firmOrder">/WEB-INF/page/proscenium/order/firmOrder.jsp</result>
+			<result name="submitSuccess">/WEB-INF/page/proscenium/order/orderSuccess.jsp</result>
+		</action>
+	</package>
+</struts>

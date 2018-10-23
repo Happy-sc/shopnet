@@ -1,0 +1,83 @@
+.hdfk,.zxfk{
+	width:100%;
+	float: left;
+	background-color: #F7FBFC;
+	border: 1px solid #E2ECED;
+	margin: 10px 0px;
+}
+
+.hdfk table,.zxfk table{
+	width: 80%;
+	margin: 10px 10%;
+}
+
+table h1{
+	margin: 10px 0px;
+	color: #3B9905;
+}
+
+table td{
+	font-size: 14px;
+	color: #7E807F;
+}
+
+table td .zfje{
+	font-size: 16px;
+	color: #DD1313;
+	font-weight: bold;
+}
+
+table td .ddh{
+	color: #3366CC;
+}
+
+font[class="7ggzr"]{
+	color: #8D3333;
+}
+
+table[class="zz"]{
+	width: 100%;
+	text-align: center;
+	background-color: #FFFFF5;
+	border: 1px solid #E2DCC6;
+	margin: 0px 0px;
+}
+
+table[class="zz"] td{
+	height: 40px;
+	border-bottom: 1px solid #E2DCC6;
+	border-left: 1px solid #E2DCC6;
+	color: #333333;
+}
+
+table[class="zz"] td[class="myxhx"]{
+	border-bottom: 0px;
+}
+
+.zxfk a{
+	color: #3366CC;
+	text-decoration: none;
+}
+
+.zxfk a:hover{
+	color: #FF3300;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,155 @@
+.comment_left{
+	float: left;
+	width: 80%;
+}
+
+.comment_right{
+	float: right;
+	width: 19%;
+	margin: 5px 0px;
+}
+
+font[class='commentSum']{
+	color: #FFFC01;
+}
+
+.commentMain{
+	width: 98%;
+	margin:0px 1% 20px 1%;
+	float: left;
+}
+
+.commentMain .title{
+	width: 100%;
+	float: left;
+	border-bottom: 1px solid #DEDEDE;
+}
+
+.commentMain .title .grade{
+	float: left;
+	width: 50%;
+	border-right:1px solid #DEDEDE;
+	margin: 20px 50px;
+}
+
+.commentMain .title .grade table{
+	width: 100%;
+
+}
+
+.commentMain .title .grade table td{
+	font-size: 12px;
+	
+}
+
+.pjsxx{
+	margin: 0px -3px;
+	padding: 0px;
+}
+
+font[class="pjz"]{
+	font-size: 60px;
+	color: #FE4000;
+	font-weight: bold;
+}
+
+font[class="myzhzs"],font[class="gkpf"]{
+	font-size: 15px;
+	color: #444444;
+	font-weight: bold;
+}
+
+.wypj{
+	float: left;
+	margin: 55px 0px;
+	font-size: 12px;
+}
+
+.wypj ul{
+	margin: 0px;
+	padding: 0px;
+}
+
+.wypj ul img{
+	margin: 0px 40px;
+}
+
+.commentMain .content .comment_content{
+	float: left;
+	width: 100%;
+}
+
+.commentMain .content table{
+	float: left;
+	width: 97%;
+	font-size: 12px;
+	margin: 10px 1.5%;
+	vertical-align: top;
+}
+
+.commentMain .content table img{
+	margin: 0px -3px;
+}
+
+.commentMain .content table img[class="xx"]{
+	margin: 0px 0px;
+}
+
+.pxwgntj ,.tlzrx{
+	width: 100%;
+	float: left;
+	margin: 10px 0px;
+}
+
+.pxwgntj .title ,.tlzrx .title{
+	font-size: 16px;
+	color: #666666;
+	font-weight: bold;
+	border-bottom: 1px solid #9C2626;
+	line-height: 30px;
+}
+
+.pxwgntj .content ,.tlzrx .content{
+	width: 100%;
+	float: left;	
+}
+
+.pxwgntj .content ul ,.tlzrx .content ul{
+	border-bottom: 1px dashed #8F8F8F;
+	float: left;
+	margin: 0px;
+	padding: 0px;
+}
+
+.pxwgntj .content ul:last-child ,.tlzrx .content ul:last-child{
+	border:0px;
+}
+
+.pxwgntj .content ul li ,.tlzrx .content ul li{
+	float: left;
+	font-size: 12px;
+	margin: 15px 0px;
+}
+
+.pxwgntj .content ul li font,.tlzrx .content ul li font{
+	color: red;
+}
+
+.page{
+	float: right;
+	margin: 10px 0px;
+}
+
+.page span[class="sxyy"]{
+	width:60px;
+}
+
+.page span{
+	display: inline-block;
+	width: 25px;
+	height: 20px;
+	text-align: center;
+	border: 1px solid #DDDDDD;
+	font-size: 12px;
+	line-height: 20px;	
+}

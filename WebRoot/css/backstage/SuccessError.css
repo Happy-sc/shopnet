@@ -1,0 +1,119 @@
+.error_main{
+	width:60%;
+	margin:30px 20%;
+	border: 1px solid #ECECEC;
+	float: left;
+}
+
+.eszm{
+	font-size:28px;
+	font-family:Times New Roman;
+	color:#BB132C;
+	font-weight:bold;
+}
+
+.sszm{
+	font-size:28px;
+	font-family:Times New Roman;
+	color:#34B01A;
+	font-weight:bold;
+}
+
+.hzm{
+	font-size:28px;		
+	font-family:Times New Roman;
+	color:#221815;
+	font-weight:bold;
+}
+	
+.tsym{
+	font-size:26px;
+	font-family:"¡• È";
+	color:#8F8D8C;
+	font-weight:bold;
+}
+
+.titlebt {
+	font-size: 12px;
+	line-height: 26px;
+	font-weight: bold;
+	color: #000000;
+	background-image: url("../../images/backstage/top_bt.jpg");
+	background-repeat: no-repeat;
+	display: block;
+	text-indent: 15px;
+	padding-top: 5px;
+}
+
+.title{
+	float:left;
+	width:95%;
+	margin: 3px 2%;
+}
+	
+.hr{
+	background-image:url("../../images/backstage/ES_hr.jpg");
+	background-repeat:repeat-x;
+	height:1px;
+	width:98%;
+	float:left;
+	margin: 5px 1%;
+}
+	
+.content{
+	width: 100%;
+	float: left;
+}
+
+.content_top{
+	width:50%;
+	margin:30px 29% 0px 29%;
+	float:left;
+}
+
+.content_content{
+	width:70%;
+	float:left;
+	margin:16px 25%;
+}
+
+.error{
+	font-size:50px;
+	color:#BB132C;
+	font-weight: bold;
+}
+
+.success{
+	font-size:50px;
+	color:#34B01A;
+	font-weight: bold;
+}
+
+.bottom{
+	float:left;
+	width: 50%;
+	margin: 15px 38%;
+}
+
+.tips{
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.content_content a[class='success']{
+	font-size:16px;
+	color: #34B01A;
+	text-decoration: none;
+}
+
+.content_content a[class='error']{
+	font-size:16px;
+	color: #BB132C;
+	text-decoration: none;
+}
+
+.content_content a:hover{
+	color: #909EA9;
+}
+
+

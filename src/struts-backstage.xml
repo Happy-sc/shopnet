@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+        "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+
+    <!-- 管理员登陆-->
+    <package name="managerLogin" namespace="/manager" extends="struts-default">
+        <action name="manager_*" class="managerLoginAction" method="{1}">
+            <result name="enterLoginUI">/WEB-INF/page/backstage/managerLogin.jsp</result>
+            <result name="loginSuccess">/WEB-INF/page/backstage/admin_index.jsp</result>
+            <result name="loginFail">/WEB-INF/page/backstage/managerLogin.jsp</result>
+            <result name="managerMain" type="redirect">/adminIndex/toAdmin_toAdminRight.action</result>
+            <result name="exitSystem" type="redirect">/manager/manager_enterLoginUI.action</result>
+        </action>
+    </package>
+
+    <!-- 获取系统时间 -->
+    <package name="getTime" namespace="/getTime" extends="struts-default">
+        <action name="getTime" class="getTimeAction" method="execute"></action>
+    </package>
+
+    <!-- 管理总界面的跳转 -->
+    <package name="adminIndex" namespace="/adminIndex" extends="struts-default">
+        <action name="toAdmin_*" class="adminIndexAction" method="{1}">
+            <result name="adminTop">/WEB-INF/page/backstage/admin_top.jsp</result>
+            <result name="adminLeft">/WEB-INF/page/backstage/admin_left.jsp</result>
+            <result name="adminRight">/WEB-INF/page/backstage/admin_right.jsp</result>
+        </action>
+    </package>
+
+    <!-- 员工基本信息 -->
+    <package name="workerInfo" namespace="/workerInfo" extends="struts-default">
+        <!-- 配置拦截器-->
+        <interceptors>
+            <!-- 登录权限控制拦截器 -->
+            <interceptor name="loginAuth" class="com.paixie.interceptor.WorkerLoginInterceptor"/>
+            <!-- 拦截器栈：登录权限控制拦截器、上传图片拦截器、默认拦截器-->
+            <interceptor-stack name="autorityStack">
+                <interceptor-ref name="loginAuth"/>
+                <!-- 配置fileUpload的拦截器 -->
+                <interceptor-ref name="fileUpload">
+                    <param name="allowedTypes">image/png,image/gif,image/jpeg</param>
+                    <param name="maximumSize">20000000</param>
+                </interceptor-ref>
+                <!-- 配置系统默认拦截器 -->
+                <interceptor-ref name="defaultStack"/>
+            </interceptor-stack>
+        </interceptors>
+
+        <action name="workerInfo_*" class="workerInfoAction" method="{1}">
+            <!-- 使用拦截器栈 -->
+            <interceptor-ref name="autorityStack"/>
+            <result name="entryWorkerInfoUI">/WEB-INF/page/backstage/worker/workerInfo.jsp</result>
+            <result name="updateInfoUI">/WEB-INF/page/backstage/worker/updateWorkerInfo.jsp</result>
+            <result name="updatePasswordUI">/WEB-INF/page/backstage/worker/updatePassword.jsp</result>
+            <result name="updateSuccess">/WEB-INF/page/backstage/success.jsp</result>
+            <result name="login">/WEB-INF/page/backstage/error.jsp</result>
+            <result name="error">/WEB-INF/page/backstage/error.jsp</result>
+            <result name="success">/WEB-INF/page/backstage/success.jsp</result>
+            <result name="input">/WEB-INF/page/backstage/worker/updateWorkerInfo.jsp</result>
+        </action>
+    </package>
+
+    <!-- 商品管理 -->
+    <package name="goodsManager" namespace="/goodsManager" extends="struts-default">
+        <!-- 配置拦截器 -->
+        <interceptors>
+            <!-- 权限控制器：商品信息管理员 -->
+            <interceptor name="workerAuthory" class="com.paixie.interceptor.WorkerAuthorityInterceptor">
+                <param name="autority">goods</param>
+            </interceptor>
+            <!-- 配置拦截器栈：权限拦截器、图片拦截、默认拦截器-->
+            <interceptor-stack name="autorityStack">
+                <interceptor-ref name="workerAuthory"/>
+                <interceptor-ref name="fileUpload">
+                    <param name="allowedTypes">image/png,image/gif,image/jpeg</param>
+                    <param name="maximumSize">1024*1024</param>
+                </interceptor-ref>
+                <interceptor-ref name="defaultStack"/>
+            </interceptor-stack>
+        </interceptors>
+
+        <!-- 引用拦截器栈 -->
+        <default-interceptor-ref name="autorityStack"/>
+
+        <!-- 配置全局映射 -->
+        <global-results>
+            <result name="login">/WEB-INF/page/backstage/error.jsp</result>
+        </global-results>
+
+        <!-- 增加商品 -->
+        <action name="goodsManager_*" class="goodsManagerAction" method="{1}">
+            <result name="addGoodsUI">/WEB-INF/page/backstage/goods/addGoods.jsp</result>
+            <result name="addGoods">/WEB-INF/page/backstage/goods/addGoodsDetail.jsp</result>
+            <result name="saveSuccess">/WEB-INF/page/backstage/success.jsp</result>
+        </action>
+
+        <!-- 商品详情 -->
+        <action name="goodsDetail_*" class="goodsDetailManagertAction" method="{1}">
+            <result name="addGoodsDetail">/WEB-INF/page/backstage/success.jsp</result>
+            <result name="addGoodsDetailUI">/WEB-INF/page/backstage/goods/addGoodsDetail.jsp</result>
+        </action>
+
+        <!-- 商品管理 -->
+        <action name="">
+        </action>
+
+        <!-- 品牌管理 -->
+        <action name="brandManager_*" class="brandManagerAction" method="{1}">
+            <result name="brandManagerUI">/WEB-INF/page/backstage/goods/brandManager.jsp</result>
+        </action>
+
+        <!-- 款式管理 -->
+        <action name="styleManager_*" class="styleManagerAction" method="{1}">
+            <result name="styleManagerUI">/WEB-INF/page/backstage/goods/styleManager.jsp</result>
+        </action>
+
+        <!-- 分类管理 -->
+        <action name="categoryManager_*" class="categoryManagerAction" method="{1}">
+            <result name="categoryManagerUI">/WEB-INF/page/backstage/goods/categoryManager.jsp</result>
+            <result name="categoryManager" type="redirect">/goodsManager/categoryManager_categoryManagerUI.action
+            </result>
+        </action>
+    </package>
+
+    <!--订单管理-->
+    <package name="orderManager" namespace="/orderManager" extends="struts-default">
+        <!-- 配置拦截器栈 进行权限控制 -->
+        <interceptors>
+            <!-- 权限控制器：系统管理员 -->
+            <interceptor name="workerAuthory" class="com.paixie.interceptor.WorkerAuthorityInterceptor">
+                <param name="autority">order</param>
+            </interceptor>
+            <!--配置拦截器栈：权限拦截器、默认拦截器-->
+            <interceptor-stack name="autorityStack">
+                <interceptor-ref name="workerAuthory"/>
+                <interceptor-ref name="defaultStack"/>
+            </interceptor-stack>
+        </interceptors>
+
+        <!-- 引用拦截器栈 -->
+        <default-interceptor-ref name="autorityStack"/>
+
+        <!-- 配置全局映射 -->
+        <global-results>
+            <result name="login">/WEB-INF/page/backstage/error.jsp</result>
+        </global-results>
+
+        <action name="orderManager_*" class="orderManagerAction" method="{1}">
+            <result name="dfkOrder">/WEB-INF/page/backstage/order/dfkOrderManager.jsp</result>
+            <result name="dfhOrder">/WEB-INF/page/backstage/order/dfhOrderManager.jsp</result>
+            <result name="yfhOrder">/WEB-INF/page/backstage/order/yfhOrderManager.jsp</result>
+            <result name="yshOrder">/WEB-INF/page/backstage/order/yshOrderManager.jsp</result>
+            <result name="orderDeail">/WEB-INF/page/backstage/order/showOrderDetail.jsp</result>
+            <result name="fhOrder" type="chain">
+                <param name="actionName">orderManager_managerOrder</param>
+                <param name="type">${type}</param>
+            </result>
+        </action>
+    </package>
+
+    <!--系统管理 -->
+    <package name="system" namespace="/systemManager" extends="struts-default">
+        <!-- 配置拦截器栈 进行权限控制 -->
+        <interceptors>
+            <!-- 权限控制器：系统管理员 -->
+            <interceptor name="workerAuthory" class="com.paixie.interceptor.WorkerAuthorityInterceptor">
+                <param name="autority">system</param>
+            </interceptor>
+            <!--配置拦截器栈：权限拦截器、默认拦截器-->
+            <interceptor-stack name="autorityStack">
+                <interceptor-ref name="workerAuthory"/>
+                <interceptor-ref name="defaultStack"/>
+            </interceptor-stack>
+        </interceptors>
+
+        <!-- 引用拦截器栈 -->
+        <default-interceptor-ref name="autorityStack"/>
+
+        <!-- 配置全局映射 -->
+        <global-results>
+            <result name="login">/WEB-INF/page/backstage/error.jsp</result>
+        </global-results>
+
+        <!-- 员工管理 -->
+        <action name="workerManager_*" class="workerManagerAction" method="{1}">
+            <result name="workerManagerUI">/WEB-INF/page/backstage/system/workerManager.jsp</result>
+            <result name="saveWorker" type="redirect">/systemManager/workerManager_workerManagerUI.action</result>
+            <result name="showWorkerInfo">/WEB-INF/page/backstage/worker/workerInfo.jsp</result>
+            <result name="searchWorker">/WEB-INF/page/backstage/system/workerManager.jsp</result>
+            <result name="editorWorker" type="chain">
+                <param name="actionName">workerManager_searchWorker</param>
+                <param name="workerQuery">${workerQuery}</param>
+            </result>
+        </action>
+
+        <!--职务管理  -->
+        <action name="">
+        </action>
+
+        <!-- 仓库管理 -->
+        <action name="storageManager_*" class="storageManagerAction" method="{1}">
+            <result name="storageManagerUI">/WEB-INF/page/backstage/system/storageManager.jsp</result>
+        </action>
+
+        <!-- 会员管理 -->
+        <action name="">
+        </action>
+
+        <!-- 公告管理 -->
+        <action name="noticeManager_*" class="noticeManagerAction" method="{1}">
+            <result name="noticeManagerUI">/WEB-INF/page/backstage/system/noticeManager.jsp</result>
+            <result name="addNoticeUI">/WEB-INF/page/backstage/system/aditorNotice.jsp</result>
+            <result name="showNotice">/WEB-INF/page/backstage/system/showNotice.jsp</result>
+            <result name="upodateNoticeUI">/WEB-INF/page/backstage/system/aditorNotice.jsp</result>
+        </action>
+    </package>
+</struts>

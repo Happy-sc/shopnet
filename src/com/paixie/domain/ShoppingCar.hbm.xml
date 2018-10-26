@@ -15,8 +15,8 @@
         <property name="goodsColor" type="string">
             <column name="goods_color"/>
         </property>
-        <property name="goodsSize" type="int">
-            <column name="goods_size"/>
+        <property name="goodsAttr" type="string" length="200">
+            <column name="goods_attr"/>
         </property>
 		<many-to-one name="users" class="com.paixie.domain.Users" fetch="join" lazy="false">
             <column name="user_id" length="100" />

@@ -75,11 +75,7 @@
         </table>
         <ul class="MM" >
           <li><a href="${pageContext.request.contextPath }/systemManager/workerManager_workerManagerUI.action" target="main">员工管理</a></li>
-          <li><a href="#" target="main">职务管理</a></li>
-          <li><a href="${pageContext.request.contextPath }/systemManager/storageManager_storageManagerUI.action" target="main">仓库管理</a></li>
-          <li><a href="" target="main">会员管理</a></li>
           <li><a href="${pageContext.request.contextPath }/systemManager/noticeManager_noticeManagerUI.action" target="main">公告管理</a></li>
-          <li><a href="#" target="main">滚动图片</a></li>
         </ul>
       </div>
       </div>

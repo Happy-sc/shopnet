@@ -34,44 +34,8 @@
     			<div id="addGoodsDetail">
     			<span>颜色:</span><input type="text" id="color">
     			&nbsp;&nbsp;&nbsp;&nbsp;
-    			<span>尺码:</span><select id="size">	
-    				<option value="-1">--请选择--</option>
-    				<option value="12">---&nbsp;12&nbsp;---</option>
-    				<option value="13">---&nbsp;13&nbsp;---</option>
-    				<option value="14">---&nbsp;14&nbsp;---</option>
-    				<option value="15">---&nbsp;15&nbsp;---</option>
-    				<option value="16">---&nbsp;16&nbsp;---</option>
-    				<option value="17">---&nbsp;17&nbsp;---</option>
-    				<option value="18">---&nbsp;18&nbsp;---</option>
-    				<option value="19">---&nbsp;19&nbsp;---</option>
-    				<option value="20">---&nbsp;20&nbsp;---</option>
-    				<option value="21">---&nbsp;21&nbsp;---</option>
-    				<option value="22">---&nbsp;22&nbsp;---</option>
-    				<option value="23">---&nbsp;23&nbsp;---</option>
-    				<option value="24">---&nbsp;24&nbsp;---</option>
-    				<option value="25">---&nbsp;25&nbsp;---</option>
-    				<option value="26">---&nbsp;26&nbsp;---</option>
-    				<option value="27">---&nbsp;27&nbsp;---</option>
-    				<option value="28">---&nbsp;28&nbsp;---</option>
-    				<option value="29">---&nbsp;29&nbsp;---</option>
-    				<option value="30">---&nbsp;30&nbsp;---</option>
-					<option value="31">---&nbsp;31&nbsp;---</option>
-					<option value="32">---&nbsp;32&nbsp;---</option>
-					<option value="33">---&nbsp;33&nbsp;---</option>
-					<option value="34">---&nbsp;34&nbsp;---</option>
-					<option value="35">---&nbsp;35&nbsp;---</option>
-					<option value="36">---&nbsp;36&nbsp;---</option>
-					<option value="37">---&nbsp;37&nbsp;---</option>
-					<option value="38">---&nbsp;38&nbsp;---</option>
-					<option value="39">---&nbsp;39&nbsp;---</option>
-					<option value="40">---&nbsp;40&nbsp;---</option>
-					<option value="41">---&nbsp;41&nbsp;---</option>
-					<option value="42">---&nbsp;42&nbsp;---</option>
-					<option value="43">---&nbsp;43&nbsp;---</option>
-					<option value="44">---&nbsp;44&nbsp;---</option>
-					<option value="45">---&nbsp;45&nbsp;---</option>
-					<option value="46">---&nbsp;46&nbsp;---</option>
-    			</select>
+    			<span>属性:</span>
+					<input type="text" id="attr">
     			&nbsp;&nbsp;&nbsp;&nbsp;
     			<span>数量:</span><input type="text" id="number" name="" >
     			&nbsp;&nbsp;&nbsp;&nbsp;
@@ -95,7 +59,7 @@
     					</tr>
     					<tr>
     						<td align="center" width="40%"><span>颜色</span></td>
-    						<td align="center"><span>尺码</span></td>
+    						<td align="center"><span>属性</span></td>
     						<td align="center"><span>数量</span></td>
     						<td align="center"><span>操作</span></td>
     					</tr>

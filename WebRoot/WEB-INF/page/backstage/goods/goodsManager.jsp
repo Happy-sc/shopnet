@@ -2,7 +2,7 @@
 <%@ taglib uri="/struts-tags" prefix="s"%>
 <html>
   <head>
-  	 <title>拍鞋购物网站后台管理系统--商品信息管理</title>
+  	 <title>商品信息管理</title>
   	 
   	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">

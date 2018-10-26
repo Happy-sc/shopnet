@@ -30,18 +30,6 @@
         <property name="goodsGrounding" type="string">
             <column name="goods_grounding" length="20" />
         </property>
-        <property name="goodsXmcz" type="string">
-            <column name="goods_xmcz" length="20" />
-        </property>
-        <property name="goodsXdcz" type="string">
-            <column name="goods_xdcz" length="20" />
-        </property>
-        <property name="goodsBhfs" type="string">
-            <column name="goods_bhfs" length="20" />
-        </property>
-        <property name="goodsToecap" type="string">
-            <column name="goods_toecap" length="20" />
-        </property>
          <property name="goodsMarketNumber" type="int">
             <column name="goods_marketNumber" />
         </property>
@@ -51,29 +39,17 @@
         <property name="goodsMarket" type="string">
             <column name="goods_market" length="20" />
         </property>
-        <property name="goodsShjj" type="string">
-            <column name="goods_shjj" length="20" />
-        </property>
         <property name="goodsImage" type="string">
             <column name="goods_image" length="200"/>
         </property>
         <property name="goodsIsRecommend" type="int">
             <column name="goods_isRecommend" />
-        </property> 
-        <property name="goodsHeight" type="float">
-            <column name="goods_height" precision="24" scale="2" />
-        </property>
-        <property name="goodsLength" type="float">
-            <column name="goods_length" precision="24" scale="2" />
         </property>
         <property name="goodsWeight" type="float">
             <column name="goods_weight" precision="24" scale="0" />
         </property>
         <property name="goodsMarketPrice" type="float">
             <column name="goods_marketPrice" precision="24" scale="2" />
-        </property>
-        <property name="goodsPaiPrice" type="float">
-            <column name="goods_paiPrice" precision="24" scale="2" />
         </property>
         <property name="goodsBid" type="float">
             <column name="goods_bid" precision="24" scale="2" />

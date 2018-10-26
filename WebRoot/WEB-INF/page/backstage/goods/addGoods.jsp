@@ -28,7 +28,7 @@
     			<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;增加商品信息 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     	</div>
      	<div id="main_content">
-    		<form action="goodsManager_addGoodsListing.action" id="addGoodsForm" method="POST" enctype="multipart/form-data">
+    		<form action="/goodsManager/goodsManager_addGoodsListing.action" id="addGoodsForm" method="POST" enctype="multipart/form-data">
     			<table id="addGoods">
     				<tr>
     					<td width="15%" align="right">商品编号：</td>
@@ -62,95 +62,34 @@
     							</c:forEach>
     						</select>
     					</td>
-    					<td align="right">适合季节：</td>
-    					<td>
-    						<select id="goodsShjj" name="goods.goodsShjj">
-    							<option value="-1">--请选择--</option>
-    							<option value="春季">春&nbsp;&nbsp;季</option>
-    							<option value="夏季">夏&nbsp;&nbsp;季</option>
-    							<option value="秋季">秋&nbsp;&nbsp;季</option>
-    							<option value="冬季">冬&nbsp;&nbsp;季</option>
-    							<option value="春夏季">春夏季</option>
-    							<option value="秋冬季">秋冬季</option>
-    						</select>
-    					</td>
-    				</tr>
-    				<tr>
-    					<td align="right">鞋面材质：</td>
-    					<td>
-    						<input type="text" name="goods.goodsXmcz" id="goodsXmcz" class="addGoodsInput"/>
-    					</td>
-    					<td align="right">鞋底材质：</td>
-    					<td>
-    						<input type="text" name="goods.goodsXdcz" id="goodsXdcz" class="addGoodsInput"/>
-    					</td>
-    				</tr>
-    				<tr>
-    					<td align="right">闭合方式：</td>
-    					<td>
-    						<select id="goodsBhfs" name="goods.goodsBhfs">
-    							<option value="-1">--请选择--</option>
-    							<option value="套脚">套脚</option>
-    							<option value="扣带">扣带</option>
-    							<option value="系带">系带</option>
-    							<option value="拉链">拉链</option>
-    							<option value="魔术贴">魔术贴</option>
-    						</select>
-    					</td>
-    					<td align="right">商品鞋头：</td>
-    					<td>
-    						<select id="goodsToecap" name="goods.goodsToecap">
-    							<option value="-1">--请选择--</option>
-    							<option value="尖头">尖头</option>
-    							<option value="露趾">露趾</option>
-    							<option value="圆头">圆头</option>
-    							<option value="扁头">扁头</option>
-    						</select>
-    					</td>
-    				</tr>
-    				<tr>
-    					<td align="right">是否推荐：</td>
-    					<td>
-    						<select id="goodsIsRecommend" name="goods.goodsIsRecommend" >
-    							<option value="-1">--请选择--</option>
-    							<option value="1">是</option>
-    							<option value="0">否</option>
-    						</select>
-    					</td>
-    					<td align="right">商品图片：</td>
-    					<td>
-    						<input type="file" id="goodsImage" name="goodsImage" class="addGoodsInput" style="border: 0px;">
-    					</td>
-    				</tr>
-    				<tr>
-    					<td align="right">商品高度：</td>
-    					<td>
-    					   <input type="text" id="goodsHeight" class="addGoodsInput" name="goods.goodsHeight"/>
-    					</td>
-    					<td align="right">商品长度：</td>
-    					<td>
-    						<input type="text" id="goodsLength" class="addGoodsInput" name="goods.goodsLength"/>
-    					</td>
+						<td align="right">是否推荐：</td>
+						<td>
+							<select id="goodsIsRecommend" name="goods.goodsIsRecommend" >
+								<option value="-1">--请选择--</option>
+								<option value="1">是</option>
+								<option value="0">否</option>
+							</select>
+						</td>
     				</tr>
     				<tr>
     					<td align="right">商品重量：</td>
     					<td>
-    						<input type="text" id="goodsWeight" class="addGoodsInput" name="goods.goodsWeight"/>
+    						<input type="number" id="goodsWeight" class="addGoodsInput" name="goods.goodsWeight"/>
     					</td>
-    					<td align="right">市&nbsp;场&nbsp;价：</td>
-    					<td>
-    						<input type="text" id="goodsMarketPrice" class="addGoodsInput" name="goods.goodsMarketPrice"/>
-    					</td>
+						<td align="right">商品图片：</td>
+						<td>
+							<input type="file" id="goodsImage" name="goodsImage" class="addGoodsInput" style="border: 0px;">
+						</td>
     				</tr>
     				<tr>
-    					<td align="right">拍&nbsp;拍&nbsp;价：</td>
-    					<td>
-    						<input type="text" id="goodsPaiPrice" class="addGoodsInput" name="goods.goodsPaiPrice"/>
-    					</td>
     					<td align="right">进&nbsp;&nbsp;&nbsp;&nbsp;价：</td>
     					<td>
     						<input type="text" id="goodsBid" class="addGoodsInput" name="goods.goodsBid"/>
     					</td>
+						<td align="right">市&nbsp;场&nbsp;价：</td>
+						<td>
+							<input type="text" id="goodsMarketPrice" class="addGoodsInput" name="goods.goodsMarketPrice"/>
+						</td>
     				</tr>
     				<tr>
     					<td align="right">商品分类：</td>

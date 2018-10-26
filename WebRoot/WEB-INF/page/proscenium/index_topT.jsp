@@ -12,7 +12,7 @@
     	   <div id="top_content_left">
     			<span>你好，欢迎来到购物网</span>
     			<img src="${pageContext.request.contextPath }/images/proscenium/phone.jpg"/>
-    			<span id="phone">0731-123456</span>&nbsp;&nbsp;|&nbsp;&nbsp;
+    			<span id="phone">001-123456</span>&nbsp;&nbsp;|&nbsp;&nbsp;
     			<input type="hidden" id="topUserName" value="${user.userName }">
     			<c:choose>
     				<c:when test="${user==null}">
@@ -33,10 +33,6 @@
     		<div id="top_content_right">
     			<ul>
     				<li id="top_mypaixie">
-    					<div class="mypaixie_title">
-    						<a href="">&nbsp;&nbsp;我的拍鞋</a>
-    						<img  src="${pageContext.request.contextPath }/images/proscenium/xiajiantou.jpg" id="tubiao">
-    					</div>      
     					<div class="mypaixie_content" style="display: none">
     						<ul>
     							<li class="_hr">
@@ -48,12 +44,6 @@
     							<li class="_hr">
     								<ul>
     									<li><a href="">&nbsp;我的收藏</a></li>
-    									<li class="img"><img src="${pageContext.request.contextPath}/images/proscenium/jiantou.jpg"/></li>
-    								</ul>
-    							</li>
-    							<li class="_hr">
-    								<ul>
-    									<li><a href="">&nbsp;我的拍鞋店</a></li>
     									<li class="img"><img src="${pageContext.request.contextPath}/images/proscenium/jiantou.jpg"/></li>
     								</ul>
     							</li>

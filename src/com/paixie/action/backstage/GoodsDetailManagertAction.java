@@ -117,7 +117,7 @@ public class GoodsDetailManagertAction extends BaseAction{
 			GoodsSize goodsSize1 = new GoodsSize();
 			String goodsSizeId = ProduceId.getId();
 			goodsSize1.setGoodsSizeId(goodsSizeId);      //尺码编号
-			goodsSize1.setGoodsSize(goodsSizeS.get(i).getGoodsSize());//尺码大小
+			goodsSize1.setGoodsAttr(goodsSizeS.get(i).getGoodsAttr());//尺码大小
 			goodsSize1.setGoodsNumber(goodsSizeN.get(i).getGoodsNumber());     //商品数量
 			goodsSizeSet.add(goodsSize1);
 		}

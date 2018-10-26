@@ -2,7 +2,7 @@
 <%@ taglib uri="/struts-tags" prefix="s"%>
 <html>
   <head>
-     <title>拍鞋购物网站后台管理系统--增加员工信息</title>
+     <title>增加员工信息</title>
 	 <link rel="stylesheet" href="${pageContext.request.contextPath }/css/backstage/layout.css" type="text/css"></link>
 	 <link rel="stylesheet" href="${pageContext.request.contextPath }/css/backstage/WorkerManager.css" type="text/css"></link>
 	 <script type="text/javascript" src="${pageContext.request.contextPath }/js/backstage/workerManager.js" charset="GBK"></script>

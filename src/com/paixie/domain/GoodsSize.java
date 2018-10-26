@@ -7,7 +7,7 @@ public class GoodsSize implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	private String goodsSizeId;              //商品尺码编号
-	private Integer goodsSize;               //商品尺码
+	private String goodsAttr;               //商品属性
 	private Integer goodsNumber;             //商品数量
 	private GoodsColor goodsColor = new GoodsColor();           //商品颜色
 	
@@ -19,10 +19,10 @@ public class GoodsSize implements Serializable{
 		this.goodsSizeId = goodsSizeId;
 	}
 	
-	public GoodsSize(String goodsSizeId,Integer goodsSize,Integer goodsNumber,
+	public GoodsSize(String goodsSizeId,String goodsAttr,Integer goodsNumber,
 			GoodsColor goodsColor){
 		this.goodsSizeId = goodsSizeId;
-		this.goodsSize = goodsSize;
+		this.goodsAttr = goodsAttr;
 		this.goodsNumber = goodsNumber;
 		this.goodsColor = goodsColor;
 	}
@@ -35,12 +35,12 @@ public class GoodsSize implements Serializable{
 		this.goodsSizeId = goodsSizeId;
 	}
 
-	public Integer getGoodsSize() {
-		return goodsSize;
+	public String getGoodsAttr() {
+		return goodsAttr;
 	}
 
-	public void setGoodsSize(Integer goodsSize) {
-		this.goodsSize = goodsSize;
+	public void setGoodsAttr(String goodsAttr) {
+		this.goodsAttr = goodsAttr;
 	}
 
 	public Integer getGoodsNumber() {

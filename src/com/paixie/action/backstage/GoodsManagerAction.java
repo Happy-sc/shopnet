@@ -107,7 +107,6 @@ public class GoodsManagerAction extends BaseAction{
 
 	/**
 	 * 添加商品列表信息
-	 * 
 	 */
 	public String addGoodsListing(){
 		//将临时文件复制到指定目录下，防止删除临时文件后，丢失文件
@@ -123,8 +122,6 @@ public class GoodsManagerAction extends BaseAction{
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
-		
 		//处理商品的仓库、分类、款式、品牌
 		Storage storage = storageService.getStorageById(goods.getStorage().getStorageId());
 		goods.setStorage(storage);
@@ -145,9 +142,6 @@ public class GoodsManagerAction extends BaseAction{
 		String goodsImagePath = DealString.subAndReplaceString(savePath+"\\"+getGoodsImageFileName());
 		goods.setGoodsImage(goodsImagePath);
 		goods.setGoodsState(1);     //标示为在售
-		
-		//设置商品编号
-		//goods.setGoodsId(ProduceId.getId());
 		
 		//商品颜色
 		Set<GoodsColor> goodsColorSet = new HashSet<GoodsColor>();    
@@ -175,9 +169,7 @@ public class GoodsManagerAction extends BaseAction{
 			String string = "<option value='"+style.getStyleId()+"'>"+style.getStyleName()+"</option>";
 			buffer.append(string);
 		}
-		
 		writeToPage(buffer.toString());
-
 	}
 	
 	/**
@@ -196,7 +188,6 @@ public class GoodsManagerAction extends BaseAction{
 			String string = "<option value='"+brand.getBrandId()+"'>"+brand.getBrandName()+"</option>";
 			buffer.append(string);
 		}
-		
 		writeToPage(buffer.toString());
 	}
 	

@@ -254,7 +254,6 @@ $.extend({
 		if(style==""){
 			style_prompt.html("请选择品牌所拥有的款式...")
 			style_prompt.attr("class","prompt_error");
-			return false;
 		}
 		return true;	
 	},

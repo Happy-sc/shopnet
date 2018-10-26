@@ -43,7 +43,7 @@ public class OrderDetailServiceImpl implements OrderDetailService{
 			orderDetail.setOrderDetailIsCom(0);                               //是否已经评价
 			orderDetail.setGoodsNumber(shoppingCar.getGoodsNumber());         //商品数量
 			orderDetail.setGoodsColor(shoppingCar.getGoodsColor());           //商品颜色
-			orderDetail.setGoodsSize(shoppingCar.getGoodsSize());             //商品尺码
+			orderDetail.setGoodsAttr(shoppingCar.getGoodsAttr());             //商品尺码
 			orderDetail.setIsAccept(0);                                       //没有收货
 			//保存订单详情
 			orderDetailDao.save(orderDetail);

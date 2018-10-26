@@ -8,7 +8,7 @@ public class ShoppingCar implements Serializable{
 	private String carId;                       //购物车编号
 	private int goodsNumber;                    //商品数量
 	private String goodsColor;                  //商品颜色
-	private Integer goodsSize;                  //商品尺码 
+	private String goodsAttr;                  //商品属性
 	private Users users;                        //用户
 	private GoodsListing goodsListing;          //商品
 	
@@ -21,11 +21,11 @@ public class ShoppingCar implements Serializable{
 	}
 	
 	public ShoppingCar(String carId,int goodsNumber,String goodsColor,
-			Integer goodsSize,Users users,GoodsListing goodsListing){
+			String goodsAttr,Users users,GoodsListing goodsListing){
 		this.carId = carId;
 		this.goodsNumber = goodsNumber;
 		this.goodsColor = goodsColor;
-		this.goodsSize = goodsSize;
+		this.goodsAttr = goodsAttr;
 		this.users = users;
 		this.goodsListing = goodsListing;
 	}
@@ -70,11 +70,11 @@ public class ShoppingCar implements Serializable{
 		this.goodsColor = goodsColor;
 	}
 
-	public Integer getGoodsSize() {
-		return goodsSize;
+	public String getGoodsAttr() {
+		return goodsAttr;
 	}
 
-	public void setGoodsSize(Integer goodsSize) {
-		this.goodsSize = goodsSize;
+	public void setGoodsAttr(String goodsAttr) {
+		this.goodsAttr = goodsAttr;
 	}
 }

@@ -5,27 +5,18 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
+import com.paixie.domain.*;
+import com.paixie.service.*;
 import org.springframework.stereotype.Controller;
 
 import com.opensymphony.xwork2.ActionContext;
 import com.paixie.action.common.BaseAction;
-import com.paixie.domain.Brand;
-import com.paixie.domain.Comment;
-import com.paixie.domain.GoodsColor;
-import com.paixie.domain.GoodsListing;
-import com.paixie.domain.GoodsSize;
-import com.paixie.domain.Style;
-import com.paixie.service.BrandService;
-import com.paixie.service.CommentService;
-import com.paixie.service.GoodsColorService;
-import com.paixie.service.GoodsService;
-import com.paixie.service.GoodsSizeService;
-import com.paixie.service.StyleService;
 
 @Controller("goodsAction")
 public class GoodsAction extends BaseAction{
 	private static final long serialVersionUID = 1L;
-	
+
+	@Resource(name="categoryService")private CategoryService categoryService;
 	@Resource(name="brandService") private BrandService brandService;
 	@Resource(name="goodsService") private GoodsService goodsService;
 	@Resource(name="styleService") private StyleService styleService;
@@ -50,9 +41,11 @@ public class GoodsAction extends BaseAction{
 	public String goodsIndexUI(){
 		//获取前29个品牌品牌
 		List<Brand> brands = brandService.getBrand(29);
-		
+		//获取所有的分类
+		List<Category> categories = categoryService.getAllCategory();
+
 		//获取特价商品(卖出商品的前10个)
-		List<GoodsListing> specialOfferGoods = goodsService.getGoodsOrderString("goodsPaiPrice","asc");
+		List<GoodsListing> specialOfferGoods = goodsService.getGoodsOrderString("goodsMarketPrice","asc");
 		//获取热卖商品
 		List<GoodsListing> bestSellerGoods = goodsService.getGoodsOrderString("goodsMarketNumber", "asc");
 		//获取新货商品
@@ -90,7 +83,8 @@ public class GoodsAction extends BaseAction{
 		ActionContext.getContext().put("bestSellerGoods", bestSellerGoods);
 		ActionContext.getContext().put("newestGoods", newestGoods);
 		ActionContext.getContext().put("lackGoods", lackGoods);
-		
+		ActionContext.getContext().put("categorys", categories);
+
 		ActionContext.getContext().put("brands", brands);
 		
 		ActionContext.getContext().put("sneakers", sneakers);

@@ -1,5 +1,4 @@
 $(document).ready(function(){
-
 	//根据分类获取款式
 	$("#category").change(function(){
 		var categoryId = $("#category").val();
@@ -172,7 +171,7 @@ $(document).ready(function(){
 	//点击添加商品详情
 	$("#TJSPXQ").click(function(){
 		var color = $("#color").val();
-		var size = $("#size").val();
+		var attr = $("#attr").val();
 		var number = $("#number").val();
 		var error_prompt = $("#error_prompt");
 		error_prompt.html("");
@@ -181,8 +180,8 @@ $(document).ready(function(){
 			error_prompt.attr("class","prompt_error");
 			return;
 		}
-		if(size=="-1"){
-			error_prompt.html("请选择商品尺码...");
+		if(attr=="-1"){
+			error_prompt.html("商品属性不能为空,请输入...");
 			error_prompt.attr("class","prompt_error");
 			return;
 		}
@@ -198,8 +197,8 @@ $(document).ready(function(){
 			return;
 		}
 		var tr = $("<tr>" +                                                   
-	           "<td align='center' width='40%'><input type='text' class='addInput' name='goodsColor.goodsColor' value='"+color+"' style='width:60%'></td>" +
-	           "<td align='center'><input type='text' class='addInput' name='goodsSizeS.goodsSize' value='"+size+"'></td>" +
+	           "<td align='center' width='40%'><input type='text' class='addInput' name='goodsColor.goodsColor' value='"+color+"' style='width:50%'></td>" +
+	           "<td align='center'><input type='text' class='addInput' name='goodsSizeS.goodsAttr' value='"+attr+"'></td>" +
 	           "<td align='center'><input type='text' class='addInput'  name='goodsSizeN.goodsNumber' value='"+number+"'></td>" +
 	           "<td align='center'><a href='javascript:void(0);' onclick='this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode)'>删除</a></td></tr>");
 	 	$("#goodsDetailTable").append(tr);

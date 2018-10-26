@@ -223,7 +223,6 @@ $.extend({
 		if(brand==null||brand==""){
 			$("#brand__prompt").html("«Î—°‘Ò∆∑≈∆...");
 			$("#brand__prompt").attr("class","prompt_error");
-			return false;
 		}
 		return true;
 	}

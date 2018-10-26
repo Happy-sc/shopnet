@@ -2,7 +2,7 @@
 <%@ taglib uri="/struts-tags" prefix="s"%>
 <html>
   <head>
-	<title>【<s:property value="#request.category.categoryName"/>品牌大全】-拍鞋网PaixieNet</title>
+	<title>【<s:property value="#request.category.categoryName"/>品牌大全】</title>
 	<link rel="stylesheet" href="${pageContext.request.contextPath }/css/proscenium/layout.css" type="text/css"></link>
  	<link rel="stylesheet" href="${pageContext.request.contextPath }/css/proscenium/showCategoryGoods.css" type="text/css"></link>
  	<script type="text/javascript" src="${pageContext.request.contextPath }/js/jQuery/jquery-1.7.2.js"></script>
@@ -20,9 +20,6 @@
     		</div>
     		<div class="left_recommendGoods">
 				<jsp:include page="/WEB-INF/page/proscenium/goods/recommendGoodsCategory.jsp" />
-    		</div>
-    		<div class="left_scanGoods">
-    			<jsp:include page="/WEB-INF/page/proscenium/goods/scanedGoods.jsp" />
     		</div>
     	</div>
     	<div id="categoryRight">

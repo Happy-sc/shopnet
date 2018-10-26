@@ -16,6 +16,7 @@ import org.compass.annotations.Store;
  */
 @Searchable         //定义为搜索实体
 public class GoodsListing implements java.io.Serializable {
+
 	private static final long serialVersionUID = 1L;
 	
 	private String goodsId;                 //商品编号
@@ -26,20 +27,12 @@ public class GoodsListing implements java.io.Serializable {
 	private String goodsName;               //商品名称
 	private String goodsImage;              //商品图片
 	private String goodsGrounding;          //商品上架时间
-	private String goodsXmcz;               //商品鞋面材质
-	private String goodsXdcz;               //商品鞋底材质
-	private String goodsBhfs;               //商品闭合方式
-	private String goodsToecap;             //商品鞋头
 	private int goodsIsRecommend;           //是否推荐  (1:推荐 0:不推荐)
 	private int goodsMarketNumber;          //商品销售量
 	private int goodsExitNumber;            //商品现存量
 	private String goodsMarket;             //商品上市时间
-	private String goodsShjj;               //商品适合季节
-	private float goodsHeight;              //商品高度 
-	private float goodsLength;              //商品长度
 	private float goodsWeight;              //商品重量
 	private float goodsMarketPrice;         //商品市场价
-	private float goodsPaiPrice;            //商品拍鞋价
 	private float goodsBid;                 //商品进价
 	private int goodsState;                 //商品状态  ：1：在售   0：已下架
 	private Set<Comment> comments = new HashSet<Comment>(0);                     //商品评价
@@ -59,13 +52,9 @@ public class GoodsListing implements java.io.Serializable {
 	}
 
 	public GoodsListing(String goodsId, Storage storage, Category category,Style style,
-			String goodsName, String goodsGrounding, String goodsXmcz,String goodsImage,
-			String goodsXdcz, String goodsBhfs, String goodsToecap,Brand brand,
-			int goodsMarketNumber,int goodsExitNumber,String goodsMarket,int goodsIsRecommend,
-			String goodsShjj, float goodsHeight,float goodsLength,Set<ShoppingCar> shoppingCars,
-			float goodsWeight, float goodsMarketPrice,float goodsPaiPrice,Integer goodsState,
-			float goodsBid, Set<Comment> comments, Set<Collect> collects,
-			Set<OrderDetail> orderDetails, Set<GoodsColor> goodsColors) {
+			String goodsName, String goodsGrounding,String goodsImage, Brand brand,int goodsMarketNumber,int goodsExitNumber,
+			String goodsMarket,int goodsIsRecommend, Set<ShoppingCar> shoppingCars,float goodsWeight, float goodsMarketPrice,Integer goodsState,
+			 float goodsBid, Set<Comment> comments, Set<Collect> collects, Set<OrderDetail> orderDetails, Set<GoodsColor> goodsColors) {
 		this.goodsId = goodsId;
 		this.storage = storage;
 		this.category = category;
@@ -73,21 +62,13 @@ public class GoodsListing implements java.io.Serializable {
 		this.brand = brand;
 		this.goodsName = goodsName;
 		this.goodsGrounding = goodsGrounding;
-		this.goodsXmcz = goodsXmcz;
 		this.goodsImage = goodsImage;
-		this.goodsXdcz = goodsXdcz;
-		this.goodsBhfs = goodsBhfs;
 		this.goodsIsRecommend = goodsIsRecommend;
-		this.goodsToecap = goodsToecap;
 		this.goodsMarketNumber = goodsMarketNumber;
 		this.goodsExitNumber = goodsExitNumber;
 		this.goodsMarket = goodsMarket;
-		this.goodsShjj = goodsShjj;
-		this.goodsHeight = goodsHeight;
-		this.goodsLength = goodsLength;
 		this.goodsWeight = goodsWeight;
 		this.goodsMarketPrice = goodsMarketPrice;
-		this.goodsPaiPrice = goodsPaiPrice;
 		this.goodsBid = goodsBid;
 		this.comments = comments;
 		this.collects = collects;
@@ -158,30 +139,6 @@ public class GoodsListing implements java.io.Serializable {
 		this.goodsGrounding = goodsGrounding;
 	}
 
-	public String getGoodsXmcz() {
-		return this.goodsXmcz;
-	}
-
-	public void setGoodsXmcz(String goodsXmcz) {
-		this.goodsXmcz = goodsXmcz;
-	}
-
-	public String getGoodsXdcz() {
-		return this.goodsXdcz;
-	}
-
-	public void setGoodsXdcz(String goodsXdcz) {
-		this.goodsXdcz = goodsXdcz;
-	}
-	
-	public String getGoodsBhfs() {
-		return this.goodsBhfs;
-	}
-
-	public void setGoodsBhfs(String goodsBhfs) {
-		this.goodsBhfs = goodsBhfs;
-	}
-
 	@SearchableProperty(index=Index.NO,store=Store.YES,name="goodsImage")  //不需要搜索、需要存储
 	public String getGoodsImage() {
 		return goodsImage;
@@ -197,14 +154,6 @@ public class GoodsListing implements java.io.Serializable {
 
 	public void setGoodsIsRecommend(int goodsIsRecommend) {
 		this.goodsIsRecommend = goodsIsRecommend;
-	}
-
-	public String getGoodsToecap() {
-		return this.goodsToecap;
-	}
-
-	public void setGoodsToecap(String goodsToecap) {
-		this.goodsToecap = goodsToecap;
 	}
 
 	public int getGoodsMarketNumber() {
@@ -231,30 +180,6 @@ public class GoodsListing implements java.io.Serializable {
 		this.goodsMarket = goodsMarket;
 	}
 
-	public String getGoodsShjj() {
-		return this.goodsShjj;
-	}
-
-	public void setGoodsShjj(String goodsShjj) {
-		this.goodsShjj = goodsShjj;
-	}
-
-	public float getGoodsHeight() {
-		return this.goodsHeight;
-	}
-
-	public void setGoodsHeight(float goodsHeight) {
-		this.goodsHeight = goodsHeight;
-	}
-
-	public float getGoodsLength() {
-		return this.goodsLength;
-	}
-
-	public void setGoodsLength(float goodsLength) {
-		this.goodsLength = goodsLength;
-	}
-
 	public float getGoodsWeight() {
 		return this.goodsWeight;
 	}
@@ -270,15 +195,6 @@ public class GoodsListing implements java.io.Serializable {
 
 	public void setGoodsMarketPrice(float goodsMarketPrice) {
 		this.goodsMarketPrice = goodsMarketPrice;
-	}
-
-	@SearchableProperty(index=Index.NO,store=Store.YES)   //不需要搜索、需要存储
-	public float getGoodsPaiPrice() {
-		return this.goodsPaiPrice;
-	}
-
-	public void setGoodsPaiPrice(float goodsPaiPrice) {
-		this.goodsPaiPrice = goodsPaiPrice;
 	}
 
 	public float getGoodsBid() {

@@ -51,7 +51,6 @@
 								<tr>
 									<td>
 										<span id="index_marketPrice"><del>¥${g.goodsMarketPrice }</del></span>
-										<span id="index_paixiePrice">¥${g.goodsPaiPrice }</span>
 									</td>
 								</tr>
 							</table>
@@ -86,7 +85,6 @@
 								<tr>
 									<td>
 										<span id="index_marketPrice"><del>¥${g.goodsMarketPrice }</del></span>
-										<span id="index_paixiePrice">¥${g.goodsPaiPrice }</span>
 									</td>
 								</tr>
 							</table>
@@ -121,7 +119,6 @@
 								<tr>
 									<td>
 										<span id="index_marketPrice"><del>¥${g.goodsMarketPrice }</del></span>
-										<span id="index_paixiePrice">¥${g.goodsPaiPrice }</span>
 									</td>
 								</tr>
 							</table>
@@ -156,7 +153,6 @@
 								<tr>
 									<td>
 										<span id="index_marketPrice"><del>¥${g.goodsMarketPrice }</del></span>
-										<span id="index_paixiePrice">¥${g.goodsPaiPrice }</span>
 									</td>
 								</tr>
 							</table>
@@ -191,7 +187,6 @@
 								<tr>
 									<td>
 										<span id="index_marketPrice"><del>¥${g.goodsMarketPrice }</del></span>
-										<span id="index_paixiePrice">¥${g.goodsPaiPrice }</span>
 									</td>
 								</tr>
 							</table>

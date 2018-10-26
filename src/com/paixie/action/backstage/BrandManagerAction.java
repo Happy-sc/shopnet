@@ -25,9 +25,12 @@ import com.paixie.service.StyleService;
 public class BrandManagerAction extends BaseAction{
 	private static final long serialVersionUID = 1L;
 	
-	@Resource(name="brandService")private BrandService brandService;
-	@Resource(name="styleService")private StyleService styleService;
-	@Resource(name="uploadAndDeleteImage")private UploadAndDeleteImage uploadAndDeleteImage;
+	@Resource(name="brandService")
+	private BrandService brandService;
+	@Resource(name="styleService")
+	private StyleService styleService;
+	@Resource(name="uploadAndDeleteImage")
+	private UploadAndDeleteImage uploadAndDeleteImage;
 	
 	private Brand brand;                       //品牌
 	private File brandImage;                   //上传文件域
@@ -88,7 +91,6 @@ public class BrandManagerAction extends BaseAction{
 		ActionContext.getContext().put("styles", styles);
 		ActionContext.getContext().put("styleCount", styleCount);
 		ActionContext.getContext().put("styleEnd", styleEnd);
-		
 		return "brandManagerUI";
 	}
 	
@@ -176,7 +178,6 @@ public class BrandManagerAction extends BaseAction{
 				response.sendRedirect("../goodsManager/brandManager_brandManagerUI.action?page="+page);
 			}
 		} catch (IOException e) {
-
 			e.printStackTrace();
 		}
 		

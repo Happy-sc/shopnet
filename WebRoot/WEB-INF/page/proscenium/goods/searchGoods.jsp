@@ -3,7 +3,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <title>拍鞋网--中国最大品牌鞋网上商城</title>
+    <title>商城</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath }/css/proscenium/layout.css" type="text/css"></link>
     <script type="text/javascript" src="${pageContext.request.contextPath }/js/jQuery/jquery-1.7.2.js"></script>
     <link rel="stylesheet" href="${pageContext.request.contextPath }/css/proscenium/showCategoryGoods.css" type="text/css"></link>
@@ -21,9 +21,6 @@
     		</div>
     		<div class="left_recommendGoods">
 				<jsp:include page="/WEB-INF/page/proscenium/goods/recommendGoodsCategory.jsp" />
-    		</div>
-    		<div class="left_scanGoods">
-    			<jsp:include page="/WEB-INF/page/proscenium/goods/scanedGoods.jsp" />
     		</div>
     	</div>
     	<div id="categoryRight">

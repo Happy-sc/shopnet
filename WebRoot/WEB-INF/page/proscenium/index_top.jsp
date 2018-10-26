@@ -11,8 +11,7 @@
     	<jsp:include page="/WEB-INF/page/proscenium/index_topT.jsp"></jsp:include>
     </div>
     <div id="top_cneter">
-    	<div id="top_center_img">
-    		<img src="${pageContext.request.contextPath }/images/proscenium/paixie.jpg"/>
+    	<div id="top_center_img" style="width: 213px;height: 71px;">
     	</div>
     	<div id="top_center_search">
     		<form action="${pageContext.request.contextPath }/search/searchGoods.action" method="POST">
@@ -20,7 +19,7 @@
     			<tr>
     				<td valign="top" id="searchTd">
     					<img  src="${pageContext.request.contextPath }/images/proscenium/search.jpg" id="searchIMG">
-    					<input type="text" class="searchContext" name="queryString" value="${queryString }">
+    					<input type="text" style="outline:none;" class="searchContext" name="queryString" value="${queryString }">
     				</td>
     				<td width="20%"><input type="image" src="${pageContext.request.contextPath }/images/proscenium/searchbutton.jpg"/></td>
     			</tr>
@@ -28,11 +27,11 @@
     				<td colspan="2">
     					<span id="search">
     						热门搜索:          
-    						<a href="">乔丹运动鞋</a>
-    						<a href="">休闲皮鞋</a>
-    						<a href="">女单</a>
-    						<a href="">跑步鞋</a>
-    						<a href="">361°运动鞋</a>
+    						<a href="">针织衫</a>
+    						<a href="">手机</a>
+    						<a href="">客厅灯</a>
+    						<a href="">牛奶</a>
+    						<a href="">运动鞋</a>
     					</span>
     				</td>
     			</tr>
@@ -42,24 +41,16 @@
     </div>
     <div id="top_bottom">
     	<span>
-    		<a href="${pageContext.request.contextPath}/goods/goods_goodsIndexUI.action" 
-    		   id="top_title" title="首页"><span id="top_title">首页</span></a>&nbsp;|&nbsp;
-    		<a href="${pageContext.request.contextPath}/goods/categoryCoods_showGoodsByCategory.action?categoryId=200001" 
-    		   id="top_title" title="运动鞋"><span id="top_title">运动鞋</span></a>&nbsp;|&nbsp;
-    		<a href="${pageContext.request.contextPath}/goods/categoryCoods_showGoodsByCategory.action?categoryId=200002" 
-    		   id="top_title" title="男鞋"><span id="top_title">男鞋</span></a>&nbsp;|&nbsp;
-    		<a href="${pageContext.request.contextPath}/goods/categoryCoods_showGoodsByCategory.action?categoryId=200003" 
-    		   id="top_title" title="女鞋"><span id="top_title">女鞋</span></a>&nbsp;|&nbsp;
-    		<a href="${pageContext.request.contextPath}/goods/categoryCoods_showGoodsByCategory.action?categoryId=200004" 
-    		   id="top_title" title="童鞋"><span id="top_title">童鞋</span></a>&nbsp;|&nbsp;
-    		<a href="${pageContext.request.contextPath}/goods/categoryCoods_showGoodsByCategory.action?categoryId=200005"
-    		   id="top_title" title="户外鞋"><span id="top_title">户外鞋</span></a>&nbsp;|
-    		<a href="${pageContext.request.contextPath}/goods/brand_getAllBrands.action" target="_blank"
-    		   id="top_title" title="品牌"><span id="top_title">品牌</span></a>
+    		<a href="${pageContext.request.contextPath}/goods/goods_goodsIndexUI.action" id="top_title" title="首页"><span id="top_title">首页</span></a>&nbsp;|&nbsp;
+			<c:forEach items="${categorys}" var="c">
+    		<a href="${pageContext.request.contextPath}/goods/categoryCoods_showGoodsByCategory.action?categoryId=${c.categoryId}" id="top_title" title="${c.categoryId}"><span id="top_title">${c.categoryName}</span></a>&nbsp;|&nbsp;
+			</c:forEach>
+    		<a href="${pageContext.request.contextPath}/goods/brand_getAllBrands.action" target="_blank" id="top_title" title="品牌"><span id="top_title">品牌</span></a>
+
     	</span>
     </div>
     <div id="top_hr">
-    	<img  src="${pageContext.request.contextPath }/images/proscenium/topHR.jpg">
+    	<img  src="${pageContext.request.contextPath }/images/proscenium/topHR.jpg" width="100%">
     </div>
   </body>
 </html>

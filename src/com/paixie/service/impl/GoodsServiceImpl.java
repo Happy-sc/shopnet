@@ -110,8 +110,6 @@ public class GoodsServiceImpl implements GoodsService {
 
 	/**
 	 * 获取某个分类的商品信息，并进行分页处理
-	 * @param category 商品分类编号
-	 * @param pageSize 每页显示商品的数量
 	 * @param page 页码
 	 * @return 指定商品分类的某页的pageSize个商品信息
 	 */
@@ -133,8 +131,7 @@ public class GoodsServiceImpl implements GoodsService {
 	 * @param price 价格
 	 * @return
 	 */
-	private String getHQL(String categoryId,String styleId, String brandId, String size, 
-			String sex,String price){
+	private String getHQL(String categoryId,String styleId, String brandId, String size, String sex,String price){
 		StringBuffer HQL = new StringBuffer("From GoodsListing as g where g.category.categoryId = "+categoryId);
 		if(styleId!=null){
 			HQL = HQL.append(" and g.style.styleId = "+styleId);
@@ -268,7 +265,7 @@ public class GoodsServiceImpl implements GoodsService {
 				List<GoodsSize> goodsSizes = goodsSizeDao.getGoodsSizeByColor(goodsColor.getGoodsColorId());
 				for(int j = 0;j < goodsSizes.size();j++){
 					GoodsSize goodsSize = goodsSizes.get(i);
-					if(goodsSize.getGoodsSize()==orderDetail.getGoodsSize()){
+					if(goodsSize.getGoodsAttr()==orderDetail.getGoodsAttr()){
 						int sizeNumber = goodsSize.getGoodsNumber()-orderDetail.getGoodsNumber();
 						goodsSize.setGoodsNumber(sizeNumber);
 						goodsSizeDao.update(goodsSize);

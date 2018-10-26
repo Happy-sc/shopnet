@@ -15,8 +15,8 @@
             <column name="goodsColor_id" length="100" />
         </many-to-one>
         
-        <property name="goodsSize" type="integer">
-            <column name="goods_size" />
+        <property name="goodsAttr" type="string">
+            <column name="goods_attr" length="200"/>
         </property>
         <property name="goodsNumber" type="integer">
             <column name="goods_number" />

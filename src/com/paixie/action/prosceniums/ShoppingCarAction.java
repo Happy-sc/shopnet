@@ -34,7 +34,7 @@ public class ShoppingCarAction extends BaseAction{
 		//获取提交信息
 		String goodsId = request.getParameter("goodsId");                 //商品编号
 		String goodsColor = request.getParameter("goodsColor");           //商品颜色
-		String goodsSize = request.getParameter("goodsSize");             //商品尺码
+		String goodsAttr = request.getParameter("goodsAttr");             //商品属性
 		String goodsNumber = request.getParameter("goodsNumber");         //商品数量
 		/*
 		 * 获取购物车
@@ -52,7 +52,7 @@ public class ShoppingCarAction extends BaseAction{
 		 * 如果购物车中包含该商品，则只需要叠加数量即可
 		 */
 		ShoppingCar shoppingCar = null;
-		String carId = goodsId+goodsColor+goodsSize;//购物车编号
+		String carId = goodsId+goodsColor+goodsAttr;//购物车编号
 		if(mapCar.containsKey(carId)){      //存在该商品，商品数量叠加
 			shoppingCar = mapCar.get(carId);  
 			shoppingCar.setGoodsNumber(shoppingCar.getGoodsNumber()+Integer.valueOf(goodsNumber));
@@ -62,7 +62,7 @@ public class ShoppingCarAction extends BaseAction{
 			shoppingCar.setCarId(ProduceId.getId());
 			shoppingCar.setGoodsColor(goodsColor);
 			shoppingCar.setGoodsNumber(Integer.valueOf(goodsNumber));
-			shoppingCar.setGoodsSize(Integer.valueOf(goodsSize));
+			shoppingCar.setGoodsAttr(goodsAttr);
 			//获取该商品
 			GoodsListing goods = goodsService.getGoodsById(goodsId);
 			shoppingCar.setGoodsListing(goods);
@@ -114,7 +114,7 @@ public class ShoppingCarAction extends BaseAction{
 		double sum = 0;
 		for(Entry<String, ShoppingCar> mycar:mapCar.entrySet()){
 			ShoppingCar car =mycar.getValue();
-			sum = sum+car.getGoodsListing().getGoodsPaiPrice()*car.getGoodsNumber();
+			sum = sum+car.getGoodsListing().getGoodsMarketPrice()*car.getGoodsNumber();
 		}
 		ActionContext.getContext().put("sum", sum);
 		ActionContext.getContext().put("car", mapCar);
@@ -155,7 +155,7 @@ public class ShoppingCarAction extends BaseAction{
 	/**
 	 * 在购物车中删除某商品
 	 * 先在数据库中删除，然后再map中删除
-	 * @param mapCar
+	 * @param
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
@@ -189,7 +189,7 @@ public class ShoppingCarAction extends BaseAction{
 		float sum = 0;               //购物车总价格
 		for(Entry<String, ShoppingCar> nc : mapCar.entrySet()){
 			ShoppingCar myCar = nc.getValue();
-			sum = sum+myCar.getGoodsNumber()*myCar.getGoodsListing().getGoodsPaiPrice();
+			sum = sum+myCar.getGoodsNumber()*myCar.getGoodsListing().getGoodsMarketPrice();
 		}
 		return sum;
 	}

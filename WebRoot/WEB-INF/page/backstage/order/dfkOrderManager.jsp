@@ -76,7 +76,7 @@
     							 </select>
     							 &nbsp;&nbsp;&nbsp;&nbsp;
     							<span class="fenye1">【</span><a href="${pageContext.request.contextPath }/systemManager/noticeManager_noticeManagerUI.action?page=1&type=${type}" 
-    						     	target="_self"">首     页</a><span class="fenye1">】</span>
+    						     	target="_self">首     页</a><span class="fenye1">】</span>
     							<span class="fenye1">【</span><a href="${pageContext.request.contextPath }/systemManager/noticeManager_noticeManagerUI.action?page=${page-1}&type=${type}" 
     						    	 target="_self">上一页</a><span class="fenye1">】</span>
     							<span class="fenye1">【</span><a href="${pageContext.request.contextPath }/systemManager/noticeManager_noticeManagerUI.action?page=${page+1}&type=${type}" 

@@ -23,8 +23,8 @@
         <property name="goodsColor" type="string">
             <column name="goods_color" />
         </property>
-        <property name="goodsSize" type="integer">
-            <column name="goods_size" />
+        <property name="goodsAttr" type="string" length="200">
+            <column name="goods_attr" />
         </property>
         <property name="orderDetailIsCom" type="integer">
             <column name="order_detail_isCom" />

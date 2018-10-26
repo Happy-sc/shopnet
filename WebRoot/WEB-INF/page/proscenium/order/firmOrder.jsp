@@ -3,7 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <html>
   <head>
-  	<title>拍鞋网购物车</title>
+  	<title>购物车</title>
   	<link rel="stylesheet" href="${pageContext.request.contextPath }/css/proscenium/orderLayout.css" type="text/css"></link>
   	<link rel="stylesheet" href="${pageContext.request.contextPath }/css/proscenium/firmOrder.css" type="text/css"></link>
  	<script type="text/javascript" src="${pageContext.request.contextPath }/js/jQuery/jquery-1.7.2.js"></script>
@@ -214,8 +214,8 @@
     						<div class="infors">
     							<ul>
     								<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;实付款：<font class="sfk">&yen;${sum+freight }</font></li>
-    								<li>可获得拍鞋币：<font class="khdpxb"><fmt:formatNumber type="number" value="${sum/100}" maxFractionDigits="0"/>个</font></li>
-    								<li>&nbsp;&nbsp;使用拍鞋币：<input type="text" class="sypxb"/><div class="jsypxb">可以使用个数:<font>${user.paixieB }</font>个</div></li>
+    								<li>可获得金币：<font class="khdpxb"><fmt:formatNumber type="number" value="${sum/100}" maxFractionDigits="0"/>个</font></li>
+    								<li>&nbsp;&nbsp;使用拍金币：<input type="text" class="sypxb"/><div class="jsypxb">可以使用个数:<font>${user.paixieB }</font>个</div></li>
     							</ul>
     						</div>
     						<div class="btn">

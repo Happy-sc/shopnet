@@ -26,7 +26,7 @@
 								<td><a href="">如何购物</a></td>
 							</tr>
 							<tr>
-								<td><a href="">拍鞋币说明</a></td>
+								<td><a href="">兑换币说明</a></td>
 							</tr>
 							<tr>
 								<td><a href="">优惠券说明</a></td>
@@ -93,13 +93,13 @@
 					<td>
 						<table id="bottom_table_description" cellpadding="3">
 							<tr>
-								<td><span id="bottom_text">客服服务热线</span></td>
+								<td><span id="bottom_text">客服热线</span></td>
 							</tr>
 							<tr>
-								<td><span style="font-size: 22px;font-weight: bold;color: #FF4F30;">4008 81 82 83</span></td>
+								<td><span style="font-size: 22px;font-weight: bold;color: #FF4F30;">4000-365-24-66</span></td>
 							</tr>
 							<tr>
-								<td><span style="font-size: 12px;color: #666666">(售后专线： 0731-123456)</span></td>
+								<td><span style="font-size: 12px;color: #666666">(售后专线： 001-123456)</span></td>
 							</tr>
 							<tr>
 								<td><span style="font-size: 12px;color: #666666">服务时间：周一至周日8：00-23：30</span></td>
@@ -114,19 +114,16 @@
 		<div id="bottom_bottom">
 			<div id="bottom_friendLink">
 				<span style="font-size: 14px;font-weight: bolder;color: #999999">友情链接:</span>         
-				<a href="http://www.cnxz.cn/" target="_blank">中国鞋网</a>
-				<a href="http://www.fzxm.com/" target="_blank">中国服装鞋帽网</a>
-				<a href="http://www.mnrc.com.cn/" target="_blank">闽南人才网</a>
-				<a href="http://hao.qq.com/" target="_blank">QQ导航 </a>
-				<a href="http://www.fandongxi.com/" target="_blank">翻东西</a>
+				<a href="https://www.taobao.com/" target="_blank">淘宝</a>
+				<a href="https://www.suning.com/" target="_blank">苏宁</a>
+				<a href="https://www.jd.com/" target="_blank">京东</a>
+				<a href="https://www.tmall.com/" target="_blank">天猫</a>
 				<a href="http://www.etao.com/" target="_blank">一淘</a>
-				<a href="http://www.wz51.com/" target="_blank">网址无忧</a>
-				<a href="http://www.57tuan.com/" target="_blank">团购网站大全</a>
-				<a href="http://www.kuaidi100.com/" target="_blank">快递100 给惠网</a>
+				<a href="https://www.gome.com.cn/" target="_blank">国美</a>
+				<a href="https://www.yhd.com/" target="_blank">一号店</a>
 				<a href="http://www.geihui.com/" target="_blank">拍拍网</a>
-				<a href="http://www.5pai.com/" target="_blank">亿商网</a>
-				<a href="http://china.eb80.com/" target="_blank">钻石</a>
-				<a href="">更多&gt;&gt;&gt;&gt;&gt; </a>
+				<a href="http://www.kuaidi100.com/" target="_blank">快递100</a>
+				<a href="">更多 &gt;&gt; </a>
 				<br/><Br/>
 			</div>
 			<div id="bottom_copyright">

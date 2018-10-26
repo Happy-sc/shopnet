@@ -57,11 +57,6 @@
 										市场价：<span class="scj">&yen;<del>${g.goodsMarketPrice }</del></span>
 									</td>
 								</tr>
-								<tr>
-								
-									<td>拍鞋价：<span class="pxj">&yen;${g.goodsPaiPrice }</span>
-									(<ftm:formatNumber type="number" value="${g.goodsPaiPrice/g.goodsMarketPrice*10}" maxFractionDigits="0"/>折)</td>
-								</tr>
 							</table></td>
 						</c:forEach>
 						</c:when>
@@ -89,11 +84,6 @@
 										市场价：<span class="scj">&yen;<del>${g.goodsMarketPrice }</del></span>
 									</td>
 								</tr>
-								<tr>
-								
-									<td>拍鞋价：&yen;<span class="pxj">${g.goodsPaiPrice }</span>
-									(<ftm:formatNumber type="number" value="${g.goodsPaiPrice/g.goodsMarketPrice*10}" maxFractionDigits="0"/>折)</td>
-								</tr>
 							</table></td>
 						</c:forEach></c:otherwise></c:choose>
 					</tr>
@@ -105,7 +95,7 @@
 						<c:when test="${pageSum<=10}">
 							<a href="${pageContext.request.contextPath}/goods/categoryCoods_showGoodsByCategory.action?categoryId=200001&page=${page-1}">
 								<span>
-									<img src="${pageContext.request.contextPath}/images/proscenium/lastPage.jpg"/ onmouseover="overPage()" id="22222">上一页
+									<img src="${pageContext.request.contextPath}/images/proscenium/lastPage.jpg" onmouseover="overPage()" id="22222">上一页
 								</span>
 							</a>
 							<c:forEach begin="1" end="${pageSum}" var="i">

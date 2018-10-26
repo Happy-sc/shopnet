@@ -12,7 +12,7 @@ public class OrderDetail implements java.io.Serializable {
 	private GoodsListing goodsListing;        //商品
 	private Integer goodsNumber;              //商品数量
 	private String goodsColor;                //商品颜色
-	private Integer goodsSize;                //商品尺码
+	private String goodsAttr;                //商品属性
 	private Integer orderDetailIsCom;         //是否已经评价了商品 :0表示否，1表示是
 	private Integer isAccept;                 //是否已经收到货物
 	private String acceptTime;                //收货时间
@@ -25,13 +25,13 @@ public class OrderDetail implements java.io.Serializable {
 
 	public OrderDetail(String orderDetailId, Order order,
 			GoodsListing goodsListing, Integer goodsNumber,
-			String goodsColor ,Integer goodsSize,String acceptTime,
+			String goodsColor ,String goodsAttr,String acceptTime,
 			Integer orderDetailIsCom,Integer isAccept) {
 		this.orderDetailId = orderDetailId;
 		this.order = order;
 		this.goodsListing = goodsListing;
 		this.goodsNumber = goodsNumber;
-		this.goodsSize = goodsSize;
+		this.goodsAttr = goodsAttr;
 		this.goodsColor = goodsColor;
 		this.orderDetailIsCom = orderDetailIsCom;
 		this.isAccept = isAccept;
@@ -93,12 +93,12 @@ public class OrderDetail implements java.io.Serializable {
 		this.goodsColor = goodsColor;
 	}
 
-	public Integer getGoodsSize() {
-		return goodsSize;
+	public String getGoodsAttr() {
+		return goodsAttr;
 	}
 
-	public void setGoodsSize(Integer goodsSize) {
-		this.goodsSize = goodsSize;
+	public void setGoodsAttr(String goodsAttr) {
+		this.goodsAttr = goodsAttr;
 	}
 
 	public String getAcceptTime() {

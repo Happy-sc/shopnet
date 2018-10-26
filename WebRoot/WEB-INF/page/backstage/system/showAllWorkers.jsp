@@ -7,7 +7,7 @@
   	<script type="text/javascript" src="${pageContext.request.contextPath }/js/backstage/workerManager.js"></script>
   	<script type="text/javascript" src="${pageContext.request.contextPath }/js/jQuery/jquery-1.7.2.js"></script>
   
-  	<title>拍鞋购物网站后台管理系统---显示全部员工信息</title>
+  	<title>显示全部员工信息</title>
  </head>
   
   <body>

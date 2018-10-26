@@ -91,7 +91,7 @@ public class OrderAction extends BaseAction{
 		//计算购物车的总金额
 		float sum = 0;
 		for(Entry<String, ShoppingCar> mycar:mapCar.entrySet()){
-			sum = sum + mycar.getValue().getGoodsNumber()*mycar.getValue().getGoodsListing().getGoodsPaiPrice();
+			sum = sum + mycar.getValue().getGoodsNumber()*mycar.getValue().getGoodsListing().getGoodsMarketPrice();
 		}
 		
 		//设置运费

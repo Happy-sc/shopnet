@@ -19,12 +19,17 @@ import com.paixie.service.StyleService;
 
 @Controller("categoryAction")
 public class CategoryAction extends BaseAction{
+
 	private static final long serialVersionUID = 1L;
 	
-	@Resource(name="goodsService")private GoodsService goodsService;
-	@Resource(name="styleService")private StyleService styleService;
-	@Resource(name="brandService")private BrandService brandService;
-	@Resource(name="categoryService")private CategoryService categoryService;
+	@Resource(name="goodsService")
+	private GoodsService goodsService;
+	@Resource(name="styleService")
+	private StyleService styleService;
+	@Resource(name="brandService")
+	private BrandService brandService;
+	@Resource(name="categoryService")
+	private CategoryService categoryService;
 	
 	/**
 	 * 根据分类获取商品信息
@@ -32,6 +37,7 @@ public class CategoryAction extends BaseAction{
 	 * @return
 	 */
 	public String showGoodsByCategory(){
+		List<Category> categories = categoryService.getAllCategory();
 		//获取查询条件
 		String categoryId = request.getParameter("categoryId");
 		String styleId = request.getParameter("style");
@@ -60,14 +66,9 @@ public class CategoryAction extends BaseAction{
 		else {
 			rows = goods.size()%4==0?goods.size()/4:goods.size()/4+1;
 		}
-		
+
 		//获取所有分类的款式
-		List<Style> sneakersStyles = styleService.getStyleByCategoryId("200001");               //运动鞋
-		List<Style> womenShoesStyles = styleService.getStyleByCategoryId("200003");             //女鞋
-		List<Style> menShoesStyles = styleService.getStyleByCategoryId("200002");               //男鞋
-		List<Style> childrenShoeStyles = styleService.getStyleByCategoryId("200004");           //儿童鞋
-		List<Style> outdoorShoeStyles = styleService.getStyleByCategoryId("200005");            //户外鞋
-		
+		ActionContext.getContext().put("categorys", categories);
 		ActionContext.getContext().put("category", category);
 		ActionContext.getContext().put("recommandGoods", recommandGoods);
 		ActionContext.getContext().put("goods", goods);
@@ -78,11 +79,7 @@ public class CategoryAction extends BaseAction{
 		ActionContext.getContext().put("brandNumber", brands.size()%6==0?brands.size()/6:brands.size()/6+1);
 		ActionContext.getContext().put("page", page);
 		ActionContext.getContext().put("pageSum", pageSum);
-		ActionContext.getContext().put("sneakersStyles", sneakersStyles);
-		ActionContext.getContext().put("womenShoesStyles", womenShoesStyles);
-		ActionContext.getContext().put("menShoesStyles", menShoesStyles);
-		ActionContext.getContext().put("childrenShoeStyles", childrenShoeStyles);
-		ActionContext.getContext().put("outdoorShoeStyles", outdoorShoeStyles);
+
 		return "showCategoryGoods";
 	}
 }

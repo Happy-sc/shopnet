@@ -12,7 +12,9 @@ import com.paixie.service.GoodsSizeService;
 
 @Service("goodsSizeService")
 public class GoodsSizeServiceImpl implements GoodsSizeService {
-	@Resource(name="goodsSizeDao")private GoodsSizeDao goodsSizeDao;
+
+	@Resource(name="goodsSizeDao")
+	private GoodsSizeDao goodsSizeDao;
 	/**
 	 * 保存商品尺码实例
 	 * @param goodsSize 商品尺码实例
@@ -23,11 +25,7 @@ public class GoodsSizeServiceImpl implements GoodsSizeService {
 	
 	@Override
 	public List<GoodsSize> getGoodsSize(String goodsColorId) {
-		List<GoodsSize> goodsSizes = goodsSizeDao.getGoodsSizeByColor(goodsColorId);
-		
-		return goodsSizes;
+		return goodsSizeDao.getGoodsSizeByColor(goodsColorId);
 	}
-	
-
 
 }

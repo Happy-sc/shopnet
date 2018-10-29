@@ -19,9 +19,8 @@ public class Style implements java.io.Serializable {
 	private String styleId;                //款式编号
 	private String styleName;              //款式名称
 	private Category category;             //分类
-	private Set<Brand> brands = new HashSet<Brand>(0);                 //品牌
+	private Brand brand;
 	private Set<GoodsListing> goods = new HashSet<GoodsListing>();     //商品
-	private String brand;                  //品牌字符串,便于显示(不需要映射在数据表中)
 
 	public Style() {
 	}
@@ -30,11 +29,11 @@ public class Style implements java.io.Serializable {
 		this.styleId = styleId;
 	}
 
-	public Style(String styleId, String styleName, Set<GoodsListing> goodsListings, Set<Brand> brands,Category category) {
+	public Style(String styleId, String styleName, Set<GoodsListing> goodsListings,Category category,Brand brand) {
 		this.styleId = styleId;
 		this.styleName = styleName;
 		this.category = category;
-		this.brands = brands;
+		this.brand = brand;
 	}
 
 	@SearchableProperty(index = Index.NO,store = Store.YES)  //不需要搜索、需要存储
@@ -63,19 +62,11 @@ public class Style implements java.io.Serializable {
 		this.category = category;
 	}
 
-	public Set<Brand> getBrands() {
-		return this.brands;
-	}
-
-	public void setBrands(Set<Brand> brands) {
-		this.brands = brands;
-	}
-
-	public String getBrand() {
+	public Brand getBrand() {
 		return brand;
 	}
 
-	public void setBrand(String brand) {
+	public void setBrand(Brand brand) {
 		this.brand = brand;
 	}
 	

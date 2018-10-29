@@ -10,13 +10,13 @@
 
 #categoryLeft{
 	position:relative;
-	width: 16.3%;
+	width: 11.3%;
 	float: left;
 	
 }
 
 #categoryRight{
-	width: 82%;
+	width: 88%;
 	float: right;
 }
 

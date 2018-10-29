@@ -21,11 +21,11 @@
             <column name="brand_spell" length="20" />
         </property>
         
-        <set name="styles" table="style_brand" lazy="true">
+        <set name="styles" inverse="true" cascade="all">
         	<key>
                 <column name="brand_id" length="50" />
             </key>
-        	<many-to-many class="com.paixie.domain.Style" column="style_id" />
+        	<one-to-many class="com.paixie.domain.Style" />
         </set>
         <set name="goods" >
         	<key>

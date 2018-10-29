@@ -53,25 +53,14 @@ public class StyleServiceImpl implements StyleService {
 	 * 增加款式
 	 * @param style   款式
 	 * @param categoryId  款式分类编号
-	 * @param brandName   款式品牌
+	 * @param brandId   款式品牌标号
 	 */
-	public void saveOrUpdateStyle(Style style, String categoryId, String brands) {
+	public void saveOrUpdateStyle(Style style, String categoryId, String brandId) {
 		//获取分类
 		Category category = categoryService.getCategoryById(categoryId);
 		style.setCategory(category);
-		
-		//获取品牌
-		if(brands!=null&&brands.trim()!=null&&!"".equals(brands.trim())){
-			Set<Brand> brandlist = new HashSet<Brand>();
-			String[] brand = brands.split(",");
-			for(int i = 0;i < brand.length;i++){
-				Brand brand2 = brandService.getBrandByName(brand[i]);
-				brandlist.add(brand2);
-			}
-		style.setBrands(brandlist);
-		}
-		
-		
+		Brand brand = brandService.getBrandByName(brandId);
+		style.setBrand(brand);
 		styleDao.saveOrUpdateStyle(style);
 	}
 
@@ -83,20 +72,6 @@ public class StyleServiceImpl implements StyleService {
 	public List<Style> getStyleByPage(int page,int pageSize) {
 		//获取指定页面的款式
 		List<Style> styles = styleDao.getAllStyle(page, pageSize);
-		//处理款式的品牌，以便于在页面显示:将品牌构建：11,22,33,44
-		for(int i = 0;i < styles.size();i++){
-			StringBuffer brandbBuffer = new StringBuffer();
-			//获取款式的品牌
-			Set<Brand> brands = styles.get(i).getBrands();
-			if(brands.size()>0){     //如果有则构建
-				Iterator<Brand> iterable = brands.iterator();
-				while (iterable.hasNext()) {
-					brandbBuffer.append(iterable.next().getBrandName()+",");
-				}
-				styles.get(i).setBrand(brandbBuffer.substring(0, brandbBuffer.length()-1));
-			}
-		}
-			
 		return styles;
 	}
 

@@ -48,18 +48,18 @@
     		<div id="main_content_main">
     			<table id="style" cellpadding="0" cellspacing="0">
     				<tr>
-    					<td align="center" width="13%"><span>款式编号</span></td>
-    					<td align="center" width="13%"><span>款式名称</span></td>
-    					<td align="center" width="13%"><span>所属分类</span></td>
-    					<td align="center" width="50%"><span>所有品牌</span></td>
-    					<td align="center" width="10%"><span>操作</span></td>
+    					<td align="center" width="15%"><span>款式编号</span></td>
+    					<td align="center" width="30%"><span>款式名称</span></td>
+    					<td align="center" width="20%"><span>所属分类</span></td>
+    					<td align="center" width="20%"><span>所属品牌</span></td>
+    					<td align="center" width="15%"><span>操作</span></td>
     				</tr>
     				<c:forEach items="${styles}" var="s">
     					<tr onmousemove="this.bgColor='#EEF2FB'" onmouseout="this.bgColor=''">
     						<td align="center">${s.styleId}&nbsp;</td>
     						<td align="center">${s.styleName}&nbsp;</td>
     						<td align="center">${s.category.categoryName}&nbsp;</td>
-    						<td align="left">${s.brand}&nbsp;</td>
+    						<td align="center">${s.brand.brandName}&nbsp;</td>
     						<td align="center">
     							<a href="javascript:void(0);" class="bjStyle">编辑</a>&nbsp;|
     							<a href="javascript:void(0);" class="scStyle">删除</a>

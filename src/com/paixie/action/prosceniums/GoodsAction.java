@@ -14,22 +14,29 @@ import com.paixie.action.common.BaseAction;
 
 @Controller("goodsAction")
 public class GoodsAction extends BaseAction{
+
 	private static final long serialVersionUID = 1L;
 
-	@Resource(name="categoryService")private CategoryService categoryService;
-	@Resource(name="brandService") private BrandService brandService;
-	@Resource(name="goodsService") private GoodsService goodsService;
-	@Resource(name="styleService") private StyleService styleService;
-	@Resource(name="commentService") private CommentService commentService;
-	@Resource(name="goodsColorService")private GoodsColorService goodsColorService;
-	@Resource(name="goodsSizeService")private GoodsSizeService goodsSizeService;
+	@Resource(name="categoryService")
+	private CategoryService categoryService;
+	@Resource(name="brandService")
+	private BrandService brandService;
+	@Resource(name="goodsService")
+	private GoodsService goodsService;
+	@Resource(name="styleService")
+	private StyleService styleService;
+	@Resource(name="commentService")
+	private CommentService commentService;
+	@Resource(name="goodsColorService")
+	private GoodsColorService goodsColorService;
+	@Resource(name="goodsSizeService")
+	private GoodsSizeService goodsSizeService;
 	
 	private String goodsId;           //商品编号
 
 	public String getGoodsId() {
 		return goodsId;
 	}
-
 	public void setGoodsId(String goodsId) {
 		this.goodsId = goodsId;
 	}
@@ -129,10 +136,14 @@ public class GoodsAction extends BaseAction{
 		GoodsColor goodsColor = goodsColorService.getGoodsColorByColor(goods,color);
 		
 		//获取该种商品颜色的尺码
-		List<GoodsSize> goodsSizes = goodsSizeService.getGoodsSize(goodsColor.getGoodsColorId());
+		if(goodsColor != null ){
+			List<GoodsSize> goodsSizes = goodsSizeService.getGoodsSize(goodsColor.getGoodsColorId());
+			ActionContext.getContext().put("goodsSizes", goodsSizes);        //当前颜色的尺码
+		}
 		
 		//获取前5款推荐商品
 		List<GoodsListing> pxwgntj = goodsService.getGoodsByRecommend(5);
+
 		//同分类前5款热销商品
 		List<GoodsListing> tkrxsp = goodsService.getMostSaleByStyle(goods.getStyle().getStyleId());
 		
@@ -163,7 +174,6 @@ public class GoodsAction extends BaseAction{
 		String sumA = getCommentAvg(sum_1, sum_2, sum_3, sum_4, sum_5,"#");
 		
 		ActionContext.getContext().put("goodsColor", goodsColor);        //商品颜色
-		ActionContext.getContext().put("goodsSizes", goodsSizes);        //当前颜色的尺码
 		ActionContext.getContext().put("goodsColors", goodsColors);      //该商品的所有颜色
 		ActionContext.getContext().put("goods", goods);                  //商品基本信息
 		

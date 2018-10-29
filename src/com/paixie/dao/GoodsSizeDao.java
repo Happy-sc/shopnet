@@ -22,10 +22,9 @@ public interface GoodsSizeDao {
 	/**
 	 * 根据商品颜色、尺码获取尺码实例
 	 * @param goodsColorId 商品颜色编号
-	 * @param goodsSize 尺码
 	 * @return
 	 */
-	GoodsSize getGoodsSizeByColorAndSize(String goodsColorId, Integer goodsSize);
+	GoodsSize getGoodsSizeByColorAndSize(String goodsColorId);
 
 	/**
 	 * 修改尺码实例

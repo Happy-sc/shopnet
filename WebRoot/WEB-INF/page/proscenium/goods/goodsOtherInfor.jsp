@@ -33,7 +33,7 @@
     				</tr>
     				<tr>
     					<td align="right" id="goodsInfor_name">闭合方式：</td>
-    					<td>${goods.goodsBhfs }</td>
+    					<td></td>
     					<td align="right" id="goodsInfor_name">上架时间：</td>
     					<td>${goods.goodsGrounding }</td>
     					<td align="right" id="goodsInfor_name">上市年份：</td>
@@ -41,11 +41,11 @@
     				</tr>
     				<tr>
     					<td align="right" id="goodsInfor_name">鞋面材质：</td>
-    					<td>${goods.goodsXmcz }</td>
+    					<td></td>
     					<td align="right" id="goodsInfor_name">鞋底材质：</td>
-    					<td>${goods.goodsXdcz }</td>
+    					<td></td>
     					<td align="right" id="goodsInfor_name">适合季节：</td>
-    					<td>${goods.goodsShjj }</td>
+    					<td></td>
     				</tr>
     				<tr>
     					<td align="right">商品颜色：</td>
@@ -62,11 +62,11 @@
     				</tr>
     				<tr>
     					<td align="right" id="goodsInfor_name">底高(cm)：</td>
-    					<td>${goods.goodsHeight }</td>
+    					<td></td>
     					<td align="right" id="goodsInfor_name">鞋长(cm)：</td>
-    					<td>${goods.goodsLength }</td>
+    					<td></td>
     					<td align="right" id="goodsInfor_name">重量(g/只)：</td>
-    					<td>${goods.goodsWeight }</td>
+    					<td></td>
     				</tr>
     			</table>
     		</div>

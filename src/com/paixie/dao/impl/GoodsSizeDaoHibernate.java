@@ -26,24 +26,20 @@ public class GoodsSizeDaoHibernate extends BaseHibernateDaoSupport implements Go
 	 */
 	@SuppressWarnings("unchecked")
 	public List<GoodsSize> getGoodsSizeByColor(String goodsColorId) {
-		String hql = "from GoodsSize as gs where gs.goodsColor.goodsColorId=? order by gs.goodsSize asc";
-		List<GoodsSize> goodsSizes = getHibernateTemplate().find(hql,goodsColorId);
-		
-		return goodsSizes;
+		String hql = "from GoodsSize as gs where gs.goodsColor.goodsColorId=?";
+		return getHibernateTemplate().find(hql,goodsColorId);
 	}
 
 	/**
 	 * 根据商品颜色、尺码获取尺码实例
 	 * @param goodsColorId 商品颜色编号
-	 * @param goodsSize 尺码
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
-	public GoodsSize getGoodsSizeByColorAndSize(String goodsColorId,
-			Integer goodsSize) {
-		String hql = "from GoodsSize as gs where gs.goodsColor.goodsColorId=? and gs.goodsSize=?";
-		List<GoodsSize> goodsSizes = getHibernateTemplate().find(hql,goodsColorId,goodsSize);
-		if(goodsSize!=null&&goodsSizes.size()>0){
+	public GoodsSize getGoodsSizeByColorAndSize(String goodsColorId ) {
+		String hql = "from GoodsSize as gs where gs.goodsColor.goodsColorId=?";
+		List<GoodsSize> goodsSizes = getHibernateTemplate().find(hql,goodsColorId);
+		if(goodsSizes.size()>0){
 			return goodsSizes.get(0);
 		}
 		return null;

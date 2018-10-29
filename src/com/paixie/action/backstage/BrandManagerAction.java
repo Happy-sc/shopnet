@@ -136,10 +136,8 @@ public class BrandManagerAction extends BaseAction{
 	 */
 	public void saveOrUpdateBrand(){
 		//获取参数
-		
 		String type = request.getParameter("type");     //类别：增加或者修改
 		String page = request.getParameter("page");     //指定页面
-		String style = request.getParameter("style");   //包含款式
 
 		String savePath = GetSavePath.getSavePath("brand");
 		//根据编号获取该品牌实例
@@ -157,7 +155,6 @@ public class BrandManagerAction extends BaseAction{
 				
 				uploadAndDeleteImage.delete(savePath+"\\"+brandImageName);
 			}
-			
 			//保存用户上传的图片
 			//处理图片路径
 			String brandImage = DealString.subAndReplaceString(savePath+"\\"+getBrandImageFileName());
@@ -167,7 +164,7 @@ public class BrandManagerAction extends BaseAction{
 			brand.setBrandImage(brand1.getBrandImage());
 		}
 		//保存或者修改品牌
-		brandService.saveOrUpdateBrand(getBrand(),style);
+		brandService.saveOrUpdateBrand(getBrand());
 		
 		//重定向
 		try {

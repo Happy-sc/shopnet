@@ -43,8 +43,8 @@
           <li><a href="${pageContext.request.contextPath }/goodsManager/goodsManager_addGoodsUI.action" target="main">增加商品</a></li>
           <li><a href="" target="main">商品管理</a></li>
           <li><a href="${pageContext.request.contextPath }/goodsManager/categoryManager_categoryManagerUI.action" target="main">分类管理</a></li>
-          <li><a href="${pageContext.request.contextPath }/goodsManager/styleManager_styleManagerUI.action" target="main">款式管理</a></li>
           <li><a href="${pageContext.request.contextPath }/goodsManager/brandManager_brandManagerUI.action" target="main">品牌管理</a></li>
+          <li><a href="${pageContext.request.contextPath }/goodsManager/styleManager_styleManagerUI.action" target="main">款式管理</a></li>
         </ul>
       </div>
       </div>

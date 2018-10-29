@@ -155,7 +155,7 @@
     						</li>
     						<li style="width: 60%">
     							${p.goodsName }<Br/>
-    							<font>拍鞋价:${p.goodsPaiPrice }</font>
+    							<font>价格:${p.goodsMarketPrice }</font>
     						</li>
     					</ul>
     				</c:forEach>
@@ -175,7 +175,7 @@
     						</li>
     						<li style="width: 60%">
     							${t.goodsName }<Br/>
-    							<font>拍鞋价:￥${t.goodsPaiPrice }</font>
+    							<font>价格:￥${t.goodsMarketPrice }</font>
     						</li>
     					</ul>
     				</c:forEach>

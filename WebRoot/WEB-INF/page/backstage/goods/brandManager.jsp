@@ -57,7 +57,7 @@
     						<td align="center">${b.brandId}&nbsp;</td>
     						<td align="center">${b.brandName}&nbsp;</td>
     						<td align="center">${b.brandSpell}&nbsp;</td>
-    						<td align="left">${b.styleString}&nbsp;</td>
+    						<td align="center">${b.styleString}&nbsp;</td>
     						<td align="center">
     							<img src="${b.brandImage}" class="brandImage"/>
     						</td>
@@ -121,44 +121,13 @@
     			</tr>
     			<tr>
     				<td align="right">品牌图片：</td>
-    				<td><img src="" id="image"></td>
+    				<td><img src="" id="image" width="50%"></td>
     				<td></td>
     			</tr>
     			<tr>
     				<td></td>
     				<td><input type="file" id="brandImage" name="brandImage"/></td>
     				<td><div id="brandImage_prompt"></div></td>
-    			</tr>
-    			<tr>
-    				<td align="right">所有款式：</td>
-    				<td><input type="text" id="style" name="style" readonly="readonly" name="brandStyle"/></td>
-    				<td><div id="style_prompt"></div></td>
-    			</tr>
-    			<tr>
-    				<td colspan="3">
-						<table id="styleTable" border="0">
-    						<c:forEach begin="1" end="${styleCount}" var="i">
-    							<c:choose>
-    								<c:when test="${i==styleCount}">
-    									<tr>
-    										<c:forEach begin="1" end="${styleEnd}" var="j">
-    											<c:set var="s" value="${styles[(j-1)+(i-1)*7]}"></c:set>
-    											<td width="14%"><input type="checkbox" class="allStyle" value="${s.styleName }">${s.styleName }</td>
-    										</c:forEach>
-    									</tr>
-    								</c:when>
-    								<c:otherwise>
-    									<tr>
-    										<c:forEach begin="1" end="7" var="j">
-    											<c:set var="s" value="${styles[(j-1)+(i-1)*7]}"></c:set>
-    											<td><input  type="checkbox" class="allStyle" value="${s.styleName }">${s.styleName }</td>
-    										</c:forEach>
-    									</tr>
-    								</c:otherwise>
-    							</c:choose>
-    						</c:forEach>
-    					</table>
-					</td>
     			</tr>
     		</table>
     	</form>

@@ -112,20 +112,8 @@ public class BrandServiceImpl implements BrandService {
 	/**
 	 * 保存或者修改品牌
 	 * @param brand  品牌
-	 * @param style 款式
 	 */
-	public void saveOrUpdateBrand(Brand brand, String style) {
-		//处理款式
-		String[] styles = style.split(",");
-		Set<Style> styleSet = new HashSet<Style>();
-		for(int i = 0;i < styles.length;i++){
-			//根据款式获取款式实例
-			Style style2 = styleDao.getStyleByName(styles[i]);
-			styleSet.add(style2);
-		}
-		brand.setStyles(styleSet);
-		
-		//保存款式
+	public void saveOrUpdateBrand(Brand brand) {
 		brandDao.saveOrUpdateBrand(brand);
 	}
 

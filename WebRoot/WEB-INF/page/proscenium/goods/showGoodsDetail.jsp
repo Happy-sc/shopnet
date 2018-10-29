@@ -48,16 +48,12 @@
     			<div id="goods_infor_base">
     				<table id="goodsBase_table" cellpadding="4">
     					<tr>
-    						<td width="50px" align="right"><span id="goodsDetailText">市&nbsp;场&nbsp;价：</span></td>
-    						<td align="left"><span id="goodsDetailSCJ"><del>&yen;${goods.goodsMarketPrice }</del></span></td>
-    					</tr>
-    					<tr>
-    						<td><span id="goodsDetailText">拍&nbsp;鞋&nbsp;价：</span></td>
-    						<td><span id="goodsDetailPXJ">&yen;${goods.goodsPaiPrice }元</span></td>
+    						<td width="50px" align="right"><span id="goodsDetailText">价&nbsp;格：</span></td>
+    						<td align="left"><span id="goodsDetailSCJ">&yen;${goods.goodsMarketPrice }</span></td>
     					</tr>
     					<tr>
     						<td><span id="goodsDetailText">赠&nbsp;&nbsp;&nbsp;&nbsp;送：</span></td>
-    						<td><span id="goodsDetailText">单件送<span style="font-size:14px;color:red;"><fmt:formatNumber type="number" value="${goods.goodsPaiPrice/100}" maxFractionDigits="0"/></span>个拍拍币</span></td>
+    						<td><span id="goodsDetailText">单件送<span style="font-size:14px;color:red;"><fmt:formatNumber type="number" value="${goods.goodsMarketPrice/100}" maxFractionDigits="0"/></span>个金币</span></td>
     					</tr>
     					<tr>
     						<td><span id="goodsDetailText">评&nbsp;&nbsp;&nbsp;&nbsp;论：</span></td>
@@ -105,10 +101,10 @@
     						</td>
     					</tr>
     					<tr id="qxzcm">
-    						<td width="65px" align="right"><span id="goodsDetailText">尺码选择：</span></td>
+    						<td width="65px" align="right"><span id="goodsDetailText">其它选择：</span></td>
     						<td>
     							<c:forEach items="${goodsSizes}" var="gs">
-    								<a href="javascript:void(0);"><span class="size">${gs.goodsSize}</span></a>
+    								<a href="javascript:void(0);"><span class="size">${gs.goodsAttr}</span></a>
     							</c:forEach>
     						</td>
     					</tr>
@@ -124,7 +120,7 @@
     						<td></td>
     						<td>
     							<a href="javascript:void(0);">
-    								<img src="${pageContext.request.contextPath}/images/proscenium/goumai_01.jpg"/ class="goumai">
+    								<img src="${pageContext.request.contextPath}/images/proscenium/goumai_01.jpg"　class="goumai">
     							</a>
     							&nbsp;&nbsp;&nbsp;
     							<a href="javascript:void(0);">
@@ -254,7 +250,7 @@
     		</tr>
     		<tr>
     			<td></td>
-    			<td>还没有拍鞋网账号?<a href="${pageContext.request.contextPath}/users/usersRegist_userRegistUI.action" target="_blank" class="ljzc">立即注册</a></td>
+    			<td>还没有账号?<a href="${pageContext.request.contextPath}/users/usersRegist_userRegistUI.action" target="_blank" class="ljzc">立即注册</a></td>
     		</tr>
     	</table>
     </div>

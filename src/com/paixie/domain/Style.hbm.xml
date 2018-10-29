@@ -18,13 +18,10 @@
         <many-to-one name="category" class="com.paixie.domain.Category" lazy="false" fetch="join">
             <column name="category_id" length="100" />
         </many-to-one>
-        
-        <set name="brands" table="style_brand" inverse="false" cascade="save-update">
-            <key>
-                <column name="style_id" length="100" />
-            </key>
-            <many-to-many class="com.paixie.domain.Brand" column="brand_id" />
-        </set>
+
+        <many-to-one name="brand" class="com.paixie.domain.Brand" lazy="false" fetch="join">
+            <column name="brand_id" length="100" />
+        </many-to-one>
         
         <set name="goods" fetch="select" cascade="save-update">
         	<key>

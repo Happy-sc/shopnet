@@ -54,7 +54,7 @@
 								</tr>
 								<tr>
 									<td>
-										市场价：<span class="scj">&yen;<del>${g.goodsMarketPrice }</del></span>
+										价格：<span class="scj">&yen;${g.goodsMarketPrice }</span>
 									</td>
 								</tr>
 							</table></td>
@@ -81,7 +81,7 @@
 								</tr>
 								<tr>
 									<td>
-										市场价：<span class="scj">&yen;<del>${g.goodsMarketPrice }</del></span>
+										价格：<span class="scj">&yen;<${g.goodsMarketPrice }</span>
 									</td>
 								</tr>
 							</table></td>

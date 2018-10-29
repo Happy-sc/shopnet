@@ -25,8 +25,7 @@
     	<div id="categoryRight">
     		<div class="right_location">
     			<a href="${pageContext.request.contextPath}/goods/goods_goodsIndexUI.action" class="position">首页</a>&nbsp;&gt;&nbsp;
-    			<a href="${pageContext.request.contextPath}/goods/categoryCoods_showGoodsByCategory.action?categoryId=${category.categoryId }"
-    			   class="nowPosition">${category.categoryName }</a>
+    			<a href="${pageContext.request.contextPath}/goods/categoryCoods_showGoodsByCategory.action?categoryId=${category.categoryId }" class="nowPosition">${category.categoryName }</a>
     		</div>
     		<div class="right_brand">
     			<jsp:include page="/WEB-INF/page/proscenium/goods/categoryBrandSize.jsp" />
@@ -34,7 +33,6 @@
     		<div class="right_goods">
     			<jsp:include page="/WEB-INF/page/proscenium/goods/categoryGoods.jsp" />
     		</div>
-    	
     	</div>
     </div>
     <div id="bottom">

@@ -55,7 +55,7 @@
     					<tr onmousemove="this.bgColor='#EEF2FB'" onmouseout="this.bgColor=''">
     						<td align="center">${c.categoryId}&nbsp;</td>
     						<td align="center">${c.categoryName}&nbsp;</td>
-    						<td align="left">${c.styleString}&nbsp;</td>
+    						<td align="center">${c.styleString}&nbsp;</td>
     						<td align="center">  
     							<a href="javascript:void(0);" class="bjcategory">编辑</a>&nbsp;|
     							<a href="javascript:void(0);" class="sccategory">删除</a>

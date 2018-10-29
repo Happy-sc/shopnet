@@ -60,10 +60,9 @@ public interface BrandService {
 	/**
 	 * 保存或者修改品牌
 	 * @param brand  品牌
-	 * @param style 款式
 	 * 款式需要做一些处理
 	 */
-	void saveOrUpdateBrand(Brand brand, String style);
+	void saveOrUpdateBrand(Brand brand);
 
 	/**
 	 * 根据编号删除品牌实例

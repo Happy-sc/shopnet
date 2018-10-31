@@ -48,8 +48,8 @@
     			<div id="goods_infor_base">
     				<table id="goodsBase_table" cellpadding="4">
     					<tr>
-    						<td width="50px" align="right"><span id="goodsDetailText">价&nbsp;格：</span></td>
-    						<td align="left"><span id="goodsDetailSCJ">&yen;${goods.goodsMarketPrice }</span></td>
+    						<td width="50px" style="text-align: right"><span id="goodsDetailText">价&nbsp;格：</span></td>
+    						<td><span id="goodsDetailSCJ">&yen;${goods.goodsMarketPrice }</span></td>
     					</tr>
     					<tr>
     						<td><span id="goodsDetailText">赠&nbsp;&nbsp;&nbsp;&nbsp;送：</span></td>
@@ -66,7 +66,6 @@
     							</c:forEach>
     							<span style="font-size: 12px;color: #666666">共有(<span style="font-size:14px;color:red;">${sum}</span>)人参与评论</span>
     						</td>
-    						
     					</tr>
     					<tr>
     						<td><span id="goodsDetailText">运&nbsp;&nbsp;&nbsp;&nbsp;费：</span></td>
@@ -187,7 +186,7 @@
     		<tr>
     			<td colspan="2">
     				<a href="javascript:void(0);">
-    					<img src="${pageContext.request.contextPath}/images/proscenium/x_1.jpg"/ class="x">
+    					<img src="${pageContext.request.contextPath}/images/proscenium/x_1.jpg" class="x">
     				</a>
     			</td>
     		</tr>

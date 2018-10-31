@@ -143,17 +143,17 @@
     	<div class="comment_right">
     		<div class="pxwgntj">
     			<div class="title">
-    				拍鞋网给你推荐
+    				给你推荐
     			</div>
     			<div class="content">
     				<c:forEach items="${pxwgntj}" var="p">
     					<ul>
-    						<li style="width: 40%">
+    						<li>
     							<a href="${pageContext.request.contextPath}/goods/goods_showGoods?goodsId=${p.goodsId}" target="_blank">
-    								<img src="${p.goodsImage }" width="80px" height="50px"/>
+    								<img src="${p.goodsImage }" width="60px" height="60px"/>
     							</a>
     						</li>
-    						<li style="width: 60%">
+    						<li>
     							${p.goodsName }<Br/>
     							<font>价格:${p.goodsMarketPrice }</font>
     						</li>
@@ -168,12 +168,12 @@
     			<div class="content">
     				<c:forEach items="${tlrxsp}" var="t">
     					<ul>
-    						<li style="width: 40%">
+    						<li>
     							<a href="${pageContext.request.contextPath}/goods/goods_showGoods?goodsId=${t.goodsId}" target="_blank">
-    								<img src="${t.goodsImage }" width="80px" height="50px"/>
+    								<img src="${t.goodsImage }" width="60px" height="60px"/>
     							</a>
     						</li>
-    						<li style="width: 60%">
+    						<li>
     							${t.goodsName }<Br/>
     							<font>价格:￥${t.goodsMarketPrice }</font>
     						</li>

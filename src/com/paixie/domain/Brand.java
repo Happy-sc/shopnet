@@ -13,6 +13,7 @@ import org.compass.annotations.Store;
  */
 @Searchable(root=false)  //定义该类为搜索、不是根、只是作为goods的一部分
 public class Brand implements java.io.Serializable {
+
 	private static final long serialVersionUID = 1L;
 
 	private String brandId;               //品牌编号

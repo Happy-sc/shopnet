@@ -122,7 +122,7 @@ window.onload = function() {
 	}
 	;
 
-	var objs = $("idNum").getElementsByTagName("li");
+	var objs = document.getElementById("idSlider").getElementsByTagName("li")
 
 	var tv = new TransformView("idTransformView", "idSlider", 300, 5, {
 		onStart : function() {

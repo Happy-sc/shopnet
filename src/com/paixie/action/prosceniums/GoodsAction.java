@@ -1,7 +1,9 @@
 package com.paixie.action.prosceniums;
 
 import java.text.DecimalFormat;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 
@@ -46,8 +48,8 @@ public class GoodsAction extends BaseAction{
 	 * @return
 	 */
 	public String goodsIndexUI(){
-		//获取前29个品牌品牌
-		List<Brand> brands = brandService.getBrand(29);
+		//获取前23个品牌品牌
+		List<Brand> brands = brandService.getBrand(23);
 		//获取所有的分类
 		List<Category> categories = categoryService.getAllCategory();
 
@@ -61,29 +63,14 @@ public class GoodsAction extends BaseAction{
 		List<GoodsListing> lackGoods = goodsService.getgoodsByGoodsExitNumber();
 		//获取推荐商品
 		List<GoodsListing> recommendGoods = goodsService.getGoodsByRecommend(10);
-		
-		
-		//获取前面10个运动鞋,根据时间排序
-		List<GoodsListing> sneakers = goodsService.getGoodsByCategoryOrder("200001",10);        //运动鞋
-		List<GoodsListing> womenShoes = goodsService.getGoodsByCategoryOrder("200003", 10);     //女鞋
-		List<GoodsListing> menShoes = goodsService.getGoodsByCategoryOrder("200002", 10);       //男鞋
-		List<GoodsListing> childrenShoes = goodsService.getGoodsByCategoryOrder("200004", 10);  //童鞋
-		List<GoodsListing> outdoorShoes = goodsService.getGoodsByCategoryOrder("200005", 10);   //户外鞋
-		
-		//获取分类的相关款式
-		List<Style> sneakersStyles = styleService.getStyleByCategoryId("200001");               
-		List<Style> womenShoesStyles = styleService.getStyleByCategoryId("200003");             
-		List<Style> menShoesStyles = styleService.getStyleByCategoryId("200002");               
-		List<Style> childrenShoeStyles = styleService.getStyleByCategoryId("200004");
-		List<Style> outdoorShoeStyles = styleService.getStyleByCategoryId("200005");
-		
-		//获取该分类的品牌
-		List<Brand> sneakerBrands = brandService.getBrandByCategory("200001");
-		List<Brand> womenBrands = brandService.getBrandByCategory("200003");
-		List<Brand> menBrands = brandService.getBrandByCategory("200002");
-		List<Brand> childrenBrands = brandService.getBrandByCategory("200004");
-		List<Brand> outdoorBrands = brandService.getBrandByCategory("200005");
-		
+
+		for (Category category : categories){
+			List<GoodsListing> goodsListings = goodsService.getGoodsByCategoryOrder(category.getCategoryId(),10);
+			List<Brand> brands1 = brandService.getBrandByCategory(category.getCategoryId());
+			ActionContext.getContext().put("goodsListings"+category.getCategoryId(), goodsListings);
+			category.setHotSellBrand(brands1);
+		}
+
 		//保存数据
 		ActionContext.getContext().put("specialOfferGoods", specialOfferGoods);
 		ActionContext.getContext().put("recommendGoods", recommendGoods);
@@ -91,32 +78,11 @@ public class GoodsAction extends BaseAction{
 		ActionContext.getContext().put("newestGoods", newestGoods);
 		ActionContext.getContext().put("lackGoods", lackGoods);
 		ActionContext.getContext().put("categorys", categories);
-
 		ActionContext.getContext().put("brands", brands);
-		
-		ActionContext.getContext().put("sneakers", sneakers);
-		ActionContext.getContext().put("menShoes", menShoes);
-		ActionContext.getContext().put("childrenShoes", childrenShoes);
-		ActionContext.getContext().put("womenShoes", womenShoes);
-		ActionContext.getContext().put("outdoorShoes", outdoorShoes);
-		
-		ActionContext.getContext().put("sneakersStyles", sneakersStyles);
-		ActionContext.getContext().put("womenShoesStyles", womenShoesStyles);
-		ActionContext.getContext().put("menShoesStyles", menShoesStyles);
-		ActionContext.getContext().put("childrenShoeStyles", childrenShoeStyles);
-		ActionContext.getContext().put("outdoorShoeStyles", outdoorShoeStyles);
-		
-		ActionContext.getContext().put("senakersSum",sneakersStyles.size()%2==0?sneakersStyles.size()/2:sneakersStyles.size()/2+1);
-		ActionContext.getContext().put("womenSum",womenShoesStyles.size()%2==0?womenShoesStyles.size()/2:womenShoesStyles.size()/2+1);
-		ActionContext.getContext().put("menSum",menShoesStyles.size()%2==0?menShoesStyles.size()/2:menShoesStyles.size()/2+1);
-		ActionContext.getContext().put("chilidrenSum",childrenShoeStyles.size()%2==0?childrenShoeStyles.size()/2:childrenShoeStyles.size()/2+1);
-		ActionContext.getContext().put("outdoorSum",outdoorShoeStyles.size()%2==0?outdoorShoeStyles.size()/2:outdoorShoeStyles.size()/2+1);
-		
-		ActionContext.getContext().put("sneakerBrands", sneakerBrands);
-		ActionContext.getContext().put("womenBrands", womenBrands);
-		ActionContext.getContext().put("menBrands", menBrands);
-		ActionContext.getContext().put("childrenBrands", childrenBrands);
-		ActionContext.getContext().put("outdoorBrands", outdoorBrands);
+		int tr = brands != null ? brands.size():0;
+		ActionContext.getContext().put("brandsTr",tr/8+1);
+		ActionContext.getContext().put("brandsTd",tr%8);
+
 		return "goodsIndexUI";
 	}
 	
@@ -124,6 +90,7 @@ public class GoodsAction extends BaseAction{
 	 * 查看商品详细信息
 	 */
 	public String showGoods(){
+		List<Category> categorys = categoryService.getAllCategory();
 		//获取商品颜色
 		String color  = request.getParameter("color");
 		//根据商品编号获取商品基本信息
@@ -138,7 +105,7 @@ public class GoodsAction extends BaseAction{
 		//获取该种商品颜色的尺码
 		if(goodsColor != null ){
 			List<GoodsSize> goodsSizes = goodsSizeService.getGoodsSize(goodsColor.getGoodsColorId());
-			ActionContext.getContext().put("goodsSizes", goodsSizes);        //当前颜色的尺码
+			ActionContext.getContext().put("goodsSizes", goodsSizes);
 		}
 		
 		//获取前5款推荐商品
@@ -178,6 +145,7 @@ public class GoodsAction extends BaseAction{
 		ActionContext.getContext().put("goods", goods);                  //商品基本信息
 		
 		ActionContext.getContext().put("pxwgntj", pxwgntj);
+		ActionContext.getContext().put("categorys", categorys);
 		ActionContext.getContext().put("tlrxsp", tkrxsp);
 		ActionContext.getContext().put("comments", comments);
 		ActionContext.getContext().put("commentSum", commentSum);

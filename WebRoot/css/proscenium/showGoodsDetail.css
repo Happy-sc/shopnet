@@ -52,7 +52,6 @@
 }
 
 #goodsBase_table,#goodsDetail_talbe,#goumai_talbe{
-	width: 80%;
 	margin: 0px 4%;
 	border-collapse: collapse;
 }
@@ -149,13 +148,13 @@ li {
 }
 
 #goods_infor_left{
-	width: 30%;
+	width: 19%;
 	float: left;
 	height: 280px;
 }
 
 #goods_infor_right{
-	width: 69%;
+	width: 80%;
 	float: right;
 	background-color: #F8F8F8;
 }
@@ -216,7 +215,6 @@ table[id="goods_infor_table"] td{
 
 #qualityGuarantee,#sellerService{
 	width: 80%;
-	margin: 10px 10%;	
 }
 
 #sellerSerivce_tips{
@@ -226,8 +224,7 @@ table[id="goods_infor_table"] td{
 }
 
 #payExplanationg_table{
-	width: 80%;	
-	margin: 10px 3%;
+	width: 80%;
 }
 
 #payExplanationg_table td{

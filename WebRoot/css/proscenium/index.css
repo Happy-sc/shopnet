@@ -8,7 +8,6 @@
 	width: 19%;
 	border: 1px solid #E2E2E2;
 	float: left;
-	height: 300px;
 }
 
 #index_category_right{
@@ -19,8 +18,8 @@
 }
 
 #index_brand{
-	width: 80%;
-	margin: 10px 10%;
+	width: 63.7%;
+	margin: 10px 0 0 18px;
 	height: 164px;
 	border: 1px solid #E2E2E2;
 	float: left;
@@ -161,7 +160,11 @@ li {
 
 #recommendGoods_table{
 	width: 100%;
-	margin: 0px;
+	margin-top: 5px;
+}
+
+#recommendGoods_table table{
+	margin: 0 auto;
 }
 
 

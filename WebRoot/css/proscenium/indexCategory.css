@@ -8,6 +8,10 @@
 	height: 17%;
 	margin: 0px 0px;
 }
+.indexCategory_sneaker{
+	position: relative;
+	height: auto;
+}
 
 .indexCategory_title{
 	background-color: #F2F2F2;
@@ -35,6 +39,9 @@ li[class^="indexCategory"] table{
 .sneaker_title,.woman_title,.man_title,.children_title{
 	border-bottom:1px dashed #CCCCCC;
 }
+.sneaker_title td{
+	height: 50px;
+}
 .categoryA{
 	font-size: 14px;
 	color:#666666;
@@ -49,17 +56,16 @@ li[class^="indexCategory"] table{
                 
 .sneakerDetail,.womanDetail,.manDetail,.childrenDetail,.outdoorDetail{
 	display: none;
-	width: 400px;
-	height: 330px;
+	width: 200px;
 	border: 1px solid #CCCCCC;
 	background-color:#F7F7F7;
 	position: absolute;
 	z-index: 1;
-	left:345.5px;
+	left:288px;
 }
 
 .sneakerDetail,.womanDetail,.manDetail{
-	top: 167px;
+	top: -1px;
 }
 
 .childrenDetail,.outdoorDetail{
@@ -68,7 +74,7 @@ li[class^="indexCategory"] table{
 
 .detailLeft{
 	float:left;
-	width: 49%;
+	width: 100%;
 }
 
 .detailRight{

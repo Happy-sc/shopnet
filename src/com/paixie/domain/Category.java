@@ -1,6 +1,8 @@
 package com.paixie.domain;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import org.compass.annotations.Index;
@@ -13,6 +15,7 @@ import org.compass.annotations.Store;
  */
 @Searchable(root=false)   //定义该类为搜索实体、不是根、只是作为goods的一部分
 public class Category implements java.io.Serializable {
+
 	private static final long serialVersionUID = 1L;
 
 	private String categoryId; 							// 分类编号
@@ -20,9 +23,10 @@ public class Category implements java.io.Serializable {
 	private Set<GoodsListing> goodsListings = new HashSet<GoodsListing>();    // 商品
 	private Set<Style> styles = new HashSet<Style>(); 				// 款式
 	private String styleString;                         //款式
-	
-	public Category() {
 
+	private List<Brand> hotSellBrand = new ArrayList<>();    // 品牌,不保存数据库
+
+	public Category() {
 	}
 
 	public Category(String categoryId, String categoryName, Set<GoodsListing> goodsListings, Set<Style> styles) {
@@ -73,5 +77,12 @@ public class Category implements java.io.Serializable {
 	public void setStyleString(String styleString) {
 		this.styleString = styleString;
 	}
-	
+
+	public List<Brand> getHotSellBrand() {
+		return hotSellBrand;
+	}
+
+	public void setHotSellBrand(List<Brand> hotSellBrand) {
+		this.hotSellBrand = hotSellBrand;
+	}
 }

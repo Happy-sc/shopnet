@@ -20,7 +20,7 @@
 					新货入驻
 				</li>
 				<li id="one5" onmouseover="setTab('one',5,5)">
-					断码清仓
+					清仓处理
 				</li>
 			</ul>
 		</div>
@@ -36,21 +36,17 @@
 							<table border="0">
 								<tr>
 									<td>
-										<a href="${pageContext.request.contextPath}/goods/goods_showGoods?goodsId=${g.goodsId}" target="_blank">
-											<img  src="${g.goodsImage}" id="goodsImg">
-										</a>
+										<a href="${pageContext.request.contextPath}/goods/goods_showGoods?goodsId=${g.goodsId}" target="_blank"><img  src="${g.goodsImage}" id="goodsImg"></a>
 									</td>
 								</tr>
 								<tr>
 									<td>
-										<a href="${pageContext.request.contextPath}/goods/goods_showGoods?goodsId=${g.goodsId}" target="_blank">
-											${g.goodsName}
-										</a>
+										<a href="${pageContext.request.contextPath}/goods/goods_showGoods?goodsId=${g.goodsId}" target="_blank">${g.goodsName}</a>
 									</td>
 								</tr>
 								<tr>
 									<td>
-										<span id="index_marketPrice"><del>¥${g.goodsMarketPrice }</del></span>
+										<span id="index_marketPrice">¥${g.goodsMarketPrice }</span>
 									</td>
 								</tr>
 							</table>
@@ -70,21 +66,17 @@
 							<table border="0">
 								<tr>
 									<td>
-										<a href="${pageContext.request.contextPath}/goods/goods_showGoods?goodsId=${g.goodsId}" target="_blank">
-											<img  src="${g.goodsImage}" id="goodsImg">
-										</a>
+										<a href="${pageContext.request.contextPath}/goods/goods_showGoods?goodsId=${g.goodsId}" target="_blank"><img  src="${g.goodsImage}" id="goodsImg"></a>
 									</td>
 								</tr>
 								<tr>
 									<td>
-										<a href="${pageContext.request.contextPath}/goods/goods_showGoods?goodsId=${g.goodsId}" target="_blank">
-											${g.goodsName}
-										</a>
+										<a href="${pageContext.request.contextPath}/goods/goods_showGoods?goodsId=${g.goodsId}" target="_blank">${g.goodsName}</a>
 									</td>
 								</tr>
 								<tr>
 									<td>
-										<span id="index_marketPrice"><del>¥${g.goodsMarketPrice }</del></span>
+										<span id="index_marketPrice">¥${g.goodsMarketPrice }</span>
 									</td>
 								</tr>
 							</table>
@@ -104,21 +96,17 @@
 							<table border="0">
 								<tr>
 									<td>
-										<a href="${pageContext.request.contextPath}/goods/goods_showGoods?goodsId=${g.goodsId}" target="_blank">
-											<img  src="${g.goodsImage}" id="goodsImg">
-										</a>
+										<a href="${pageContext.request.contextPath}/goods/goods_showGoods?goodsId=${g.goodsId}" target="_blank"><img  src="${g.goodsImage}" id="goodsImg"></a>
 									</td>
 								</tr>
 								<tr>
 									<td>
-										<a href="${pageContext.request.contextPath}/goods/goods_showGoods?goodsId=${g.goodsId}" target="_blank">
-											${g.goodsName}
-										</a>
+										<a href="${pageContext.request.contextPath}/goods/goods_showGoods?goodsId=${g.goodsId}" target="_blank">${g.goodsName}</a>
 									</td>
 								</tr>
 								<tr>
 									<td>
-										<span id="index_marketPrice"><del>¥${g.goodsMarketPrice }</del></span>
+										<span id="index_marketPrice">¥${g.goodsMarketPrice }</span>
 									</td>
 								</tr>
 							</table>
@@ -138,21 +126,17 @@
 							<table border="0">
 								<tr>
 									<td>
-										<a href="${pageContext.request.contextPath}/goods/goods_showGoods?goodsId=${g.goodsId}" target="_blank">
-											<img  src="${g.goodsImage}" id="goodsImg">
-										</a>
+										<a href="${pageContext.request.contextPath}/goods/goods_showGoods?goodsId=${g.goodsId}" target="_blank"><img  src="${g.goodsImage}" id="goodsImg"></a>
 									</td>
 								</tr>
 								<tr>
 									<td>
-										<a href="${pageContext.request.contextPath}/goods/goods_showGoods?goodsId=${g.goodsId}" target="_blank">
-											${g.goodsName}
-										</a>
+										<a href="${pageContext.request.contextPath}/goods/goods_showGoods?goodsId=${g.goodsId}" target="_blank">${g.goodsName}</a>
 									</td>
 								</tr>
 								<tr>
 									<td>
-										<span id="index_marketPrice"><del>¥${g.goodsMarketPrice }</del></span>
+										<span id="index_marketPrice">¥${g.goodsMarketPrice }</span>
 									</td>
 								</tr>
 							</table>
@@ -172,21 +156,17 @@
 							<table border="0">
 								<tr>
 									<td>
-										<a href="${pageContext.request.contextPath}/goods/goods_showGoods?goodsId=${g.goodsId}" target="_blank">
-											<img  src="${g.goodsImage}" id="goodsImg">
-										</a>
+										<a href="${pageContext.request.contextPath}/goods/goods_showGoods?goodsId=${g.goodsId}" target="_blank"><img  src="${g.goodsImage}" id="goodsImg"></a>
 									</td>
 								</tr>
 								<tr>
 									<td>
-										<a href="${pageContext.request.contextPath}/goods/goods_showGoods?goodsId=${g.goodsId}" target="_blank">
-											${g.goodsName}
-										</a>
+										<a href="${pageContext.request.contextPath}/goods/goods_showGoods?goodsId=${g.goodsId}" target="_blank">${g.goodsName}</a>
 									</td>
 								</tr>
 								<tr>
 									<td>
-										<span id="index_marketPrice"><del>¥${g.goodsMarketPrice }</del></span>
+										<span id="index_marketPrice">¥${g.goodsMarketPrice }</span>
 									</td>
 								</tr>
 							</table>

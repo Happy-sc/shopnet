@@ -6,7 +6,7 @@
 	<package name="email" namespace="/email" extends="struts-default">
 		<!-- 定义拦截器实现权限控制 -->
 		<interceptors>
-			<interceptor name="userAuthory" class="com.paixie.interceptor.UserAuthorityInterceptor" />
+			<interceptor name="userAuthory" class="com.shop.interceptor.UserAuthorityInterceptor" />
 		</interceptors>
 		
 		<action name="sendEmail_*" class="emailAction" method="{1}">

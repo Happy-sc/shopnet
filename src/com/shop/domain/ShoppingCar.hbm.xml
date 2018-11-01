@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.shop.domain.ShoppingCar" table="px_shoppingcar">
+    	<cache usage="read-write"/>
+        <id name="carId" type="string">
+            <column name="car_id" length="100" />
+            <generator class="assigned" />
+        </id>
+        <property name="goodsNumber" type="int">
+            <column name="goods_number"/>
+        </property>
+        <property name="goodsColor" type="string">
+            <column name="goods_color"/>
+        </property>
+        <property name="goodsAttr" type="string" length="200">
+            <column name="goods_attr"/>
+        </property>
+		<many-to-one name="users" class="com.shop.domain.Users" fetch="join" lazy="false">
+            <column name="user_id" length="100" />
+        </many-to-one>
+        <many-to-one name="goodsListing" class="com.shop.domain.GoodsListing" lazy="false" fetch="join">
+            <column name="goods_id" length="100" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

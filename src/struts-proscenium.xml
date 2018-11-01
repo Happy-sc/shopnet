@@ -70,7 +70,7 @@
 	<package name="userCenter" namespace="/userCenter" extends="struts-default">
 		<!-- 使用拦截器栈进行权限控制 -->
 		<interceptors>
-			<interceptor name="userAuthory" class="com.paixie.interceptor.UserAuthorityInterceptor" />
+			<interceptor name="userAuthory" class="com.shop.interceptor.UserAuthorityInterceptor" />
 			<interceptor-stack name="userAuthoryStack">
 				<interceptor-ref name="userAuthory" />
 				<interceptor-ref name="defaultStack" />
@@ -160,7 +160,7 @@
 	<package name="order" namespace="/order" extends="struts-default">
 		<!-- 配置权限拦截器 -->
 		<interceptors>
-			<interceptor name="userAuthory" class="com.paixie.interceptor.UserAuthorityInterceptor" />
+			<interceptor name="userAuthory" class="com.shop.interceptor.UserAuthorityInterceptor" />
 			<interceptor-stack name="userAuthoryStack">
 				<interceptor-ref name="userAuthory" />
 				<interceptor-ref name="defaultStack" />

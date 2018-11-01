@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.shop.domain.Position" table="px_position">
+    	<cache usage="read-write"/>
+        <id name="positionId" type="string">
+            <column name="position_id" length="100" />
+            <generator class="assigned" />
+        </id>
+        <property name="positionName" type="string">
+            <column name="position_name" length="20" />
+        </property>
+        <set name="workers" inverse="true" cascade="save-update">
+            <key>
+                <column name="position_id" length="100" />
+            </key>
+            <one-to-many class="com.shop.domain.Worker" />
+        </set>
+    </class>
+</hibernate-mapping>

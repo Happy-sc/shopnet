@@ -1,10 +1,10 @@
-ÔËĞĞµÄURL
-Ç°Ì¨£ºhttp://localhost:8080/goods/goods_goodsIndexUI.action
-ºóÌ¨£ºhttp://localhost:8080/manager/manager_enterLoginUI.action
-×¢£ºÃ»ÓĞ¿¼ÂÇµ½ä¯ÀÀÆ÷¼æÈİÎÊÌâ£¬ËùÒÔ×îºÃÊÇÔÚfirefoxÏÂÃæÔËĞĞ¡£
+è¿è¡Œçš„URL
+å‰å°ï¼šhttp://localhost:8080/goods/goods_goodsIndexUI.action
+åå°ï¼šhttp://localhost:8080/manager/manager_enterLoginUI.action
+æ³¨ï¼šæ²¡æœ‰è€ƒè™‘åˆ°æµè§ˆå™¨å…¼å®¹é—®é¢˜ï¼Œæ‰€ä»¥æœ€å¥½æ˜¯åœ¨firefoxä¸‹é¢è¿è¡Œã€‚
 
-notice£º
-1¡¢ĞŞ¸Äcom.paixie.common.SendEmail.java ÎÄ¼ş¡£ÀïÃæÓÖÌáÊ¾
-2¡¢½«¸½¼şËØ²ÄÉÏ´«µ½tomcatÏÂµÄ¸ÃÂ·¾¶ÏÂ£ºÉÌÆ·£ºimages\goods\goods  Æ·ÅÆ£ºimages\goods\brands
-3¡¢ºóÌ¨µÇÂ½Îª£ºuserName£º09408400118 password£º09408400118
-   Ç°Ì¨²âÊÔ£ºuserName£ºchenssy  password:chenSSy
+noticeï¼š
+1ã€ä¿®æ”¹com.paixie.common.SendEmail.java æ–‡ä»¶ã€‚é‡Œé¢åˆæç¤º
+2ã€å°†é™„ä»¶ç´ æä¸Šä¼ åˆ°tomcatä¸‹çš„è¯¥è·¯å¾„ä¸‹ï¼šå•†å“ï¼šimages\goods\goods  å“ç‰Œï¼šimages\goods\brands
+3ã€åå°ç™»é™†ä¸ºï¼šuserNameï¼š09408400118 passwordï¼š09408400118
+   å‰å°æµ‹è¯•ï¼šuserNameï¼šchenssy  password:chenSSy

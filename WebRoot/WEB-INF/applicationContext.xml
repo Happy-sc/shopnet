@@ -15,12 +15,12 @@
 	default-autowire="byName">
 	
 	<!-- 使用自动扫描组件 -->
-	<context:component-scan base-package="com.paixie" />
+	<context:component-scan base-package="com.shop" />
 	
 	<!-- 定义数据源bean，使用c3p0数据源实现 -->
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
 		<property name="driverClass" value="com.mysql.jdbc.Driver" />
-		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/paixienet?autoReconnect\=true&amp;useUnicode\=true&amp;characterEncoding\=UTF-8" />
+		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/shopnet?autoReconnect\=true&amp;useUnicode\=true&amp;characterEncoding\=UTF-8" />
 		<property name="user" value="root" />
 		<property name="password" value="root" />
 		<property name="maxPoolSize" value="200" />
@@ -37,27 +37,27 @@
 		<property name="mappingResources">
 			<list>
 				<!-- 以下用来列出Hibernate映射文件 -->
-				<value>com/paixie/domain/Address.hbm.xml</value>
-				<value>com/paixie/domain/Brand.hbm.xml</value>
-				<value>com/paixie/domain/Category.hbm.xml</value>
-				<value>com/paixie/domain/Collect.hbm.xml</value>
-				<value>com/paixie/domain/Comment.hbm.xml</value>
-				<value>com/paixie/domain/DiscountCoupon.hbm.xml</value>
-				<value>com/paixie/domain/GoodsColor.hbm.xml</value>
-				<value>com/paixie/domain/GoodsSize.hbm.xml</value>
-				<value>com/paixie/domain/GoodsListing.hbm.xml</value>
-				<value>com/paixie/domain/Notice.hbm.xml</value>
-				<value>com/paixie/domain/Order.hbm.xml</value>
-				<value>com/paixie/domain/OrderDetail.hbm.xml</value>
-				<value>com/paixie/domain/OrderState.hbm.xml</value>
-				<value>com/paixie/domain/Position.hbm.xml</value>
-				<value>com/paixie/domain/Storage.hbm.xml</value>
-				<value>com/paixie/domain/Style.hbm.xml</value>
-				<value>com/paixie/domain/Users.hbm.xml</value>
-				<value>com/paixie/domain/Worker.hbm.xml</value>
-				<value>com/paixie/domain/SecretSecurity.hbm.xml</value>
-				<value>com/paixie/domain/ShoppingCar.hbm.xml</value>
-				<value>com/paixie/domain/PaixieBRecord.hbm.xml</value>
+				<value>com/shop/domain/Address.hbm.xml</value>
+				<value>com/shop/domain/Brand.hbm.xml</value>
+				<value>com/shop/domain/Category.hbm.xml</value>
+				<value>com/shop/domain/Collect.hbm.xml</value>
+				<value>com/shop/domain/Comment.hbm.xml</value>
+				<value>com/shop/domain/DiscountCoupon.hbm.xml</value>
+				<value>com/shop/domain/GoodsColor.hbm.xml</value>
+				<value>com/shop/domain/GoodsSize.hbm.xml</value>
+				<value>com/shop/domain/GoodsListing.hbm.xml</value>
+				<value>com/shop/domain/Notice.hbm.xml</value>
+				<value>com/shop/domain/Order.hbm.xml</value>
+				<value>com/shop/domain/OrderDetail.hbm.xml</value>
+				<value>com/shop/domain/OrderState.hbm.xml</value>
+				<value>com/shop/domain/Position.hbm.xml</value>
+				<value>com/shop/domain/Storage.hbm.xml</value>
+				<value>com/shop/domain/Style.hbm.xml</value>
+				<value>com/shop/domain/Users.hbm.xml</value>
+				<value>com/shop/domain/Worker.hbm.xml</value>
+				<value>com/shop/domain/SecretSecurity.hbm.xml</value>
+				<value>com/shop/domain/ShoppingCar.hbm.xml</value>
+				<value>com/shop/domain/PaixieBRecord.hbm.xml</value>
 			</list>
 		</property>
 		
@@ -95,7 +95,7 @@
 	
 	<aop:config>
 		<!-- 配置一个切入点 匹配com.app.service包及其子包下的所有bean-->
-		<aop:pointcut id="pointcut" expression="execution(* com.paixie.service..*(..))"/>
+		<aop:pointcut id="pointcut" expression="execution(* com.shop.service..*(..))"/>
 		<!-- 指定在切入点应用txAdvice事务增强处理 -->
 		<aop:advisor advice-ref="txAdvice" pointcut-ref="pointcut"/>
 	</aop:config>
@@ -104,11 +104,11 @@
 	<bean id="compass" class="org.compass.spring.LocalCompassBean">
 		<property name="classMappings">
 			<list>
-				<value>com.paixie.domain.GoodsListing</value>
-				<value>com.paixie.domain.Style</value>
-				<value>com.paixie.domain.Brand</value>
-				<value>com.paixie.domain.Category</value>
-				<value>com.paixie.domain.GoodsColor</value>
+				<value>com.shop.domain.GoodsListing</value>
+				<value>com.shop.domain.Style</value>
+				<value>com.shop.domain.Brand</value>
+				<value>com.shop.domain.Category</value>
+				<value>com.shop.domain.GoodsColor</value>
 			</list>
 		</property>
 		

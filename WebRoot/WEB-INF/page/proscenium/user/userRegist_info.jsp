@@ -2,7 +2,7 @@
 <%@ taglib uri="/struts-tags" prefix="s" %>
 <html>
   <head>
-  	<title>拍鞋购物商城_用户注册</title>
+  	<title>用户注册</title>
    	<link rel="stylesheet" href="${pageContext.request.contextPath }/css/proscenium/layout.css" type="text/css"></link>
   	<link rel="stylesheet" href="${pageContext.request.contextPath }/css/proscenium/userRegist.css" type="text/css"></link>
   	<script type="text/javascript" src="${pageContext.request.contextPath }/js/jQuery/jquery-1.7.2.js"></script>
@@ -16,7 +16,7 @@
     <div id="main">
     	<div id="userRegist">
     		<div id="regist_title">
-    			<span class="title_text">注册拍鞋商城...</span>
+    			<span class="title_text">用户注册</span>
     		</div>
     		<div id="regist_image">
     			<ul>
@@ -59,8 +59,7 @@
     				<tr>
     					<td></td>
     					<td colspan="2" >
-    						<img src="${pageContext.request.contextPath}/authImage/authImage_2.action" id="authImage"
-    							 title="点击更换验证码" class="hztu">
+    						<img src="${pageContext.request.contextPath}/authImage/authImage_2.action" id="authImage" title="点击更换验证码" class="hztu">
     						看不清?<a href="javascript:changeImage();" id="hztu" class="hztu">换装图片</a>
     					</td>
     				</tr>

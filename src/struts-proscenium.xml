@@ -144,9 +144,9 @@
 			<result name="commentSuccess" type="redirectAction">managerCenter_enterManagerCenter.action</result>
 		</action>
 		
-		<!-- 拍鞋币记录 -->
-		<action name="paixieB_*" class="paixieBAction" method="{1}">
-			<result name="seePaixieB">/WEB-INF/page/proscenium/user/seePaixieB.jsp</result>
+		<!-- 金币记录 -->
+		<action name="seeJinB*" class="seeJinBAction" method="{1}">
+			<result name="seeJinB">/WEB-INF/page/proscenium/user/seeJinB.jsp</result>
 		</action>
 		
 		<!-- 我的优惠 -->

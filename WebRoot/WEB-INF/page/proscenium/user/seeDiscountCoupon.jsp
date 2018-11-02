@@ -3,7 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
   <head>
-  	<title>拍鞋网---会员管理中心</title>
+  	<title>会员管理中心</title>
   	<link rel="stylesheet" href="${pageContext.request.contextPath }/css/proscenium/layout.css" type="text/css"></link>
 	<link rel="stylesheet" href="${pageContext.request.contextPath }/css/proscenium/userCenterLayout.css" type="text/css"></link>
 	<link rel="stylesheet" href="${pageContext.request.contextPath }/css/proscenium/seeDiscountCoupon.css" type="text/css"></link>
@@ -16,10 +16,6 @@
     	<jsp:include page="/WEB-INF/page/proscenium/index_top.jsp" />
     </div>
     <div id="main">
-    	<div class="location">
-    		<a href="${pageContext.request.contextPath}/userCenter/managerCenter_enterManagerCenter.action?userName=${userName}" target="_self">我的拍鞋</a>
-    		<span>&gt;&nbsp;我的优惠券</span>
-    	</div>
     	<div class="content">
     		<div class="content_left">
     			<jsp:include page="/WEB-INF/page/proscenium/user/userCenterNavigation.jsp" />

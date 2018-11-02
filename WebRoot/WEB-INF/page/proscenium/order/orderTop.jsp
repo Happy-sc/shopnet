@@ -7,9 +7,6 @@
   
   <body>
     <div class="orderTop_main">
-    	<div class="orderTop_left">
-    		<img src="${pageContext.request.contextPath }/images/proscenium/paixie.jpg"/>
-    	</div>	
     	<div class="orderTop_right">
     		<ul>
     			<li class="text">
@@ -17,7 +14,7 @@
     				<a href="${pageContext.request.contextPath}/userCenter/managerCenter_enterManagerCenter.action" target="_blank">[个人中心]</a>
     				<a href="${pageContext.request.contextPath}/users/usersLogin_userExit.action">[安全退出]</a>
     			</li>
-    			<li>
+    			<li class="step_left">
     				<ul>
     					<c:choose>
     						<c:when test="${type=='showCar'}">

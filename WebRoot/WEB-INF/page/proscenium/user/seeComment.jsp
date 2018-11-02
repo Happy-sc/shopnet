@@ -3,7 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
   <head>
-  	<title>拍鞋网---会员管理中心</title>
+  	<title>会员管理中心</title>
   	<link rel="stylesheet" href="${pageContext.request.contextPath }/css/proscenium/layout.css" type="text/css"></link>
 	<link rel="stylesheet" href="${pageContext.request.contextPath }/css/proscenium/userCenterLayout.css" type="text/css"></link>
 	<link rel="stylesheet" href="${pageContext.request.contextPath }/css/proscenium/seeComment.css" type="text/css"></link>
@@ -16,10 +16,6 @@
     	<jsp:include page="/WEB-INF/page/proscenium/index_top.jsp" />
     </div>
     <div id="main">
-    	<div class="location">
-    		<a href="${pageContext.request.contextPath}/userCenter/managerCenter_enterManagerCenter.action?userName=${userName}" target="_self">我的拍鞋</a>
-    		<span>&gt;&nbsp;我的评价</span>
-    	</div>
     	<div class="content">
     		<div class="content_left">
     			<jsp:include page="/WEB-INF/page/proscenium/user/userCenterNavigation.jsp" />
@@ -41,7 +37,7 @@
     						<div class="Ctitle">
     							<ul>
     								<li style="width: 55%">商品</li>
-    								<li style="width: 30%">可获得拍鞋币</li>
+    								<li style="width: 30%">可获得金币</li>
     								<li style="width: 14%">操作</li>
     							</ul>
     						</div >
@@ -58,9 +54,9 @@
     												</td>
     												<td width="40.5%">
     													&nbsp;${od.goodsListing.goodsName }<br/>
-    													&nbsp;价格:<font>￥${od.goodsListing.goodsPaiPrice }</font>
+    													&nbsp;价格:<font>￥${od.goodsListing.goodsMarketPrice }</font>
     												</td>
-    												<td width="30.5%" align="center"><font><fmt:formatNumber type="number" value="${od.goodsListing.goodsPaiPrice/100}" maxFractionDigits="0"/>个</font></td>
+    												<td width="30.5%" align="center"><font><fmt:formatNumber type="number" value="${od.goodsListing.goodsMarketPrice/100}" maxFractionDigits="0"/>个</font></td>
     												<td align="center"><a href="${pageContext.request.contextPath }/userCenter/comment_commentUI.action?orderDetailId=${od.orderDetailId}" class="commentA">评价</a></td>
     											</tr>
     										</c:forEach>
@@ -102,7 +98,7 @@
     							<ul>
     								<li style="width: 15%">商品</li>
     								<li style="width: 54%">评价</li>
-    								<li style="width: 15%"">打分</li>
+    								<li style="width: 15%">打分</li>
     								<li style="width: 15%">操作</li>
     							</ul>
     						</div >

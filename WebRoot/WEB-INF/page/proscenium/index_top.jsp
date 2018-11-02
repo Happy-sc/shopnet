@@ -11,8 +11,7 @@
     	<jsp:include page="/WEB-INF/page/proscenium/index_topT.jsp"></jsp:include>
     </div>
     <div id="top_cneter">
-    	<div id="top_center_img" style="width: 213px;height: 71px;">
-    	</div>
+    	<div id="top_center_img" style="width: 213px;height: 71px;"></div>
     	<div id="top_center_search">
     		<form action="${pageContext.request.contextPath }/search/searchGoods.action" method="POST">
     		<table >

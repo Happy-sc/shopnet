@@ -2,7 +2,7 @@
 <%@ taglib uri="/struts-tags" prefix="s" %>
 <html>
   <head>
-	<title>拍鞋购物商城_用户注册：绑定邮箱</title>
+	<title>绑定邮箱</title>
 	<link rel="stylesheet" href="${pageContext.request.contextPath }/css/proscenium/layout.css" type="text/css"></link>
  	<link rel="stylesheet" href="${pageContext.request.contextPath }/css/proscenium/userRegist.css" type="text/css"></link>
  	<script type="text/javascript" src="${pageContext.request.contextPath }/js/jQuery/jquery-1.7.2.js"></script>
@@ -18,7 +18,7 @@
     	<div class="emailAuth">
     		<div >
     			<div id="regist_title">
-    				<span class="title_text">注册拍鞋商城--绑定邮箱</span>
+    				<span class="title_text">绑定邮箱</span>
     			</div>
     			<div id="regist_image">
     				<ul>

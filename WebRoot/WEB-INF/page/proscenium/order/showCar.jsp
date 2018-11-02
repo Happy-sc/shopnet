@@ -2,7 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"  %>
 <html>
   <head>
-  	<title>拍鞋网购物车</title>
+  	<title>购物车</title>
   	<link rel="stylesheet" href="${pageContext.request.contextPath }/css/proscenium/orderLayout.css" type="text/css"></link>
   	<link rel="stylesheet" href="${pageContext.request.contextPath }/css/proscenium/showCar.css" type="text/css"></link>
  	<script type="text/javascript" src="${pageContext.request.contextPath }/js/jQuery/jquery-1.7.2.js"></script>
@@ -24,7 +24,7 @@
     			<div class="car_title">
     				<ul>
     					<li class="goodsName">商品名称</li>
-    					<li class="price">拍鞋价(元)</li>
+    					<li class="price">价格(元)</li>
     					<li class="number">商品数量</li>
     					<li class="sum">小计(元)</li>
     					<li class="caozuo">操作</li>
@@ -51,20 +51,20 @@
     											${car.goodsListing.goodsName }
     										</a>
     									</td>		
-    									<td width="12.5%" rowspan="2" align="center">￥${car.goodsListing.goodsPaiPrice }</td>
+    									<td width="12.5%" rowspan="2" align="center">￥${car.goodsListing.goodsMarketPrice }</td>
     									<td width="12.5%" rowspan="2" align="center">
     										<a href="javascript:void(0);"><span class="carNumber">-</span></a>
     										<input type="text" value="${car.goodsNumber}" class="carNum"/>
     										<a href="javascript:void(0);"><span class="carNumber">+</span></a>
     									</td>
-    									<td width="12.5%" rowspan="2" align="center">￥${car.goodsNumber*car.goodsListing.goodsPaiPrice }</td>
+    									<td width="12.5%" rowspan="2" align="center">￥${car.goodsNumber*car.goodsListing.goodsMarketPrice }</td>
     									<td width="12.5%" align="center">
 
     										<a href="javascript:void(0);" class="aa" id="shoucang">加入收藏</a>
     									</td>
     								</tr>
     								<tr>
-    									<td>颜色:<span>${car.goodsColor }</span>&nbsp;&nbsp;尺码:<span>${car.goodsSize }码</span></td>
+    									<td>颜色:<span>${car.goodsColor }</span>&nbsp;&nbsp;属性:<span>${car.goodsAttr}</span></td>
     									<td align="center">
     										<a href="javascript:void(0);" class="aa" id="shanchu">删除</a>
     									</td>
@@ -84,7 +84,7 @@
     					<ul>
     						<li><span>使用优惠券</span></li>
     						<li>输入优惠码:<input type="text" />
-    							<a href="javascript:void(0);"><img src="${pageContext.request.contextPath }/images/proscenium/shiyong_01.jpg"/ class="shiyong"></a>
+    							<a href="javascript:void(0);"><img src="${pageContext.request.contextPath }/images/proscenium/shiyong_01.jpg" class="shiyong"></a>
     						</li>
     						<li>
     							<div>

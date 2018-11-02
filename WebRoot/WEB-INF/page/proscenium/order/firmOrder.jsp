@@ -109,7 +109,7 @@
     						<li class="liTitle">
     							<img src="${pageContext.request.contextPath }/images/proscenium/dianhao.jpg"/>配送方式：
     							<ul>
-    								<li>系统会根据您填写的地址自动匹配合理的快递公司进行配送,拍鞋网目前不支持自主选择快递公司.</li>
+    								<li>系统会根据您填写的地址自动匹配合理的快递公司进行配送,目前不支持自主选择快递公司.</li>
     							</ul>
     						</li>
     						<li class="liTitle">
@@ -168,13 +168,13 @@
     											${car.goodsListing.goodsName }
     										</a>
     									</td>		
-    									<td width="12.5%" rowspan="2" align="center">￥${car.goodsListing.goodsPaiPrice }</td>
+    									<td width="12.5%" rowspan="2" align="center">￥${car.goodsListing.goodsMarketPrice }</td>
     									<td width="12.5%" rowspan="2" align="center">
     										<a href="javascript:void(0);"><span class="carNumber">-</span></a>
     										<input type="text" value="${car.goodsNumber}" class="carNum"/>
     										<a href="javascript:void(0);"><span class="carNumber">+</span></a>
     									</td>
-    									<td width="12.5%" rowspan="2" align="center">￥${car.goodsNumber*car.goodsListing.goodsPaiPrice }</td>
+    									<td width="12.5%" rowspan="2" align="center">￥${car.goodsNumber*car.goodsListing.goodsMarketPrice }</td>
     									<td width="12.5%" align="center">
     										<a href="javascript:void(0);" class="aa" id="shoucang">
     											加入收藏
@@ -182,7 +182,7 @@
     									</td>
     								</tr>
     								<tr>
-    									<td>颜色:<span>${car.goodsColor }</span>&nbsp;&nbsp;尺码:<span>${car.goodsSize }码</span></td>
+    									<td>颜色:<span>${car.goodsColor }</span>&nbsp;&nbsp;属性:<span>${car.goodsAttr }</span></td>
     									<td align="center">
     										<a href="javascript:void(0);" class="aa" id="shanchu">
     											删除
@@ -215,7 +215,7 @@
     							<ul>
     								<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;实付款：<font class="sfk">&yen;${sum+freight }</font></li>
     								<li>可获得金币：<font class="khdpxb"><fmt:formatNumber type="number" value="${sum/100}" maxFractionDigits="0"/>个</font></li>
-    								<li>&nbsp;&nbsp;使用拍金币：<input type="text" class="sypxb"/><div class="jsypxb">可以使用个数:<font>${user.paixieB }</font>个</div></li>
+    								<li>&nbsp;&nbsp;使用金币：<input type="text" class="sypxb"/><div class="jsypxb">可以使用个数:<font>${userjinB }</font>个</div></li>
     							</ul>
     						</div>
     						<div class="btn">

@@ -24,7 +24,7 @@ public class Order implements java.io.Serializable {
 	private String orderSend;                //发货日期
 	private String orderOver;                //收货日期
 	private String orderUserRequire;         //用户要求
-	private int paixieBNum;                  //使用拍鞋币个数
+	private int jinBNum;                  //使用金币个数
 	private Set<OrderDetail> orderDetails = new HashSet<OrderDetail>(0);       //订单详细情况
 	private OrderState orderState;           //订单状态
 	
@@ -35,14 +35,14 @@ public class Order implements java.io.Serializable {
 		this.orderId = orderId;
 	}
 
-	public Order(String orderId, Users users, Worker worker,int paixieBNum,
+	public Order(String orderId, Users users, Worker worker,int jinBNum,
 			OrderState orderState,String orderPhone, String orderAddress,
 			float orderPrice, String orderDate, String orderConsignee,String orderOver,
 			String orderPostalcode, String orderSend,Set<OrderDetail> orderDetails,
 			String orderPayment,String orderUserRequire,float orderFreight) {
 		this.orderId = orderId;
 		this.users = users;
-		this.paixieBNum = paixieBNum;
+		this.jinBNum = jinBNum;
 		this.worker = worker;
 		this.orderPhone = orderPhone;
 		this.orderAddress = orderAddress;
@@ -179,12 +179,12 @@ public class Order implements java.io.Serializable {
 		this.orderState = orderState;
 	}
 
-	public int getPaixieBNum() {
-		return paixieBNum;
+	public int getJinBNum() {
+		return jinBNum;
 	}
 
-	public void setPaixieBNum(int paixieBNum) {
-		this.paixieBNum = paixieBNum;
+	public void setJinBNum(int jinBNum) {
+		this.jinBNum = jinBNum;
 	}
 
 	public String getOrderOver() {

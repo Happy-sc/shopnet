@@ -1,7 +1,7 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <html>
   <head>
-	<title>拍鞋购物商城首页_中国最大的品牌鞋销售广场</title>
+	<title>注册成功</title>
 	<link rel="stylesheet" href="${pageContext.request.contextPath }/css/proscenium/layout.css" type="text/css"></link>
 	<link rel="stylesheet" href="${pageContext.request.contextPath }/css/proscenium/userRegist.css" type="text/css"></link>
   </head>
@@ -14,7 +14,7 @@
     	<div class="registSuccess">
     		<div >
     			<div id="regist_title">
-    				<span class="title_text">注册拍鞋商城--注册成功</span>
+    				<span class="title_text">注册成功</span>
     			</div>
     			<div id="regist_image">
     				<ul>
@@ -41,8 +41,8 @@
     					</tr>
     					<tr>
     						<td></td>
-    						<td><span style="color:red">为了您账号的安全,请您务必在24小之内完成邮箱验证!!!</span>
-    							<a href="${emailURL }" target="_blank">
+    						<td><span style="color:red">为了您账号的安全,请您务必在24小之内完成邮箱验证!</span>
+    							<a href="${emailURL}" target="_blank">
     								<img src="${pageContext.request.contextPath }/images/proscenium/checkEmailLoadEmail.jpg"/>
     							</a>
     						</td>

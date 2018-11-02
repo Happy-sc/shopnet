@@ -139,6 +139,7 @@ $(document).ready(function(){
 			if(flag=="false"){
 				$("#qxzcm").css("border","1px solid red");
 				$("#goods_infor_detail").css("height","230px");
+				$("#tjdtr").remove();
 				$("#qxzcm").after("<tr id='tjdtr'><td clospan='2' style='font-size:12px;color:red'>请选择属性</td></tr>");
 			}
 			else{
@@ -172,6 +173,7 @@ $(document).ready(function(){
 			if(flag=="false"){
 				$("#qxzcm").css("border","1px solid red");
 				$("#goods_infor_detail").css("height","230px");
+                $("#tjdtr").remove();
 				$("#qxzcm").after("<tr id='tjdtr'><td clospan='2' style='font-size:12px;color:red'>请选择属性</td></tr>");
 			} else{
 				var goodsId = $("#choosedGoodsId").val();

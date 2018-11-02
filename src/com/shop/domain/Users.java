@@ -22,7 +22,7 @@ public class Users implements java.io.Serializable {
 	private String userRealName;              //用户真实姓名
 	private String userAddress;               //用户居住地址
 	private String userTelephone;             //用户联系电话
-	private int paixieB;                      //拍鞋币
+	private int jinB;                      //金币
 	private Set<Collect> collects = new HashSet<Collect>(0);                             //用户收藏
 	private Set<Address> addresses = new HashSet<Address>(0);                            //用户收货地址
 	private Set<DiscountCoupon> discountCoupons = new HashSet<DiscountCoupon>(0);        //用户优惠券
@@ -30,7 +30,7 @@ public class Users implements java.io.Serializable {
 	private Set<Comment> comments = new HashSet<Comment>(0);                             //用户评价
 	private Set<SecretSecurity> secretSecurities = new HashSet<SecretSecurity>(0);       //用户密保
 	private Set<ShoppingCar> shoppingCars = new HashSet<ShoppingCar>(0);                 //用户购物车
-	private Set<PaixieBRecord> paixieBRecords = new HashSet<PaixieBRecord>();            //拍鞋币记录
+	private Set<JinBRecord> paixieBRecords = new HashSet<JinBRecord>();            //拍鞋币记录
 	
 	public Users() {
 	}
@@ -40,10 +40,10 @@ public class Users implements java.io.Serializable {
 	}
 
 	public Users(String userId, String userName, String userPassword,String emailDate,
-			String userEmail, String userBirthday,String userSex,int paixieB,
+			String userEmail, String userBirthday,String userSex,int jinB,
 			Set<Collect> collects,String userRealName,Set<ShoppingCar> shoppingCars,
 			String userAddress,String userTelephone,Set<Address> addresses, 
-			Set<DiscountCoupon> discountCoupons,Set<Order> orders,Set<PaixieBRecord> paixieBRecords,
+			Set<DiscountCoupon> discountCoupons,Set<Order> orders,Set<JinBRecord> paixieBRecords,
 			Set<Comment> comments,Set<SecretSecurity> secretSecurities) {
 		this.userId = userId;
 		this.userName = userName;
@@ -52,7 +52,7 @@ public class Users implements java.io.Serializable {
 		this.emailDate = emailDate;
 		this.userBirthday = userBirthday;
 		this.userSex = userSex;
-		this.paixieB = paixieB;
+		this.jinB = jinB;
 		this.userRealName = userRealName;
 		this.userAddress = userAddress;
 		this.userTelephone = userTelephone;
@@ -210,20 +210,20 @@ public class Users implements java.io.Serializable {
 		this.shoppingCars = shoppingCars;
 	}
 
-	public Set<PaixieBRecord> getPaixieBRecords() {
+	public Set<JinBRecord> getPaixieBRecords() {
 		return paixieBRecords;
 	}
 
-	public void setPaixieBRecords(Set<PaixieBRecord> paixieBRecords) {
+	public void setPaixieBRecords(Set<JinBRecord> paixieBRecords) {
 		this.paixieBRecords = paixieBRecords;
 	}
 
-	public int getPaixieB() {
-		return paixieB;
+	public int getJinB() {
+		return jinB;
 	}
 
-	public void setPaixieB(int paixieB) {
-		this.paixieB = paixieB;
+	public void setJinB(int jinB) {
+		this.jinB = jinB;
 	}
 
 	public String getEmailDate() {

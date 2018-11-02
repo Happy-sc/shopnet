@@ -6,8 +6,8 @@
   <body>
     <div class="content_left_main">
     	<ul>
-    		<li class="mypaixie">
-    			<img src="${pageContext.request.contextPath}/images/proscenium/userCenter_mypaixie.jpg"/>
+    		<li class="personal_center">
+    			个人中心
     		</li>
     		<li>
     			<div class="countManager_title">
@@ -40,14 +40,11 @@
     			<div class="discountManager_content">
     				<ul>
     					<li><a href="${pageContext.request.contextPath }/userCenter/discountCoupon_seeDiscountCoupon.action?type=kyyhq">我的优惠券</a></li>
-    					<li><a href="${pageContext.request.contextPath }/userCenter/paixieB_seePaixieB.action?type=pxbhqjl" target="_self">拍鞋币记录</a></li>
+    					<li><a href="${pageContext.request.contextPath }/userCenter/seeJinB_seeJinB.action?type=jbhqjl" target="_self">金币记录</a></li>
     				</ul>
     			</div>
     		</li>
     	</ul>
-    	</div>
-    	<div class="paixieunion">
-    		<img src="${pageContext.request.contextPath}/images/proscenium/userCenter_union.jpg"/>
     	</div>
   </body>
 </html>

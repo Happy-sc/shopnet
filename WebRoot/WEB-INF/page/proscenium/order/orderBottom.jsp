@@ -14,7 +14,7 @@
     			<tr>
     				<td></td>
     				<td>
-    					拍鞋全场购物满129元免运费<br/>
+    					全场购物满129元免运费<br/>
     					<a href="">
     						更多运费信息
     					</a>
@@ -48,7 +48,7 @@
     			<tr>
     				<td></td>
     				<td>
-    					需要帮助？请拨打<span class="phone">1234-56-78-90</span>
+    					需要帮助？请拨打<span class="phone">400-365-24-66</span>
     				</td>
     			</tr>
     		</table>

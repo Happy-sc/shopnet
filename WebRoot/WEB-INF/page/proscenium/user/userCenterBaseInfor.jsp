@@ -2,7 +2,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
   <head>
-
   </head>
   
   <body>
@@ -11,7 +10,7 @@
     		<span class="username">${user.userName }</span><span>,欢迎您!</span><Br/><Br/>
     		<span>优惠券：<span class="username">sss</span>张</span>
     		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    		<span>拍鞋币：<span class="username">${user.paixieB }</span>个</span >
+    		<span>金币：<span class="username">${user.jinB }</span>个</span >
     	</div>
     	<div class="baseInforBottom">
     		<div class="remind">

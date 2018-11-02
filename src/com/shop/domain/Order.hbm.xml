@@ -53,8 +53,8 @@
         <property name="orderOver" type="string">
             <column name="order_over" length="20" />
         </property>
-        <property name="paixieBNum" type="int">
-            <column name="paixieB_num"/>
+        <property name="jinBNum" type="int">
+            <column name="jinB_num"/>
         </property>
         <set name="orderDetails" inverse="true" cascade="all">
             <key>

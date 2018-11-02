@@ -57,7 +57,7 @@
 				<value>com/shop/domain/Worker.hbm.xml</value>
 				<value>com/shop/domain/SecretSecurity.hbm.xml</value>
 				<value>com/shop/domain/ShoppingCar.hbm.xml</value>
-				<value>com/shop/domain/PaixieBRecord.hbm.xml</value>
+				<value>com/shop/domain/JinBRecord.hbm.xml</value>
 			</list>
 		</property>
 		

@@ -1,7 +1,7 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <html>
   <head>
-  	<title>拍鞋网---找回密码</title>
+  	<title>找回密码</title>
   	<link rel="stylesheet" href="${pageContext.request.contextPath }/css/proscenium/layout.css" type="text/css"></link>
   	<link rel="stylesheet" href="${pageContext.request.contextPath }/css/proscenium/forgetPassword.css" type="text/css"></link>
  	<script type="text/javascript" src="${pageContext.request.contextPath }/js/jQuery/jquery-1.7.2.js"></script>
@@ -33,7 +33,7 @@
   				<li>
   					<font>新密码设置成功!</font>
   					<br/>请牢记您新设置的密码。
-  					<a href="${pageContext.request.contextPath}/goods/goods_goodsIndexUI.action" " class="dlyx">返回首页</a>&nbsp;&nbsp;&nbsp;
+  					<a href="${pageContext.request.contextPath}/goods/goods_goodsIndexUI.action" class="dlyx">返回首页</a>&nbsp;&nbsp;&nbsp;
   					<a href="${pageContext.request.contextPath}/users/usersLogin_userLoginUI.action" class="dlyx">登陆</a>
   				</li>
   			</ul>

@@ -39,7 +39,7 @@
     			<div class="content_content">
     				<span class="tips">您没有登录,请先登录后操作...</span>
     				<span>点击：</span>
-    				<a href="" class="error">登录</a>
+    				<a href="/manager/manager_enterLoginUI.action" class="error">登录</a>
     			</div>
     		</div>
     		<div class="hr"></div>

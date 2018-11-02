@@ -2,7 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"  %>
 <html>
   <head>
-  	<title>拍鞋网购物车</title>
+  	<title>购物车</title>
   	<link rel="stylesheet" href="${pageContext.request.contextPath }/css/proscenium/orderLayout.css" type="text/css"></link>
   	<link rel="stylesheet" href="${pageContext.request.contextPath }/css/proscenium/orderSuccess.css" type="text/css"></link>
  	<script type="text/javascript" src="${pageContext.request.contextPath }/js/jQuery/jquery-1.7.2.js"></script>
@@ -69,7 +69,7 @@
  									</tr>
  									<tr>
  										<td class="myxhx">中国工商银行车站路口分行</td>
- 										<td class="myxhx">拍鞋网</td>
+ 										<td class="myxhx">XXX</td>
  										<td class="myxhx">6222 0219 0300 5874 232</td>
  									</tr>
  								</table>

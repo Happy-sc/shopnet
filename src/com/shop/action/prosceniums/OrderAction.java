@@ -19,14 +19,14 @@ import com.shop.domain.Address;
 import com.shop.domain.Order;
 import com.shop.domain.OrderDetail;
 import com.shop.domain.OrderState;
-import com.shop.domain.PaixieBRecord;
+import com.shop.domain.JinBRecord;
 import com.shop.domain.ShoppingCar;
 import com.shop.domain.Users;
 import com.shop.service.AddressService;
 import com.shop.service.OrderDetailService;
 import com.shop.service.OrderService;
 import com.shop.service.OrderStateService;
-import com.shop.service.PaixieBService;
+import com.shop.service.JinBService;
 import com.shop.service.UsersService;
 
 @Controller("orderAction")
@@ -38,7 +38,7 @@ public class OrderAction extends BaseAction{
 	@Resource(name="orderDetailService")private OrderDetailService orderDetailService;
 	@Resource(name="orderStateService") private OrderStateService orderStateService;
 	@Resource(name="usersService")private UsersService usersService;
-	@Resource(name="")private PaixieBService paixieBService;
+	@Resource(name="")private JinBService jinBService;
 	private Order order;
 	private String type;
 	private String orderDetailId;
@@ -129,7 +129,7 @@ public class OrderAction extends BaseAction{
 		newOrder.setOrderPhone(order.getOrderPhone());                 //联系电话
 		newOrder.setOrderPostalcode(order.getOrderPostalcode());       //邮政编码
 		newOrder.setOrderPrice(order.getOrderPrice());                 //订单总金额
-		newOrder.setPaixieBNum(order.getPaixieBNum());                 //用户使用拍鞋币
+		newOrder.setJinBNum(order.getJinBNum());                 //用户使用金币
 		newOrder.setUsers(users);                                      //用户
 		newOrder.setOrderUserRequire(order.getOrderUserRequire());     //用户要求
 		
@@ -154,19 +154,19 @@ public class OrderAction extends BaseAction{
 		/*
 		 * 如果获取拍鞋币个数不为0
 		 * 则保存用户获得拍鞋币记录
-		 * 且修改用户拍鞋币个数
+		 * 且修改用户金币个数
 		 */
-		int paixieBSum = (int) (order.getOrderPrice()/100);
+		int jinBSum = (int) (order.getOrderPrice()/100);
 		//获得拍鞋币
-		if(paixieBSum>0){
-			PaixieBRecord paixieBRecord = new PaixieBRecord();
-			paixieBRecord.setPaixieBId(ProduceId.getId());
-			paixieBRecord.setPaixieBNum(paixieBSum);
-			paixieBRecord.setPaixieBState(1);
-			paixieBRecord.setPaixieBTime(orderDate);
-			paixieBRecord.setPaixieBStyle("购买商品时，获取了"+paixieBSum+"个拍鞋币");
-			paixieBRecord.setUsers(users);
-			paixieBService.savePaixieB(paixieBRecord);
+		if(jinBSum>0){
+			JinBRecord jinBRecord = new JinBRecord();
+			jinBRecord.setJinBId(ProduceId.getId());
+			jinBRecord.setJinBNum(jinBSum);
+			jinBRecord.setJinBState(1);
+			jinBRecord.setJinBTime(orderDate);
+			jinBRecord.setJinBStyle("购买商品时，获取了"+jinBSum+"个金币");
+			jinBRecord.setUsers(users);
+			jinBService.saveJinB(jinBRecord);
 		}
 		
 		String sypxb = request.getParameter("sypxb");
@@ -175,21 +175,21 @@ public class OrderAction extends BaseAction{
 			sypxbS = Integer.valueOf(sypxb);
 		}
 		
-		//如果使用拍鞋币
+		//如果使用金币
 		if(sypxbS>0){
-			PaixieBRecord paixieBRecord = new PaixieBRecord();
-			paixieBRecord.setPaixieBId(ProduceId.getId());
-			paixieBRecord.setPaixieBNum(sypxbS);
-			paixieBRecord.setPaixieBState(0);
-			paixieBRecord.setPaixieBTime(orderDate);
-			paixieBRecord.setPaixieBStyle("购买商品时，使用了"+sypxbS+"个拍鞋币");
-			paixieBRecord.setUsers(users);
-			paixieBService.savePaixieB(paixieBRecord);
+			JinBRecord jinBRecord = new JinBRecord();
+			jinBRecord.setJinBId(ProduceId.getId());
+			jinBRecord.setJinBNum(sypxbS);
+			jinBRecord.setJinBState(0);
+			jinBRecord.setJinBTime(orderDate);
+			jinBRecord.setJinBStyle("购买商品时，使用了"+sypxbS+"个拍鞋币");
+			jinBRecord.setUsers(users);
+			jinBService.saveJinB(jinBRecord);
 		}
 		
 		//修改用户的拍鞋币个数
-		int userPaixie = users.getPaixieB()+paixieBSum-sypxbS;
-		users.setPaixieB(userPaixie);
+		int userPaixie = users.getJinB()+jinBSum-sypxbS;
+		users.setJinB(userPaixie);
 		usersService.updateUser(users);
 		
 		int flag = 0 ;    //标签：判断支付方式，支付方式不同，显示的界面不同

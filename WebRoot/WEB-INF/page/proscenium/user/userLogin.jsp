@@ -2,7 +2,7 @@
 <%@ taglib uri="/struts-tags" prefix="s"%>
 <html>
   <head>
-	<title>拍鞋购物商城_用户登录</title>
+	<title>用户登录</title>
 	<link rel="stylesheet" href="${pageContext.request.contextPath }/css/proscenium/layout.css" type="text/css"></link>
  	<link rel="stylesheet" href="${pageContext.request.contextPath }/css/proscenium/userLogin.css" type="text/css"></link>
  	<script type="text/javascript" src="${pageContext.request.contextPath }/js/jQuery/jquery-1.7.2.js"></script>
@@ -62,16 +62,16 @@
     		<div id="login_right">
     			<table id="right">
     				<tr>
-    					<td><span class="right_text">还不是拍鞋用户？</span></td>
+    					<td><span class="right_text">还没注册用户？</span></td>
     				</tr>
     				<tr>
-    					<td><span class="right_text">现在免费注册成为拍鞋用户，便能立刻享受便宜又放心的购物乐趣。</span></td>
+    					<td><span class="right_text">现在免费注册便能立刻享受便宜又放心的购物乐趣。</span></td>
     				</tr>
     				<tr>
     					<td align="center"><span class="right_text1">我们诚挚邀请您加入</span></td>
     				</tr>
     				<tr>
-    					<td align="center"><span class="right_text1">中国最大品牌鞋销售广场</span></td>
+    					<td align="center"><span class="right_text1">中国最便宜购物平台</span></td>
     				</tr>
     				<tr>
     					<td align="center">

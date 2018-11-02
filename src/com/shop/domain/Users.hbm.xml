@@ -42,8 +42,8 @@
         <property name="emailDate" type="string">
             <column name="email_date" length="50"/>
         </property>
-        <property name="paixieB" type="int">
-            <column name="paixieB"/>
+        <property name="jinB" type="int">
+            <column name="jinB"/>
         </property>
         <set name="collects" inverse="true" cascade="all">
             <key>
@@ -91,7 +91,7 @@
             <key>
                 <column name="user_id" length="100" />
             </key>                                
-            <one-to-many class="com.shop.domain.PaixieBRecord" />
+            <one-to-many class="com.shop.domain.JinBRecord" />
         </set>
     </class>
 </hibernate-mapping>

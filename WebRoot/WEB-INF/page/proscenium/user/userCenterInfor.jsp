@@ -2,7 +2,7 @@
 <%@ taglib uri="/struts-tags" prefix="s" %>
 <html>
   <head>
-  	<title>拍鞋网---会员管理中心</title>
+  	<title>会员管理中心</title>
   	<link rel="stylesheet" href="${pageContext.request.contextPath }/css/proscenium/layout.css" type="text/css"></link>
 	<link rel="stylesheet" href="${pageContext.request.contextPath }/css/proscenium/userCenterLayout.css" type="text/css"></link>
 	<link rel="stylesheet" href="${pageContext.request.contextPath }/css/proscenium/userCenterInfor.css" type="text/css"></link>
@@ -18,10 +18,6 @@
     	<jsp:include page="/WEB-INF/page/proscenium/index_top.jsp" />
     </div>
     <div id="main">
-    	<div class="location">
-    		<a href="${pageContext.request.contextPath}/userCenter/managerCenter_enterManagerCenter.action?userName=${userName}" target="_self">我的拍鞋</a>
-    		<span>&gt;&nbsp;账户信息</span>
-    	</div>
     	<div class="content">
     		<div class="content_left">
     			<jsp:include page="/WEB-INF/page/proscenium/user/userCenterNavigation.jsp" />
@@ -55,17 +51,12 @@
     					<tr>
     						<td align="right">电子邮箱：</td>
     						<td align="left"><input class="text" type="text" id="emailText" value="${user.userEmail }" readonly="readonly"/></td>
-    						<td align="left">
-    							<a href=""><span class="updateText">修改</span></a>
-    						</td>
+    						<td align="left"></td>
     					</tr>
     					<tr>
     						<td align="right">联系电话：</td>
     						<td align="left"><input class="text" type="text" id="telephoneText" value="${user.userTelephone }" readonly="readonly"/></td>
-    						<td align="left">
-    							<a href=""><span class="updateText">修改</span>
-    							</a><div class=""></div>
-    						</td>
+    						<td align="left"></td>
     					</tr>
     					<tr>
     						<td align="right">出身日期：</td>

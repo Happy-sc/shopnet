@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	//Ñ¡¶¨tab
+	//é€‰å®štab
 	var _type = $("#paixieBType").val();
 	if("pxbhqjl"==_type){
 		$("#tab1").attr("class","now");
@@ -12,7 +12,7 @@ $(document).ready(function(){
 		$("#tab2Div").show();
 	}
 	
-	//·ÅÔÚtabÉÏ
+	//æ”¾åœ¨tabä¸Š
 	$(".paixieB_content .title li").hover(
 		function(){
 			var _class = $(this).attr("class");
@@ -28,7 +28,7 @@ $(document).ready(function(){
 		}
 	)
 	
-	//µã»÷tab
+	//ç‚¹å‡»tab
 	$(".paixieB_content .title li").click(
 		function(){
 			var _id = $(this).attr("id");

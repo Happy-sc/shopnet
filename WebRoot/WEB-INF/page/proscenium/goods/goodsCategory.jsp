@@ -4,7 +4,7 @@
 <head>
     <link rel="stylesheet" href="${pageContext.request.contextPath }/css/proscenium/goodsCategory.css" type="text/css"></link>
     <script type="text/javascript" src="${pageContext.request.contextPath }/js/jQuery/jquery-1.7.2.js"></script>
-    <script type="text/javascript" src="${pageContext.request.contextPath }/js/proscenium/goodsCategory.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath }/js/proscenium/goodsCategory.js" charset="UTF-8"></script>
 </head>
 
 <body>

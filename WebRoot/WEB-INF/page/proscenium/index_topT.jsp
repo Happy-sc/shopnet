@@ -3,7 +3,7 @@
 <html>
   <head>
   	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/proscenium/index_top.css" type="text/css"></link>
-  	<script type="text/javascript" src="${pageContext.request.contextPath}/js/proscenium/indexTop.js"></script>
+  	<script type="text/javascript" src="${pageContext.request.contextPath}/js/proscenium/indexTop.js" charset="UTF-8"></script>
   	
   </head>
   

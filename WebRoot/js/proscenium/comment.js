@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	//ÉèÖÃÆæÊıĞĞ¡¢Å¼ÊıĞĞ±³¾°ÑÕÉ«
+	//è®¾ç½®å¥‡æ•°è¡Œã€å¶æ•°è¡ŒèƒŒæ™¯é¢œè‰²
 	var comment = $(".comment_content");
 	for(var i = 1;i<=comment.length;i++){
 		if(i%2==0){
@@ -10,7 +10,7 @@ $(document).ready(function(){
 		}
 	}
 	
-	//ÓÃ»§ÊÕ²ØÉÌÆ·
+	//ç”¨æˆ·æ”¶è—å•†å“
 	$("#collect").click(
 		function(){
 			var goodsId = $("#goodsId").val();
@@ -23,18 +23,18 @@ $(document).ready(function(){
 				function(data){
 					if(data=="1"){
 						$(".sccgDIV").show();
-						$(".sccgDIV").delay(3000).hide(0);          //ÑÓÊ±º¯Êı
+						$(".sccgDIV").delay(3000).hide(0);          //å»¶æ—¶å‡½æ•°
 					}
 					else{
 						$(".scsbDIV").show();
-						$(".scsbDIV").delay(3000).hide(0);      //ÑÓÊ±º¯Êı
+						$(".scsbDIV").delay(3000).hide(0);      //å»¶æ—¶å‡½æ•°
 					}
 				}
 			)
 		}	
 	)
 	
-	//µã»÷ÊÕ²ØµÄXÊ±
+	//ç‚¹å‡»æ”¶è—çš„Xæ—¶
 	$(".sccgDIV a,.scsbDIV a").click(
 		function(){
 			var _class = $(this).parent().attr("class");

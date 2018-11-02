@@ -1,10 +1,10 @@
 $(document).ready(function(){
-	var flag = true;        //¶¨ÒåÈ«¾Ö±äÁ¿
+	var flag = true;        //å®šä¹‰å…¨å±€å˜é‡
 	
-	//Æ·ÅÆÃû³Æ
+	//å“ç‰Œåç§°
 	$("#brandName").focus(function(){
 			var brandName_prompt = $("#brandName_prompt");
-			brandName_prompt.html("Æ·ÅÆÃû³ÆÊı×Ö¡¢×ÖÄ¸¡¢ºº×Ö×é³É....");
+			brandName_prompt.html("å“ç‰Œåç§°æ•°å­—ã€å­—æ¯ã€æ±‰å­—ç»„æˆ....");
 			brandName_prompt.attr("class","prompt_tips");
 		}	
 	)
@@ -14,7 +14,7 @@ $(document).ready(function(){
 			var brandName_prompt = $("#brandName_prompt");
 			brandName_prompt.html("");
 			if(brandName==""){
-				brandName_prompt.html("Æ·ÅÆÃû³Æ²»ÄÜÎª¿Õ,ÇëÖØĞÂÊäÈë...");
+				brandName_prompt.html("å“ç‰Œåç§°ä¸èƒ½ä¸ºç©º,è¯·é‡æ–°è¾“å…¥...");
 				brandName_prompt.attr("class","prompt_error");
 				flag = false;
 				return;
@@ -40,10 +40,10 @@ $(document).ready(function(){
 		}	
 	)
 	
-	//Æ·ÅÆÆ´Òô
+	//å“ç‰Œæ‹¼éŸ³
 	$("#brandSpell").focus(function(){
 			var brandSpell_prompt = $("#brandSpell_prompt");
-			brandSpell_prompt.html("Æ·ÅÆÆ´Ğ´Êı×Ö,×ÖÄ¸×é³É,×îÉÙÈıÎ»....");
+			brandSpell_prompt.html("å“ç‰Œæ‹¼å†™æ•°å­—,å­—æ¯ç»„æˆ,æœ€å°‘ä¸‰ä½....");
 			brandSpell_prompt.attr("class","prompt_tips");
 		}
 	)
@@ -54,13 +54,13 @@ $(document).ready(function(){
 			brandSpell_prompt.html("");
 			var reg = /^[-\w]*$/;
 			if(brandSpell==""){
-				brandSpell_prompt.html("Æ·ÅÆÆ´Ğ´²»ÄÜÎª¿Õ,ÇëÖØĞÂÊäÈë...");
+				brandSpell_prompt.html("å“ç‰Œæ‹¼å†™ä¸èƒ½ä¸ºç©º,è¯·é‡æ–°è¾“å…¥...");
 				brandSpell_prompt.attr("class","prompt_error");
 				flag = false;
 				return ;
 			}
 			if(reg.test(brandSpell)==false){
-				brandSpell_prompt.html("Æ·ÅÆÆ´Ğ´¸ñÊ½´íÎó,ÇëÖØĞÂÊäÈë...");
+				brandSpell_prompt.html("å“ç‰Œæ‹¼å†™æ ¼å¼é”™è¯¯,è¯·é‡æ–°è¾“å…¥...");
 				brandSpell_prompt.attr("class","prompt_error");
 				flag = false;
 				return;
@@ -88,7 +88,7 @@ $(document).ready(function(){
 		}
 	)
 	
-	//µã»÷¿îÊ½
+	//ç‚¹å‡»æ¬¾å¼
 	$("input[type='checkbox']").click(
 		function(){
 			var _thisV = $(this).val();
@@ -121,7 +121,7 @@ $(document).ready(function(){
       	title: "Dialog Title", 
     })
     
-    //±à¼­
+    //ç¼–è¾‘
     $(".bjBrand").click(
     	function(){
     		var _tr = $(this).parent().parent().children();
@@ -139,7 +139,7 @@ $(document).ready(function(){
     		$("#style").val(brandStyle);
     		$("#name1").val(brandName);
     		$("#name3").val(brandSpell);
-    		//ÉèÖÃstyleÑ¡Ôñ
+    		//è®¾ç½®styleé€‰æ‹©
     		var styles = brandStyle.split(",");
     		var styleS = $(".allStyle");
     		styleS.attr("checked",null);
@@ -153,12 +153,12 @@ $(document).ready(function(){
     		}
     		$("#type").val("update");
     		$("#zjbjBtn").attr("src","../images/backstage/okUpdate.jpg");
-    		$(".zjbjBrand").dialog("option","title", "±à¼­ÉÌÆ·Æ·ÅÆ")
+    		$(".zjbjBrand").dialog("option","title", "ç¼–è¾‘å•†å“å“ç‰Œ")
 							  .dialog("open");
     	}	
     )
 	
-	//µã»÷Ìí¼ÓÆ·ÅÆ
+	//ç‚¹å‡»æ·»åŠ å“ç‰Œ
     $("#addBrandBtn").click(function(){
     	$("#brandName").val("");
     	$("#brandSpell").val("");
@@ -166,7 +166,7 @@ $(document).ready(function(){
     	$("#image").attr("src","");
     	$("#style").val("");
     	$(".allStyle").attr("checked",null);
-    	//»ñÈ¡±àºÅ
+    	//è·å–ç¼–å·
     	var url = "../goodsManager/brandManager_getBrandId.action"
     	$.ajax({
     		url : url,
@@ -176,13 +176,13 @@ $(document).ready(function(){
     			$("#brandId").val(data);
     			$("#type").val("add");
     			$("#zjbjBtn").attr("src","../images/backstage/okAdd.jpg");
-    			$(".zjbjBrand").dialog("option","title", "Ôö¼ÓÉÌÆ·Æ·ÅÆ")
+    			$(".zjbjBrand").dialog("option","title", "å¢åŠ å•†å“å“ç‰Œ")
 							  .dialog("open");
 			}
     	})
     })
     
-    //µã»÷È·ÈÏ
+    //ç‚¹å‡»ç¡®è®¤
     $("#zjbjBtn").click(function(){
     	$("#brandName").blur();
     	$("#brandSpell").blur();
@@ -197,7 +197,7 @@ $(document).ready(function(){
     	}
     })
     
-    //µã»÷É¾³ı
+    //ç‚¹å‡»åˆ é™¤
     $(".scBrand").click(function(){
     	var brandId = $.trim($(this).parent().parent().children().eq(0).text());
     	var page = $("#page").val();
@@ -222,7 +222,7 @@ $.extend({
 					$("#brandSpell_prompt").html(data);
 				}
 				
-				if(data.indexOf("ÒÑ¾­´æÔÚ")!=-1){
+				if(data.indexOf("å·²ç»å­˜åœ¨")!=-1){
 					if(types=="name"){
 						$("#brandName_prompt").attr("class","prompt_error");
 					}
@@ -246,26 +246,26 @@ $.extend({
 		return isRep;
 	},
 	
-	//ÅĞ¶ÏÊÇ·ñÑ¡ÔñÁË¿îÊ½
+	//åˆ¤æ–­æ˜¯å¦é€‰æ‹©äº†æ¬¾å¼
 	styleIsSelected:function(){
 		var style = $("#style").val();
 		var style_prompt = $("#style_prompt");
 		style_prompt.html("");
 		if(style==""){
-			style_prompt.html("ÇëÑ¡ÔñÆ·ÅÆËùÓµÓĞµÄ¿îÊ½...")
+			style_prompt.html("è¯·é€‰æ‹©å“ç‰Œæ‰€æ‹¥æœ‰çš„æ¬¾å¼...")
 			style_prompt.attr("class","prompt_error");
 		}
 		return true;	
 	},
 	
-	//ÅĞ¶ÏÊÇ·ñÑ¡ÔñÁËÍ¼Æ¬
+	//åˆ¤æ–­æ˜¯å¦é€‰æ‹©äº†å›¾ç‰‡
 	imageIsSelected:function(){
 		var image = $("#image").attr("src");
 		var file = $("#brandImage").val();
 		var brandImage_prompt = $("#brandImage_prompt"); 
 		brandImage_prompt.html("");
 		if((image==null||image=="")&&(file==""||file==null)){
-			brandImage_prompt.html("Æ·ÅÆÍ¼Æ¬²»ÄÜÎª¿Õ,ÇëÑ¡ÔñÍ¼Æ¬...");
+			brandImage_prompt.html("å“ç‰Œå›¾ç‰‡ä¸èƒ½ä¸ºç©º,è¯·é€‰æ‹©å›¾ç‰‡...");
 			brandImage_prompt.attr("class","prompt_error");
 			return false;
 		}

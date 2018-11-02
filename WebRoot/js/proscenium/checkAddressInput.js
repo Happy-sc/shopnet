@@ -1,12 +1,12 @@
 $(document).ready(function(){
-	var flag;  //¶¨ÒåÈ«¾Ö±äÁ¿
+	var flag;  //å®šä¹‰å…¨å±€å˜é‡
 	
-	//ÊÕ»õÈË
+	//æ”¶è´§äºº
 	$("#consignee").blur(
 		function(){
 			var consignee = $("#consignee").val();
 			if(consignee==""||consignee==null){
-				$(".consignee_prompt").html("ÇëÊäÈëÊÕ¼şÈËĞÕÃû...");
+				$(".consignee_prompt").html("è¯·è¾“å…¥æ”¶ä»¶äººå§“å...");
 				$(".consignee_prompt").css("color","red");
 				$(this).css("border","1px solid red");
 				flag = false;
@@ -23,21 +23,21 @@ $(document).ready(function(){
 		}	
 	)
 	
-	//ËùÔÚ³ÇÊĞ
+	//æ‰€åœ¨åŸå¸‚
 	$(".newAddress select").change(
 		function(){
 			$.city();
 		}	
 	)
 	
-	//ËùÔÚ½ÖµÀ
+	//æ‰€åœ¨è¡—é“
 	$("#street").blur(
 		function(){
 			var street = $("#street").val();
 			var street_prompt = $(".street_prompt");
 			street_prompt.html("");
 			if(street==""||street==null){
-				street_prompt.html("ÇëÊäÈë½ÖµÀ...");
+				street_prompt.html("è¯·è¾“å…¥è¡—é“...");
 				street_prompt.css("color","red");
 				$(this).css("border","1px solid red");
 				flag = false;
@@ -54,21 +54,21 @@ $(document).ready(function(){
 		}	
 	)
 	
-	//µç»°ºÅÂë
+	//ç”µè¯å·ç 
 	$("#telephone").blur(
 		function(){
 			var phone = $("#telephone").val();
 			var phone_prompt = $(".phone_prompt");
 			var reg = /^((\d{3,4}-)?\d{7,8})$|(1[0-9]{10})/;
 			if(phone==""||phone==null){
-				phone_prompt.html("ÇëÊäÈëµç»°ºÅÂë...");
+				phone_prompt.html("è¯·è¾“å…¥ç”µè¯å·ç ...");
 				phone_prompt.css("color","red");
 				$(this).css("border","1px solid red");
 				flag = false;
 				return false;
 			}
 			if(reg.test(phone)==false){
-				phone_prompt.html("µç»°ºÅÂë¸ñÊ½´íÎó...");
+				phone_prompt.html("ç”µè¯å·ç æ ¼å¼é”™è¯¯...");
 				phone_prompt.css("color","red");
 				$(this).css("border","1px solid red");
 				flag = false;
@@ -85,21 +85,21 @@ $(document).ready(function(){
 		}	
 	)
 	
-	//ÓÊÕş±àÂë
+	//é‚®æ”¿ç¼–ç 
 	$("#postCode").blur(
 		function(){
 			var postCode = $("#postCode").val();
 			var postCode_prompt = $(".postCode_prompt");
 			var reg = /^[1-9][0-9]{5}$/;
 			if(postCode==""||postCode==null){
-				postCode_prompt.html("ÇëÊäÈëÓÊÕş±àÂë...");
+				postCode_prompt.html("è¯·è¾“å…¥é‚®æ”¿ç¼–ç ...");
 				postCode_prompt.css("color","red");
 				$(this).css("border","1px solid red");
 				flag = false;
 				return false;
 			}
 			if(reg.test(postCode)==false){
-				postCode_prompt.html("ÓÊÕş±àÂë¸ñÊ½´íÎó...");
+				postCode_prompt.html("é‚®æ”¿ç¼–ç æ ¼å¼é”™è¯¯...");
 				postCode_prompt.css("color","red");
 				$(this).css("border","1px solid red");
 				flag = false;
@@ -116,7 +116,7 @@ $(document).ready(function(){
 		}	
 	)
 	
-	//µã»÷±£´æ
+	//ç‚¹å‡»ä¿å­˜
 	$("#saveBTN").click(
 		function(){
 			$("#consignee").blur();
@@ -133,7 +133,7 @@ $(document).ready(function(){
 				$.saveAddress();
 			}
 			else{
-				//ĞÂÔö¡¢ĞŞ¸ÄµØÖ·
+				//æ–°å¢ã€ä¿®æ”¹åœ°å€
 				$("#addressForm").submit();
 			}
 			
@@ -142,32 +142,32 @@ $(document).ready(function(){
 })
 
 $.extend({
-	//ÅĞ¶Ï³ÇÊĞ
+	//åˆ¤æ–­åŸå¸‚
 	city:function(){
 		var province = $("#provinceValue").val();
 		var city_prompt = $(".city_prompt");
 		city_prompt.html("");
 		if(province==""||province==null){
-			city_prompt.html("ÇëÑ¡ÔñÊ¡·İ...");
+			city_prompt.html("è¯·é€‰æ‹©çœä»½...");
 			city_prompt.css("color","red");
 			return false;
 		}
 		return true;	
 	},
 
-	//Ä¬ÈÏµØÖ·
+	//é»˜è®¤åœ°å€
 	defaultAddress:function(){
 		var dd = $("#isDefault:checked").val();
 		var isDefaul_prompt = $(".isDefaul_prompt");
 		if(dd==null){
-			isDefaul_prompt.html("ÊÇ·ñÎªÄ¬ÈÏµØÖ·??");
+			isDefaul_prompt.html("æ˜¯å¦ä¸ºé»˜è®¤åœ°å€??");
 			isDefaul_prompt.css("color","red");
 			return false;
 		}
 		return true;
 	},
 	
-	//±£´æµØÖ·
+	//ä¿å­˜åœ°å€
 	saveAddress:function(){
 		var consignee = $("#consignee").val();
 		var telephone = $("#telephone").val();
@@ -191,7 +191,7 @@ $.extend({
 			data:data,
 			success:function(){
 				$(".addAddress").hide();
-				//ÉèÖÃÏÔÊ¾±íµ¥Öµ
+				//è®¾ç½®æ˜¾ç¤ºè¡¨å•å€¼
 				var detailAddress = province+","+city+","+country+","+street;
 				$(".ps_address .content .address .detailAddress").html(detailAddress);
 				$(".ps_address .content .address .postCode").html(postCode);

@@ -12,7 +12,7 @@
  	 <link rel="stylesheet" href="${pageContext.request.contextPath }/css/backstage/goodsManager.css" type="text/css"></link>
  	 <script type="text/javascript" src="${pageContext.request.contextPath }/js/My97DatePicker/WdatePicker.js" ></script>
  	 <script type="text/javascript" src="${pageContext.request.contextPath }/js/jQuery/jquery-1.7.2.js"></script>
-     <script type="text/javascript" src="${pageContext.request.contextPath }/js/backstage/goodsManager.js" charset="GBK"></script>
+     <script type="text/javascript" src="${pageContext.request.contextPath }/js/backstage/goodsManager.js" charset="UTF-8"></script>
  
  </head>
   

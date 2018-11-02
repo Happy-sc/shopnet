@@ -1,23 +1,23 @@
 $(document).ready(function(){
-	//µã»÷²é¿´¶©µ¥
+	//ç‚¹å‡»æŸ¥çœ‹è®¢å•
 	$(".ckOrder").click(function(){
 		var orderId = $(this).parent().children().eq(0).val();
 		location.href = "../orderManager/orderManager_showOrderDetail.action?orderId="+orderId;
 	})
 	
-	//·¢»õ:²é¿´
+	//å‘è´§:æŸ¥çœ‹
 	$(".fhckOrder").click(function(){
 		var orderId = $(this).parent().children().eq(0).val();
 		location.href = "../orderManager/orderManager_showOrderDetail.action?orderId="+orderId+"&type=ckfh"
 	})
 	
-	//µã»÷·¢»õ
+	//ç‚¹å‡»å‘è´§
 	$(".fhOrder").click(function(){
 		var orderId = $(this).parent().children().eq(0).val();
 		location.href = "../orderManager/orderManager_showOrderDetail.action?orderId="+orderId+"&type=qrfh";
 	})
 	
-	//µã»÷È·ÈÏ·¢»õ¡¢·µ»õ(¶©µ¥ÏûÏ¢)
+	//ç‚¹å‡»ç¡®è®¤å‘è´§ã€è¿”è´§(è®¢å•æ¶ˆæ¯)
 	$(".qrfhA").click(function(){
 		var orderId = $("#fhOrderId").val();
 		location.href = "../orderManager/orderManager_fhOrder.action?orderId="+orderId;

@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	//µã»÷×ó±ßµÄtap
+	//ç‚¹å‡»å·¦è¾¹çš„tap
 	$("h1[class='type']").click(function(){
 		var _content = $(this).parent().children(".content");
 		var _id = _content.attr("id");

@@ -8,22 +8,22 @@ $(document).ready(function(){
 			var answer_02 = $("#answer_02").val();
 			var answer_03 = $("#answer_03").val();
 			if(question_01==""&&question_02==""&&question_03==""){
-				$("#secretTips").html("请选择密保问题...");
+				$("#secretTips").html("璇烽�夋嫨瀵嗕繚闂...");
 				$("#secretTips").css("color","red");
 				return false;
 			}
 			if(question_01!=""&&answer_01==""){
-				$("#secretTips").html("请给第一密保输入答案");
+				$("#secretTips").html("璇风粰绗竴瀵嗕繚杈撳叆绛旀");
 				$("#secretTips").css("color","red");
 				return false;
 			}
 			if(question_02!=""&&answer_02==""){
-				$("#secretTips").html("请给第二密保输入答案");
+				$("#secretTips").html("璇风粰绗簩瀵嗕繚杈撳叆绛旀");
 				$("#secretTips").css("color","red");
 				return false;
 			}
 			if(question_03!=""&&answer_03==""){
-				$("#secretTips").html("请给第三密保输入答案");
+				$("#secretTips").html("璇风粰绗笁瀵嗕繚杈撳叆绛旀");
 				$("#secretTips").css("color","red");
 				return false;
 			}
@@ -31,7 +31,7 @@ $(document).ready(function(){
 		}	
 	)
 	
-	//选定密保
+	//閫夊畾瀵嗕繚
 	for(var i=1;i<=3;i++){
 		var questionValue = $("#question_1"+i).val();
 		var questions = $("#question_0"+i).children();

@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	//µ±Êó±ê·ÅÔÚÆ·ÅÆÓÒ±ßµÄÊ±ºò
+	//å½“é¼ æ ‡æ”¾åœ¨å“ç‰Œå³è¾¹çš„æ—¶å€™
 	$(".brand_category ul li div img").hover(
 		function(){
 			var imgsrc = $(this).attr("src");
@@ -17,7 +17,7 @@ $(document).ready(function() {
 			}
 		}),
 	
-	//µã»÷ÓÒ±ßµÄÆ·ÅÆ
+	//ç‚¹å‡»å³è¾¹çš„å“ç‰Œ
 	$(".brand_category ul li div img").click(function(){
 		var _li = $(this).parent().parent().parent().children();
 		for(var i = 0;i < _li.length;i++){
@@ -34,7 +34,7 @@ $(document).ready(function() {
 		$(this).attr("class","clicked");
 	})
 		
-	//µ±Êó±ê·ÅÔÚÆ·ÅÆÆ´ÒôÉÏÊ±
+	//å½“é¼ æ ‡æ”¾åœ¨å“ç‰Œæ‹¼éŸ³ä¸Šæ—¶
 	$(".brandsSpell .spell table td img").hover(
 		function(){
 			var imgsrc = $(this).attr("src");
@@ -52,7 +52,7 @@ $(document).ready(function() {
 		}
 	),
 	
-	//µ±µã»÷Æ·ÅÆµÄÆ´ÒôÊ±
+	//å½“ç‚¹å‡»å“ç‰Œçš„æ‹¼éŸ³æ—¶
 	$(".spell table td img").click(function(){
 		$(".brands").children().hide();
 		var id = $(this).attr("id");
@@ -84,7 +84,7 @@ $(document).ready(function() {
 		
 	}),
 	
-	//µ±µã»÷ÓÒ±ßµÄ·ÖÀàÊ±
+	//å½“ç‚¹å‡»å³è¾¹çš„åˆ†ç±»æ—¶
 	$(".brand_category li div img").click(function(){
 		
 		$(".brand_main").children().hide();

@@ -18,7 +18,7 @@ import org.compass.annotations.Store;
 public class GoodsListing implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
-	
+
 	private String goodsId;                 //商品编号
 	private Storage storage;                //商品所在仓库
 	private Category category;              //商品分类
@@ -90,7 +90,7 @@ public class GoodsListing implements java.io.Serializable {
 	public Storage getStorage() {
 		return this.storage;
 	}
-	
+
 	public void setStorage(Storage storage) {
 		this.storage = storage;
 	}
@@ -147,7 +147,7 @@ public class GoodsListing implements java.io.Serializable {
 	public void setGoodsImage(String goodsImage) {
 		this.goodsImage = goodsImage;
 	}
-	
+
 	public int getGoodsIsRecommend() {
 		return goodsIsRecommend;
 	}

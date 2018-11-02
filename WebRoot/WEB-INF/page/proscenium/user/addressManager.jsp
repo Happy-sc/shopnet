@@ -16,10 +16,10 @@
   	<script type="text/javascript" src="${pageContext.request.contextPath }/js/jQuery/jquery.ui.draggable.js"></script>
   	<script type="text/javascript" src="${pageContext.request.contextPath }/js/jQuery/jquery.ui.position.js"></script>
   	<script type="text/javascript" src="${pageContext.request.contextPath }/js/jQuery/jquery.ui.dialog.js"></script>
-  	<script type="text/javascript" src="${pageContext.request.contextPath }/js/proscenium/addressManager.js" charset="GBK"></script>
- 	<script type="text/javascript" src="${pageContext.request.contextPath }/js/proscenium/checkAddressInput.js" charset="GBK"></script>
- 	<script type="text/javascript" src="${pageContext.request.contextPath }/js/proscenium/provincesCity.js"></script>
- 	<script type="text/javascript" src="${pageContext.request.contextPath }/js/proscenium/provincesdata.js"></script>
+  	<script type="text/javascript" src="${pageContext.request.contextPath }/js/proscenium/addressManager.js" charset="UTF-8"></script>
+ 	<script type="text/javascript" src="${pageContext.request.contextPath }/js/proscenium/checkAddressInput.js" charset="UTF-8"></script>
+ 	<script type="text/javascript" src="${pageContext.request.contextPath }/js/proscenium/provincesCity.js" charset="UTF-8"></script>
+ 	<script type="text/javascript" src="${pageContext.request.contextPath }/js/proscenium/provincesdata.js" charset="UTF-8"></script>
  </head>
   <body>
     <div id="top">

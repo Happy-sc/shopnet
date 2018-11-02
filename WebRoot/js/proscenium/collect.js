@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	//ÅĞ¶Ïµ±Ç°µÄtab
+	//åˆ¤æ–­å½“å‰çš„tab
 	var type = $("#collectType").val();
 	var _li = $(".collect_content .title li");
 	if(type=="all"){
@@ -15,7 +15,7 @@ $(document).ready(function(){
 		$(".collect_content .content .kongbai").css("left","528px");
 	}
 	
-	//Êó±ê·ÅÔÚliÉÏÃæ
+	//é¼ æ ‡æ”¾åœ¨liä¸Šé¢
 	$(".collect_content .title li").hover(
 		function(){
 			var _class = $(this).attr("class");
@@ -31,7 +31,7 @@ $(document).ready(function(){
 		}
 	)
 
-	//µã»÷tab
+	//ç‚¹å‡»tab
 	$(".collect_content .title li").click(
 		function(){
 			var _id = $(this).attr("id");
@@ -47,7 +47,7 @@ $(document).ready(function(){
 		}	
 	)
 	
-	//µã»÷È«Ñ¡
+	//ç‚¹å‡»å…¨é€‰
 	$("input[class='quanxuan']").click(
 		function(){
 			var _checked = $(this).attr("checked");
@@ -62,7 +62,7 @@ $(document).ready(function(){
 		}	
 	)
 	
-	//·ÅÔÚÒ³ÃæÉÏÃæÊ± 
+	//æ”¾åœ¨é¡µé¢ä¸Šé¢æ—¶ 
 	$("ul[class='page'] li span").hover(
 		function(){
 			$(this).css("border","1px solid red");

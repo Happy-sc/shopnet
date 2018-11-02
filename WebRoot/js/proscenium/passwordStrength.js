@@ -1,27 +1,27 @@
 $.extend({
 		/**
-		 * ÃÜÂëµÈ¼¶
-		 * ¶¨Òå¼ÆÊıÆ÷score
-		 * ³¤¶È<=6 +1
-		 * 6<³¤¶È<=10  +1
-		 * 10<³¤¶È<=16 +1
-		 * ÓĞĞ¡Ğ´ +1
-		 * ÓĞÊı×Ö +1
-		 * ÓĞ´óĞ´ +1
+		 * å¯†ç ç­‰çº§
+		 * å®šä¹‰è®¡æ•°å™¨score
+		 * é•¿åº¦<=6 +1
+		 * 6<é•¿åº¦<=10  +1
+		 * 10<é•¿åº¦<=16 +1
+		 * æœ‰å°å†™ +1
+		 * æœ‰æ•°å­— +1
+		 * æœ‰å¤§å†™ +1
 		 * 
-		 * score<=3 µÍ
-		 * socre 4 5 ÖĞ
-		 * score 6 ¸ß
+		 * score<=3 ä½
+		 * socre 4 5 ä¸­
+		 * score 6 é«˜
 		 * 
 		 */
 	passwordStrength:function(){
 		var password = $("#newPassword").val();
 		var password_prompt = $("#newPW_prompt");
 		$("#newPW_prompt").html("");
-		//ÏÈÅĞ¶ÏÃÜÂëÊäÈëÊÇ·ñÕıÈ·£ºÖ»ÄÜ°üº¬Êı×Ö¡¢´óĞ¡Ğ´×ÖÄ¸
+		//å…ˆåˆ¤æ–­å¯†ç è¾“å…¥æ˜¯å¦æ­£ç¡®ï¼šåªèƒ½åŒ…å«æ•°å­—ã€å¤§å°å†™å­—æ¯
 		var reg = /^[0-9a-zA-Z]{1,}$/;
 		if(reg.test(password)==false){
-			password_prompt.html("ÃÜÂë¸ñÊ½²»¶Ô£¬ÓÉ6-15Î»Êı×ÖÓë×ÖÄ¸×éºÏ£¬Çø·Ö´óĞ¡Ğ´");
+			password_prompt.html("å¯†ç æ ¼å¼ä¸å¯¹ï¼Œç”±6-15ä½æ•°å­—ä¸å­—æ¯ç»„åˆï¼ŒåŒºåˆ†å¤§å°å†™");
 			password_prompt.attr("class","error_prompt");
 			return false;
 		}
@@ -31,32 +31,32 @@ $.extend({
 			$(".strenght_H").children().attr("src","../images/proscenium/safeLevelqiang_01.jpg");
 			
 			var score = 0;
-			if(password.length<=6){                          //³¤¶È<=6
+			if(password.length<=6){                          //é•¿åº¦<=6
 				score += 1;
 			}
-			if(password.length>6&&password.length<=10){      //6<³¤¶È<=10
+			if(password.length>6&&password.length<=10){      //6<é•¿åº¦<=10
 				score += 2;
 			}
-			if(password.length>10&&password.length<=16){    //<10³¤¶È<=16
+			if(password.length>10&&password.length<=16){    //<10é•¿åº¦<=16
 				score += 3;
 			}
-			if(password.match(/([0-9])/)){           //°üº¬Êı×Ö
+			if(password.match(/([0-9])/)){           //åŒ…å«æ•°å­—
 				score += 1;
 			}
-			if(password.match(/([a-z])/)){           //°üº¬Ğ¡Ğ´
+			if(password.match(/([a-z])/)){           //åŒ…å«å°å†™
 				score += 1;
 			}
-			if(password.match(/([A-Z])/)){          //°üº¬´óĞ´
+			if(password.match(/([A-Z])/)){          //åŒ…å«å¤§å†™
 				score += 1;
 			}
-			if(score<=3){                //µÍ¼¶ÃÜÂë
+			if(score<=3){                //ä½çº§å¯†ç 
 				$(".strenght_L").children().attr("src","../images/proscenium/safeLevelruo_02.jpg");
 			}
-			if(score>=4&&score<=5){     //ÖĞ¼¶ÃÜÂë
+			if(score>=4&&score<=5){     //ä¸­çº§å¯†ç 
 				$(".strenght_L").children().attr("src","../images/proscenium/safeLevelruo_02.jpg");
 				$(".strenght_M").children().attr("src","../images/proscenium/safeLevelzhong_02.jpg");
 			}
-			if(score==6){              //¸ß¼¶ÃÜÂë
+			if(score==6){              //é«˜çº§å¯†ç 
 				$(".strenght_L").children().attr("src","../images/proscenium/safeLevelruo_02.jpg");
 				$(".strenght_M").children().attr("src","../images/proscenium/safeLevelzhong_02.jpg");
 				$(".strenght_H").children().attr("src","../images/proscenium/safeLevelqiang_02.jpg");;

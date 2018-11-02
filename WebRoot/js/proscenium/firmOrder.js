@@ -1,18 +1,18 @@
 $(document).ready(function(){
-	//ÅĞ¶ÏÊÇ·ñÊ¹ÓÃµØÖ·
+	//åˆ¤æ–­æ˜¯å¦ä½¿ç”¨åœ°å€
 	var i = $(".ps_address .content input[id='isAdd']").val();
 	if(i=="0"){
 		$(".addAddress").show();
-		//¼ÓÔØ³ÇÊĞ
+		//åŠ è½½åŸå¸‚
 		$(".city").ProvinceCity();
-		//ÉèÖÃÆäËûCSS
+		//è®¾ç½®å…¶ä»–CSS
 		$(".ps_address .content .title").css("background-color","red");
 	}
 	else{
 		$(".ps_address .content .oldAddress").show();
 	}	
 	
-	//·ÅÔÚĞÂÔöµØÖ·ÉÏ
+	//æ”¾åœ¨æ–°å¢åœ°å€ä¸Š
 	$(".ps_address .content .newAddress img").hover(
 		function(){
 			$(this).attr("src","../images/proscenium/userNewAddress_02.jpg");
@@ -22,7 +22,7 @@ $(document).ready(function(){
 		}
 	)
 	
-	//µã»÷Ê¹ÓÃĞÂµØÖ·
+	//ç‚¹å‡»ä½¿ç”¨æ–°åœ°å€
 	$(".ps_address .content .newAddress img").click(
 		function(){
 			$(".ps_address .content .oldAddress").hide();
@@ -31,7 +31,7 @@ $(document).ready(function(){
 		}	
 	)
 	
-	//µ±·ÅÈë¶©µ¥²¹³äÖĞ
+	//å½“æ”¾å…¥è®¢å•è¡¥å……ä¸­
 	$(".car_submit textarea").focus(
 		function(){
 			$(this).attr("class","ddbc_1");
@@ -44,12 +44,12 @@ $(document).ready(function(){
 			var _ddbc = $(this).val();
 			if(_ddbc==""){
 				$(this).attr("class","ddbc");
-				$(this).val("Ñ¡Ìî,¿ÉÒÔ¸æËßÎÒÃÇÄú¶Ô¶©µ¥µÄÌØÊâÒªÇó");
+				$(this).val("é€‰å¡«,å¯ä»¥å‘Šè¯‰æˆ‘ä»¬æ‚¨å¯¹è®¢å•çš„ç‰¹æ®Šè¦æ±‚");
 			}
 		}
 	)
 	
-	//·ÅÔÚÌá½»¶©µ¥°´Å¥ÉÏ
+	//æ”¾åœ¨æäº¤è®¢å•æŒ‰é’®ä¸Š
 	$(".car_submit .submit .btn img").hover(
 		function(){
 			$(this).attr("src","../images/proscenium/submitOrder_02.jpg");
@@ -59,26 +59,26 @@ $(document).ready(function(){
 		}
 	)
 	
-	//µã»÷Ìá½»¶©µ¥°´Å¥
+	//ç‚¹å‡»æäº¤è®¢å•æŒ‰é’®
 	$(".car_submit .submit .btn img").click(
 		function(){
 			$(".ps_pay .title .paytype").html("");
 			$(".qr_address").html("");
 			var payType = $(".ps_pay .content #payStyle:checked").val();
 			if(payType==""||payType==null){
-				$(".ps_pay .title .paytype").html("ÇëÑ¡ÔñÖ§¸¶·½Ê½");
+				$(".ps_pay .title .paytype").html("è¯·é€‰æ‹©æ”¯ä»˜æ–¹å¼");
 				var ptDiv = $(".ps_pay").offset().top;
 				$("html,body").animate({ scrollTop:ptDiv},1000); 
 				return false;
 			}
 			var address = $(".oldAddress .address li[class='detailAddress']").text();
 			if(address==""||address==null){
-				$(".qr_address").html("ÇëÈ·ÈÏÊÕ»õµØÖ·");
+				$(".qr_address").html("è¯·ç¡®è®¤æ”¶è´§åœ°å€");
 				var qrA = $(".payStyle").offset().top;
 				$("html,body").animate({ scrollTop:qrA},1000); 
 				return false;
 			}
-			//ÉèÖÃÖµ
+			//è®¾ç½®å€¼
 			var postCode = $(".oldAddress .address li[class='postCode']").text();
 			var consignee = $(".oldAddress .address li[class='consignee']").text();
 			var phone = $(".oldAddress .address li[class='phone']").text();
@@ -103,7 +103,7 @@ $(document).ready(function(){
 	)
 	
 	
-	//Ê¹ÓÃÅÄĞ¬±Ò
+	//ä½¿ç”¨æ‹é‹å¸
 	$(".sypxb").focus(
 		function(){
 			var sumS = $("font[class='sfk']").text();
@@ -127,7 +127,7 @@ $(document).ready(function(){
 					var sumS = $("font[class='sfk']").text();
 					var sum = sumS.substring(1,sumS.length); 
 					
-					if(data.indexOf("½öÓĞ")!=-1){
+					if(data.indexOf("ä»…æœ‰")!=-1){
 						var datas = data.split(",");
 						$(".jsypxb").html(datas[0]);
 						$(".jsypxb").css("color","red");
@@ -135,7 +135,7 @@ $(document).ready(function(){
 						$("font[class='sfk']").html("&yen;"+String(Number(sum)-Number(datas[1])));
 					}
 					else{
-						$(".jsypxb").html("ÄãÊ¹ÓÃÁË"+paixieBNum+"¸öÅÄĞ¬±Ò");
+						$(".jsypxb").html("ä½ ä½¿ç”¨äº†"+paixieBNum+"ä¸ªæ‹é‹å¸");
 						$("font[class='sfk']").html("&yen;"+String(Number(sum)-Number(paixieBNum)));
 					}
 				}

@@ -1,23 +1,23 @@
 var historyp; 
-//×îĞÂ·ÃÎÊµÄÉÌÆ·±àºÅID 
-var nid="ĞÂÉÌÆ·±àºÅID"; 
-//ÉèÖÃcookie±£´æµÄä¯ÀÀ¼ÇÂ¼µÄÌõÊı 
+//æœ€æ–°è®¿é—®çš„å•†å“ç¼–å·ID 
+var nid="æ–°å•†å“ç¼–å·ID"; 
+//è®¾ç½®cookieä¿å­˜çš„æµè§ˆè®°å½•çš„æ¡æ•° 
 var N=5; 
 var count=0; 
-//ÅĞ¶ÏÊÇ·ñ´æÔÚcookie 
-if($.cookie('smile1314h')==null) //cookie ²»´æÔÚ 
+//åˆ¤æ–­æ˜¯å¦å­˜åœ¨cookie 
+if($.cookie('smile1314h')==null) //cookie ä¸å­˜åœ¨ 
 { 
-	//´´½¨ĞÂµÄcookie,±£´æä¯ÀÀ¼ÇÂ¼ 
+	//åˆ›å»ºæ–°çš„cookie,ä¿å­˜æµè§ˆè®°å½• 
 	$.cookie('smile1314h',nid,{expires:7,path:'/'}); 
 } 
-else //cookiesÒÑ¾­´æÔÚ 
+else //cookieså·²ç»å­˜åœ¨ 
 { 
-	//»ñÈ¡ä¯ÀÀ¹ıµÄÉÌÆ·±àºÅID 
+	//è·å–æµè§ˆè¿‡çš„å•†å“ç¼–å·ID 
 	historyp=$.cookie('smile1314h'); 
 	var check_result = $('#latestp'); 
 	check_result.html('<img src=/CSS/Image/Loading.gif style=/"margin-left:40px;;/">'); 
-	//ajax ¸ù¾İ²úÆ·±àºÅ»ñÈ¡ĞÅÏ¢ÁĞ±í 
-	$.ajax({ //Ò»¸öAjax¹ı³Ì 
+	//ajax æ ¹æ®äº§å“ç¼–å·è·å–ä¿¡æ¯åˆ—è¡¨ 
+	$.ajax({ //ä¸€ä¸ªAjaxè¿‡ç¨‹ 
 		type: "get", 
 		url : "/Comm/getLatestProduct.ashx", 
 		dataType:'html', 
@@ -26,11 +26,11 @@ else //cookiesÒÑ¾­´æÔÚ
 		check_result.html(""); 
 		check_result.html(json); 
 }}); 
-//·Ö½â×Ö·û´®ÎªÊı×é 
+//åˆ†è§£å­—ç¬¦ä¸²ä¸ºæ•°ç»„ 
 var pArray=historyp.split(','); 
-//×îĞÂ·ÃÎÊµÄÉÌÆ·±àºÅ·ÅÖÃÔØ×îÇ°Ãæ 
+//æœ€æ–°è®¿é—®çš„å•†å“ç¼–å·æ”¾ç½®è½½æœ€å‰é¢ 
 historyp=nid; 
-//ÅĞ¶ÏÊÇ¸ÃÉÌÆ·±àºÅÊÇ·ñ´æÔÚÓÚ×î½ü·ÃÎÊµÄ¼ÇÂ¼ÀïÃæ 
+//åˆ¤æ–­æ˜¯è¯¥å•†å“ç¼–å·æ˜¯å¦å­˜åœ¨äºæœ€è¿‘è®¿é—®çš„è®°å½•é‡Œé¢ 
 for(var i=0;i<pArray.length;i++) 
 { 
 if(pArray[i]!=nid) 
@@ -43,6 +43,6 @@ break;
 } 
 } 
 } 
-//ĞŞ¸ÄcookieµÄÖµ 
+//ä¿®æ”¹cookieçš„å€¼ 
 $.cookie('smile1314h',historyp); 
 } 

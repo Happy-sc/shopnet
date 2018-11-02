@@ -1,5 +1,5 @@
 jQuery(document).ready(function(){
-	//µã»÷µÇÂ¼
+	//ç‚¹å‡»ç™»å½•
 	jQuery("#login").click(
 		function(){
 			var thisURL = location.href;

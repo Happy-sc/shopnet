@@ -7,9 +7,9 @@
 	<link rel="stylesheet" href="${pageContext.request.contextPath }/css/proscenium/userCenterLayout.css" type="text/css"></link>
 	<link rel="stylesheet" href="${pageContext.request.contextPath }/css/proscenium/userCenterInfor.css" type="text/css"></link>
  	<script type="text/javascript" src="${pageContext.request.contextPath }/js/jQuery/jquery-1.7.2.js"></script>
-  	<script type="text/javascript" src="${pageContext.request.contextPath }/js/proscenium/provincesCity.js"></script>
- 	<script type="text/javascript" src="${pageContext.request.contextPath }/js/proscenium/provincesdata.js"></script>
- 	<script type="text/javascript" src="${pageContext.request.contextPath }/js/proscenium/userCenterInfor.js" charset="GBK"></script>
+  	<script type="text/javascript" src="${pageContext.request.contextPath }/js/proscenium/provincesCity.js" charset="UTF-8"></script>
+ 	<script type="text/javascript" src="${pageContext.request.contextPath }/js/proscenium/provincesdata.js" charset="UTF-8"></script>
+ 	<script type="text/javascript" src="${pageContext.request.contextPath }/js/proscenium/userCenterInfor.js" charset="UTF-8"></script>
  	<script type="text/javascript" src="${pageContext.request.contextPath }/js/My97DatePicker/WdatePicker.js" ></script>
  </head>
   

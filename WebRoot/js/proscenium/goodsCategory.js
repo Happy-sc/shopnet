@@ -1,4 +1,4 @@
-//µã»÷·ÖÀàµÄ¼ÓºÅ,Õ¹¿ª»ò¹Ø±Õ¿îÊ½
+//ç‚¹å‡»åˆ†ç±»çš„åŠ å·,å±•å¼€æˆ–å…³é—­æ¬¾å¼
 function showOrHideStyle(num){
 	$("#style_"+num).toggleClass("hide");
 	if($("#style_"+num).attr("class")!="hide"){
@@ -10,7 +10,7 @@ function showOrHideStyle(num){
 }
 
 
-//µã»÷category tab
+//ç‚¹å‡»category tab
 function setLable(name,num,n){
 	for(var j = 1;j<=n;j++){
 		var menu = $("#"+name+j);
@@ -23,7 +23,7 @@ function setLable(name,num,n){
 }
 
 $(document).ready(function() {
-	//µ±Êó±ê·ÅÔÚÒ³ÃæÉÏÃæÊ±
+	//å½“é¼ æ ‡æ”¾åœ¨é¡µé¢ä¸Šé¢æ—¶
 	$(".categoryPage a span").hover(
 		function(){
 			$(this).css("border","1px solid red");
@@ -33,7 +33,7 @@ $(document).ready(function() {
 		}
 	)
 	
-	//Õ¹¿ª·ÖÀà
+	//å±•å¼€åˆ†ç±»
 	var flcategoryId = $("#flcategoryId").val();
 	var i = flcategoryId.substring(flcategoryId.length-1,flcategoryId.length);
 	showOrHideStyle(i);

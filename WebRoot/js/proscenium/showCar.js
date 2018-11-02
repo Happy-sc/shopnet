@@ -1,8 +1,8 @@
 $(document).ready(function(){
-	//ÉèÖÃÔË·Ñ
+	//è®¾ç½®è¿è´¹
 	$.setFreight();
 
-	//·ÅÔÚÊ¹ÓÃÍ¼±êÉÏ
+	//æ”¾åœ¨ä½¿ç”¨å›¾æ ‡ä¸Š
 	$(".car_youhuiquan .left img[class='shiyong']").hover(
 		function(){
 			$(this).attr("src","../images/proscenium/shiyong_02.jpg")
@@ -12,7 +12,7 @@ $(document).ready(function(){
 		}
 	)
 	
-	//·ÅÔÚÔÙÈ¥¹ºÎïÍ¼±êÉÏ
+	//æ”¾åœ¨å†å»è´­ç‰©å›¾æ ‡ä¸Š
 	$(".car_bottom .left img").hover(
 		function(){
 			$(this).attr("src","../images/proscenium/jixugouwu_02.jpg")
@@ -22,7 +22,7 @@ $(document).ready(function(){
 		}
 	)
 	
-	//·ÅÔÚÈ¥½áËãÍ¼±êÉÏ
+	//æ”¾åœ¨å»ç»“ç®—å›¾æ ‡ä¸Š
 	$(".car_bottom .right li img").hover(
 		function(){
 			$(this).attr("src","../images/proscenium/qujiesuan_12.jpg")

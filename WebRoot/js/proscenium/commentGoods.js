@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	//放在打分上面
+	//鏀惧湪鎵撳垎涓婇潰
 	$(".dafenA").hover(
 		function(){
 			grade($(this));
@@ -12,13 +12,13 @@ $(document).ready(function(){
 		}
 	)
 	
-	//点击打分
+	//鐐瑰嚮鎵撳垎
 	$(".dafenA").click(function(){
 		var num = grade($(this));
 		$("#commentGrade").val(num);
 	})
 	
-	//发表评价按钮
+	//鍙戣〃璇勪环鎸夐挳
 	$("#fbpjImg").hover(
 		function(){
 			$(this).attr("src","../images/proscenium/fbpl_02.jpg");

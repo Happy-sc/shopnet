@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	//鼠标放在<上时
+	//榧犳爣鏀惧湪<涓婃椂
 	$(".recommand_content .left img").hover(
 		function(){
 			$(this).attr("src","../images/proscenium/userCenter_left02.jpg")
@@ -9,7 +9,7 @@ $(document).ready(function() {
 		}
 	),
 	
-	//鼠标放在>上时
+	//榧犳爣鏀惧湪>涓婃椂
 	$(".recommand_content .right img").hover(
 		function(){
 			$(this).attr("src","../images/proscenium/userCenter_right02.jpg")
@@ -19,7 +19,7 @@ $(document).ready(function() {
 		}
 	),
 	
-	//点击tab选项
+	//鐐瑰嚮tab閫夐」
 	$(".recommand_title li").click(
 		function(){
 			var tabs = $(".recommand_title").children().children("li");
@@ -33,7 +33,7 @@ $(document).ready(function() {
 		}	
 	)
 	
-	//设定安全级别
+	//璁惧畾瀹夊叏绾у埆
 	var i = $("#aqjb").val();
 	if(i==2){
 		$(".aqjbz").attr("src","../images/proscenium/safeLevelzhong_02S.jpg");

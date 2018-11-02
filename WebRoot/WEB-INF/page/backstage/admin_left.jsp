@@ -8,7 +8,7 @@
 	
   	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/backstage/adminLeft.css" type="text/css"></link>
  	<script type="text/javascript" src="${pageContext.request.contextPath}/js/jQuery/jquery-1.7.2.js"></script>
- 	<script type="text/javascript" src="${pageContext.request.contextPath }/js/backstage/adminLeft.js"></script>
+ 	<script type="text/javascript" src="${pageContext.request.contextPath }/js/backstage/adminLeft.js" charset="UTF-8"></script>
  </head>
   <body>
 

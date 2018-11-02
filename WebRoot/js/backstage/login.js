@@ -1,20 +1,20 @@
 $(document).ready(function(){
-	//µã»÷µÇÂ¼
+	//ç‚¹å‡»ç™»å½•
 	$("#loginForm").submit(function(){
 		var workerId = $("#workerId").val();
 		var password = $("#workerPassword").val();
 		var code = $("#code").val();
 		var tips = $(".loginError");
 		if(workerId.trim()==""){
-			tips.html("ÇëÊäÈëÓÃ»§Ãû...");
+			tips.html("è¯·è¾“å…¥ç”¨æˆ·å...");
 			return false;
 		}
 		else if(password.trim()==""){
-			tips.html("ÇëÊäÈëÃÜÂë...");
+			tips.html("è¯·è¾“å…¥å¯†ç ...");
 			return false;
 		}
 		else if(code.trim()==""){
-			tips.html("ÇëÊäÈëÑéÖ¤Âë...")
+			tips.html("è¯·è¾“å…¥éªŒè¯ç ...")
 			return false;
 		}
 		else{
@@ -22,7 +22,7 @@ $(document).ready(function(){
 		}
 	})
 	
-	//µã»÷ÏÂÒ»ÕÅ
+	//ç‚¹å‡»ä¸‹ä¸€å¼ 
 	$("#xyz,#authImage").click(function(){
 		var nowTime = new Date().getTime();
 		var _src = $("#authImage").attr("src")+"?nowTime="+nowTime;

@@ -1,5 +1,5 @@
 /*
- * ĞŞ¸ÄÔ±¹¤ĞÅÏ¢
+ * ä¿®æ”¹å‘˜å·¥ä¿¡æ¯
  */
 function checkUpdateForms(){
 	var workerId = document.getElementById("workerId").value;
@@ -12,88 +12,88 @@ function checkUpdateForms(){
 	
 	if(workerId==""||workerName==""||workerIDCard==""||workerBirthday==""||
 	   	workerPhone==""||workerAddress==""){
-		div.innerHTML = "ÊäÈëĞÅÏ¢²»ÄÜÎª¿Õ,ÇëÊäÈëĞÅÏ¢ºóÌá½»..."
+		div.innerHTML = "è¾“å…¥ä¿¡æ¯ä¸èƒ½ä¸ºç©º,è¯·è¾“å…¥ä¿¡æ¯åæäº¤..."
 		return false;
 	   }
 	return true;
 }
 
 /*
- * Ô±¹¤ĞŞ¸ÄÃÜÂë
+ * å‘˜å·¥ä¿®æ”¹å¯†ç 
  */
-//µ±Êó±ê·ÅÈëÊäÈë¾ÉÃÜÂë¿òÊ±
+//å½“é¼ æ ‡æ”¾å…¥è¾“å…¥æ—§å¯†ç æ¡†æ—¶
 function oldPasswordFocus(){
 	    var oldPrompt = document.getElementById("oldPrompt");
-		oldPrompt.innerHTML = "ÇëÊäÈëÄúµÄÕıÈ·µÄÔ­Ê¼ÃÜÂë...";
+		oldPrompt.innerHTML = "è¯·è¾“å…¥æ‚¨çš„æ­£ç¡®çš„åŸå§‹å¯†ç ...";
 		oldPrompt.className = "messagePrompt";
 }
 
-//µ±Êó±êÀë¿ªÊäÈë¾ÉÃÜÂë¿òÊ±
+//å½“é¼ æ ‡ç¦»å¼€è¾“å…¥æ—§å¯†ç æ¡†æ—¶
 function oldPasswordBlur(){
 	var oldPassword = document.getElementById("oldPassword").value;
 	var oldPrompt = document.getElementById("oldPrompt");
 	oldPrompt.innerHTML = "";
 	if(oldPassword==""){
-		oldPrompt.innerHTML = "ÃÜÂëÊäÈë²»ÄÜÎª¿Õ,ÇëÊäÈë...";
+		oldPrompt.innerHTML = "å¯†ç è¾“å…¥ä¸èƒ½ä¸ºç©º,è¯·è¾“å…¥...";
 		oldPrompt.className = "prompt_error";
 		return false;
 	}
 	return false
 }
 
-//µ±Êó±ê·ÅÈëÊäÈëĞÂÃÜÂë¿òÊ±
+//å½“é¼ æ ‡æ”¾å…¥è¾“å…¥æ–°å¯†ç æ¡†æ—¶
 function newPasswordFocus(){
 		var newPrompt = document.getElementById("newPrompt");
-		newPrompt.innerHTML = "ĞÂÃÜÂë¿ÉÓÉ´óĞ¡Ğ´Ó¢ÎÄ×ÖÄ¸¡¢Êı×Ö×é³É£¬³¤¶È6£­16¸ö×Ö·û";
+		newPrompt.innerHTML = "æ–°å¯†ç å¯ç”±å¤§å°å†™è‹±æ–‡å­—æ¯ã€æ•°å­—ç»„æˆï¼Œé•¿åº¦6ï¼16ä¸ªå­—ç¬¦";
 		newPrompt.className = "messagePrompt";
 }
 
-//µ±Êó±êÀë¿ªÊäÈëĞÂÃÜÂë¿òÊ±
+//å½“é¼ æ ‡ç¦»å¼€è¾“å…¥æ–°å¯†ç æ¡†æ—¶
 function newPasswordBlur(){
 	var newPassword = document.getElementById("newPassword").value;
 	var newPrompt =document.getElementById("newPrompt");
 	newPrompt.innerHTML = "";
 	var reg=/^[a-zA-Z0-9]{6,16}$/;
 	if(newPassword==""){
-		newPrompt.innerHTML = "ĞÂÃÜÂëÊäÈë²»ÄÜ¿Õ,ÇëÊäÈë...";
+		newPrompt.innerHTML = "æ–°å¯†ç è¾“å…¥ä¸èƒ½ç©º,è¯·è¾“å…¥...";
 		newPrompt.className = "prompt_error";
 		return false;
 	}
 	if(reg.test(newPassword)==false){
-		newPrompt.innerHTML = "ĞÂÃÜÂë¸ñÊ½´íÎó,ÇëÖØĞÂÊäÈë...";
+		newPrompt.innerHTML = "æ–°å¯†ç æ ¼å¼é”™è¯¯,è¯·é‡æ–°è¾“å…¥...";
 		newPrompt.className = "prompt_error";
 		return false;
 	}
 	return true;
 }
 
-//µ±Êó±ê·ÅÈëÔÙÊäÈëÒ»´ÎÃÜÂë¿òÊ±
+//å½“é¼ æ ‡æ”¾å…¥å†è¾“å…¥ä¸€æ¬¡å¯†ç æ¡†æ—¶
 function reNewPasswordFocus(){
 	var renewPrompt = document.getElementById("reNewPrompt");
-	renewPrompt.innerHTML = "ÇëÔÙÒ»´ÎÊäÈëÃÜÂë.....";
+	renewPrompt.innerHTML = "è¯·å†ä¸€æ¬¡è¾“å…¥å¯†ç .....";
 	renewPrompt.className = "messagePrompt";
 }
 
-//µ±Êó±êÀë¿ªÔÙÊäÈëÒ»´ÎÃÜÂë¿òÊ±
+//å½“é¼ æ ‡ç¦»å¼€å†è¾“å…¥ä¸€æ¬¡å¯†ç æ¡†æ—¶
 function reNewPasswordBlur(){
 	var newPassword = document.getElementById("newPassword").value;
 	var reNewPassword = document.getElementById("reNewPassword").value;
 	var newPrompt = document.getElementById("reNewPrompt");
 	newPrompt.innerHTML = "";
 	if(reNewPassword==""){
-		newPrompt.innerHTML = "ÃÜÂëÊäÈë²»ÄÜÎª¿Õ,ÇëÖØĞÂÊäÈë....";
+		newPrompt.innerHTML = "å¯†ç è¾“å…¥ä¸èƒ½ä¸ºç©º,è¯·é‡æ–°è¾“å…¥....";
 		newPrompt.className = "prompt_error";
 		return false;
 	}
 	if(newPassword!=reNewPassword){
-		newPrompt.innerHTML = "Á½´ÎÃÜÂëÊäÈë²»Í¬,ÇëÖØĞÂÊäÈë...";
+		newPrompt.innerHTML = "ä¸¤æ¬¡å¯†ç è¾“å…¥ä¸åŒ,è¯·é‡æ–°è¾“å…¥...";
 		newPrompt.className = "prompt_error";
 		return false;
 	}
 	return true;
 }
 
-//µ±µã»÷È·¶¨ĞŞ¸Ä
+//å½“ç‚¹å‡»ç¡®å®šä¿®æ”¹
 function checkPasswordForms(){
 	if(oldPasswordBlur()==true&&newPasswordBlur()==true&&reNewPasswordBlur()==true){
 		return true;
@@ -105,7 +105,7 @@ function checkPasswordForms(){
 }
 
 /*
- * ËÑË÷Ô±¹¤ĞÅÏ¢
+ * æœç´¢å‘˜å·¥ä¿¡æ¯
  */
 function checkRearchForms(){
 	var workerId = document.getElementById("workerId").value;
@@ -114,50 +114,50 @@ function checkRearchForms(){
 	var message = document.getElementById("message");
 	
 	if(workerId==""&&workerName==""&&positionId=="-1"){
-		message.innerHTML = "ÊäÈëËÑË÷Ìõ¼ş²»ÄÜÎª¿Õ,ÇëÊäÈëËÑË÷Ìõ¼ş....";
+		message.innerHTML = "è¾“å…¥æœç´¢æ¡ä»¶ä¸èƒ½ä¸ºç©º,è¯·è¾“å…¥æœç´¢æ¡ä»¶....";
 		return false;
 	}
 	return true;
 }
 
 /*
- * Ìí¼ÓÔ±¹¤ĞÅÏ¢
+ * æ·»åŠ å‘˜å·¥ä¿¡æ¯
  */
-//µ±Êó±ê·ÅÔÚÔ±¹¤±àºÅµÄÊäÈë¿òÖĞÊ±
+//å½“é¼ æ ‡æ”¾åœ¨å‘˜å·¥ç¼–å·çš„è¾“å…¥æ¡†ä¸­æ—¶
 function workerIdFocus(){
 	var workerId_prompt = document.getElementById("workerId_prompt");
-		workerId_prompt.innerHTML = "Ô±¹¤±àºÅÓÉ11Î»µÄÊı×Ö×é³É....";
+		workerId_prompt.innerHTML = "å‘˜å·¥ç¼–å·ç”±11ä½çš„æ•°å­—ç»„æˆ....";
 		workerId_prompt.className = "addWorker_prompt";
 }
 
-//µ±Êó±êÀë¿ªÔ±¹¤±àºÅµÄÊäÈë¿òÖĞÊ±
+//å½“é¼ æ ‡ç¦»å¼€å‘˜å·¥ç¼–å·çš„è¾“å…¥æ¡†ä¸­æ—¶
 function workerIdBlur(){
 	var workerId = document.getElementById("workerId").value;
 	var workerId_prompt = document.getElementById("workerId_prompt");
 	var reg = /^\d{11}$/;
 	workerId_prompt.innerHTML = "";
 	if(workerId==""){
-		workerId_prompt.innerHTML = "Ô±¹¤±àºÅ²»ÄÜÎª¿Õ,ÇëÊäÈë....";
+		workerId_prompt.innerHTML = "å‘˜å·¥ç¼–å·ä¸èƒ½ä¸ºç©º,è¯·è¾“å…¥....";
 		workerId_prompt.className = "prompt_error";
 		return false;
 	}
 	if(reg.test(workerId)==false){
-		workerId_prompt.innerHTML = "Ô±¹¤±àºÅ¸ñÊ½´íÎó,ÇëÖØĞÂÊäÈë...";
+		workerId_prompt.innerHTML = "å‘˜å·¥ç¼–å·æ ¼å¼é”™è¯¯,è¯·é‡æ–°è¾“å…¥...";
 		workerId_prompt.className = "prompt_error";
 		return false;
 	}
-	idIsExit(workerId);        //ÅĞ¶Ï¸ÃÔ±¹¤±àºÅÊÇ·ñ´æÔÚ
+	idIsExit(workerId);        //åˆ¤æ–­è¯¥å‘˜å·¥ç¼–å·æ˜¯å¦å­˜åœ¨
 	return true;
 }
 
-//ÑéÖ¤¸ÃÔ±¹¤ÊÇ·ñ´æÔÚ
+//éªŒè¯è¯¥å‘˜å·¥æ˜¯å¦å­˜åœ¨
 function idIsExit(workerId){
 	var url = "../systemManager/systemWorkerManager_idIsExit.action";
 	$.get(url,{
 		workerId:workerId
 	},function(data){
 		document.getElementById("workerId_prompt").innerHTML = data;
-		if(data.indexOf("ÒÑ¾­´æÔÚ")==-1){
+		if(data.indexOf("å·²ç»å­˜åœ¨")==-1){
 			document.getElementById("workerId_prompt").className = "addWorker_prompt";
 		}
 		else{
@@ -166,65 +166,65 @@ function idIsExit(workerId){
 	})
 }
 
-//µ±Êó±ê·ÅÔÚÔ±¹¤ĞÕÃûµÄÊäÈë¿òÖĞÊ±
+//å½“é¼ æ ‡æ”¾åœ¨å‘˜å·¥å§“åçš„è¾“å…¥æ¡†ä¸­æ—¶
 function workerNameFocus(){
 	var workerName_prompt = document.getElementById("workerName_prompt");
-	workerName_prompt.innerHTML = "ÇëÊäÈëÔ±¹¤ĞÕÃû...";
+	workerName_prompt.innerHTML = "è¯·è¾“å…¥å‘˜å·¥å§“å...";
 	workerName_prompt.className = "addworker_prompt";
 }
 
-//µ±Êó±êÀïÀë¿ªÔ±¹¤ĞÕÃûµÄÊäÈë¿òÖĞÊ±
+//å½“é¼ æ ‡é‡Œç¦»å¼€å‘˜å·¥å§“åçš„è¾“å…¥æ¡†ä¸­æ—¶
 function workerNameBlur(){
 	var workerName = document.getElementById("workerName").value;
 	var workerName_prompt = document.getElementById("workerName_prompt");
 	workerName_prompt.innerHTML = "";
 	if(workerName==""){
-		workerName_prompt.innerHTML = "Ô±¹¤ĞÕÃû²»ÄÜÎª¿Õ,ÇëÊäÈë...";
+		workerName_prompt.innerHTML = "å‘˜å·¥å§“åä¸èƒ½ä¸ºç©º,è¯·è¾“å…¥...";
 		workerName_prompt.className = "prompt_error";
 		return false;
 	}
 	return true;
 }
 
-//µ±Êó±ê·ÅÔÚÔ±¹¤Éí·İÖ¤ºÅµÄÊäÈë¿òÖĞÊ±
+//å½“é¼ æ ‡æ”¾åœ¨å‘˜å·¥èº«ä»½è¯å·çš„è¾“å…¥æ¡†ä¸­æ—¶
 function workerIdCardFocus(){
 	var workerIdCard_prompt = document.getElementById("workerIdCard_prompt");
-	workerIdCard_prompt.innerHTML = "Éí·İÖ¤ÓÉ18Î»µÄÊı×Ö×é³É(×îºóÒ»¸öÎ»¿ÉÎª×ÖÄ¸)....";
+	workerIdCard_prompt.innerHTML = "èº«ä»½è¯ç”±18ä½çš„æ•°å­—ç»„æˆ(æœ€åä¸€ä¸ªä½å¯ä¸ºå­—æ¯)....";
 	workerIdCard_prompt.className = "addworker_prompt";
 }
 
-//µ±Êó±êÀë¿ªÔ±¹¤Éí·İÖ¤ºÅµÄÊäÈë¿òÖĞÊ±
+//å½“é¼ æ ‡ç¦»å¼€å‘˜å·¥èº«ä»½è¯å·çš„è¾“å…¥æ¡†ä¸­æ—¶
 function workerIdCardBlur(){
 	var workerIdCard = document.getElementById("workerIdCard").value;
 	var workerIdCard_prompt = document.getElementById("workerIdCard_prompt");
 	workerIdCard_prompt.innerHTML = "";
 	var reg = /^\d{17}[xyz0-9]$/;
 	if(workerIdCard==""){
-		workerIdCard_prompt.innerHTML = "Éí·İÖ¤²»ÄÜÎª¿Õ,ÇëÊäÈë...";
+		workerIdCard_prompt.innerHTML = "èº«ä»½è¯ä¸èƒ½ä¸ºç©º,è¯·è¾“å…¥...";
 		workerIdCard_prompt.className = "prompt_error";
 		return false;
 	}
 	if(reg.test(workerIdCard)==false){
-		workerIdCard_prompt.innerHTML = "Éí·İÖ¤¸ñÊ½´íÎó,ÇëÖØĞÂÊäÈë...";
+		workerIdCard_prompt.innerHTML = "èº«ä»½è¯æ ¼å¼é”™è¯¯,è¯·é‡æ–°è¾“å…¥...";
 		workerIdCard_prompt.className = "prompt_error";
 		return false;
 	}
 	return true;
 }
 
-//ÑéÖ¤Ö°Îñ
+//éªŒè¯èŒåŠ¡
 function checkPosition(){
 	var positionId = document.getElementById("positionId").value;
 	var position_prompt = document.getElementById("position_prompt");
 	if(positionId=="-1"){
-		position_prompt.innerHTML = "ÇëÑ¡ÔñÔ±¹¤Ö°Îñ...";
+		position_prompt.innerHTML = "è¯·é€‰æ‹©å‘˜å·¥èŒåŠ¡...";
 		position_prompt.className = "prompt_error";
 		return false;
 	}
 	return true;
 }
 
-//µ±µã»÷Ìí¼Ó°´Å¥Ê±
+//å½“ç‚¹å‡»æ·»åŠ æŒ‰é’®æ—¶
 function checkAddWorker(){
 	if(workerIdBlur()&&workerNameBlur()&&workerIdCardBlur()&&checkPosition()){
 		return true;

@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	//µã»÷È·ÈÏĞŞ¸Ä
+	//ç‚¹å‡»ç¡®è®¤ä¿®æ”¹
 	$("#updateWorkerInfoForm").submit(function(){
 		var workerName = $("#workerName").val();
 		var idCard = $("#workerIDCard").val();
@@ -9,34 +9,34 @@ $(document).ready(function(){
 		var error = $(".errorMessage");
 		
 		if(workerName.trim()==""){
-			error.html("ĞÕÃû²»ÄÜÎª¿Õ...");
+			error.html("å§“åä¸èƒ½ä¸ºç©º...");
 			return false;
 		}
 		if(idCard.trim()==""){
-			error.html("Éí·İÖ¤²»ÄÜÎª¿Õ...");
+			error.html("èº«ä»½è¯ä¸èƒ½ä¸ºç©º...");
 			return false;
 		}
 		var idExp = /^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{4}$/;
 		if(idExp.test(idCard)==false){
-			error.html("Éí·İÖ¤¸ñÊ½´íÎó...");
+			error.html("èº«ä»½è¯æ ¼å¼é”™è¯¯...");
 			return false;
 		}
 		if(birthday.trim()==""){
-			error.html("³öÉúÈÕÆÚ²»ÄÜÎª¿Õ...");
+			error.html("å‡ºç”Ÿæ—¥æœŸä¸èƒ½ä¸ºç©º...");
 			return false;
 		}
 		if(phone.trim()==""){
-			error.html("µç»°ºÅÂë²»ÄÜÎª¿Õ...");
+			error.html("ç”µè¯å·ç ä¸èƒ½ä¸ºç©º...");
 			return false;
 		}
-		var phoneExp_01 = /^1[0-9]{10}/;    //ÊÖ»úºÅÂë
-		var phoneExp_02 = /^\(?\\d{3,4}[-\\)]?\\d{7,8}$/;    //¹Ì¶¨µç»°
+		var phoneExp_01 = /^1[0-9]{10}/;    //æ‰‹æœºå·ç 
+		var phoneExp_02 = /^\(?\\d{3,4}[-\\)]?\\d{7,8}$/;    //å›ºå®šç”µè¯
 		if(phoneExp_01.test(phone)==false&&phoneExp_02.test(phone)==false){
-			error.html("ÁªÏµµç»°¸ñÊ½´íÎó...");
+			error.html("è”ç³»ç”µè¯æ ¼å¼é”™è¯¯...");
 			return false;
 		}
 		if(address.trim()==""){
-			error.html("×¡Ö·²»ÄÜÎª¿Õ...");
+			error.html("ä½å€ä¸èƒ½ä¸ºç©º...");
 			return false;
 		}
 		else{

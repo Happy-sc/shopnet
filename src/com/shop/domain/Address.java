@@ -1,19 +1,19 @@
 package com.shop.domain;
 
 /*
- * ÓÃ»§¼Ä»õµØÖ·ÊµÌå
+ * ç”¨æˆ·å¯„è´§åœ°å€å®ä½“
  */
 public class Address implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-	private String addressId;                 //µØÖ·±àºÅ
-	private Users users;                      //ÓÃ»§
-	private String addressDetail;             //µØÖ·ÏêÇé
-	private String addressPostalcode;         //ÓÊÕş±àÂë
-	private String addressPhone;              //ÁªÏµºÅÂë
-	private String  consignee;                //ÊÕ»õÈË
-	private Integer isDefault;               //ÊÇ·ñÎªÄ¬ÈÏµØÖ·£º0£º·ñ£¬1£ºÊÇ
+	private String addressId;                 //åœ°å€ç¼–å·
+	private Users users;                      //ç”¨æˆ·
+	private String addressDetail;             //åœ°å€è¯¦æƒ…
+	private String addressPostalcode;         //é‚®æ”¿ç¼–ç 
+	private String addressPhone;              //è”ç³»å·ç 
+	private String  consignee;                //æ”¶è´§äºº
+	private Integer isDefault;               //æ˜¯å¦ä¸ºé»˜è®¤åœ°å€ï¼š0ï¼šå¦ï¼Œ1ï¼šæ˜¯
 
 	public Address() {
 	}
@@ -89,6 +89,6 @@ public class Address implements java.io.Serializable {
 		this.isDefault = isDefault;
 	}
 
-	
+
 	
 }

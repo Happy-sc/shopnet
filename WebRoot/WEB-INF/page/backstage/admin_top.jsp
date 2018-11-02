@@ -7,7 +7,7 @@
 	
 	<link rel="stylesheet" href="${pageContext.request.contextPath }/css/backstage/adminIndex.css" type="text/css"></link>
   	<script type="text/javascript" src="${pageContext.request.contextPath}/js/jQuery/jquery-1.7.2.js"></script>
-  	<script type="text/javascript" src="${pageContext.request.contextPath }/js/backstage/adminTop.js" charset="GBK"></script>
+  	<script type="text/javascript" src="${pageContext.request.contextPath }/js/backstage/adminTop.js" charset="utf-8"></script>
   </head>
   <body leftmargin="0" topmargin="0">
   <table width="100%" height="64" border="0" cellpadding="0" cellspacing="0" class="admin_topbg">

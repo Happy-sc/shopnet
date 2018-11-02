@@ -6,8 +6,8 @@
 	<link rel="stylesheet" href="${pageContext.request.contextPath }/css/proscenium/userCenterLayout.css" type="text/css"></link>
 	<link rel="stylesheet" href="${pageContext.request.contextPath }/css/proscenium/userCenterUpdatePW.css" type="text/css"></link>
 	<script type="text/javascript" src="${pageContext.request.contextPath }/js/jQuery/jquery-1.7.2.js"></script>
-  	<script type="text/javascript" src="${pageContext.request.contextPath }/js/proscenium/passwordStrength.js" charset="GBK"></script>
-  	<script type="text/javascript" src="${pageContext.request.contextPath }/js/proscenium/userCenterUpdatePW.js" charset="GBK"></script>
+  	<script type="text/javascript" src="${pageContext.request.contextPath }/js/proscenium/passwordStrength.js" charset="UTF-8"></script>
+  	<script type="text/javascript" src="${pageContext.request.contextPath }/js/proscenium/userCenterUpdatePW.js" charset="UTF-8"></script>
   </head>
   
   <body>

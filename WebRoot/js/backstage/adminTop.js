@@ -1,5 +1,5 @@
 function exitSystem(){
-	var flag = confirm("ÄúÈ·¶¨ÒªÍË³öÏµÍ³Âğ£¿");
+	var flag = confirm("æ‚¨ç¡®å®šè¦é€€å‡ºç³»ç»Ÿå—ï¼Ÿ");
 	if (flag)
 		location.href = "/manager/manager_exitSystem.action";
 	return false;

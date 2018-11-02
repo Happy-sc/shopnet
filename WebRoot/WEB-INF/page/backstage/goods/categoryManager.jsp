@@ -17,7 +17,7 @@
   	<script type="text/javascript" src="${pageContext.request.contextPath }/js/jQuery/jquery.ui.draggable.js"></script>
   	<script type="text/javascript" src="${pageContext.request.contextPath }/js/jQuery/jquery.ui.position.js"></script>
   	<script type="text/javascript" src="${pageContext.request.contextPath }/js/jQuery/jquery.ui.dialog.js"></script>
-  	<script type="text/javascript" src="${pageContext.request.contextPath }/js/backstage/categoryManager.js" charset="GBK"></script>
+  	<script type="text/javascript" src="${pageContext.request.contextPath }/js/backstage/categoryManager.js" charset="UTF-8"></script>
   </head>
   
   <body>

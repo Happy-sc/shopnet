@@ -1,12 +1,3 @@
-/*
-moo.fx pack, effects extensions for moo.fx.
-by Valerio Proietti (http://mad4milk.net) MIT-style LICENSE
-for more info visit (http://moofx.mad4milk.net).
-Friday, April 14, 2006
-v 1.2.4
-*/
-
-//smooth scroll
 fx.Scroll = Class.create();
 fx.Scroll.prototype = Object.extend(new fx.Base(), {
 	initialize: function(options) {

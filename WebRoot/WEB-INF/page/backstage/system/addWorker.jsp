@@ -5,7 +5,7 @@
      <title>增加员工信息</title>
 	 <link rel="stylesheet" href="${pageContext.request.contextPath }/css/backstage/layout.css" type="text/css"></link>
 	 <link rel="stylesheet" href="${pageContext.request.contextPath }/css/backstage/WorkerManager.css" type="text/css"></link>
-	 <script type="text/javascript" src="${pageContext.request.contextPath }/js/backstage/workerManager.js" charset="GBK"></script>
+	 <script type="text/javascript" src="${pageContext.request.contextPath }/js/backstage/workerManager.js" charset="UTF-8"></script>
  	 <script type="text/javascript" src="${pageContext.request.contextPath }/js/jQuery/jquery-1.7.2.js"></script>
  </head>
   

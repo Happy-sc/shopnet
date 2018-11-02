@@ -16,8 +16,8 @@
   	 <script type="text/javascript" src="${pageContext.request.contextPath }/js/jQuery/jquery.ui.draggable.js"></script>
   	 <script type="text/javascript" src="${pageContext.request.contextPath }/js/jQuery/jquery.ui.position.js"></script>
   	 <script type="text/javascript" src="${pageContext.request.contextPath }/js/jQuery/jquery.ui.dialog.js"></script>
-  	 <script type="text/javascript" src="${pageContext.request.contextPath }/js/proscenium/goodsDetailInfor.js" charset="GBK"></script>
- 	 <script type="text/javascript" src="${pageContext.request.contextPath }/js/proscenium/comment.js" charset="GBK"></script>
+  	 <script type="text/javascript" src="${pageContext.request.contextPath }/js/proscenium/goodsDetailInfor.js" charset="utf-8"></script>
+ 	 <script type="text/javascript" src="${pageContext.request.contextPath }/js/proscenium/comment.js" charset="utf-8"></script>
  	</head>
   
   <body>

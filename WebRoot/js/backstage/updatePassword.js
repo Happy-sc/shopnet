@@ -1,10 +1,10 @@
 $(document).ready(function(){
 	var flag;
 	
-	//¾ÉÃÜÂë
+	//æ—§å¯†ç 
 	$("#oldPassword").focus(
 		function(){
-			$("#oldPrompt").html("ÇëÊäÈëÄúµÄÕıÈ·µÄÔ­Ê¼ÃÜÂë...");
+			$("#oldPrompt").html("è¯·è¾“å…¥æ‚¨çš„æ­£ç¡®çš„åŸå§‹å¯†ç ...");
 			$("#oldPrompt").attr("class","messagePrompt");
 		}	
 	)
@@ -14,7 +14,7 @@ $(document).ready(function(){
 			var oldPw= $(this).val();
 			var oldPw_prompt =$("#oldPrompt");
 			if(oldPw==""||oldPw==null){
-				oldPw_prompt.html("ÃÜÂëÊäÈë²»ÄÜÎª¿Õ,ÇëÊäÈë..");
+				oldPw_prompt.html("å¯†ç è¾“å…¥ä¸èƒ½ä¸ºç©º,è¯·è¾“å…¥..");
 				oldPw_prompt.attr("class","prompt_error");
 				flag = "false";
 				return false;
@@ -24,10 +24,10 @@ $(document).ready(function(){
 		}	
 	)
 	
-	//ĞÂÃÜÂë
+	//æ–°å¯†ç 
 	$("#newPassword").focus(
 		function(){
-			$("#newPrompt").html("ĞÂÃÜÂë¿ÉÓÉ´óĞ¡Ğ´Ó¢ÎÄ×ÖÄ¸¡¢Êı×Ö×é³É£¬³¤¶È6£­16¸ö×Ö·û");
+			$("#newPrompt").html("æ–°å¯†ç å¯ç”±å¤§å°å†™è‹±æ–‡å­—æ¯ã€æ•°å­—ç»„æˆï¼Œé•¿åº¦6ï¼16ä¸ªå­—ç¬¦");
 			$("#newPrompt").attr("class","messagePrompt");
 		}	
 	)
@@ -39,13 +39,13 @@ $(document).ready(function(){
 			newPw_prompt.html("");
 			var reg=/^[a-zA-Z0-9]{6,16}$/;
 			if(newPw==""||newPw==null){
-				newPw_prompt.html("ĞÂÃÜÂëÊäÈë²»ÄÜ¿Õ,ÇëÊäÈë...");
+				newPw_prompt.html("æ–°å¯†ç è¾“å…¥ä¸èƒ½ç©º,è¯·è¾“å…¥...");
 				newPw_prompt.attr("class","prompt_error");
 				flag = "false";
 				return false;
 			}
 			if(reg.test(newPw)==false){
-				newPw_prompt.html("ĞÂÃÜÂë¸ñÊ½´íÎó,ÇëÖØĞÂÊäÈë...");
+				newPw_prompt.html("æ–°å¯†ç æ ¼å¼é”™è¯¯,è¯·é‡æ–°è¾“å…¥...");
 				newPw_prompt.attr("class","prompt_error");
 				flag = "false";
 				return false;
@@ -55,10 +55,10 @@ $(document).ready(function(){
 		}	
 	)
 	
-	//ÔÙÒ»´ÎÊäÈëÃÜÂë
+	//å†ä¸€æ¬¡è¾“å…¥å¯†ç 
 	$("#reNewPassword").focus(
 		function(){
-			$("#reNewPrompt").html("ÇëÔÙÒ»´ÎÊäÈëĞÂÃÜÂë...");
+			$("#reNewPrompt").html("è¯·å†ä¸€æ¬¡è¾“å…¥æ–°å¯†ç ...");
 			$("#reNewPrompt").attr("class","messagePrompt");
 		}	
 	)
@@ -70,13 +70,13 @@ $(document).ready(function(){
 			var reNew_Prompt = $("#reNewPrompt");
 			reNew_Prompt.html("");
 			if(reNewPw==""||reNewPw==null){
-				reNew_Prompt.html("²»ÄÜÎª¿Õ,ÇëÊäÈë...");
+				reNew_Prompt.html("ä¸èƒ½ä¸ºç©º,è¯·è¾“å…¥...");
 				reNew_Prompt.attr("class","prompt_error");
 				flag = "false";
 				return false;
 			}
 			if(reNewPw!=newPw){
-				reNew_Prompt.html("Á½´ÎÃÜÂëÊäÈë²»Í¬,ÇëÖØĞÂÊäÈë...");
+				reNew_Prompt.html("ä¸¤æ¬¡å¯†ç è¾“å…¥ä¸åŒ,è¯·é‡æ–°è¾“å…¥...");
 				reNew_Prompt.attr("class","prompt_error");
 				flag = "false";
 				return false;
@@ -86,7 +86,7 @@ $(document).ready(function(){
 		}	
 	)
 	
-	//Ìá½»±íµ¥
+	//æäº¤è¡¨å•
 	$("#updataPWForm").submit(
 		function(){
 			$("#oldPassword").blur();

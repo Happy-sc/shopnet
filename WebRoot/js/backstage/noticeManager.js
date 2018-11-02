@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	//Ñ¡Ôñ¹«¸æÀà±ğ
+	//é€‰æ‹©å…¬å‘Šç±»åˆ«
 	var _type = $("#_type").val();
 	if(_type!=""){
 		var noticeType = $("#noticeType").children();
@@ -11,31 +11,31 @@ $(document).ready(function(){
 		}
 	}
 	
-	//µã»÷É¾³ı
+	//ç‚¹å‡»åˆ é™¤
 	$(".scNotice").click(function(){
 		var noticeId = $(this).parent().children().eq(0).val();
 		var page = $("#page").val();
 		location.href = "../systemManager/noticeManager_deleteNotice.action?noticeId="+noticeId+"&page="+page;
 	})
-	//µã»÷±à¼­
+	//ç‚¹å‡»ç¼–è¾‘
 	$(".bjNotice").click(function(){
 		var noticeId = $(this).parent().children().eq(0).val();
 		var page = $("#page").val();
 		location.href = "../systemManager/noticeManager_upodateNoticeUI.action?noticeId="+noticeId+"&page="+page;
 	})
 
-	//µã»÷²é¿´
+	//ç‚¹å‡»æŸ¥çœ‹
 	$(".ckNotice").click(function(){
 		var noticeId = $(this).parent().children().eq(0).val();
 		location.href = "../systemManager/noticeManager_showNotice.action?noticeId="+noticeId;
 	})
 	
-	//µã»÷Ôö¼Ó
+	//ç‚¹å‡»å¢åŠ 
 	$("#addNoticeBtn").click(function(){
 		location.href = "../systemManager/noticeManager_addNoticeUI.action";
 	})
 	
-	//µã»÷·¢²¼¹«¸æ
+	//ç‚¹å‡»å‘å¸ƒå…¬å‘Š
 	$("#noticeForm").submit(function(){
 		var noticeTitle = $.trim($("#noticeTitle").val());
 		var noticeContent = CKEDITOR.instances.noticeContent.getData();
@@ -43,19 +43,19 @@ $(document).ready(function(){
 		var noticePrompt = $("#noticePrompt");
 		noticePrompt.html("");
 		if(noticeTitle==""){
-			noticePrompt.html("ÇëÊäÈë¹«¸æÖ÷Ìâ..");
+			noticePrompt.html("è¯·è¾“å…¥å…¬å‘Šä¸»é¢˜..");
 			noticePrompt.attr("class","prompt_error");
 			return false;
 		}
 		
 		else if(noticeContent==""){
-			noticePrompt.html("ÇëÊäÈë¹«¸æÄÚÈİ..");
+			noticePrompt.html("è¯·è¾“å…¥å…¬å‘Šå†…å®¹..");
 			noticePrompt.attr("class","prompt_error");
 			return false;
 		}
 		
 		else if(noticeType=="-1"){
-			noticePrompt.html("ÇëÊäÈë¹«¸æÀà±ğ..");
+			noticePrompt.html("è¯·è¾“å…¥å…¬å‘Šç±»åˆ«..");
 			noticePrompt.attr("class","prompt_error");
 			return false;
 		}

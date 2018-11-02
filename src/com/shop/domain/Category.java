@@ -11,20 +11,20 @@ import org.compass.annotations.SearchableProperty;
 import org.compass.annotations.Store;
 
 /*
- * ÉÌÆ··ÖÀàÊµÌå
+ * å•†å“åˆ†ç±»å®ä½“
  */
-@Searchable(root=false)   //¶¨Òå¸ÃÀàÎªËÑË÷ÊµÌå¡¢²»ÊÇ¸ù¡¢Ö»ÊÇ×÷ÎªgoodsµÄÒ»²¿·Ö
+@Searchable(root=false)   //å®šä¹‰è¯¥ç±»ä¸ºæœç´¢å®ä½“ã€ä¸æ˜¯æ ¹ã€åªæ˜¯ä½œä¸ºgoodsçš„ä¸€éƒ¨åˆ†
 public class Category implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-	private String categoryId; 							// ·ÖÀà±àºÅ
-	private String categoryName; 						// ·ÖÀàÃû³Æ
-	private Set<GoodsListing> goodsListings = new HashSet<GoodsListing>();    // ÉÌÆ·
-	private Set<Style> styles = new HashSet<Style>(); 				// ¿îÊ½
-	private String styleString;                         //¿îÊ½
+	private String categoryId; 							// åˆ†ç±»ç¼–å·
+	private String categoryName; 						// åˆ†ç±»åç§°
+	private Set<GoodsListing> goodsListings = new HashSet<GoodsListing>();    // å•†å“
+	private Set<Style> styles = new HashSet<Style>(); 				// æ¬¾å¼
+	private String styleString;                         //æ¬¾å¼
 
-	private List<Brand> hotSellBrand = new ArrayList<>();    // Æ·ÅÆ,²»±£´æÊı¾İ¿â
+	private List<Brand> hotSellBrand = new ArrayList<>();    // å“ç‰Œ,ä¸ä¿å­˜æ•°æ®åº“
 
 	public Category() {
 	}
@@ -36,7 +36,7 @@ public class Category implements java.io.Serializable {
 		this.styles = styles;
 	}
 
-	@SearchableProperty(index=Index.NO,store=Store.YES)  //²»ĞèÒªËÑË÷¡¢ĞèÒª´æ´¢
+	@SearchableProperty(index=Index.NO,store=Store.YES)  //ä¸éœ€è¦æœç´¢ã€éœ€è¦å­˜å‚¨
 	public String getCategoryId() {
 		return categoryId;
 	}
@@ -45,7 +45,7 @@ public class Category implements java.io.Serializable {
 		this.categoryId = categoryId;
 	}
 
-	@SearchableProperty(index = Index.NOT_ANALYZED,store = Store.YES)  //ĞèÒªËÑË÷¡¢ĞèÒª´æ´¢
+	@SearchableProperty(index = Index.NOT_ANALYZED,store = Store.YES)  //éœ€è¦æœç´¢ã€éœ€è¦å­˜å‚¨
 	public String getCategoryName() {
 		return categoryName;
 	}

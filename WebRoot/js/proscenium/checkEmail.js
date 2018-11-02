@@ -1,10 +1,10 @@
 $(document).ready(function(){
-	var flag ; //¶¨ÒåÈ«¾Ö±äÁ¿
+	var flag ; //å®šä¹‰å…¨å±€å˜é‡
 	$("#passwordForm").submit(
 		function(){
 			var password = $("input[name=password]").val();
 			if(password==""||password==null){
-				$(".password_prompt").html("ÇëÊäÈëµÇÂ½ÃÜÂë...");
+				$(".password_prompt").html("è¯·è¾“å…¥ç™»é™†å¯†ç ...");
 				$(".password_prompt").css("color","red");
 				return false;
 			}
@@ -19,16 +19,16 @@ $(document).ready(function(){
 			var registEmail = $("#registEmail").html();
 			var reg = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
 			if(email==""||email==null){
-				email_prompt.html("ÓÊ¼ş²»ÄÜÎª¿Õ...");
+				email_prompt.html("é‚®ä»¶ä¸èƒ½ä¸ºç©º...");
 				email_prompt.css("color","red");
 				return false;
 			}
 			if(reg.test(email)==false){
-				email_prompt.html("ÊäÈëÓÊ¼ş¸ñÊ½´íÎó,ÇëÖØĞÂÊäÈë...");
+				email_prompt.html("è¾“å…¥é‚®ä»¶æ ¼å¼é”™è¯¯,è¯·é‡æ–°è¾“å…¥...");
 				email_prompt.css("color","red");
 				return false;
 			}
-			if(email!=registEmail){     //ÅĞ¶Ï¸ÃÓÊÏäÊÇ·ñÒÑ¾­×¢²áÁË
+			if(email!=registEmail){     //åˆ¤æ–­è¯¥é‚®ç®±æ˜¯å¦å·²ç»æ³¨å†Œäº†
 				flag = "";
 				$.ajax({
 					type:"POST",
@@ -37,7 +37,7 @@ $(document).ready(function(){
 					data:"email="+email,
 					success: function(data){
 						$(".email_prompt").html(data);
-							if(data.indexOf("ÒÑ¾­´æÔÚ")!=-1){
+							if(data.indexOf("å·²ç»å­˜åœ¨")!=-1){
 							$(".email_prompt").css("color","red");
 							flag = "false";
 							}
@@ -45,7 +45,7 @@ $(document).ready(function(){
 					})
 				if(flag=="false")return false;
 				}
-			$("#inputMailForm").submit();    //Ìá½»±íµ¥
+			$("#inputMailForm").submit();    //æäº¤è¡¨å•
 		}	
 	)
 })

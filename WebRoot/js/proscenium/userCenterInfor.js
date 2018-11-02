@@ -1,10 +1,10 @@
 $(document).ready(function() {
-	var provinceIndex; //¶¨ÒåÈ«¾Ö±äÁ¿¼ÇÂ¼Ê¡Î»ÖÃ
+	var provinceIndex; //å®šä¹‰å…¨å±€å˜é‡è®°å½•çœä½ç½®
      
-	//¼ÓÔØ³ÇÊĞ
+	//åŠ è½½åŸå¸‚
 	$(".address").ProvinceCity();
 	
-	//Ñ¡¶¨ĞÔ±ğ
+	//é€‰å®šæ€§åˆ«
 	var sexValue =  $("#sexValue").val();
 	var sexs = $("input[id=userSex]");
 	for(var i=0;i<sexs.length;i++){
@@ -13,34 +13,34 @@ $(document).ready(function() {
 		}
 	}
 	
-	//Ñ¡¶¨Ê¡
+	//é€‰å®šçœ
 	var province = $("#province").val();
 	var provinces = $("select[name=province]").children();
 	for(var i = 0;i<provinces.length;i++){
 		if(provinces.eq(i).val()==province){
 			provinces.eq(i).attr("selected","true");
 			provinceIndex = i;
-			//Õ¹¿ªµÚ¶ş¼¶³ÇÊĞ
+			//å±•å¼€ç¬¬äºŒçº§åŸå¸‚
 			$.each( GT[i-1] , function(index,data){
 				$("select[name=city]").append("<option value='"+data+"'>"+data+"</option>");
 			});
 		}	
 	}
 	
-	//Ñ¡¶¨ÊĞ
+	//é€‰å®šå¸‚
 	var city = $("#city").val();
 	var cities = $("select[name=city]").children();
 	for(var j = 0;j<cities.length;j++){
 		if(cities.eq(j).val()==city){
 			cities.eq(j).attr("selected","true");
-			//Õ¹¿ªµÚÈı¼¶³ÇÊĞ
+			//å±•å¼€ç¬¬ä¸‰çº§åŸå¸‚
 			$.each( GC[provinceIndex-1][j-1] , function(index,data){
 				$("select[name=countryCity]").append("<option value='"+data+"'>"+data+"</option>");
 			})
 		}
 	}
 	
-	//Ñ¡¶¨ÏØ¼¶
+	//é€‰å®šå¿çº§
 	var country = $("#country").val();
 	var countries = $("select[name=countryCity]").children();
 	for(var l = 0;l<countries.length;l++){
@@ -49,7 +49,7 @@ $(document).ready(function() {
 		}
 	}
 	
-	//¼ìÑéÊı¾İ
+	//æ£€éªŒæ•°æ®
 	$("#userCenterForm").submit(
 		
 		function(){
@@ -62,22 +62,22 @@ $(document).ready(function() {
 			var street = $("#street").val();
 
 			if(userRealName==""){
-				$("#userRealName_prompt").html("ÇëÊäÈëÕæÊµĞÕÃû...");
+				$("#userRealName_prompt").html("è¯·è¾“å…¥çœŸå®å§“å...");
 				$("#userRealName_prompt").attr("class","error_prompt");
 				return false;
 			}
 			if(userSex==""){
-				$("#userSex_prompt").html("ÇëÑ¡ÔñĞÔ±ğ...");
+				$("#userSex_prompt").html("è¯·é€‰æ‹©æ€§åˆ«...");
 				$("#userSex_prompt").attr("class","error_prompt");
 				return false;
 			}
 			if(userBirthday==""){
-				$("#userBirthday_prompt").html("ÇëÑ¡Ôñ³öÉíÈÕÆÚ...");
+				$("#userBirthday_prompt").html("è¯·é€‰æ‹©å‡ºèº«æ—¥æœŸ...");
 				$("#userBirthday_prompt").attr("class","error_prompt");
 				return false;
 			}
 			if(province==""||city==""||country==""||street==""){
-				$("#address_prompt").html("ÇëÑ¡Ôñ/ÊäÈëÏêÏ¸µØÖ·...");
+				$("#address_prompt").html("è¯·é€‰æ‹©/è¾“å…¥è¯¦ç»†åœ°å€...");
 				$("#address_prompt").attr("class","error_prompt");
 				return false;
 			}

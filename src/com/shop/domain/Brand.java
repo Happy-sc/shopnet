@@ -9,20 +9,20 @@ import org.compass.annotations.SearchableProperty;
 import org.compass.annotations.Store;
 
 /*
- * ÉÌÆ·Æ·ÅÆÊµÌå
+ * å•†å“å“ç‰Œå®ä½“
  */
-@Searchable(root=false)  //¶¨Òå¸ÃÀàÎªËÑË÷¡¢²»ÊÇ¸ù¡¢Ö»ÊÇ×÷ÎªgoodsµÄÒ»²¿·Ö
+@Searchable(root=false)  //å®šä¹‰è¯¥ç±»ä¸ºæœç´¢ã€ä¸æ˜¯æ ¹ã€åªæ˜¯ä½œä¸ºgoodsçš„ä¸€éƒ¨åˆ†
 public class Brand implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-	private String brandId;               //Æ·ÅÆ±àºÅ
-	private String brandName;             //Æ·ÅÆÃû³Æ
-	private String brandImage;            //Æ·ÅÆÍ¼Æ¬
-	private String brandSpell;            //Æ·ÅÆÆ´Òô
-	private Set<Style> styles = new HashSet<Style>();          //¿îÊ½
-	private Set<GoodsListing> goods = new HashSet<GoodsListing>();   //ÉÌÆ·
-	private String styleString ;          //ÓÃÓÚ¹¹½¨¿îÊ½µÄ×Ö·û
+	private String brandId;               //å“ç‰Œç¼–å·
+	private String brandName;             //å“ç‰Œåç§°
+	private String brandImage;            //å“ç‰Œå›¾ç‰‡
+	private String brandSpell;            //å“ç‰Œæ‹¼éŸ³
+	private Set<Style> styles = new HashSet<Style>();          //æ¬¾å¼
+	private Set<GoodsListing> goods = new HashSet<GoodsListing>();   //å•†å“
+	private String styleString ;          //ç”¨äºæ„å»ºæ¬¾å¼çš„å­—ç¬¦
 	
 	public Brand() {
 	}
@@ -39,7 +39,7 @@ public class Brand implements java.io.Serializable {
 		this.brandSpell = brandSpell;
 	}
 
-	@SearchableProperty(index=Index.NO,store=Store.YES)  //²»ĞèÒªËÑË÷¡¢ĞèÒª´æ´¢
+	@SearchableProperty(index=Index.NO,store=Store.YES)  //ä¸éœ€è¦æœç´¢ã€éœ€è¦å­˜å‚¨
 	public String getBrandId() {
 		return this.brandId;
 	}
@@ -48,7 +48,7 @@ public class Brand implements java.io.Serializable {
 		this.brandId = brandId;
 	}
 
-	@SearchableProperty(index = Index.NOT_ANALYZED,store = Store.YES)  //ĞèÒªËÑË÷¡¢ĞèÒª´æ´¢
+	@SearchableProperty(index = Index.NOT_ANALYZED,store = Store.YES)  //éœ€è¦æœç´¢ã€éœ€è¦å­˜å‚¨
 	public String getBrandName() {
 		return this.brandName;
 	}
@@ -64,7 +64,7 @@ public class Brand implements java.io.Serializable {
 	public void setStyles(Set<Style> styles) {
 		this.styles = styles;
 	}
-	
+
 	public String getBrandImage() {
 		return this.brandImage;
 	}
@@ -72,8 +72,8 @@ public class Brand implements java.io.Serializable {
 	public void setBrandImage(String brandImage) {
 		this.brandImage = brandImage;
 	}
-	
-	@SearchableProperty(index = Index.NOT_ANALYZED,store = Store.YES)   //ĞèÒªËÑË÷¡¢ĞèÒª´æ´¢
+
+	@SearchableProperty(index = Index.NOT_ANALYZED,store = Store.YES)   //éœ€è¦æœç´¢ã€éœ€è¦å­˜å‚¨
 	public String getBrandSpell() {
 		return brandSpell;
 	}
@@ -97,5 +97,5 @@ public class Brand implements java.io.Serializable {
 	public void setGoods(Set<GoodsListing> goods) {
 		this.goods = goods;
 	}
-	
+
 }

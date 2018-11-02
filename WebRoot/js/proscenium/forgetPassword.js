@@ -1,6 +1,6 @@
 $(document).ready(function(){
-	var flag;   //¶¨ÒåÈ«¾Ö±äÁ¿
-	//ÑéÖ¤Âë
+	var flag;   //å®šä¹‰å…¨å±€å˜é‡
+	//éªŒè¯ç 
 	$("#checkCode,#hyzyzm").click(
 		function(){
 			var timenow = new Date().getTime();   
@@ -8,7 +8,7 @@ $(document).ready(function(){
 		}	
 	)
 	
-	//Êó±ê·ÅÈëÊäÈë¿òÖĞ
+	//é¼ æ ‡æ”¾å…¥è¾“å…¥æ¡†ä¸­
 	$("input[type='text']").focus(
 		function(){
 			$(this).val("");
@@ -16,35 +16,35 @@ $(document).ready(function(){
 		}	
 	)
 	
-	//µ±Êó±êÀë¿ªÊäÈë¿ò
+	//å½“é¼ æ ‡ç¦»å¼€è¾“å…¥æ¡†
 	$("input[type='text']").blur(
 		function(){
 			$(this).css("border","1px solid #D7D7D7");
 		}	
 	)
 	
-	//µã»÷ÏÂÒ»²½
+	//ç‚¹å‡»ä¸‹ä¸€æ­¥
 	$("#checkIdentityForm").submit(
 		function(){
 			var userName = $("#checkIdentityForm input[name='userName']");
 			var checkCode = $("#checkIdentityForm input[name='checkCode']");
 			if(userName.val()==""||userName.val()==null){
-				$("div[id='userName']").html("ÇëÊäÈëÓÃ»§Ãû");
+				$("div[id='userName']").html("è¯·è¾“å…¥ç”¨æˆ·å");
 				return false;
 			}
 			if(checkCode.val()==""||checkCode.val()==null){
-				$("div[id='checkCode']").html("ÇëÊäÈëÑéÖ¤Âë");
+				$("div[id='checkCode']").html("è¯·è¾“å…¥éªŒè¯ç ");
 				return false;
 			}
 			return true;
 		}	
 	)
 	
-	//·ÅÈëÊäÈëÃÜÂë¿ò
+	//æ”¾å…¥è¾“å…¥å¯†ç æ¡†
 	$("input[name='newPassword']").focus(
 		function(){
 			$(this).css("border","1px solid #FFCC66");
-			$("#newPassword_prompt").html("ÃÜÂëÓÉ6-16Î»Êı×Ö£¬´óĞ¡Ğ´×ÖÄ¸×é³É...");
+			$("#newPassword_prompt").html("å¯†ç ç”±6-16ä½æ•°å­—ï¼Œå¤§å°å†™å­—æ¯ç»„æˆ...");
 			$("#newPassword_prompt").attr("class","");
 		}	
 	)
@@ -55,7 +55,7 @@ $(document).ready(function(){
 			var newPassword_prompt = $("#newPassword_prompt")
 			newPassword_prompt.html("");
 			if(newPassword==""||newPassword==null){
-				newPassword_prompt.html("ÃÜÂë²»ÄÜÎª¿Õ...");
+				newPassword_prompt.html("å¯†ç ä¸èƒ½ä¸ºç©º...");
 				newPassword_prompt.attr("class","error_prompt");
 				$(this).css("border","1px solid red");
 				flag = false;
@@ -63,7 +63,7 @@ $(document).ready(function(){
 			}
 			var reg = /^[a-zA-Z0-9_]{6,16}$/;
 			if(reg.test(newPassword)==false){
-				newPassword_prompt.html("µÇÂ¼ÃÜÂë¸ñÊ½´íÎó,ÇëÖØĞÂÊäÈë...");
+				newPassword_prompt.html("ç™»å½•å¯†ç æ ¼å¼é”™è¯¯,è¯·é‡æ–°è¾“å…¥...");
 				newPassword_prompt.attr("class","error_prompt");
 				$(this).css("border","1px solid red");
 				flag = false;
@@ -75,11 +75,11 @@ $(document).ready(function(){
 		}	
 	)
 	
-	//ÔÙÊäÈëÒ»´ÎÃÜÂë
+	//å†è¾“å…¥ä¸€æ¬¡å¯†ç 
 	$("input[name='reNewPassword']").focus(
 		function(){
 			$(this).css("border","1px solid #FFCC66");	
-			$("#reNewPassword_prompt").html("ÇëÔÙÊäÈëÒ»´ÎĞÂÃÜÂë...");
+			$("#reNewPassword_prompt").html("è¯·å†è¾“å…¥ä¸€æ¬¡æ–°å¯†ç ...");
 			$("#reNewPassword_prompt").attr("class","");
 		}	
 	)
@@ -91,13 +91,13 @@ $(document).ready(function(){
 			var reNewPassword_prompt = $("#reNewPassword_prompt");
 			reNewPassword_prompt.html("");
 			if(reNewPassword==""||reNewPassword==null){
-				reNewPassword_prompt.html("ÇëÔÙÊäÈëÒ»´ÎĞÂÃÜÂë...");
+				reNewPassword_prompt.html("è¯·å†è¾“å…¥ä¸€æ¬¡æ–°å¯†ç ...");
 				reNewPassword_prompt.attr("class","error_prompt");
 				flag = false;
 				return false;
 			}
 			if(reNewPassword!=newPassword){
-				reNewPassword_prompt.html("Á½´ÎÊäÈëµÄÃÜÂë²»Í¬...");
+				reNewPassword_prompt.html("ä¸¤æ¬¡è¾“å…¥çš„å¯†ç ä¸åŒ...");
 				reNewPassword_prompt.attr("class","error_prompt");
 				flag = false;
 				return false;

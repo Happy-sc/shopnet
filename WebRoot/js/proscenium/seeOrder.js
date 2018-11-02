@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	//È·¶¨µ±Ç°tab
+	//ç¡®å®šå½“å‰tab
 	var type = $("#orderType").val()
 	if("all"==type){
 		$("#tab1").attr("class","now");
@@ -21,7 +21,7 @@ $(document).ready(function(){
 		$(".content_syhsfk").hide();
 	}
 	
-	//·ÅÔÚtabÉÏÃæ
+	//æ”¾åœ¨tabä¸Šé¢
 	$(".order_content .title li").hover(
 		function(){
 			var _class = $(this).attr("class");
@@ -37,7 +37,7 @@ $(document).ready(function(){
 		}
 	)
 	
-	//µã»÷tab
+	//ç‚¹å‡»tab
 	$(".order_content .title li").click(function(){
 			var _id = $(this).attr("id");
 			if(_id=="tab1"){
@@ -52,9 +52,9 @@ $(document).ready(function(){
 		}	
 	)
 	
-	//µã»÷È·ÈÏÊÕ»õ
+	//ç‚¹å‡»ç¡®è®¤æ”¶è´§
 	$(".qrsh").click(function(){
-		if(confirm("ÄãÈ·ÈÏÊÕ»õÂğ?ÔÚÃ»ÓĞÊÕµ½»õÎïÖ®Ç°,²»ÒªÈ·ÈÏÊÕ»õ£¬·ñÔòÄã»áÅâÁË·òÈËÓÖÕÛ±ø..")){
+		if(confirm("ä½ ç¡®è®¤æ”¶è´§å—?åœ¨æ²¡æœ‰æ”¶åˆ°è´§ç‰©ä¹‹å‰,ä¸è¦ç¡®è®¤æ”¶è´§ï¼Œå¦åˆ™ä½ ä¼šèµ”äº†å¤«äººåˆæŠ˜å…µ..")){
 			var odId = $(this).parent().find("#qrshODId").val();
 			var oId = $(this).parent().find("#qrshOId").val();
 			location.href = "../userCenter/order_qrsh.action?orderId="+oId+"&orderDetailId="+odId;

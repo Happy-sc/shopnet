@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	//Ñ¡¶¨tab
+	//é€‰å®štab
 	var _type = $("#commentType").val();
 	if(_type=="dpjsp"){
 		$("#tab1").attr("class","now");
@@ -12,7 +12,7 @@ $(document).ready(function(){
 		$("#tab2Div").show();
 	}
 	
-	//·ÅÔÚliÉÏ
+	//æ”¾åœ¨liä¸Š
 	$(".comment_content .title li").hover(
 		function(){
 			var _class = $(this).attr("class");
@@ -26,7 +26,7 @@ $(document).ready(function(){
 		}
 	)
 	
-	//µã»÷li
+	//ç‚¹å‡»li
 	$(".comment_content .title li").click(
 		function(){
 			var _id = $(this).attr("id");

@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	//·ÅÔÚ-¡¢+·ûºÅÉÏÃæ
+	//æ”¾åœ¨-ã€+ç¬¦å·ä¸Šé¢
 	$("span[class='carNumber']").hover(
 		function(){
 			$(this).css("border","1px solid #999999");
@@ -9,7 +9,7 @@ $(document).ready(function(){
 		}
 	)
 	
-	//µã»÷-¡¢+·ûºÅ
+	//ç‚¹å‡»-ã€+ç¬¦å·
 	$("span[class='carNumber']").click(
 		function(){
 			var _this = $(this).text();
@@ -29,14 +29,14 @@ $(document).ready(function(){
 			var _td = $(this).parent().parent().parent().children();
 			var price = _td.eq(2).text().substring(1,_td.eq(2).text().length);
 			var sum = (Number(price)*thisNumber).toFixed(2);
-			_td.eq(4).text("£¤"+sum);
-			//ĞŞ¸Ä¹ºÎï³µ
+			_td.eq(4).text("ï¿¥"+sum);
+			//ä¿®æ”¹è´­ç‰©è½¦
 			var carId = $(this).parent().parent().parent().children().eq(0).children("input").val();
 			$.updateCar(carId,thisNumber);
 		}	
 	)
 	
-	//ÊıÁ¿ÎÄ±¾¿òÀïÃæµÄÊı¾İ·¢Éú¸Ä±äÊ±
+	//æ•°é‡æ–‡æœ¬æ¡†é‡Œé¢çš„æ•°æ®å‘ç”Ÿæ”¹å˜æ—¶
 	$("input[class='carNum']").change(
 		function(){
 			var number = $(this).val();
@@ -47,14 +47,14 @@ $(document).ready(function(){
 			var _td = $(this).parent().parent().children();
 			var price = _td.eq(2).text().substring(1,_td.eq(2).text().length);
 			var sum = (Number(price)*number).toFixed(2);
-			_td.eq(4).text("£¤"+sum);
+			_td.eq(4).text("ï¿¥"+sum);
 			var carId = $(this).parent().parent().children().eq(0).children("input").val();
 			$.updateCar(carId,number);
 			$.setFreight();
 		}	
 	)
 	
-	//µã»÷É¾³ı
+	//ç‚¹å‡»åˆ é™¤
 	$("a[id='shanchu']").click(
 		function(){
 			var _li = $(this).parent().parent().parent().parent().parent();
@@ -65,16 +65,16 @@ $(document).ready(function(){
 		}	
 	)
 	
-	//µã»÷ÊÕ²Ø
+	//ç‚¹å‡»æ”¶è—
 	$("a[id='shoucang']").click(
 		function(e){
 			var goodsId = $("#carGoodsId").val();
-			//ÊÕ²ØÉÌÆ·
+			//æ”¶è—å•†å“
 		    var i =	$.collectGoods(goodsId,e);
 		}	
 	)
 	
-	//µã»÷XÊ±
+	//ç‚¹å‡»Xæ—¶
 	$(".shoucang a,.yjscl a").click(
 		function(){
 			var _class = $(this).parent().attr("class");
@@ -85,7 +85,7 @@ $(document).ready(function(){
 })
 
 $.extend({
-	//ĞŞ¸Ä¹ºÎï³µ
+	//ä¿®æ”¹è´­ç‰©è½¦
 	updateCar:function(carId,number){
 		var url = "../order/orderCar_updateCar.action";
 		$.post(
@@ -99,18 +99,18 @@ $.extend({
 				if(type=="firmOrder"){
 					$("font[class='zje']").html("&yen;"+data);
 					$("font[class='sfk']").html("&yen;"+data);
-					$("font[class='khdpxb']").html(parseInt(data/100)+"¸ö");
+					$("font[class='khdpxb']").html(parseInt(data/100)+"ä¸ª");
 				}
 				if(type=="showCar"){
 					$(".car_content span[class='thisSum']").html(data);
 					$(".car_bottom .right li span[class='sum']").html("&yen;"+data);
-					$(".car_youhuiquan .right [class='YHQSUM']").html("ÉÌÆ·×Ü¶î:"+data);
+					$(".car_youhuiquan .right [class='YHQSUM']").html("å•†å“æ€»é¢:"+data);
 				}
 			}
 		)
 	},
 	
-	//É¾³ı¹ºÎï³µ
+	//åˆ é™¤è´­ç‰©è½¦
 	deleteCar:function(carId){
 		var url = "../order/orderCar_deleteGoods.action";
 		$.post(
@@ -133,7 +133,7 @@ $.extend({
 		)
 	},
 	
-	//ÊÕ²ØÉÌÆ·
+	//æ”¶è—å•†å“
 	collectGoods:function(goodsId,e){
 		var url = "../userCenter/collect_collectGoods.action";
 		$.post(
@@ -146,30 +146,30 @@ $.extend({
 				if(data=="0"){
 					$(".yjscl").show();
 					$(".yjscl").css("top",y-30);
-					$(".yjscl").delay(3000).hide(0);          //ÑÓÊ±º¯Êı
+					$(".yjscl").delay(3000).hide(0);          //å»¶æ—¶å‡½æ•°
 				}
 				else{
 					$(".shoucang").show();
 					$(".shoucang").css("top",y-30);
-					$(".shoucang").delay(3000).hide(0);      //ÑÓÊ±º¯Êı
+					$(".shoucang").delay(3000).hide(0);      //å»¶æ—¶å‡½æ•°
 				}
 			}
 		)
 	},
 	
-	//ÉèÖÃÔË·Ñ
+	//è®¾ç½®è¿è´¹
 	setFreight:function(){
 		var sum = $(".car_content span[class='thisSum']").text();
 		if(Number(sum)<229){
 			$("img[class='freight']").attr("src","../images/proscenium/order_no.jpg");
-			$("span[class='freight']").html("»¹Î´Âú229ÔªÃâÔË·ÑÌõ¼ş£¡(ÔË·ÑÈ«¹ú10Ôª)");
+			$("span[class='freight']").html("è¿˜æœªæ»¡229å…ƒå…è¿è´¹æ¡ä»¶ï¼(è¿è´¹å…¨å›½10å…ƒ)");
 			$("span[class='freight']").css("color","red");
-			$(".car_bottom .right li .yunfei").html("ÔË·Ñ<span style='font-size:12px;color:#FA0505'>10</span>Ôª&nbsp;&nbsp;&nbsp;")
+			$(".car_bottom .right li .yunfei").html("è¿è´¹<span style='font-size:12px;color:#FA0505'>10</span>å…ƒ&nbsp;&nbsp;&nbsp;")
 		}
 		else{
 			$("img[class='freight']").attr("src","../images/proscenium/order_yes.jpg");
-			$("span[class='freight']").html("ÒÑÂú229ÔªÃâÔË·ÑÌõ¼ş£¬±¾¶©µ¥¿ÉÃâÔË·Ñ£¡");
-			$(".car_bottom .right li .yunfei").html("<span style='font-size:12px;color:#FA0505'>ÃâÔË·Ñ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>")
+			$("span[class='freight']").html("å·²æ»¡229å…ƒå…è¿è´¹æ¡ä»¶ï¼Œæœ¬è®¢å•å¯å…è¿è´¹ï¼");
+			$(".car_bottom .right li .yunfei").html("<span style='font-size:12px;color:#FA0505'>å…è¿è´¹&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>")
 		}
 	},
 	

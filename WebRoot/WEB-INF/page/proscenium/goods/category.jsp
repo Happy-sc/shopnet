@@ -44,11 +44,11 @@
                     <div class="brand_content">
                         <table cellpadding="3">
                             <c:forEach items="${c.hotSellBrand}" var="b" varStatus="status">
-                                <c:if test="${status.count/2 == 0}">
+                                <c:if test="${(status.count+1)%2 == 0}">
                                     <tr>
                                 </c:if>
                                     <td><img src="${b.brandImage}" width="80" height="50"/></td>
-                                <c:if test="${status.count/2 == 0}">
+                                <c:if test="${(status.count+1)%2 == 0}">
                                     </tr>
                                 </c:if>
                             </c:forEach>

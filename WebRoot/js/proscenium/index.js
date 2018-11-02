@@ -1,5 +1,4 @@
-
-//tabҳ���л�
+//tab页面切换
 function setTab(name, num, n) {
 	for (i = 1; i <= n; i++) {
 		var menu = document.getElementById(name + i);
@@ -12,19 +11,19 @@ function setTab(name, num, n) {
 }
 
 jQuery(document).ready(function(){
-	//�˶�ЬͼƬ
+	//运动鞋图片
 	jQuery("#allSneakers").hover(
-		//����ͼƬ��
+		//放在图片上
 		function(){
 			jQuery(this).attr("src","../images/proscenium/allSneakers_02.jpg");
 		},
-		//�뿪ͼƬ
+		//离开图片
 		function(){
 			jQuery(this).attr("src","../images/proscenium/allSneakers_01.jpg");
 		}
 	)
 	
-	//ŮЬͼƬ
+	//女鞋图片
 	jQuery("#allWomenShoes").hover(
 		function(){
 			jQuery(this).attr("src","../images/proscenium/allWomenShoes_02.jpg");
@@ -34,7 +33,7 @@ jQuery(document).ready(function(){
 		}
 	),
 	
-	//��ЬͼƬ
+	//男鞋图片
 	jQuery("#allMenShoes").hover(
 		function(){
 			jQuery(this).attr("src","../images/proscenium/allMenShoes_02.jpg");
@@ -44,7 +43,7 @@ jQuery(document).ready(function(){
 		}
 	),
 	
-	//��ͯЬ
+	//儿童鞋
 	jQuery("#allChildrenShoes").hover(
 		function(){
 			jQuery(this).attr("src","../images/proscenium/allChildrenShoes_02.jpg");
@@ -54,7 +53,7 @@ jQuery(document).ready(function(){
 		}
 	),
 	
-	//����Ь
+	//户外鞋
 	jQuery("#allOutdoorShoes").hover(
 		function(){
 			jQuery(this).attr("src","../images/proscenium/allOutdoorShoes_02.jpg");
@@ -65,7 +64,7 @@ jQuery(document).ready(function(){
 	),
 	
 	/**
-	 * �ұߵķ��ࣺcategoty.jsp
+	 * 右边的分类：categoty.jsp
 	 */
 	jQuery("#index_category_left>ul>li").hover(	
 		function(){

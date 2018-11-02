@@ -10,7 +10,7 @@
   	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/backstage/noticeManager.css" type="text/css"></link>
   	<script type="text/javascript" src="${pageContext.request.contextPath}/js/jQuery/jquery-1.7.2.js"></script>
   	<script type="text/javascript" src="${pageContext.request.contextPath}/ckeditor/ckeditor.js"></script>
-  	<script type="text/javascript" src="${pageContext.request.contextPath}/js/backstage/noticeManager.js" charset="GBK"></script>
+  	<script type="text/javascript" src="${pageContext.request.contextPath}/js/backstage/noticeManager.js" charset="UTF-8"></script>
   </head>
   <body>
    <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">

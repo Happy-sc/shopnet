@@ -40,7 +40,7 @@ public class GoodsColor implements Serializable{
 		this.goodsSizeSet = goodsSizeSet;
 		this.goodsListing = goodsListing;
 	}
-	
+
 	@SearchableProperty(index=Index.NO,store=Store.YES)  //需要搜索、需要存储
 	public String getGoodsColorId() {
 		return goodsColorId;
@@ -49,7 +49,7 @@ public class GoodsColor implements Serializable{
 	public void setGoodsColorId(String goodsColorId) {
 		this.goodsColorId = goodsColorId;
 	}
-	
+
 	@SearchableProperty(index=Index.ANALYZED,store=Store.YES) //需要搜索、需要存储
 	public String getGoodsColor() {
 		return goodsColor;
@@ -100,6 +100,6 @@ public class GoodsColor implements Serializable{
 	public void setGoodsListing(GoodsListing goodsListing) {
 		this.goodsListing = goodsListing;
 	}
-	
+
 	
 }

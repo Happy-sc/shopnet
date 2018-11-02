@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="${pageContext.request.contextPath }/css/proscenium/userManagerCenter.css" type="text/css"></link>
 	<link rel="stylesheet" href="${pageContext.request.contextPath }/css/proscenium/myOrder.css" type="text/css"></link>
 	<script type="text/javascript" src="${pageContext.request.contextPath }/js/jQuery/jquery-1.7.2.js"></script>
-  	<script type="text/javascript" src="${pageContext.request.contextPath }/js/proscenium/userManagerCenter.js"></script>
+  	<script type="text/javascript" src="${pageContext.request.contextPath }/js/proscenium/userManagerCenter.js" charset="UTF-8"></script>
   </head>
   
   <body>

@@ -1,4 +1,4 @@
-//tabÒ³ÃæÇĞ»»
+//tabé¡µé¢åˆ‡æ¢
 function setTab(name, num, n) {
 	for (i = 1; i <= n; i++) {
 		var menu = document.getElementById(name + i);
@@ -11,7 +11,7 @@ function setTab(name, num, n) {
 }
 
 $(document).ready(function(){
-	//³õÊ¼»¯dialog
+	//åˆå§‹åŒ–dialog
 	$(".userLogin").dialog(
   	{
   		bgiframe: true,
@@ -22,7 +22,7 @@ $(document).ready(function(){
       	autoOpen: false,
     })
     
-	//Ñ¡¶¨µ±Ç°ÑÕÉ«
+	//é€‰å®šå½“å‰é¢œè‰²
 	var thisColor = $("#choosedImg").val();
 	var imgs = $("#goods_infor_detail img[id='goodsColor']");
 	for(var i = 0;i<imgs.length;i++){
@@ -32,20 +32,20 @@ $(document).ready(function(){
 		}
 	}
 	
-	//ÊÇ·ñÏÔÊ¾jQuery dialog
+	//æ˜¯å¦æ˜¾ç¤ºjQuery dialog
 	var _url = location.search;
 	var param = _url.split("&");
 	for(var i = 0;i<param.length;i++){
 		var _param = param[i];
 		var paramValue = _param.split("=")[1];
 		if(paramValue=="show"){
-			$(".userLogin .password_prompt").html("ÓÃ»§Ãû»òÃÜÂë´íÎó,ÇëÖØĞÂÊäÈë...");
+			$(".userLogin .password_prompt").html("ç”¨æˆ·åæˆ–å¯†ç é”™è¯¯,è¯·é‡æ–°è¾“å…¥...");
 			$(".userLogin").dialog("open");
 		}
 			
 	}
 	
-	//Êó±ê·ÅÔÚÑÕÉ«ÉÏ
+	//é¼ æ ‡æ”¾åœ¨é¢œè‰²ä¸Š
 	$("#goods_infor_detail img[id='goodsColor']").hover(
 		function(){
 			$(this).css("border","1px solid red");
@@ -57,7 +57,7 @@ $(document).ready(function(){
 		}
 	)
 	
-	//µã»÷³ßÂë
+	//ç‚¹å‡»å°ºç 
 	$("#goods_infor_detail span[class='size']").click(
 		function(){
 			var buyColor = $(this).parent().parent().children();
@@ -71,7 +71,7 @@ $(document).ready(function(){
 		}
 	)
 	
-	//µã»÷-,+ºÅÊ±
+	//ç‚¹å‡»-,+å·æ—¶
 	$("#goods_infor_detail span[class='number']").click(
 		function(){
 			var id = $(this).attr("id");
@@ -90,7 +90,7 @@ $(document).ready(function(){
 		}	
 	)
 	
-	//·ÅÔÚ¹ºÂòµÄdivÉÏÊ±
+	//æ”¾åœ¨è´­ä¹°çš„divä¸Šæ—¶
 	$("#goods_infor_detail").hover(
 		function(){
 			$(this).css("border","1px solid #FFCC7F");
@@ -102,7 +102,7 @@ $(document).ready(function(){
 		}
 	)
 	
-	//·ÅÔÚ¹ºÂò°´Å¥ÉÏ
+	//æ”¾åœ¨è´­ä¹°æŒ‰é’®ä¸Š
 	$("#goods_infor_detail img[class='goumai']").hover(
 		function(){
 			$(this).attr("src","../images/proscenium/goumai_02.jpg");
@@ -112,7 +112,7 @@ $(document).ready(function(){
 		}
 	)
 	
-	//·ÅÔÚ¼ÓÈë¹ºÎï³µÉÏ
+	//æ”¾åœ¨åŠ å…¥è´­ç‰©è½¦ä¸Š
 	$("#goods_infor_detail img[class='addCar']").hover(
 		function(){
 			$(this).attr("src","../images/proscenium/addcar_02.jpg");
@@ -121,13 +121,13 @@ $(document).ready(function(){
 			$(this).attr("src","../images/proscenium/addcar_01.jpg");
 		}
 	)
-	
-	//µã»÷¹ºÎï³µ¡¢Á¢¼´¹ºÂò--·Ö¿ª×ö
+
+	//ç‚¹å‡»è´­ç‰©è½¦ã€ç«‹å³è´­ä¹°--åˆ†å¼€åš
 	$("#goods_infor_detail img[class='addCar']").click(
 		function(){
 			var flag = "false";
 			var class_ = $(this).attr("class");
-			//»ñÈ¡ËùÓĞµÄ³ßÂë
+			//è·å–æ‰€æœ‰çš„å±æ€§
 			var size = $("#goods_infor_detail span[class='size']");
 			for(var i = 0;i<size.length;i++){
 				var id = size.eq(i).attr("id");
@@ -139,7 +139,7 @@ $(document).ready(function(){
 			if(flag=="false"){
 				$("#qxzcm").css("border","1px solid red");
 				$("#goods_infor_detail").css("height","230px");
-				$("#qxzcm").after("<tr id='tjdtr'><td clospan='2' style='font-size:12px;color:red'>ÇëÑ¡Ôñ³ßÂë</td></tr>");
+				$("#qxzcm").after("<tr id='tjdtr'><td clospan='2' style='font-size:12px;color:red'>è¯·é€‰æ‹©å±æ€§</td></tr>");
 			}
 			else{
 				var goodsId = $("#choosedGoodsId").val();
@@ -150,17 +150,17 @@ $(document).ready(function(){
 				$(".addCarSuccess").show();
 				$("#sfyjysp").val("yjyl");
 			}
-				
-		}	
+
+		}
 	)
 	
-	//µã»÷Á¢¼´¹ºÂò
+	//ç‚¹å‡»ç«‹å³è´­ä¹°
 	$("img[class='goumai']").click(function(){
-		var sfyjysp = $("#sfyjysp").val();      //ÅĞ¶ÏÊÇ·ñÒÑ¾­¼ÓÈë¹ºÎï³µÁË
+		var sfyjysp = $("#sfyjysp").val();      //åˆ¤æ–­æ˜¯å¦å·²ç»åŠ å…¥è´­ç‰©è½¦äº†
 		if(sfyjysp!="yjyl"){
 			var flag = "false";
 			var class_ = $(this).attr("class");
-			//»ñÈ¡ËùÓĞµÄ³ßÂë
+			//è·å–æ‰€æœ‰çš„å±æ€§
 			var size = $("#goods_infor_detail span[class='size']");
 			for(var i = 0;i<size.length;i++){
 				var id = size.eq(i).attr("id");
@@ -172,9 +172,8 @@ $(document).ready(function(){
 			if(flag=="false"){
 				$("#qxzcm").css("border","1px solid red");
 				$("#goods_infor_detail").css("height","230px");
-				$("#qxzcm").after("<tr id='tjdtr'><td clospan='2' style='font-size:12px;color:red'>ÇëÑ¡Ôñ³ßÂë</td></tr>");
-			}
-			else{
+				$("#qxzcm").after("<tr id='tjdtr'><td clospan='2' style='font-size:12px;color:red'>è¯·é€‰æ‹©å±æ€§</td></tr>");
+			} else{
 				var goodsId = $("#choosedGoodsId").val();
 				var goodsSize = $("#goods_infor_detail span[id='nowSize']").html();
 				var goodsColor = $("#choosedColor").val();
@@ -188,21 +187,21 @@ $(document).ready(function(){
 		}
 	})
 	
-	//µã»÷XÊ±
+	//ç‚¹å‡»Xæ—¶
 	$(".chooseSize_title img").click(
 		function(){
 			$(".chooseSize").hide();
 		}	
 	)
 	
-	//µã»÷X»òÕßÔÙ¹ä¹äÁ´½ÓÊ±
+	//ç‚¹å‡»Xæˆ–è€…å†é€›é€›é“¾æ¥æ—¶
 	$(".addCarSuccess img[class='x'],a[class='zaikan']").click(
 		function(){
 			$(".addCarSuccess").hide();
 		}	
 	)
 	
-	//µã»÷ÊÕ²Ø
+	//ç‚¹å‡»æ”¶è—
 	$("img[class='shoucang']").click(
 		function(){
 			var userName = $("#topUserName").val();
@@ -221,19 +220,19 @@ $(document).ready(function(){
 					function(data){
 						if(data=="1"){
 							$(".sccgDIV").show();
-							$(".sccgDIV").delay(2000).hide(0);          //ÑÓÊ±º¯Êı
+							$(".sccgDIV").delay(2000).hide(0);          //å»¶æ—¶å‡½æ•°
 						}
 						
 						else{
 							$(".scsbDIV").show();
-							$(".scsbDIV").delay(2000).hide(0);      //ÑÓÊ±º¯Êı
+							$(".scsbDIV").delay(2000).hide(0);      //å»¶æ—¶å‡½æ•°
 						}
 					})
 				}
 			}	
 		)
 	
-	//µã»÷ÊÕ²ØµÄXÊ±
+	//ç‚¹å‡»æ”¶è—çš„Xæ—¶
 	$(".sccgDIV a,.scsbDIV a").click(
 		function(){
 			var _class = $(this).parent().attr("class");
@@ -241,7 +240,7 @@ $(document).ready(function(){
 		}	
 	)
 
-	//µã»÷ÎÒÒªÆÀ¼Û
+	//ç‚¹å‡»æˆ‘è¦è¯„ä»·
     $("#wypj").click(
     	function(){
     		var userName = $("#topUserName").val();
@@ -257,7 +256,7 @@ $(document).ready(function(){
     )
     
  	var flag;
-    //ÓÃ»§ÃûÊäÈë¿ò
+    //ç”¨æˆ·åè¾“å…¥æ¡†
     $(".userLogin #userName").focus(
     	function(){
     		$(this).css("border","1px solid #FFCC66");
@@ -270,14 +269,14 @@ $(document).ready(function(){
     		var userName_prompt = $(".userLogin .userName_prompt");
     		userName_prompt.css("color","red");
     		if(userName==""||userName==null){
-    			userName_prompt.html("ÇëÊäÈëÓÃ»§Ãû...");
+    			userName_prompt.html("è¯·è¾“å…¥ç”¨æˆ·å...");
     			$(this).css("border","1px solid red");
     			flag = false;
     			return false;
     		}
     		var reg = /^[a-zA-Z0-9_]{6,16}$/;
     		if(reg.test(userName)==false){
-    			userName_prompt.html("ÓÃ»§Ãû¸ñÊ½´íÎó,ÇëÖØĞÂÊäÈë...")
+    			userName_prompt.html("ç”¨æˆ·åæ ¼å¼é”™è¯¯,è¯·é‡æ–°è¾“å…¥...")
     			$(this).css("border","1px solid red");
     			flag = false;
     			return false;
@@ -288,7 +287,7 @@ $(document).ready(function(){
     	}	
     )
     
-    //ÃÜÂëÎÄ±¾¿ò
+    //å¯†ç æ–‡æœ¬æ¡†
     $(".userLogin #password").focus(
     	function(){
     		$(this).css("border","1px solid #FFCC66");
@@ -301,14 +300,14 @@ $(document).ready(function(){
     		var password_prompt = $(".userLogin .password_prompt");
     		password_prompt.css("color","red");
     		if(password==""||password==null){
-    			password_prompt.html("ÇëÊäÈëµÇÂ¼ÃÜÂë...");
+    			password_prompt.html("è¯·è¾“å…¥ç™»å½•å¯†ç ...");
     			$(this).css("border","1px solid red");
     			flag = false;
     			return false;
     		}
     		var reg = /^[a-zA-Z0-9_]{6,16}$/;
     		if(reg.test(password)==false){
-    			password_prompt.html("µÇÂ¼ÃÜÂë¸ñÊ½´íÎó,ÇëÖØĞÂÊäÈë...")
+    			password_prompt.html("ç™»å½•å¯†ç æ ¼å¼é”™è¯¯,è¯·é‡æ–°è¾“å…¥...")
     			$(this).css("border","1px solid red");
     			flag = false;
     			return false;
@@ -319,7 +318,7 @@ $(document).ready(function(){
     	}	
     )
     
-    //µÇÂ¼°´Å¥
+    //ç™»å½•æŒ‰é’®
     $(".userLogin img").hover(
     	function(){
     		$(this).attr("src","../images/proscenium/userLogin_02.jpg");
@@ -329,7 +328,7 @@ $(document).ready(function(){
     	}
     )
 	
-    //µã»÷µÇÂ¼°´Å¥
+    //ç‚¹å‡»ç™»å½•æŒ‰é’®
     $(".userLogin .userLoginGD").click(
     	function(){
     		 $(".userLogin #userName").blur();
@@ -352,18 +351,18 @@ $(document).ready(function(){
     				},
     				function(data){
     					$("#topUserName").val("userName");
-    					if(data.indexOf("´íÎó")!=-1){
+    					if(data.indexOf("é”™è¯¯")!=-1){
     						$(".userLogin .password_prompt").html(data);
     					}
-    					if(data.indexOf("ÊÕ²Ø¹ı¸ÃÉÌÆ·")!=-1){
+    					if(data.indexOf("æ”¶è—è¿‡è¯¥å•†å“")!=-1){
     						$(".userLogin").dialog("close");
     						$(".scsbDIV").show();
     					}
-    					if(data.indexOf("ÊÕ²Ø³É¹¦")!=-1){
+    					if(data.indexOf("æ”¶è—æˆåŠŸ")!=-1){
     						$(".userLogin").dialog("close");
     						$(".sccgDIV").show();
     					}
-    					if(data.indexOf("ÆÀ¼Û")!=-1){
+    					if(data.indexOf("è¯„ä»·")!=-1){
     						window.location.href = "../goods/comment_goodsComment.action?goodsId="+goodsId;
     					}
     				}
@@ -373,9 +372,9 @@ $(document).ready(function(){
     )
 })
 
-//¶¨ÒåÄäÃûº¯Êı
+//å®šä¹‰åŒ¿åå‡½æ•°
 $.extend({
-	//¼ÓÈë¹ºÎï³µ
+	//åŠ å…¥è´­ç‰©è½¦
 	addCar:function(goodsId,goodsSize,goodsColor,goodsNumber){
 		var url = "../goods/car_addGoods.action";
 		$.ajax({

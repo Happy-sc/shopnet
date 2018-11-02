@@ -5,12 +5,12 @@ $(document).ready(function() {
 		}
 	)
 	var flag = false;
-	//¾ÉÃÜÂë
+	//æ—§å¯†ç 
 	$("#oldPassword").blur(
 		function(){
 			var oldPassword = $("#oldPassword").val();
 			if(oldPassword==""||oldPassword==null){
-				$("#oldPW_prompt").html("ÇëÊäÈë¾ÉÃÜÂë...");
+				$("#oldPW_prompt").html("è¯·è¾“å…¥æ—§å¯†ç ...");
 				$("#oldPW_prompt").attr("class","error_prompt");
 				flag = false;
 				return false;
@@ -21,20 +21,20 @@ $(document).ready(function() {
 		}	
 	)
 	
-	//ĞÂÃÜÂë
+	//æ–°å¯†ç 
 	$("#newPassword").blur(
 		function(){
 			var newPassword = $("#newPassword").val();
 			$("#newPW_prompt").html("");
 			if(newPassword==""||newPassword==null){
-				$("#newPW_prompt").html("ÇëÊäÈëĞÂÃÜÂë...");
+				$("#newPW_prompt").html("è¯·è¾“å…¥æ–°å¯†ç ...");
 				$("#newPW_prompt").attr("class","error_prompt");
 				flag = false;
 				return false;
 			}
 			var reg = /^[0-9a-zA-Z]{6,16}$/;
 			if(reg.test(newPassword)==false){
-				$("#newPW_prompt").html("ÃÜÂë¸ñÊ½²»ÕıÈ·,ÇëÖØĞÂÊäÈë...");
+				$("#newPW_prompt").html("å¯†ç æ ¼å¼ä¸æ­£ç¡®,è¯·é‡æ–°è¾“å…¥...");
 				$("#newPW_prompt").attr("class","error_prompt");
 				flag = false;
 				return false;
@@ -45,19 +45,19 @@ $(document).ready(function() {
 		}	
 	)
 	
-	//ÖØĞÂÊäÈëĞÂÃÜÂë
+	//é‡æ–°è¾“å…¥æ–°å¯†ç 
 	$("#newRePassword").blur(
 		function(){
 			var newRePassword = $("#newRePassword").val();
 			var newPassword = $("#newPassword").val();
 			if(newRePassword==""||newRePassword==null){
-				$("#newRePW_prompt").html("ÇëÔÙÒ»´ÎÊäÈëĞÂÃÜÂë...");
+				$("#newRePW_prompt").html("è¯·å†ä¸€æ¬¡è¾“å…¥æ–°å¯†ç ...");
 				$("#newRePW_prompt").attr("class","error_prompt");
 				flag = false;
 				return false;
 			}
 			if(newRePassword!=newPassword){
-				$("#newRePW_prompt").html("ÃÜÂë²»Ò»ÖÂ,ÇëÖØĞÂÊäÈë...");
+				$("#newRePW_prompt").html("å¯†ç ä¸ä¸€è‡´,è¯·é‡æ–°è¾“å…¥...");
 				$("#newRePW_prompt").attr("class","error_prompt");
 				flag = false;
 				return false;
@@ -68,7 +68,7 @@ $(document).ready(function() {
 		}	
 	)
 	
-	//ÑéÖ¤±íµ¥
+	//éªŒè¯è¡¨å•
 	$("#updatePW").submit(
 		function(){
 		$("#oldPassword").blur();

@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	$("#addNewAddress").click(
 		function(){
-			//Çå¿ÕÊı¾İ£¬±£Ö¤ĞŞ¸Äºó²»»áÖØĞÂÑ¡¶¨Êı¾İ
+			//æ¸…ç©ºæ•°æ®ï¼Œä¿è¯ä¿®æ”¹åä¸ä¼šé‡æ–°é€‰å®šæ•°æ®
 			$("#addressId").val("");
 			$("#consignee").val("");
 			$("#telephone").val("");
@@ -26,10 +26,10 @@ $(document).ready(function(){
       	autoOpen: false,
     }),
     
-    //¼ÓÔØ³ÇÊĞ
+    //åŠ è½½åŸå¸‚
 	$(".city").ProvinceCity(),
 	
-	//·ÅÔÚĞÂÔöÍ¼Æ¬ÉÏ
+	//æ”¾åœ¨æ–°å¢å›¾ç‰‡ä¸Š
 	$("#addNewAddress").hover(
 		function(){
 			$(this).attr("src","/paixieNet/images/proscenium/addNewAddress_02.jpg")
@@ -38,7 +38,7 @@ $(document).ready(function(){
 			$(this).attr("src","/paixieNet/images/proscenium/addNewAddress_01.jpg")	
 		}
 	)
-	//µ±·ÅÈëinputÖĞÊ±
+	//å½“æ”¾å…¥inputä¸­æ—¶
 	$(".newAddress input").focus(
 		function(){
 			$(this).css("border","1px solid #FFCC66");
@@ -52,10 +52,10 @@ $(document).ready(function(){
 	)
 	
 
-	//ĞŞ¸ÄÊÕ»õµØÖ·
+	//ä¿®æ”¹æ”¶è´§åœ°å€
 	$(".showAddress a[class='update']").click(
 		function(){
-			//»ñÈ¡¸ÃĞĞµÄÊı¾İ
+			//è·å–è¯¥è¡Œçš„æ•°æ®
 			var this_tr = $(this).parent().parent().children();
 			var this_td = $(this).parent().children();
 			
@@ -66,14 +66,14 @@ $(document).ready(function(){
 			var addressId = this_tr.eq(5).children("input").val();
 			var isDefault = this_tr.eq(4).children("input").val();
 
-			//´¦ÀíµØÖ·
+			//å¤„ç†åœ°å€
 			var addresses = address.split(",");
 			var province = addresses[0];
 			var city = addresses[1];
 			var country = addresses[2];
 			var street = addresses[3];
 			
-			//Éè¶¨Öµ
+			//è®¾å®šå€¼
 
 			$(".newAddress #addressId").val(addressId);
 			$(".newAddress #consignee").val(consignee);
@@ -87,32 +87,32 @@ $(document).ready(function(){
 			else{
 				$(".newAddress input[type='radio']").eq(1).attr("checked",'checked');
 			}
-			//Ñ¡¶¨Ê¡
+			//é€‰å®šçœ
 			var provinces = $("select[name=province]").children();
 			for(var i = 0;i<provinces.length;i++){
 				if(provinces.eq(i).val()==province){
 					provinces.eq(i).attr("selected","true");
 					provinceIndex = i;
-					//Õ¹¿ªµÚ¶ş¼¶³ÇÊĞ
+					//å±•å¼€ç¬¬äºŒçº§åŸå¸‚
 					$.each( GT[i-1] , function(index,data){
 						$("select[name=city]").append("<option value='"+data+"'>"+data+"</option>");
 					});
 				}	
 			}
 	
-			//Ñ¡¶¨ÊĞ
+			//é€‰å®šå¸‚
 			var cities = $("select[name=city]").children();
 			for(var j = 0;j<cities.length;j++){
 				if(cities.eq(j).val()==city){
 					cities.eq(j).attr("selected","true");
-					//Õ¹¿ªµÚÈı¼¶³ÇÊĞ
+					//å±•å¼€ç¬¬ä¸‰çº§åŸå¸‚
 					$.each( GC[provinceIndex-1][j-1] , function(index,data){
 						$("select[name=countryCity]").append("<option value='"+data+"'>"+data+"</option>");
 					})
 				}
 			}
 	
-			//Ñ¡¶¨ÏØ¼¶
+			//é€‰å®šå¿çº§
 			var countries = $("select[name=countryCity]").children();
 			for(var l = 0;l<countries.length;l++){
 				if(countries.eq(l).val()==country){
@@ -120,12 +120,12 @@ $(document).ready(function(){
 				}
 			}
 			
-			$(".newAddress").attr("title","ĞŞ¸ÄÊÕ»õµØÖ·");
+			$(".newAddress").attr("title","ä¿®æ”¹æ”¶è´§åœ°å€");
 			$(".newAddress").dialog("open");
 			}	
 		)
 		
-		//µã»÷É¾³ı
+		//ç‚¹å‡»åˆ é™¤
 		$(".showAddress a[class='delete']").click(
 			function(){
 				var this_tr = $(this).parent().parent().children();

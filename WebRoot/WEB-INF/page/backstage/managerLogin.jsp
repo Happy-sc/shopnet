@@ -9,7 +9,7 @@
   	<title>购物网站后台管理系统--登录</title>
   	<link rel="stylesheet" href="${pageContext.request.contextPath }/css/backstage/login.css" type="text/css"></link>
   	<script type="text/javascript" src="${pageContext.request.contextPath }/js/jQuery/jquery-1.7.2.js"></script>
-  	<script type="text/javascript" src="${pageContext.request.contextPath }/js/backstage/login.js" charset="GBK"></script>
+  	<script type="text/javascript" src="${pageContext.request.contextPath }/js/backstage/login.js" charset="utf-8"></script>
  </head>
   
   <body>

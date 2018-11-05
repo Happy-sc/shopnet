@@ -36,8 +36,8 @@ public class JinBAction extends BaseAction{
 		//获取用户的金币记录
 		System.out.println(page);
 		List<JinBRecord> jinBRecords = jinBService.getUserJinB(users.getUserId(),page,jinBState);
-		int paixieBSum = jinBService.getJinBSum(users.getUserId(),jinBState);
-		pageSum = paixieBSum%10==0?paixieBSum/10:paixieBSum/10+1;
+		int jinBSum = jinBService.getJinBSum(users.getUserId(),jinBState);
+		pageSum = jinBSum%10==0?jinBSum/10:jinBSum/10+1;
 		
 		ActionContext.getContext().put("jinBRecords", jinBRecords);
 		ActionContext.getContext().put("nowPage", page);

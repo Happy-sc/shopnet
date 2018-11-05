@@ -163,9 +163,9 @@
     												</a>
     											</td>
     											<td style="width: 14%">${od[0].goodsNumber }</td>
-    											<td style="width: 14%"><font>￥${od[0].goodsListing.goodsPaiPrice }</font></td>
-    											<td style="width: 14%"><font>￥${od[0].goodsNumber*od[0].goodsListing.goodsPaiPrice }</font></td>
-    											<td style="width: 14%"><font><fmt:formatNumber type="number" value="${od[0].goodsNumber*od[0].goodsListing.goodsPaiPrice/100 }" maxFractionDigits="0"/></font></td>
+    											<td style="width: 14%"><font>￥${od[0].goodsListing.goodsMarketPrice }</font></td>
+    											<td style="width: 14%"><font>￥${od[0].goodsNumber*od[0].goodsListing.goodsMarketPrice }</font></td>
+    											<td style="width: 14%"><font><fmt:formatNumber type="number" value="${od[0].goodsNumber*od[0].goodsListing.goodsMarketPrice/100 }" maxFractionDigits="0"/></font></td>
     											<td style="width: 14%">
     												<input type="hidden" value="${od[0].orderDetailId }" id="qrshODId"/>
     												<input type="hidden" value="${od[1].orderId }" id="qrshOId" />

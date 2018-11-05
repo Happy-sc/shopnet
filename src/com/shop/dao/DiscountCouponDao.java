@@ -50,4 +50,9 @@ public interface DiscountCouponDao {
 	 * @return
 	 */
 	List<DiscountCoupon> getDiscountCouponByUserId(String userId,int pageNo);
+
+	/**
+	 * 根据用户编号和优惠状态查询
+	 */
+	List<DiscountCoupon> getDiscountCoupon(String userId,int state,int pageNo);
 }

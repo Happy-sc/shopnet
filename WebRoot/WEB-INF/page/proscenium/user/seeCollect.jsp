@@ -71,7 +71,7 @@
     										</tr>
     										<tr>
     											<td>&nbsp;<font class="brand">品牌:</font><a href="" class="brand">${c.goodsListing.brand.brandName }</a></td>
-    											<td align="center"><font class="price">￥${c.goodsListing.goodsPaiPrice}</font></td>
+    											<td align="center"><font class="price">￥${c.goodsListing.goodsMarketPrice}</font></td>
     											<td align="center">
     												<c:choose>
     													<c:when test="${c.goodsListing.goodsState==1}">

@@ -21,8 +21,11 @@ import com.shop.service.GoodsService;
 public class CollectionAction extends BaseAction{
 	private static final long serialVersionUID = 1L;
 	
-	@Resource(name="collectService")private CollectService collectService;
-	@Resource(name="goodsService")private GoodsService goodsService;
+	@Resource(name="collectService")
+	private CollectService collectService;
+	@Resource(name="goodsService")
+	private GoodsService goodsService;
+
 	private String goodsId;
 	private String type;
 	public String getGoodsId() {
@@ -110,7 +113,7 @@ public class CollectionAction extends BaseAction{
 	 * 取消收藏
 	 */
 	public String cancelCollect(){
-		
+		collectService.deleteCollect(getGoodsId());
 		return null;
 	}
 	

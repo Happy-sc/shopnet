@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	//选定tab
-	var _type = $("#paixieBType").val();
-	if("pxbhqjl"==_type){
+	var _type = $("#jinBType").val();
+	if("jbhqjl"==_type){
 		$("#tab1").attr("class","now");
 		$(".kongbai").css("left","332px");
 		$("#tab1Div").show();
@@ -13,7 +13,7 @@ $(document).ready(function(){
 	}
 	
 	//放在tab上
-	$(".paixieB_content .title li").hover(
+	$(".jinB_content .title li").hover(
 		function(){
 			var _class = $(this).attr("class");
 			if("now"!=_class){
@@ -29,14 +29,14 @@ $(document).ready(function(){
 	)
 	
 	//点击tab
-	$(".paixieB_content .title li").click(
+	$(".jinB_content .title li").click(
 		function(){
 			var _id = $(this).attr("id");
 			if(_id=="tab1"){
-				window.location.href = "../userCenter/paixieB_seePaixieB.action?type=pxbhqjl&page=1";
+				window.location.href = "../userCenter/seeJinB_seeJinB.action?type=jbhqjl&page=1";
 			}
 			if(_id=="tab2"){
-				window.location.href = "../userCenter/paixieB_seePaixieB.action?type=pxbzcjl&page=1";
+				window.location.href = "../userCenter/seeJinB_seeJinB.action?type=jbzcjl&page=1";
 			}
 		}	
 	)

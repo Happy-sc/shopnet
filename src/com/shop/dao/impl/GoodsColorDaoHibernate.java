@@ -77,8 +77,7 @@ public class GoodsColorDaoHibernate extends BaseHibernateDaoSupport implements G
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
-	public GoodsColor getGoodsColorByIdAndColor(String goodsId,
-			String goodsColor) {
+	public GoodsColor getGoodsColorByIdAndColor(String goodsId, String goodsColor) {
 		String hql = "from GoodsColor as gc where gc.goodsColor=? and gc.goodsListing.goodsId=?";
 		List<GoodsColor> goodsColors = getHibernateTemplate().find(hql,goodsColor,goodsId);
 		if(goodsColors!=null&&goodsColors.size()>0){

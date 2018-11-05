@@ -26,11 +26,11 @@
     			</div>
     			<div class="discount_content">
     				<div class="title">
-						<input type="hidden" id="discountType" value="${type }"/>
+						<input type="hidden" id="discountType" value="${type}"/>
     					<ul>
-    						<li id="tab1" class="now">可用优惠券</li>
-    						<li id="tab2">已使用优惠券</li>
-    						<li id="tab3">已过期优惠券</li>
+    						<li id="tab1" <c:if test="${type==1}">class="now"</c:if>>可用优惠券</li>
+							<li id="tab2" <c:if test="${type==2}">class="now"</c:if>>已使用优惠券</li>
+    						<li id="tab3" <c:if test="${type==0}">class="now"</c:if>>已过期优惠券</li>
     					</ul>
     				</div>
     				<div class="content">
@@ -41,21 +41,18 @@
     								<li style="width: 17%">优惠券号码</li>
     								<li style="width: 30%">使用说明</li>
     								<li style="width: 17%">截止时间</li>
-    								<li style="width: 17%">使用状态</li>
     							</ul>
+    							<c:forEach items="${discountCoupons}" var="dc">
+									<ul>
+										<li style="width: 21%">${dc.discountCouponName}</li>
+										<li style="width: 21%">${dc.discountCouponId}</li>
+										<li style="width: 33%">${dc.discountCouponValidity}</li>
+										<li style="width: 21%">${dc.discountCouponTime}</li>
+									</ul>
+								</c:forEach>
     						</div>
-    						<div class="Ccontent">
-    						
-    						</div>
-    					</div>
-    					<div id="tab2Div">
-    					
-    					</div>
-    					<div id="tab3Div">
-    					
     					</div>
     				</div>
-    				<div class="kongbai"></div>
     			</div>
     			<div class="yhqsysm">
     				<div class="title">&nbsp;&nbsp;&nbsp;优惠券使用说明</div>

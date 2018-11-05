@@ -8,12 +8,12 @@ public class DiscountCoupon implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
-	private String discountCouponId;             //优惠券编号
-	private Users users;                         //用户
+	private String discountCouponId;              //优惠券编号
+	private Users users;                           //用户
 	private String discountCouponName;           //优惠券名称
 	private String discountCouponTime;           //优惠券过期时间
 	private String discountCouponValidity;       //优惠券说明
-	private boolean discountCouponState;         //优惠券使用状态  0:已过期   1：可用    2：已使用
+	private Integer discountCouponState;         //优惠券使用状态  0:已过期   1：可用    2：已使用
 
 	public DiscountCoupon() {
 	}
@@ -22,9 +22,8 @@ public class DiscountCoupon implements java.io.Serializable {
 		this.discountCouponId = discountCouponId;
 	}
 
-	public DiscountCoupon(String discountCouponId, Users users,
-			String discountCouponName, String discountCouponTime,
-			String discountCouponValidity, boolean discountCouponState) {
+	public DiscountCoupon(String discountCouponId, Users users, String discountCouponName, String discountCouponTime,
+			String discountCouponValidity, Integer discountCouponState) {
 		this.discountCouponId = discountCouponId;
 		this.users = users;
 		this.discountCouponName = discountCouponName;
@@ -73,11 +72,11 @@ public class DiscountCoupon implements java.io.Serializable {
 		this.discountCouponValidity = discountCouponValidity;
 	}
 
-	public boolean getDiscountCouponState() {
+	public Integer getDiscountCouponState() {
 		return this.discountCouponState;
 	}
 
-	public void setDiscountCouponState(boolean discountCouponState) {
+	public void setDiscountCouponState(Integer discountCouponState) {
 		this.discountCouponState = discountCouponState;
 	}
 

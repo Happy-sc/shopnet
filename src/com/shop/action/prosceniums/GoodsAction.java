@@ -178,7 +178,6 @@ public class GoodsAction extends BaseAction{
 		else {
 			sumAvg = 5;
 		}
-		
 		DecimalFormat format = new DecimalFormat(blxs);   //保留一位小数
 		
 		return format.format(sumAvg);

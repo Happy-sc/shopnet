@@ -9,8 +9,8 @@ import com.shop.dao.base.BaseHibernateDaoSupport;
 import com.shop.domain.DiscountCoupon;
 
 @Repository("discountCouponDao")
-public class DiscountCouponDaoHibernate extends BaseHibernateDaoSupport
-		implements DiscountCouponDao {
+public class DiscountCouponDaoHibernate extends BaseHibernateDaoSupport implements DiscountCouponDao {
+
 	private int pageSize = 10;
 	
 	/**
@@ -56,6 +56,11 @@ public class DiscountCouponDaoHibernate extends BaseHibernateDaoSupport
 	public List<DiscountCoupon> getDiscountCouponByUserId(String userId,int pageNo) {
 		int offset = (pageNo-1)*pageSize;
 		return (List<DiscountCoupon>)findByPage("from DiscountCoupon as d where d.users.userId=?", userId, offset, pageNo);
+	}
+
+	@Override
+	public List<DiscountCoupon> getDiscountCoupon(String userId, int state, int pageNo) {
+		return getHibernateTemplate().find("from DiscountCoupon as d where d.users.userId=? and d.discountCouponState=?",userId,state);
 	}
 
 	/**

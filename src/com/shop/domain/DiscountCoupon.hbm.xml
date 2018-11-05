@@ -23,7 +23,7 @@
         <property name="discountCouponValidity" type="string">
             <column name="discountCoupon_validity" length="200" />
         </property>
-        <property name="discountCouponState" type="boolean">
+        <property name="discountCouponState" type="int">
             <column name="discountCoupon_state" />
         </property>
     </class>

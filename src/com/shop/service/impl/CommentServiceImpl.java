@@ -12,7 +12,9 @@ import com.shop.service.CommentService;
 
 @Service("commentService")
 public class CommentServiceImpl implements CommentService {
-	@Resource(name="commentDao")private CommentDao commentDao;
+
+	@Resource(name="commentDao")
+	private CommentDao commentDao;
 	/**
 	 * 获取商品的评价，并进行分页处理
 	 * @param goodsId 商品编号
@@ -29,8 +31,7 @@ public class CommentServiceImpl implements CommentService {
 	 * @return 商品的评价数量
 	 */
 	public int getCommentSumByGoods(String goodsId) {
-		int commentSum = commentDao.getCommentSum(goodsId);
-		return commentSum;
+		return commentDao.getCommentSum(goodsId);
 	}
 
 	/**
@@ -40,10 +41,8 @@ public class CommentServiceImpl implements CommentService {
 	 * @return 商品的评分数量
 	 */
 	public int getGoodsGradeSum(String goodsId, int grade) {
-		int gradeSum = commentDao.getGoodsGradeSum(goodsId,grade);
-		return gradeSum;
+		return commentDao.getGoodsGradeSum(goodsId, grade);
 	}
-
 	/**
 	 * 获取用户的评价,且进行分页处理
 	 * @param userId 用户编号

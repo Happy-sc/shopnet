@@ -13,41 +13,41 @@ import com.shop.service.GoodsColorService;
 
 @Service("goodsColorService")
 public class GoodsColorServiceImpl implements GoodsColorService{
-	@Resource(name="goodsColorDao")private GoodsColorDao goodsColorDao;
+
+	@Resource(name="goodsColorDao")
+	private GoodsColorDao goodsColorDao;
 	/**
-	 * ±£´æÉÌÆ·ÑÕÉ«ÊµÀı
-	 * @param goodsColor ÉÌÆ·ÑÕÉ«ÊµÀı
+	 * ä¿å­˜å•†å“é¢œè‰²å®ä¾‹
+	 * @param goodsColor å•†å“é¢œè‰²å®ä¾‹
 	 */
 	public void save(GoodsColor goodsColor) {
 		goodsColorDao.save(goodsColor);
 	}
 	
 	/**
-	 * ¸ù¾İÉÌÆ·±àºÅ»ñÈ¡¸ÃÉÌÆ·µÄÑÕÉ«
-	 * @param goodsId ÉÌÆ·±àºÅ
+	 * æ ¹æ®å•†å“ç¼–å·è·å–è¯¥å•†å“çš„é¢œè‰²
+	 * @param goodsId å•†å“ç¼–å·
 	 * @return
 	 */
 	public List<GoodsColor> getGoodsColorByGoodsId(String goodsId) {
-		List<GoodsColor> goodsColors = goodsColorDao.getGoodsColor(goodsId);
-		return goodsColors;
+		return goodsColorDao.getGoodsColor(goodsId);
 	}
 
 	/**
-	 * ¸ù¾İÉÌÆ·ÑÕÉ«»ñÈ¡ÉÌÆ·ÑÕÉ«ÊµÀı
-	 * @param goodsColor ÉÌÆ·ÑÕÉ«
+	 * æ ¹æ®å•†å“é¢œè‰²è·å–å•†å“é¢œè‰²å®ä¾‹
+	 * @param goodsColor å•†å“é¢œè‰²
 	 * @return
 	 */
 	public GoodsColor getGoodsColorByColor(String goodsColor) {
-		GoodsColor goodsColor2 = goodsColorDao.getGoodsColorByColor(goodsColor);
-		return goodsColor2;
+		return goodsColorDao.getGoodsColorByColor(goodsColor);
 	}
 
 	/**
-	 * ¸ù¾İÉÌÆ·ÑÕÉ«¡¢ÉÌÆ·»ù±¾ĞÅÏ¢ÅĞ¶ÏÉèÖÃµ±Ç°ÑÕÉ«
-	 * Èç¹ûcolor!=null,Ôò±íÊ¾ÊÇ´ÓÉÌÆ·ÏêÏ¸Ò³ÃæÁ´½Ó¹ıÀ´,¸ù¾İcolorId»ñÈ¡
-	 * ·ñÔòĞèÒª¸ù¾İgoodsImage»ñÈ¡
+	 * æ ¹æ®å•†å“é¢œè‰²ã€å•†å“åŸºæœ¬ä¿¡æ¯åˆ¤æ–­è®¾ç½®å½“å‰é¢œè‰²
+	 * å¦‚æœcolor!=null,åˆ™è¡¨ç¤ºæ˜¯ä»å•†å“è¯¦ç»†é¡µé¢é“¾æ¥è¿‡æ¥,æ ¹æ®colorIdè·å–
+	 * å¦åˆ™éœ€è¦æ ¹æ®goodsImageè·å–
 	 * @param goods
-	 * @param goodsColor
+	 * @param color
 	 * @return
 	 */
 	public GoodsColor getGoodsColorByColor(GoodsListing goods, String color) {

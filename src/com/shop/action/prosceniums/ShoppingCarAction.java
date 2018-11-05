@@ -23,8 +23,10 @@ import com.shop.service.ShoppingCarService;
 public class ShoppingCarAction extends BaseAction{
 	private static final long serialVersionUID = 1L;
 	
-	@Resource(name="goodsService")private GoodsService goodsService;
-	@Resource(name="shoppingCarService")private ShoppingCarService shoppingCarService;
+	@Resource(name="goodsService")
+	private GoodsService goodsService;
+	@Resource(name="shoppingCarService")
+	private ShoppingCarService shoppingCarService;
 	
 	/**
 	 * 添加商品到购物车

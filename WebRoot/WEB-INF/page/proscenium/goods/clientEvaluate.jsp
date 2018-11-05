@@ -105,7 +105,7 @@
     							<c:forEach begin="1" end="${c.commentGrade}">
     								<img src="${pageContext.request.contextPath }/images/proscenium/dafen_01.jpg" class="pjsxx"/>
     							</c:forEach>	
-    							<c:forEach begin="0" end="${5-c.commentGrade}"> 
+    							<c:forEach begin="1" end="${5-c.commentGrade}">
     								<img src="${pageContext.request.contextPath }/images/proscenium/dafen_00.jpg" class="pjsxx"/>
     							</c:forEach>
     						</td>

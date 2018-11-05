@@ -61,7 +61,7 @@ public class CommentDaoHibernate extends BaseHibernateDaoSupport implements Comm
 	
 	/**
 	 * 根据用户编号获取该用户指定页面的Comment实例
-	 * @param usetId 用户编号
+	 * @param userId 用户编号
 	 * @param pageNo 指定页面
 	 * @return 指定页面的该用户的全部的Comment实例
 	 */

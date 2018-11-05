@@ -60,7 +60,7 @@
     				<li id="top_mycar" class="Yes">
     					<div class="mycar_title">
     						<img src="${pageContext.request.contextPath }/images/proscenium/shoppingCar.jpg">
-    						<a href="${pageContext.request.contextPath }/order/car_showCar.action">购物车<span class="topNumber">0</span>件</a>
+    						<a href="${pageContext.request.contextPath }/order/orderCar_showCar.action">购物车<span class="topNumber">0</span>件</a>
     						<img src="${pageContext.request.contextPath }/images/proscenium/xiajiantou.jpg" id="cartubiao">
     					</div>
     			</ul>

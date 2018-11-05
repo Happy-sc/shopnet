@@ -1,11 +1,11 @@
-.paixieB_title{
+.jinB_title{
 	border: 1px solid #DDDDDD;
 	border-bottom: 1px solid #FF0002;
 	height: 30px;
 	width: 94.5%;
 }
 
-.paixieB_title span{
+.jinB_title span{
 	font-size: 16px;
 	font-weight: bold;
 	color: #CC0000;
@@ -13,19 +13,19 @@
 	line-height: 35px;
 }
 
-.paixieB_content{
+.jinB_content{
 	width: 94.5%;
 	float: left;
 	margin: 10px 0px;
 }
 
-.paixieB_content .title ul{
+.jinB_content .title ul{
 	padding: 0px;
 	float: left;
 	margin: 0px 0px 0px 8px;
 }
 
-.paixieB_content .title ul li{
+.jinB_content .title ul li{
 	width: 130px;
 	height: 35px;
 	text-align: center;
@@ -40,13 +40,13 @@
 	cursor: pointer;
 }
 
-.paixieB_content .title ul li[class="now"]{
+.jinB_content .title ul li[class="now"]{
 	font-weight: bold;
 	color: #000000;
 	background-color: #FFFFFF;
 }
 
-.paixieB_content .content{
+.jinB_content .content{
 	width: 100%;
 	float: left;
 	border: 1px solid #E2E2E2;

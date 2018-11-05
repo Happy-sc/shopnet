@@ -6,9 +6,9 @@
   	<title>会员管理中心</title>
   	<link rel="stylesheet" href="${pageContext.request.contextPath }/css/proscenium/layout.css" type="text/css"></link>
 	<link rel="stylesheet" href="${pageContext.request.contextPath }/css/proscenium/userCenterLayout.css" type="text/css"></link>
-	<link rel="stylesheet" href="${pageContext.request.contextPath }/css/proscenium/seePaixieB.css" type="text/css"></link>
+	<link rel="stylesheet" href="${pageContext.request.contextPath }/css/proscenium/seeJinB.css" type="text/css"></link>
  	<script type="text/javascript" src="${pageContext.request.contextPath }/js/jQuery/jquery-1.7.2.js"></script>
-  	<script type="text/javascript" src="${pageContext.request.contextPath }/js/proscenium/seePaixieB.js" charset="UTF-8"></script>
+  	<script type="text/javascript" src="${pageContext.request.contextPath }/js/proscenium/seeJinB.js" charset="UTF-8"></script>
  </head>
   
   <body>
@@ -21,13 +21,13 @@
     			<jsp:include page="/WEB-INF/page/proscenium/user/userCenterNavigation.jsp" />
     		</div>
     		<div class="content_right">
-    			<div class="paixieB_title">
+    			<div class="jinB_title">
     				<span>我的金币</span>
     			</div>
-    			<div class="kypxb">&nbsp;&nbsp;&nbsp;可用金币个数:&nbsp;<font>${user.paixieB }</font>&nbsp;个</div>
-    			<div class="paixieB_content">
+    			<div class="kypxb">&nbsp;&nbsp;&nbsp;可用金币个数:&nbsp;<font>${user.jinB }</font>&nbsp;个</div>
+    			<div class="jinB_content">
     				<div class="title">
-						<input type="hidden" id="paixieBType" value="${type }"/>
+						<input type="hidden" id="jinBType" value="${type}"/>
     					<ul>
     						<li id="tab1">金币获取记录</li>
     						<li id="tab2">金币支出记录</li>
@@ -44,11 +44,11 @@
     						</div >
     						<div class="Ccontent">
     							<table border="0">
-    								<c:forEach items="${paixieBRecords}" var="pxb">
+    								<c:forEach items="${jinBRecords}" var="jb">
     									<tr>
-    										<td width="33%">${pxb.paixieBTime }</td>
-    										<td width="33%"><font>${pxb.paixieBNum }个</font></td>
-    										<td width="33%">${pxb.paixieBStyle }</td>
+    										<td width="33%">${jb.jinBTime }</td>
+    										<td width="33%"><font>${jb.jinBNum }个</font></td>
+    										<td width="33%">${jb.jinBStyle }</td>
     									</tr>
     								</c:forEach>
     							</table>
@@ -57,21 +57,21 @@
     									<div class="page">
     									<c:choose>
     										<c:when test="${pageSum<5}">
-    											<a href="${pageContext.request.contextPath }/userCenter/paixieB_seePaixieB.action?type=jbhqjl&page=${nowPage-1}"><span class="sxyy">上一页</span></a>
+    											<a href="${pageContext.request.contextPath }/userCenter/jinB_seeJinB.action?type=jbhqjl&page=${nowPage-1}"><span class="sxyy">上一页</span></a>
     											<c:forEach begin="1" end="${pageSum}" var="p">
-   													<a href="${pageContext.request.contextPath }/userCenter/paixieB_seePaixieB.action?type=jbhqjl&page=${p}"><span>${p}</span></a>
+   													<a href="${pageContext.request.contextPath }/userCenter/jinB_seeJinB.action?type=jbhqjl&page=${p}"><span>${p}</span></a>
    												</c:forEach>
-   												<a href="${pageContext.request.contextPath }/userCenter/paixieB_seePaixieB.action?type=jbhqjl&page=${nowPage+1}"><span class="sxyy">下一页</span></a>
+   												<a href="${pageContext.request.contextPath }/userCenter/jinB_seeJinB.action?type=jbhqjl&page=${nowPage+1}"><span class="sxyy">下一页</span></a>
    											</c:when>
     										<c:otherwise>
-    											<a href="${pageContext.request.contextPath }/userCenter/paixieB_seePaixieB.action?type=jbhqjl&page=${nowPage-1}"><span class="sxyy">上一页</span></a>
-    											<a href="${pageContext.request.contextPath }/userCenter/paixieB_seePaixieB.action?type=jbhqjl&page=${1}"><span>1</span></a>
-    											<a href="${pageContext.request.contextPath }/userCenter/paixieB_seePaixieB.action?type=jbhqjl&page=${2}"><span>2</span></a>
-    											<a href="${pageContext.request.contextPath }/userCenter/paixieB_seePaixieB.action?type=jbhqjl&page=${3}"><span>3</span></a>
+    											<a href="${pageContext.request.contextPath }/userCenter/jinB_seeJinB.action?type=jbhqjl&page=${nowPage-1}"><span class="sxyy">上一页</span></a>
+    											<a href="${pageContext.request.contextPath }/userCenter/jinB_seeJinB.action?type=jbhqjl&page=${1}"><span>1</span></a>
+    											<a href="${pageContext.request.contextPath }/userCenter/jinB_seeJinB.action?type=jbhqjl&page=${2}"><span>2</span></a>
+    											<a href="${pageContext.request.contextPath }/userCenter/jinB_seeJinB.action?type=jbhqjl&page=${3}"><span>3</span></a>
     											...
-    											<a href="${pageContext.request.contextPath }/userCenter/paixieB_seePaixieB.action?type=jbhqjl&page=${pageSum-1}"><span>${paixieBPage-1}</span></a>
-    											<a href="${pageContext.request.contextPath }/userCenter/paixieB_seePaixieB.action?type=jbhqjl&page=${pageSum}"><span>${paixieBPage}</span></a>
-    											<a href="${pageContext.request.contextPath }/userCenter/paixieB_seePaixieB.action?type=jbhqjl&page=${nowPage+1}"><span class="sxyy">下一页</span></a>
+    											<a href="${pageContext.request.contextPath }/userCenter/jinB_seeJinB.action?type=jbhqjl&page=${pageSum-1}"><span>${jinBPage-1}</span></a>
+    											<a href="${pageContext.request.contextPath }/userCenter/jinB_seeJinB.action?type=jbhqjl&page=${pageSum}"><span>${jinBPage}</span></a>
+    											<a href="${pageContext.request.contextPath }/userCenter/jinB_seeJinB.action?type=jbhqjl&page=${nowPage+1}"><span class="sxyy">下一页</span></a>
     										</c:otherwise>
     									</c:choose>
     									</div>
@@ -89,35 +89,35 @@
     						</div >
     						<div class="Ccontent">
     							<table border="0">
-    								<c:forEach items="${paixieBRecords}" var="pxb">
+    								<c:forEach items="${jinBRecords}" var="jb">
     									<tr>
-    										<td width="33%">${pxb.paixieBTime }</td>
-    										<td width="33%"><font>${pxb.paixieBNum }个</font></td>
-    										<td width="33%">${pxb.paixieBStyle }</td>
+    										<td width="33%">${jb.jinBTime }</td>
+    										<td width="33%"><font>${jb.jinBNum }个</font></td>
+    										<td width="33%">${jb.jinBStyle }</td>
     									</tr>
     								</c:forEach>
     							</table>
     							
     							<c:choose>
-    								<c:when test="${paixieBPage>1}">
+    								<c:when test="${jinBPage>1}">
     									<div class="page">
     									<c:choose>
-    										<c:when test="${paixieBPage<5}">
-    											<a href="${pageContext.request.contextPath }/userCenter/paixieB_seePaixieB.action?type=jbhqjl&page=${nowPage-1}"><span class="sxyy">上一页</span></a>
-    											<c:forEach begin="1" end="${paixieBPage}" var="p">
-    												<a href="${pageContext.request.contextPath }/userCenter/paixieB_seePaixieB.action?type=jbhqjl&page=${p}"><span>${p}</span></a>
+    										<c:when test="${jinBPage<5}">
+    											<a href="${pageContext.request.contextPath }/userCenter/jinB_seeJinB.action?type=jbhqjl&page=${nowPage-1}"><span class="sxyy">上一页</span></a>
+    											<c:forEach begin="1" end="${jinBPage}" var="p">
+    												<a href="${pageContext.request.contextPath }/userCenter/jinB_seeJinB.action?type=jbhqjl&page=${p}"><span>${p}</span></a>
     											</c:forEach>
-    											<a href="${pageContext.request.contextPath }/userCenter/paixieB_seePaixieB.action?type=jbhqjl&page=${nowPage+1}"><span class="sxyy">下一页</span></a>
+    											<a href="${pageContext.request.contextPath }/userCenter/jinB_seeJinB.action?type=jbhqjl&page=${nowPage+1}"><span class="sxyy">下一页</span></a>
     										</c:when>
     										<c:otherwise>
-    											<a href="${pageContext.request.contextPath }/userCenter/paixieB_seePaixieB.action?type=jbhqjl&page=${nowPage-1}"><span class="sxyy">上一页</span></a>
-    											<a href="${pageContext.request.contextPath }/userCenter/paixieB_seePaixieB.action?type=jbhqjl&page=${1}"><span>1</span></a>
-    											<a href="${pageContext.request.contextPath }/userCenter/paixieB_seePaixieB.action?type=jbhqjl&page=${2}"><span>2</span></a>
-    											<a href="${pageContext.request.contextPath }/userCenter/paixieB_seePaixieB.action?type=jbhqjl&page=${3}"><span>3</span></a>
+    											<a href="${pageContext.request.contextPath }/userCenter/jinB_seeJinB.action?type=jbhqjl&page=${nowPage-1}"><span class="sxyy">上一页</span></a>
+    											<a href="${pageContext.request.contextPath }/userCenter/jinB_seeJinB.action?type=jbhqjl&page=${1}"><span>1</span></a>
+    											<a href="${pageContext.request.contextPath }/userCenter/jinB_seeJinB.action?type=jbhqjl&page=${2}"><span>2</span></a>
+    											<a href="${pageContext.request.contextPath }/userCenter/jinB_seeJinB.action?type=jbhqjl&page=${3}"><span>3</span></a>
     											...
-    											<a href="${pageContext.request.contextPath }/userCenter/paixieB_seePaixieB.action?type=jbhqjl&page=${paixieBPage-1}"><span>${paixieBPage-1}</span></a>
-    											<a href="${pageContext.request.contextPath }/userCenter/paixieB_seePaixieB.action?type=jbhqjl&page=${paixieBPage}"><span>${paixieBPage}</span></a>
-    											<a href="${pageContext.request.contextPath }/userCenter/paixieB_seePaixieB.action?type=jbhqjl&page=${nowPage+1}"><span class="sxyy">下一页</span></a>
+    											<a href="${pageContext.request.contextPath }/userCenter/jinB_seeJinB.action?type=jbhqjl&page=${jinBPage-1}"><span>${jinBPage-1}</span></a>
+    											<a href="${pageContext.request.contextPath }/userCenter/jinB_seeJinB.action?type=jbhqjl&page=${jinBPage}"><span>${jinBPage}</span></a>
+    											<a href="${pageContext.request.contextPath }/userCenter/jinB_seeJinB.action?type=jbhqjl&page=${nowPage+1}"><span class="sxyy">下一页</span></a>
     										</c:otherwise>
     									</c:choose>
     									</div>
@@ -130,8 +130,8 @@
     			</div>
     			<div class="pxbsysm">
     				<ul>
-    					<li>&nbsp;&nbsp;&nbsp;拍鞋币使用说明</li>
-    					<li><a href="">什么是拍鞋币?</a></li>
+    					<li>&nbsp;&nbsp;&nbsp;金币使用说明</li>
+    					<li><a href="">什么是金币?</a></li>
     				</ul>
     			</div>
     		</div>

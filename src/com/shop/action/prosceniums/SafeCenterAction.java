@@ -80,8 +80,9 @@ public class SafeCenterAction extends BaseAction{
 		//获取用户的密保
 		Users user = (Users) session.getAttribute("user");
 		List<SecretSecurity> secretSecurities = secretSecurityService.getSecreteSecurityByUserId(user.getUserId());
-		for(int i = 0;i<secretSecurities.size();i++)
+		for(int i = 0;i<secretSecurities.size();i++){
 			ActionContext.getContext().put("secret_"+i, secretSecurities.get(i));
+		}
 		return "enterScreteSccurity";
 	}
 	
@@ -121,7 +122,7 @@ public class SafeCenterAction extends BaseAction{
 	
 	/**
 	 * 得到密保
-	 * @param secreteId 密保编号
+	 * @param secretId 密保编号
 	 * @param question 密保问题
 	 * @param answer 密保答案
 	 * @param users 用户

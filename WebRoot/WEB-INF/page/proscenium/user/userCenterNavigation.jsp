@@ -39,7 +39,7 @@
     			</div>
     			<div class="discountManager_content">
     				<ul>
-    					<li><a href="${pageContext.request.contextPath }/userCenter/discountCoupon_seeDiscountCoupon.action?type=kyyhq">我的优惠券</a></li>
+    					<li><a href="${pageContext.request.contextPath }/userCenter/discountCoupon_seeDiscountCoupon.action?type=1">我的优惠券</a></li>
     					<li><a href="${pageContext.request.contextPath }/userCenter/seeJinB_seeJinB.action?type=jbhqjl" target="_self">金币记录</a></li>
     				</ul>
     			</div>

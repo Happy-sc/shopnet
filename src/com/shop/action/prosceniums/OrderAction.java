@@ -31,14 +31,22 @@ import com.shop.service.UsersService;
 
 @Controller("orderAction")
 public class OrderAction extends BaseAction{
+
 	private static final long serialVersionUID = 1L;
 	
-	@Resource(name="addressService")private AddressService addressService;
-	@Resource(name="orderService")private OrderService orderService;
-	@Resource(name="orderDetailService")private OrderDetailService orderDetailService;
-	@Resource(name="orderStateService") private OrderStateService orderStateService;
-	@Resource(name="usersService")private UsersService usersService;
-	@Resource(name="")private JinBService jinBService;
+	@Resource(name="addressService")
+	private AddressService addressService;
+	@Resource(name="orderService")
+	private OrderService orderService;
+	@Resource(name="orderDetailService")
+	private OrderDetailService orderDetailService;
+	@Resource(name="orderStateService")
+	private OrderStateService orderStateService;
+	@Resource(name="usersService")
+	private UsersService usersService;
+	@Resource(name="jinBService")
+	private JinBService jinBService;
+
 	private Order order;
 	private String type;
 	private String orderDetailId;
@@ -257,10 +265,8 @@ public class OrderAction extends BaseAction{
 		System.out.println(type);
 		Order order = orderService.getOrder(orderId);
 		OrderState orderState = orderStateService.getOrderState("500005");
-		
 		order.setOrderState(orderState);
 		orderService.updateOrder(order);
-
 		return "cancelOrder";
 	}
 	
@@ -270,7 +276,6 @@ public class OrderAction extends BaseAction{
 	public String qrsh(){
 		//订单编号
 		String orderId = request.getParameter("orderId");
-		//订单详情编号
 		
 		//获取订单详情
 		OrderDetail orderDetail = orderDetailService.getOrderDetailById(orderDetailId);

@@ -20,11 +20,15 @@ import com.shop.service.OrderDetailService;
 
 @Controller("commentAction")
 public class CommentAction extends BaseAction{
+
 	private static final long serialVersionUID = 1L;
 	
-	@Resource(name="goodsService")private GoodsService goodsService;
-	@Resource(name="commentService")private CommentService commentService;
-	@Resource(name="")private OrderDetailService orderDetailService;
+	@Resource(name="goodsService")
+	private GoodsService goodsService;
+	@Resource(name="commentService")
+	private CommentService commentService;
+	@Resource(name="orderDetailService")
+	private OrderDetailService orderDetailService;
 	
 	private String orderDetailId;
 	private Comment comment;
@@ -54,9 +58,7 @@ public class CommentAction extends BaseAction{
 	 */
 	public String goodsComment(){
 		String goodsId = request.getParameter("goodsId");
-		
 		GoodsListing goods = goodsService.getGoodsById(goodsId);
-	
 		//获取该类商品的评价
 		List<Comment> comments = commentService.getCommentByGoods(goodsId,15,1);
 		
@@ -137,7 +139,6 @@ public class CommentAction extends BaseAction{
 		
 		request.setAttribute("orderDetailId", orderDetailId);
 		request.setAttribute("goods", orderDetail.getGoodsListing());
-		
 		return "commentUI";
 	}
 	

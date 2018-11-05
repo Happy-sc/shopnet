@@ -2,7 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
   <head>
-	<title>拍鞋购物商城首页_中国最大的品牌鞋销售广场</title>
+	<title>评论</title>
 	<link rel="stylesheet" href="${pageContext.request.contextPath }/css/proscenium/layout.css" type="text/css"></link>
  	<link rel="stylesheet" href="${pageContext.request.contextPath }/css/proscenium/goodsComment.css" type="text/css"></link>
  	<script type="text/javascript" src="${pageContext.request.contextPath }/js/jQuery/jquery-1.7.2.js"></script>
@@ -17,7 +17,7 @@
     <div id="main">
     	<div class="location">
     		您现在的位置:
-    		<a href="">拍鞋网首页</a>&nbsp;&gt;&nbsp;
+    		<a href="">首页</a>&nbsp;&gt;&nbsp;
     		<a href="">${goods.brand.brandName }网上专卖店</a>&nbsp;&gt;&nbsp;
     		<a href="">${goods.goodsName }</a>
     	</div>
@@ -173,7 +173,7 @@
     						</a>
     					</li>
     					<li>${goods.goodsName }</li>
-    					<li>价格：<font>￥${goods.goodsPaiPrice }</font></li>
+    					<li>价格：<font>￥${goods.goodsMarketPrice }</font></li>
     					<li>
     						<a href="${pageContext.request.contextPath}/goods/goods_showGoods?goodsId=${goods.goodsId}" target="_blank">
     							<img src="${pageContext.request.contextPath }/images/proscenium/seeGoods.jpg" />

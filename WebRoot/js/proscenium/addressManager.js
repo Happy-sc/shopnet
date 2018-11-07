@@ -9,7 +9,7 @@ $(document).ready(function(){
 			$("#street").val("");
 			$("select[name=province]").children().eq(0).attr("selected","true");
 			$("select[name=city]").children().eq(0).attr("selected","true");
-			$("select[name=countryCity]").children().eq(0).attr("selected","true");
+			$("select[name=country]").children().eq(0).attr("selected","true");
 			
 			$(".newAddress").dialog("open");
 		}	
@@ -32,10 +32,10 @@ $(document).ready(function(){
 	//放在新增图片上
 	$("#addNewAddress").hover(
 		function(){
-			$(this).attr("src","/paixieNet/images/proscenium/addNewAddress_02.jpg")
+			$(this).attr("src","/images/proscenium/addNewAddress_02.jpg")
 		},
 		function(){
-			$(this).attr("src","/paixieNet/images/proscenium/addNewAddress_01.jpg")	
+			$(this).attr("src","/images/proscenium/addNewAddress_01.jpg")
 		}
 	)
 	//当放入input中时
@@ -107,13 +107,13 @@ $(document).ready(function(){
 					cities.eq(j).attr("selected","true");
 					//展开第三级城市
 					$.each( GC[provinceIndex-1][j-1] , function(index,data){
-						$("select[name=countryCity]").append("<option value='"+data+"'>"+data+"</option>");
+						$("select[name=country]").append("<option value='"+data+"'>"+data+"</option>");
 					})
 				}
 			}
 	
 			//选定县级
-			var countries = $("select[name=countryCity]").children();
+			var countries = $("select[name=country]").children();
 			for(var l = 0;l<countries.length;l++){
 				if(countries.eq(l).val()==country){
 					countries.eq(l).attr("selected","true");

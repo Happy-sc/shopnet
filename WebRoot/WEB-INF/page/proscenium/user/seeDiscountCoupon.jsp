@@ -37,10 +37,10 @@
     					<div id="tab1Div">
     						<div class="Ctitle">
     							<ul>
-    								<li style="width: 17%">优惠券名称</li>
-    								<li style="width: 17%">优惠券号码</li>
-    								<li style="width: 30%">使用说明</li>
-    								<li style="width: 17%">截止时间</li>
+    								<li style="width: 21%">优惠券名称</li>
+    								<li style="width: 21%">优惠券号码</li>
+    								<li style="width: 33%">使用说明</li>
+    								<li style="width: 21%">截止时间</li>
     							</ul>
     							<c:forEach items="${discountCoupons}" var="dc">
 									<ul>

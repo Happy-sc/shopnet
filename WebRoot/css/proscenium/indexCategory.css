@@ -61,7 +61,7 @@ li[class^="indexCategory"] table{
 	background-color:#F7F7F7;
 	position: absolute;
 	z-index: 1;
-	left:288px;
+	left: 100%;
 }
 
 .sneakerDetail,.womanDetail,.manDetail{

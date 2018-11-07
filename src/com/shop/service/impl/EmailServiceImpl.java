@@ -22,11 +22,9 @@ public class EmailServiceImpl implements EmailService {
 		users.setUserEmail(email);             //设置用户邮箱
 		users.setCheckCode(random);            //邮箱验证码
 		users.setEmailDate(GetTime.getTime("yyyy-MM-dd HH:mm:ss"));    //邮箱验证时间:只需要精确到小时
-		//验证
 		if("regist".equals(type)){
 			users.setIsActivate(0);
 		}
-	
 		return users;
 	}
 

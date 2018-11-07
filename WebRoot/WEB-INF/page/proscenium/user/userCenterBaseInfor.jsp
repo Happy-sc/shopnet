@@ -8,9 +8,9 @@
     <div class="baseInfor">
     	<div class="baseInforTop">
     		<span class="username">${user.userName }</span><span>,欢迎您!</span><Br/><Br/>
-    		<span>优惠券：<span class="username"></span>张</span>
+    		<span>优惠券：<span class="username">${user.discountCoupons.size()}</span>张</span>
     		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    		<span>金币：<span class="username">${user.jinB }</span>个</span >
+    		<span>金币：<span class="username">${user.jinB}</span>个</span >
     	</div>
     	<div class="baseInforBottom">
     		<div class="remind">

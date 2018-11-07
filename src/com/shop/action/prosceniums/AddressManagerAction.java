@@ -13,7 +13,9 @@ import com.shop.service.AddressService;
 public class AddressManagerAction extends BaseAction{
 	private static final long serialVersionUID = 1L;
 	
-	@Resource(name="addressService")private AddressService addressService;
+	@Resource(name="addressService")
+	private AddressService addressService;
+
 	private Address address;
 
 	public Address getAddress() {
@@ -31,10 +33,8 @@ public class AddressManagerAction extends BaseAction{
 	public String addAddress(){
 		//设置详细地址
 		address.setAddressDetail(getDetailAddress());
-
 		//获取用户
 		Users users = (Users) request.getSession().getAttribute("user");
-	
 		//保存或者修改用户地址
 		addressService.saveOrUpdateAddress(getAddress(),users);
 		/*
@@ -79,7 +79,6 @@ public class AddressManagerAction extends BaseAction{
 			dAddress.setIsDefault(0);
 			addressService.update(dAddress);
 		}
-		
 		addressService.update(address1);       //修改地址
 		
 		return "adderssUI";
@@ -96,7 +95,6 @@ public class AddressManagerAction extends BaseAction{
 		
 		//构建详细地址
 		String detailAddress = province+","+city+","+country+","+street;
-		
 		return detailAddress;
 	}
 	

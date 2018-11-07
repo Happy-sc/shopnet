@@ -22,10 +22,15 @@ import com.shop.service.OrderDetailService;
 
 @Service("orderDetailService")
 public class OrderDetailServiceImpl implements OrderDetailService{
-	@Resource(name="orderDetailDao")private OrderDetailDao orderDetailDao;
-	@Resource(name="shoppingCarDao")private ShoppingCarDao shoppingCarDao;
-	@Resource(name="orderDao")private OrderDao orderDao;
-	@Resource(name="orderStateDao")private OrderStateDao orderStateDao;
+
+	@Resource(name="orderDetailDao")
+	private OrderDetailDao orderDetailDao;
+	@Resource(name="shoppingCarDao")
+	private ShoppingCarDao shoppingCarDao;
+	@Resource(name="orderDao")
+	private OrderDao orderDao;
+	@Resource(name="orderStateDao")
+	private OrderStateDao orderStateDao;
 	/**
 	 * 保存订单详情
 	 * @param mapCar 购物车

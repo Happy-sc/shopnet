@@ -87,6 +87,17 @@ public class GoodsManagerAction extends BaseAction{
 		this.goods = goods;
 	}
 
+
+	/**
+	 * 商品管理
+	 * @return
+	 */
+	public String getGoodsUI(){
+		List<GoodsListing> goodsList = goodsService.getGoodsByAll();
+		ActionContext.getContext().put("goods", goodsList);
+		return "addGoodsUI";
+	}
+
 	/**
 	 * 添加商品页面
 	 * @return

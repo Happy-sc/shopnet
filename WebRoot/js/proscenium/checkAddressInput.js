@@ -1,6 +1,5 @@
 $(document).ready(function(){
 	var flag;  //定义全局变量
-	
 	//收货人
 	$("#consignee").blur(
 		function(){

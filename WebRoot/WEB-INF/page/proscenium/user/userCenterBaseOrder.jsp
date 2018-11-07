@@ -65,7 +65,7 @@
     									&nbsp;
     								</td>
     								<td style="width: 13.8%">
-    									${order.orderState.orderStateName }<Br/><br/>
+    									${order.orderState.orderStateName }
     									<a href="">订单详情</a></td>
     								<td style="width: 13.8%">
     									<c:if test="${(order.orderPayment ==0||order.orderPayment ==2)&&(order.orderState.orderStateId=='500003')}">

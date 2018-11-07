@@ -48,16 +48,12 @@ public class WorkerManagerAction extends BaseAction{
 	public String workerManagerUI(){
 		//获取员工
 		List<Worker> workers = workerService.getWorkersPage(page);
-		
 		//员工总页数
 		pageSum = workerService.getWorkerPageCount();
-		
 		//获取所有的职务
 		List<Position> positions = positionService.getAllPosition();
-		
 		request.setAttribute("workers", workers);
 		request.setAttribute("positions", positions);
-		
 		return "workerManagerUI";
 	}
 	
@@ -76,7 +72,6 @@ public class WorkerManagerAction extends BaseAction{
 			flag = "该编号已经存在";
 		}
 		writeToPage(flag);
-		
 	}
 	
 	/**
@@ -87,9 +82,7 @@ public class WorkerManagerAction extends BaseAction{
 		Position position = positionService.getPositionById(worker.getPosition().getPositionId());
 		worker.setPosition(position);
 		worker.setWorkerPassword("111111");       //设定初始密码
-		
 		workerService.saveWorker(worker);
-		
 		return "saveWorker";
 	}
 	
@@ -109,10 +102,8 @@ public class WorkerManagerAction extends BaseAction{
 	public String searchWorker(){
 		//根据查询条件获取人员信息
 		List<Worker> workers = workerService.getWorkerByQuery(workerQuery);
-		
 		//查询所有职位
 		List<Position> positions = positionService.getAllPosition();
-		
 		//总页数
 		int pageCount = workers.size()%10==0?workers.size()/10:workers.size()/10+1;
 		
@@ -141,8 +132,6 @@ public class WorkerManagerAction extends BaseAction{
 	 * 修改员工信息
 	 */
 	public String updateWorker(){
-		System.out.println(worker);
-		System.out.println(workerQuery);
 		//根据员工编号获取员工实例
 		Worker worker1 = workerService.getWorkerById(worker.getWorkerId());
 		//设置值。防止覆盖

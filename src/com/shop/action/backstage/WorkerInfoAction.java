@@ -146,7 +146,6 @@ public class WorkerInfoAction extends BaseAction{
 			request.setAttribute("message", "旧密码输入错误...");
 			return "updatePasswordUI";
 		}
-		
 	}
 	
 	

@@ -1,7 +1,8 @@
 function exitSystem(){
 	var flag = confirm("您确定要退出系统吗？");
-	if (flag)
-		location.href = "/manager/manager_exitSystem.action";
+	if (flag){
+        window.top.location.href = "/manager/manager_exitSystem.action";
+	}
 	return false;
 }
 

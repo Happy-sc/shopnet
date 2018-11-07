@@ -10,7 +10,7 @@ $.fn.ProvinceCity = function(){
 	//插入3个空的下拉框
 	_self.append("<select class='provincesSelect' id='provinceValue' name='province'></select>");
 	_self.append("<select class='provincesSelect' id='cityValue' name='city'></select>");
-	_self.append("<select class='provincesSelect' id='countryValue' name='countryCity'></select>");
+	_self.append("<select class='provincesSelect' id='countryValue' name='country'></select>");
 	//分别获取3个下拉框
 	var $sel1 = _self.find("select").eq(0);
 	var $sel2 = _self.find("select").eq(1);

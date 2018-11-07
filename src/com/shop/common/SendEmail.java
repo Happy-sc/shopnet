@@ -19,7 +19,7 @@ import org.springframework.stereotype.Component;
 @Scope("singleton")
 public class SendEmail {
 	
-	private String host = "smtp.163.com";            //邮件主机
+	private String host = "smtp.qq.com";            //邮件主机
 	/*
 	 *这里填写你的163用户名和密码。
 	 当然也可以使用其他的  但是要将host改为相应的
@@ -39,28 +39,23 @@ public class SendEmail {
 		props.setProperty("mail.host",host);               //设置邮件主机
 		props.setProperty("mail.smtp.auth", "true");      //设置需要验证
 		props.setProperty("mail.transport.protocol", "smtp");   //设置使用协议
-		Session session = Session.getDefaultInstance(props, 
-				new Authenticator() {
+		Session session = Session.getDefaultInstance(props, new Authenticator() {
 					protected PasswordAuthentication getPasswordAuthentication(){
 						return new PasswordAuthentication(userName, password);         //设置用户名、密码
 					}
 		});
-
 		Message msg = new MimeMessage(session);
 		//设置邮件发送内容
 		String content = getContent(type,username,random,toEmail);
 		try {
 			msg.setSubject(getEmailSubject(type));   //设置标题
-			msg.setFrom(new InternetAddress("\""+MimeUtility.encodeText("拍鞋网--shop.net")
-					 +"\"<chenssy"));       //设置发件人
+			msg.setFrom(new InternetAddress("\""+MimeUtility.encodeText("--shop.net") +"\"<chenssy"));       //设置发件人
 			msg.setRecipient(RecipientType.TO, new InternetAddress(toEmail));    //设置收件人
 			msg.setContent(content, "text/html;charset=gbk");    //邮件内容
-			
 			Transport.send(msg);       //邮件发送
 		} catch (Exception e) {
 			e.printStackTrace();
-		}          
-		
+		}
 	}
 	
 	/**
@@ -176,7 +171,6 @@ public class SendEmail {
             "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+
             "<span style='font-size:16px;font-weight:bold;'>"+GetTime.getTime("yyyy年MM月dd日")+"</span>";
 		}
-		
 		if("updateEmail".equals(type)){
 			return "<span style='font-size:16px;font-weight:bold;'>尊敬的"+userName+":</span><br><br>"+
             "&nbsp;&nbsp;&nbsp;&nbsp;<span style='font-size:16px;font-weight:bold;'>您好：</span><br><br>"+
@@ -212,16 +206,16 @@ public class SendEmail {
 	public String getEmailSubject(String type){
 		String subject = null;
 		if("regist".equals(type)){
-			subject = "感谢您注册拍鞋购物网站[shop.net]";
+			subject = "感谢您注册购物网站[shop.net]";
 		}
 		if("checkEmail".equals(type)){
-			subject = "拍鞋网上商城--邮箱验证提醒";
+			subject = "商城--邮箱验证提醒";
 		}
 		if("updateRemindEmail".equals(type)){
-			subject = "拍鞋网商城--邮箱更改提醒";
+			subject = "商城--邮箱更改提醒";
 		}
 		if("password_check".equals(type)){
-			subject = "拍鞋网商城--申请找回密码";
+			subject = "商城--申请找回密码";
 		}
 		return subject;
 	}

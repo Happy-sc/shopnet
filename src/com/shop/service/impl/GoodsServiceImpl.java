@@ -22,12 +22,19 @@ import com.shop.service.GoodsSizeService;
 
 @Service("goodsService")
 public class GoodsServiceImpl implements GoodsService {
-	@Resource(name="goodsListingDao")private GoodsListingDao goodsListingDao;
-	@Resource(name="goodsColorDao") private GoodsColorDao goodsColorDao;
-	@Resource(name="goodsSizeDao")private GoodsSizeDao goodsSizeDao;
-	@Resource(name="uploadAndDeleteImage")private UploadAndDeleteImage uploadAndDeleteImage;
-	@Resource(name="goodsColorService")private GoodsColorService goodsColorService;
-	@Resource(name="goodsSizeService")private GoodsSizeService goodsSizeService;
+	
+	@Resource(name="goodsListingDao")
+	private GoodsListingDao goodsListingDao;
+	@Resource(name="goodsColorDao")
+	private GoodsColorDao goodsColorDao;
+	@Resource(name="goodsSizeDao")
+	private GoodsSizeDao goodsSizeDao;
+	@Resource(name="uploadAndDeleteImage")
+	private UploadAndDeleteImage uploadAndDeleteImage;
+	@Resource(name="goodsColorService")
+	private GoodsColorService goodsColorService;
+	@Resource(name="goodsSizeService")
+	private GoodsSizeService goodsSizeService;
 	/**
 	 * 增加商品基本信息
 	 * @param goods 需要保存的商品基本信息

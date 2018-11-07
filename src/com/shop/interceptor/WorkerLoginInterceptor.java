@@ -30,7 +30,6 @@ public class WorkerLoginInterceptor extends AbstractInterceptor{
 		else {
 			return invocation.invoke();
 		}
-	
 	}
 
 }

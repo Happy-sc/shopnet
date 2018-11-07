@@ -215,7 +215,7 @@
     							<ul>
     								<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;实付款：<font class="sfk">&yen;${sum+freight }</font></li>
     								<li>可获得金币：<font class="khdpxb"><fmt:formatNumber type="number" value="${sum/100}" maxFractionDigits="0"/>个</font></li>
-    								<li>&nbsp;&nbsp;使用金币：<input type="text" class="sypxb"/><div class="jsypxb">可以使用个数:<font>${userjinB }</font>个</div></li>
+    								<li>&nbsp;&nbsp;使用金币：<input type="text" class="sypxb"/><div class="jsypxb">可以使用个数:<font>${user.jinB }</font>个</div></li>
     							</ul>
     						</div>
     						<div class="btn">

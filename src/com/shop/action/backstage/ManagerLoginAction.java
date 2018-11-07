@@ -51,13 +51,11 @@ public class ManagerLoginAction extends BaseAction{
 				ActionContext.getContext().put("workerId", worker.getWorkerId());
 				ActionContext.getContext().put("tips", "用户名或密码错误...");
 				return "loginFail";
-			}
-			else {
+			} else {
 				session.setAttribute("worker", workern);
 				return "loginSuccess";
 			}
-		}
-		else{       //错误返回错误信息
+		} else{       //错误返回错误信息
 			ActionContext.getContext().put("password", worker.getWorkerPassword());
 			ActionContext.getContext().put("workerId", worker.getWorkerId());
 			ActionContext.getContext().put("tips", "验证码错误...");
@@ -70,8 +68,9 @@ public class ManagerLoginAction extends BaseAction{
 	 */
 	public String exitSystem(){
 		Worker worker1 = (Worker) session.getAttribute("worker");
-		if(worker1!=null)
+		if(worker1!=null){
 			session.removeAttribute("worker");
+		}
 		return "exitSystem";
 			
 	}

@@ -25,7 +25,7 @@ public class GoodsDetailManagertAction extends BaseAction{
 	private static final long serialVersionUID = 1L;
 	
 	private GoodsColor goodsColor;              //商品颜色
-	private List<GoodsSize> goodsSizeS = new ArrayList<GoodsSize>();          //商品尺码
+	private List<GoodsSize> goodsSizeS = new ArrayList<GoodsSize>();          //商品属性
 	private List<GoodsSize> goodsSizeN = new ArrayList<GoodsSize>();          //商品数量
 	private File goodsImage; 					// 封装上传图片
 	private String goodsImageFileName; 			// 封装上传图片名称
@@ -116,12 +116,11 @@ public class GoodsDetailManagertAction extends BaseAction{
 		for(int i = 0; i < goodsSizeS.size();i++){
 			GoodsSize goodsSize1 = new GoodsSize();
 			String goodsSizeId = ProduceId.getId();
-			goodsSize1.setGoodsSizeId(goodsSizeId);      //尺码编号
-			goodsSize1.setGoodsAttr(goodsSizeS.get(i).getGoodsAttr());//尺码大小
+			goodsSize1.setGoodsSizeId(goodsSizeId);      //属性编号
+			goodsSize1.setGoodsAttr(goodsSizeS.get(i).getGoodsAttr());//属性
 			goodsSize1.setGoodsNumber(goodsSizeN.get(i).getGoodsNumber());     //商品数量
 			goodsSizeSet.add(goodsSize1);
 		}
-		
 		goodsColor1.setGoodsSizeSet(goodsSizeSet);       //将尺码添加到颜色中
 		goodsColorSet.add(goodsColor1);
 		

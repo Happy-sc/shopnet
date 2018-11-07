@@ -135,7 +135,7 @@
     			<td><div class="isDefaul_prompt"></div></td>
     		</tr>
     		<tr>
-    			<td><input type="hidden"" name="address.addressId" id="addressId"/></td>
+    			<td><input type="hidden" name="address.addressId" id="addressId"/></td>
     			<td><input type="image" src="${pageContext.request.contextPath }/images/proscenium/saveBtn.jpg" id="saveBTN"/></td>
     			<td></td>
     		</tr>

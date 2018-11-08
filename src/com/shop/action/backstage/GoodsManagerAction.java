@@ -95,7 +95,7 @@ public class GoodsManagerAction extends BaseAction{
 	public String getGoodsUI(){
 		List<GoodsListing> goodsList = goodsService.getGoodsByAll();
 		ActionContext.getContext().put("goods", goodsList);
-		return "addGoodsUI";
+		return "goodsManager";
 	}
 
 	/**

@@ -44,7 +44,7 @@
 			<c:forEach items="${categorys}" var="c">
     		<a href="${pageContext.request.contextPath}/goods/categoryCoods_showGoodsByCategory.action?categoryId=${c.categoryId}" id="top_title" title="${c.categoryId}"><span id="top_title">${c.categoryName}</span></a>&nbsp;|&nbsp;
 			</c:forEach>
-    		<a href="${pageContext.request.contextPath}/goods/brand_getAllBrands.action" target="_blank" id="top_title" title="品牌"><span id="top_title">品牌</span></a>
+    		<a href="${pageContext.request.contextPath}/goods/brand_getAllBrands.action" id="top_title" title="品牌"><span id="top_title">品牌</span></a>
 
     	</span>
     </div>

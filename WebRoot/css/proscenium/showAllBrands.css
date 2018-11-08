@@ -1,9 +1,8 @@
 /*
- *showAllBrands.jspµÄÑùÊ½
+ *showAllBrands.jspçš„æ ·å¼
  */
 #main{
 	width: 83%;
-	margin: 0px 8.5%;
 }
 
 .brand_category{
@@ -97,7 +96,7 @@
 	cursor:pointer
 }
 /*
- *showAllBrandsSpell.jspµÄÑùÊ½
+ *showAllBrandsSpell.jspçš„æ ·å¼
  */
 
 .brandsSpell .spell table{
@@ -113,16 +112,18 @@
 	background-repeat:repeat-x;
 }
 
-
-
 .spellLeft{
 	float: left;
-	width: 8%;
 }
 
 .spellBrands li{
 	list-style-type: none;
 	text-align: center;
+}
+
+.spellBrands img{
+	width: 100px;
+	height: 45px;
 }
 
 .spellBrands{

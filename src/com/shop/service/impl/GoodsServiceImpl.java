@@ -22,7 +22,7 @@ import com.shop.service.GoodsSizeService;
 
 @Service("goodsService")
 public class GoodsServiceImpl implements GoodsService {
-	
+
 	@Resource(name="goodsListingDao")
 	private GoodsListingDao goodsListingDao;
 	@Resource(name="goodsColorDao")
@@ -155,7 +155,6 @@ public class GoodsServiceImpl implements GoodsService {
 		if(price!=null){
 			
 		}
-		
 		return HQL.toString();
 	}
 
@@ -176,7 +175,6 @@ public class GoodsServiceImpl implements GoodsService {
 	public void saveGoods(GoodsListing goods, Set<GoodsColor> goodsColor) {
 		//将商品颜色放入的商品基本信息中
 		goods.setGoodsColors(goodsColor);
-		
 		//保存商品图片
 		uploadAndDeleteImage.upload(goods.getGoodsImageF(), goods.getGoodsImagePath());
 		//将临时文件删除
@@ -262,13 +260,8 @@ public class GoodsServiceImpl implements GoodsService {
 				goods.setGoodsMarketNumber(marketNumber);
 				//保存商品实例
 				goodsListingDao.update(goods);
-				
-				//修改商品指定尺码、颜色的数量
 				//获取该商品的指定颜色
 				GoodsColor goodsColor = goodsColorDao.getGoodsColorByIdAndColor(goods.getGoodsId(),orderDetail.getGoodsColor());
-				//获取指定颜色、指定尺码
-				//GoodsSize goodsSize = goodsSizeDao.getGoodsSizeByColorAndSize(goodsColor.getGoodsColorId(), orderDetail.getGoodsSize());
-				//获取所有该颜色的所有尺码
 				List<GoodsSize> goodsSizes = goodsSizeDao.getGoodsSizeByColor(goodsColor.getGoodsColorId());
 				for(int j = 0;j < goodsSizes.size();j++){
 					GoodsSize goodsSize = goodsSizes.get(i);
@@ -281,5 +274,10 @@ public class GoodsServiceImpl implements GoodsService {
 				}
 			}
 		}
+	}
+
+	@Override
+	public List<GoodsListing> getGoodsByAll() {
+		return goodsListingDao.getAll();
 	}
 }

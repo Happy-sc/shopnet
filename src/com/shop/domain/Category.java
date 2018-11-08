@@ -24,7 +24,7 @@ public class Category implements java.io.Serializable {
 	private Set<Style> styles = new HashSet<Style>(); 				// 款式
 	private String styleString;                         //款式
 
-	private List<Brand> hotSellBrand = new ArrayList<>();    // 品牌,不保存数据库
+	private List<Brand> brands = new ArrayList<>();    // 品牌,不保存数据库
 
 	public Category() {
 	}
@@ -78,11 +78,11 @@ public class Category implements java.io.Serializable {
 		this.styleString = styleString;
 	}
 
-	public List<Brand> getHotSellBrand() {
-		return hotSellBrand;
+	public List<Brand> getBrands() {
+		return brands;
 	}
 
-	public void setHotSellBrand(List<Brand> hotSellBrand) {
-		this.hotSellBrand = hotSellBrand;
+	public void setBrands(List<Brand> brands) {
+		this.brands = brands;
 	}
 }

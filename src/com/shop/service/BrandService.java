@@ -6,97 +6,97 @@ import com.shop.domain.Brand;
 import com.shop.domain.Style;
 
 /**
- * @Description: Æ·ÅÆµÄÒµÎñ²ã½Ó¿Ú
+ * @Description: å“ç‰Œçš„ä¸šåŠ¡å±‚æ¥å£
  */
 public interface BrandService {
 
 	/**
-	 * ¸ù¾İÆ·ÅÆÃû³Æ»ñÈ¡Æ·ÅÆ
-	 * @param brandName Æ·ÅÆÃû³Æ
+	 * æ ¹æ®å“ç‰Œåç§°è·å–å“ç‰Œ
+	 * @param brandName å“ç‰Œåç§°
 	 * @return
 	 */
 	Brand getBrandByName(String brandName);
 
 	/**
-	 * »ñÈ¡ËùÓĞµÄÆ·ÅÆ
+	 * è·å–æ‰€æœ‰çš„å“ç‰Œ
 	 * @return
 	 */
 	List<Brand> getAllBrands();
 
 	/**
-	 * »ñÈ¡Ö¸¶¨Ò³ÂëµÄ¿îÊ½
-	 * @param pageNo Ò³Âë
-	 * @param pageSize Ò³Âë´óĞ¡
+	 * è·å–æŒ‡å®šé¡µç çš„æ¬¾å¼
+	 * @param pageNo é¡µç 
+	 * @param pageSize é¡µç å¤§å°
 	 * @return
 	 */
 	List<Brand> getBrandByPage(int pageNo, int pageSize);
 
 	/**
-	 * »ñÈ¡Æ·ÅÆµÄ×ÜÁ¿
+	 * è·å–å“ç‰Œçš„æ€»é‡
 	 * @return
 	 */
 	long getBrandCount();
 
 	/**
-	 * È¡µÃÆ·ÅÆµÄ±àºÅ
+	 * å–å¾—å“ç‰Œçš„ç¼–å·
 	 * @return
 	 */
 	String getBrandId();
 
 	/**
-	 * ¸ù¾İÆ·ÅÆÆ´Òô»ñÈ¡ Æ·ÅÆÊµÁ¦
-	 * @param brandSpell Æ·ÅÆÆ´Òô
+	 * æ ¹æ®å“ç‰Œæ‹¼éŸ³è·å– å“ç‰Œå®åŠ›
+	 * @param brandSpell å“ç‰Œæ‹¼éŸ³
 	 * @return
 	 */
 	Brand getBrandBySpell(String brandSpell);
 
 	/**
-	 * ¸ù¾İÆ·ÅÆ±àºÅ»ñÈ¡Æ·ÅÆÊµÀı
-	 * @param brandId Æ·ÅÆ±àºÅ
+	 * æ ¹æ®å“ç‰Œç¼–å·è·å–å“ç‰Œå®ä¾‹
+	 * @param brandId å“ç‰Œç¼–å·
 	 * @return
 	 */
 	Brand getBrandById(String brandId);
 
 	/**
-	 * ±£´æ»òÕßĞŞ¸ÄÆ·ÅÆ
-	 * @param brand  Æ·ÅÆ
-	 * ¿îÊ½ĞèÒª×öÒ»Ğ©´¦Àí
+	 * ä¿å­˜æˆ–è€…ä¿®æ”¹å“ç‰Œ
+	 * @param brand  å“ç‰Œ
+	 * æ¬¾å¼éœ€è¦åšä¸€äº›å¤„ç†
 	 */
 	void saveOrUpdateBrand(Brand brand);
 
 	/**
-	 * ¸ù¾İ±àºÅÉ¾³ıÆ·ÅÆÊµÀı
+	 * æ ¹æ®ç¼–å·åˆ é™¤å“ç‰Œå®ä¾‹
 	 * @param brandId
 	 */
 	void deleteBrand(String brandId);
 	
 
 	/**
-	 * »ñÈ¡Ä³¸ö×ÖÄ¸¿ªÍ·Æ·ÅÆ
-	 * @param string ×ÖÄ¸
+	 * è·å–æŸä¸ªå­—æ¯å¼€å¤´å“ç‰Œ
+	 * @param string å­—æ¯
 	 */
 	List<Brand> getBrandBypytb(String string);
 
 	/**
-	 * ¸ù¾İ·ÖÀàÀ´»ñÈ¡Æ·ÅÆ
-	 * @param categoryId ·ÖÀà±àºÅ
+	 * æ ¹æ®åˆ†ç±»æ¥è·å–å“ç‰Œ
+	 * @param categoryId åˆ†ç±»ç¼–å·
 	 */
 	List<Brand> getBrandByCategory(String categoryId);
 	
 	/**
-	 * ¸ù¾İ¿îÊ½»ñÈ¡Æ·ÅÆ
-	 * @param styleId ¿îÊ½±àºÅ
+	 * æ ¹æ®æ¬¾å¼è·å–å“ç‰Œ
+	 * @param styleId æ¬¾å¼ç¼–å·
 	 */
 	List<Brand> getBrandByStyleId(String styleId);
 	
 	/**
-	 * »ñÈ¡Ä³Ğ©¿îÊ½µÄÆ·ÅÆ
+	 * è·å–æŸäº›æ¬¾å¼çš„å“ç‰Œ
 	 */
 	List<Brand> getBrandByStyle(List<Style> styles);
 
 	/**
-	 * »ñÈ¡Ö¸¶¨ÊıÁ¿µÄÆ·ÅÆ
-	 * @param count Ö¸¶¨ÊıÁ¿
+	 * è·å–æŒ‡å®šæ•°é‡çš„å“ç‰Œ
+	 * @param count æŒ‡å®šæ•°é‡
 	 */
 	List<Brand> getBrand(int count);
 }

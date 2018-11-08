@@ -66,7 +66,7 @@ public class GoodsAction extends BaseAction{
 			List<GoodsListing> goodsListings = goodsService.getGoodsByCategoryOrder(category.getCategoryId(),10);
 			List<Brand> brands1 = brandService.getBrandByCategory(category.getCategoryId());
 			ActionContext.getContext().put("goodsListings"+category.getCategoryId(), goodsListings);
-			category.setHotSellBrand(brands1);
+			category.setBrands(brands);
 		}
 
 		//保存数据

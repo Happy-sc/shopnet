@@ -25,7 +25,7 @@
     	<td valign="top" background="${pageContext.request.contextPath }/images/backstage/content-bg.gif">
     		<table width="100%" height="31" border="0" cellpadding="0" cellspacing="0" class="left_topbg" id="table2">
      			<tr>
-        			<td height="31"><div class="titlebt">欢迎界面</div></td>
+        			<td height="31"><div class="titlebt">品牌管理</div></td>
       			</tr>
     		</table>
     	</td>

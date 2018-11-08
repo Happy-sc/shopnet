@@ -89,21 +89,18 @@
             <result name="login">/WEB-INF/page/backstage/error.jsp</result>
         </global-results>
 
-        <!-- 增加商品 -->
+        <!-- 商品 -->
         <action name="goodsManager_*" class="goodsManagerAction" method="{1}">
             <result name="addGoodsUI">/WEB-INF/page/backstage/goods/addGoods.jsp</result>
             <result name="addGoods">/WEB-INF/page/backstage/goods/addGoodsDetail.jsp</result>
             <result name="saveSuccess">/WEB-INF/page/backstage/success.jsp</result>
+            <result name="goodsManager">/WEB-INF/page/backstage/goods/goodsManager.jsp</result>
         </action>
 
         <!-- 商品详情 -->
         <action name="goodsDetail_*" class="goodsDetailManagertAction" method="{1}">
             <result name="addGoodsDetail">/WEB-INF/page/backstage/success.jsp</result>
             <result name="addGoodsDetailUI">/WEB-INF/page/backstage/goods/addGoodsDetail.jsp</result>
-        </action>
-
-        <!-- 商品管理 -->
-        <action name="">
         </action>
 
         <!-- 品牌管理 -->

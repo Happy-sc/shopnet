@@ -99,4 +99,10 @@ public interface GoodsService {
 	 */
 	void updateGoodsByOrder(List<OrderDetail> orderDetails);
 
+	/**
+	 * 获取所有商品
+	 * @return
+	 */
+	List<GoodsListing> getGoodsByAll();
+
 }

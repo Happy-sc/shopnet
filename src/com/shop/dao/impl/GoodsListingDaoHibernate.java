@@ -10,8 +10,7 @@ import com.shop.dao.base.BaseHibernateDaoSupport;
 import com.shop.domain.GoodsListing;
 
 @Repository("goodsListingDao")
-public class GoodsListingDaoHibernate extends BaseHibernateDaoSupport implements
-		GoodsListingDao{
+public class GoodsListingDaoHibernate extends BaseHibernateDaoSupport implements GoodsListingDao{
 
 	private int offset; 
 	
@@ -213,9 +212,14 @@ public class GoodsListingDaoHibernate extends BaseHibernateDaoSupport implements
 		List<GoodsListing> list = getSession().createQuery(hql).
 		  						  setMaxResults(i).      //前5个
 		  						  list();               //结果集
-
 		return list;
 	}
-	
-	
+
+	@Override
+	public List<GoodsListing> getAll() {
+		String hql = "from GoodsListing as g  order by g.goodsGrounding desc";
+		return getSession().createQuery(hql).list();
+	}
+
+
 }

@@ -119,4 +119,10 @@ public interface GoodsListingDao {
 	 * @return
 	 */
 	List<GoodsListing> getRecommand(int i);
+
+	/**
+	 * 获取所有商品
+	 * @return
+	 */
+	List<GoodsListing> getAll();
 }

@@ -9,27 +9,27 @@
 			<ul class="slider" id="idSlider">
 				<li>
 					<a href="">
-						<img src="${pageContext.request.contextPath}/images/proscenium/scroll/13487383982.jpg" />
+						<img src="${pageContext.request.contextPath}/images/proscenium/scroll/scroll_01.jpg" />
 					</a>
 				</li>
 				<li>
 					<a href="">
-						<img src="${pageContext.request.contextPath}/images/proscenium/scroll/13487399062.jpg" />
+						<img src="${pageContext.request.contextPath}/images/proscenium/scroll/scroll_02.jpg" />
 					</a>
 				</li>
 				<li>
 					<a href="">
-						<img src="${pageContext.request.contextPath}/images/proscenium/scroll/13488276592.jpg" />
+						<img src="${pageContext.request.contextPath}/images/proscenium/scroll/scroll_03.jpg" />
 					</a>
 				</li>
 				<li>
 					<a href="">
-						<img src="${pageContext.request.contextPath}/images/proscenium/scroll/13488277782.jpg" />
+						<img src="${pageContext.request.contextPath}/images/proscenium/scroll/scroll_04.jpg" />
 					</a>
 				</li>
 				<li>
 					<a href="">
-						<img src="${pageContext.request.contextPath}/images/proscenium/scroll/13488789232.jpg" />
+						<img src="${pageContext.request.contextPath}/images/proscenium/scroll/scroll_05.jpg" />
 					</a>
 				</li>
 			</ul>

@@ -21,7 +21,7 @@
                                 <td align="center"><a href=""><img alt="${b.brandName}" src="${b.brandImage}" height="50px" width="75px" border="0"></a></td>
                                 <c:if test="${j==brandsTd}">
                                     <td align="center">
-                                        <a href="${pageContext.request.contextPath}/goods/brand_getAllBrands.action" target="_blank">
+                                        <a href="${pageContext.request.contextPath}/goods/brand_getAllBrands.action">
                                             <img alt="更多品牌" src="${pageContext.request.contextPath}/images/proscenium/moreBrand.jpg" height="50px" width="75px" border="0">
                                         </a>
                                     </td>

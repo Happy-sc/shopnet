@@ -43,15 +43,16 @@
                     </div>
                     <div class="brand_content">
                         <table cellpadding="3">
-                            <c:forEach items="${c.brands}" var="b" varStatus="status">
-                                <c:if test="${(status.count+1)%2 == 0}">
-                                    <tr>
-                                </c:if>
-                                    <td><img src="${b.brandImage}" width="80" height="50"/></td>
-                                <c:if test="${(status.count+1)%2 == 0}">
-                                    </tr>
-                                </c:if>
-                            </c:forEach>
+                            <c:set var="residue" value="${c.brands.size()%2}"/>
+                            <c:set var="trNum" value="${(c.brands.size()-residue)/2+residue}"/>
+                             <c:forEach begin="1" end="${trNum}" var="i">
+                                 <tr>
+                                     <td><img src="${c.brands[i-1].brandImage}" width="80" height="50"/></td>
+                                     <c:if test="${residue == 0}">
+                                     <td><img src="${c.brands[i].brandImage}" width="80" height="50"/></td>
+                                     </c:if>
+                                 </tr>
+                             </c:forEach>
                         </table>
                     </div>
                 </div>

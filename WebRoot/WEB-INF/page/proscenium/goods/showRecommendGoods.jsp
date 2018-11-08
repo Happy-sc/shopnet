@@ -28,33 +28,40 @@
     <div class="list">
         <div id="one_con1">
             <table cellpadding="0" cellspacing="0" id="recommendGoods_table" border="0">
-                    <c:forEach begin="1" end="${bestSellerGoods.size()}" var="i">
+                    <c:set var="residue" value="${bestSellerGoods.size()%5}"/>
+                    <c:set var="trNum" value="${(bestSellerGoods.size()-residue)/5+1}"/>
+                    <c:forEach begin="1" end="${trNum}" var="i">
+
+                    <c:forEach begin="1" end="2" var="i">
                     <tr>
-                        <c:forEach items="${bestSellerGoods}" var="g" varStatus="status">
-                    <td>
-                        <table border="0">
-                            <tr>
-                                <td>
-                                    <a href="${pageContext.request.contextPath}/goods/goods_showGoods?goodsId=${g.goodsId}" target="_blank"><img src="${g.goodsImage}" id="goodsImg"></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a href="${pageContext.request.contextPath}/goods/goods_showGoods?goodsId=${g.goodsId}" target="_blank">${g.goodsName}</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span id="index_marketPrice">¥${g.goodsMarketPrice}</span>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
+                        <c:forEach begin="1" end="5" var="j">
+                        <c:set var="g" value="${bestSellerGoods[(j-1)+(i-1)*5]}"></c:set>
+                        <td>
+                            <table border="0">
+                                <tr>
+                                    <td>
+                                        <a href="${pageContext.request.contextPath}/goods/goods_showGoods?goodsId=${g.goodsId}" target="_blank"><img src="${g.goodsImage}" id="goodsImg"></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="${pageContext.request.contextPath}/goods/goods_showGoods?goodsId=${g.goodsId}" target="_blank">${g.goodsName}</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span id="index_marketPrice">¥${g.goodsMarketPrice}</span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
                     </c:forEach>
                     </tr>
                 </c:forEach>
             </table>
         </div>
+
+
         <div id="one_con2" style="display: none;">
             <table cellpadding="0" cellspacing="0" id="recommendGoods_table" border="0">
                 <c:forEach begin="1" end="2" var="i">
@@ -65,14 +72,12 @@
                                 <table border="0">
                                     <tr>
                                         <td>
-                                            <a href="${pageContext.request.contextPath}/goods/goods_showGoods?goodsId=${g.goodsId}"
-                                               target="_blank"><img src="${g.goodsImage}" id="goodsImg"></a>
+                                            <a href="${pageContext.request.contextPath}/goods/goods_showGoods?goodsId=${g.goodsId}" target="_blank"><img src="${g.goodsImage}" id="goodsImg"></a>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <a href="${pageContext.request.contextPath}/goods/goods_showGoods?goodsId=${g.goodsId}"
-                                               target="_blank">${g.goodsName}</a>
+                                            <a href="${pageContext.request.contextPath}/goods/goods_showGoods?goodsId=${g.goodsId}" target="_blank">${g.goodsName}</a>
                                         </td>
                                     </tr>
                                     <tr>

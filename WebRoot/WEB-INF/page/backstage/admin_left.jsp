@@ -57,7 +57,6 @@
           </tr>
         </table>
         <ul class="MM"  >
-		  <li><a href="${pageContext.request.contextPath }/orderManager/orderManager_managerOrder.action" target="main">查&nbsp;询&nbsp;订&nbsp;单</a></li>
           <li><a href="${pageContext.request.contextPath }/orderManager/orderManager_managerOrder.action?type=dfk" target="main">待付款订单</a></li>
           <li><a href="${pageContext.request.contextPath }/orderManager/orderManager_managerOrder.action?type=dfh" target="main">待发货订单</a></li>
           <li><a href="${pageContext.request.contextPath }/orderManager/orderManager_managerOrder.action?type=yfh" target="main">已发货订单</a></li>

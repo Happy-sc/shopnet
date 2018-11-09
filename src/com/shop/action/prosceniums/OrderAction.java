@@ -87,13 +87,12 @@ public class OrderAction extends BaseAction{
 		Address address1 = addressService.getUserDefaultAddress(user.getUserId());
 		if(address1!=null){
 			dfAddress = address1;
-		}
-		else {    //如果用户没有设置默认地址
+		} else {    //如果用户没有设置默认地址
 			List<Address> addresses = addressService.getAddressByUser(user.getUserId());
-			if(addresses!=null&&addresses.size()!=0)
+			if(addresses!=null&&addresses.size()!=0){
 				dfAddress = addresses.get(0);
+			}
 		}
-		
 		//获取购物车
 		Map<String, ShoppingCar> mapCar = (Map<String, ShoppingCar>) session.getAttribute("mapCar");
 		//计算购物车的总金额
@@ -101,7 +100,6 @@ public class OrderAction extends BaseAction{
 		for(Entry<String, ShoppingCar> mycar:mapCar.entrySet()){
 			sum = sum + mycar.getValue().getGoodsNumber()*mycar.getValue().getGoodsListing().getGoodsMarketPrice();
 		}
-		
 		//设置运费
 		float freight = 0;
 		freight = sum<259?10:0;
@@ -143,25 +141,21 @@ public class OrderAction extends BaseAction{
 		
 		//处理订单状态
 		//如果为货到付款，则订单状态为:待发货
-		//如果为线上支付、线下支付则为代付款：只有付款后才能发货
+		//如果为线上支付、线下支付,为待付款：只有付款后才能发货
 		OrderState orderState ;
 		if("1".equals(order.getOrderPayment())){
 			orderState = orderStateService.getOrderState("500001");
-		}
-		else {
+		}else {
 			orderState = orderStateService.getOrderState("500003");
 		}
-		
 		newOrder.setOrderState(orderState);
-		
-		//保存订单,
 		orderService.saveOrder(newOrder); 
 		//保存订单详细,同时在数据库中删除购物车里面的这些数据
 		orderDetailService.saveOrderDetail(mapCar,newOrder);
 		
 		/*
-		 * 如果获取拍鞋币个数不为0
-		 * 则保存用户获得拍鞋币记录
+		 * 如果获取金币个数不为0
+		 * 则保存用户获得金币记录
 		 * 且修改用户金币个数
 		 */
 		int jinBSum = (int) (order.getOrderPrice()/100);
@@ -190,12 +184,12 @@ public class OrderAction extends BaseAction{
 			jinBRecord.setJinBNum(sypxbS);
 			jinBRecord.setJinBState(0);
 			jinBRecord.setJinBTime(orderDate);
-			jinBRecord.setJinBStyle("购买商品时，使用了"+sypxbS+"个拍鞋币");
+			jinBRecord.setJinBStyle("购买商品时，使用了"+sypxbS+"个金币");
 			jinBRecord.setUsers(users);
 			jinBService.saveJinB(jinBRecord);
 		}
 		
-		//修改用户的拍鞋币个数
+		//修改用户的金币个数
 		int userPaixie = users.getJinB()+jinBSum-sypxbS;
 		users.setJinB(userPaixie);
 		usersService.updateUser(users);
@@ -215,7 +209,6 @@ public class OrderAction extends BaseAction{
 		ActionContext.getContext().put("orderPrice", newOrder.getOrderPrice());
 		ActionContext.getContext().put("orderId", newOrder.getOrderId());
 		ActionContext.getContext().put("type", "successOrder");
-		
 	
 		return "submitSuccess";
 	}
@@ -240,12 +233,10 @@ public class OrderAction extends BaseAction{
 		if("dsh".equals(type)){
 			orList = orderDetailService.getDSHOrderDetail(page,user.getUserId(),0);        //用户待收货订单
 			allSum = orderDetailService.getDSHOrderSum(user.getUserId(),0);
-		}
-		else {
+		} else {
 			 AllOrders = orderService.getOrderByUserState(page,user.getUserId(),type);  //所有订单
 			 allSum = orderService.getAllOrderSum(user.getUserId(),type);
 		}
-		
 		pageSum = allSum%5==0?allSum/5:allSum/5+1;        //所有订单
 			
 		//保存信息
@@ -276,19 +267,16 @@ public class OrderAction extends BaseAction{
 	public String qrsh(){
 		//订单编号
 		String orderId = request.getParameter("orderId");
-		
 		//获取订单详情
 		OrderDetail orderDetail = orderDetailService.getOrderDetailById(orderDetailId);
 		orderDetail.setIsAccept(1);
 		orderDetail.setAcceptTime(GetTime.getTime("yyyy-MM-dd HH:mm:ss"));
-		
 		/*
 		 * 确认收货，更改orderDetail，并且查看所属订单中是否还有没有确认收货的订单
 		 * 如果没有 则修改整个订单状态  ---确认收货
 		 * 否则不修改
 		 */
 		orderDetailService.QRSH(orderDetail,orderId);
-
 		//确认收货后，转到商品评价
 		return "qrsh";    
 	}

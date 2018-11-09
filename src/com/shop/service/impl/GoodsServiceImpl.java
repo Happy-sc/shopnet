@@ -133,21 +133,18 @@ public class GoodsServiceImpl implements GoodsService {
 	 * @param categoryId  分类编号
 	 * @param styleId  款式编号
 	 * @param brandId 品牌编号
-	 * @param size 尺码
-	 * @param sex 男鞋？女鞋
+	 * @param attr 属性
+	 * @param sex 男？女
 	 * @param price 价格
 	 * @return
 	 */
-	private String getHQL(String categoryId,String styleId, String brandId, String size, String sex,String price){
+	private String getHQL(String categoryId,String styleId, String brandId, String attr, String sex,String price){
 		StringBuffer HQL = new StringBuffer("From GoodsListing as g where g.category.categoryId = "+categoryId);
 		if(styleId!=null){
 			HQL = HQL.append(" and g.style.styleId = "+styleId);
 		}
 		if(brandId!=null){
 			HQL = HQL.append(" and g.brand.brandId = "+brandId);
-		}
-		if(size!=null){
-			HQL = HQL.append(" and g.");
 		}
 		if(sex!=null){
 			HQL = HQL.append(" and g.goodsName like %"+sex+"%");

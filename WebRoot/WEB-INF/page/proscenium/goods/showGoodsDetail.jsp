@@ -119,7 +119,7 @@
     						<td></td>
     						<td>
     							<a href="javascript:void(0);">
-    								<img src="${pageContext.request.contextPath}/images/proscenium/goumai_01.jpg"　class="goumai">
+    								<img src="${pageContext.request.contextPath}/images/proscenium/goumai_01.jpg" class="goumai">
     							</a>
     							&nbsp;&nbsp;&nbsp;
     							<a href="javascript:void(0);">

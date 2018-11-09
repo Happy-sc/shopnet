@@ -291,7 +291,6 @@ a[class="goodsDetail"]:HOVER {
 
 span[class="size"],span[class="number"]{
 	display: inline-block;
-	width: 25px;
 	height: 20px;
 	text-align: center;
 	border: 1px solid #DDDDDD;

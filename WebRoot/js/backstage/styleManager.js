@@ -28,7 +28,7 @@ $(document).ready(function(){
 			success:function(data){
 				$("#styleId").val(data);
 				$("#type").val("add");
-				$("#qrzjbj").attr("src","../images/backstage/okAdd.jpg");
+				$("#qrzjbj").attr("src","/images/backstage/okAdd.jpg");
 				$(".zjbjStyle").dialog("option","title", "增加商品款式").dialog("open");
 			}
 		})
@@ -47,7 +47,7 @@ $(document).ready(function(){
 		function(){
 			var styleName = $("#styleName").val();
 			var styleName_prompt = $("#styleName_prompt");
-			var reg = /^\D{2,}$/;
+			var reg = /^.{2,}$/;
 			styleName_prompt.html("");
 			if(styleName==""){
 				styleName_prompt.html("款式名称不能为空,请输入...");
@@ -170,7 +170,7 @@ $(document).ready(function(){
 		}
 		$("#type").val("update");
 		$("#thisName").val(_name);
-		$("#qrzjbj").attr("src","../images/backstage/okUpdate.jpg");
+		$("#qrzjbj").attr("src","/images/backstage/okUpdate.jpg");
 		$(".zjbjStyle").dialog("option","title", "编辑商品款式").dialog("open")
 	})
 	

@@ -68,7 +68,6 @@ public class GoodsAction extends BaseAction{
 			ActionContext.getContext().put("goodsListings"+category.getCategoryId(), goodsListings);
 			category.setBrands(brands1);
 		}
-
 		//保存数据
 		ActionContext.getContext().put("specialOfferGoods", specialOfferGoods);
 		ActionContext.getContext().put("recommendGoods", recommendGoods);
@@ -93,25 +92,19 @@ public class GoodsAction extends BaseAction{
 		String color  = request.getParameter("color");
 		//根据商品编号获取商品基本信息
 		GoodsListing goods = goodsService.getGoodsById(getGoodsId());
-		
 		//根据商品编号获取商品的所有颜色
 		List<GoodsColor> goodsColors = goodsColorService.getGoodsColorByGoodsId(goodsId);
-		
 		//根据goods、color来判断该商品颜色实例
 		GoodsColor goodsColor = goodsColorService.getGoodsColorByColor(goods,color);
-		
 		//获取该种商品颜色的尺码
 		if(goodsColor != null ){
 			List<GoodsSize> goodsSizes = goodsSizeService.getGoodsSize(goodsColor.getGoodsColorId());
 			ActionContext.getContext().put("goodsSizes", goodsSizes);
 		}
-		
 		//获取前5款推荐商品
 		List<GoodsListing> pxwgntj = goodsService.getGoodsByRecommend(5);
-
 		//同分类前5款热销商品
 		List<GoodsListing> tkrxsp = goodsService.getMostSaleByStyle(goods.getStyle().getStyleId());
-		
 		//获取该类商品的评价
 		List<Comment> comments = commentService.getCommentByGoods(getGoodsId(),10,1);
 		
@@ -135,7 +128,6 @@ public class GoodsAction extends BaseAction{
 		if("".equals(color)){
 			ActionContext.getContext().put("source", "image");
 		}
-		
 		String sumA = getCommentAvg(sum_1, sum_2, sum_3, sum_4, sum_5,"#");
 		
 		ActionContext.getContext().put("goodsColor", goodsColor);        //商品颜色

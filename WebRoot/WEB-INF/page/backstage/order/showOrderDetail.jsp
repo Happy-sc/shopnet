@@ -49,8 +49,8 @@
     					<td width="30%">&nbsp;${order.users.userName }</td>
     				</tr>
     				<tr>
-    					<td align="right"><span>支出拍鞋币：</span></td>
-    					<td>&nbsp;${order.paixieBNum }</td>
+    					<td align="right"><span>支出金币：</span></td>
+    					<td>&nbsp;${order.jinBNum }</td>
     					<td align="right"><span>支付方式：</span></td>
     					<td>&nbsp;
 							<c:if test="${order.orderPayment==0}">
@@ -103,13 +103,13 @@
     			</table>
     			<table id="orderDetailXXXX">
     				<tr>
-    					<td colspan="6" align="center"><font class="orderTitle">订单详细信息</font></td>
+    					<td colspan="8" align="center"><font class="orderTitle">订单详细信息</font></td>
     				</tr>
     				<tr>
     					<td align="center" width="20%"><span>商品编号</span></td>
     					<td align="center" width="10%"><span>商品图片</span></td>
     					<td align="center" width="20%"><span>颜色</span></td>
-    					<td align="center" width="10%"><span>尺码</span></td>
+    					<td align="center" width="10%"><span>属性</span></td>
     					<td align="center" width="6%"><span>单价</span></td>
     					<td align="center" width="6%"><span>数量</span></td>
     					<td align="center" width="10%"><span>是否已收货</span></td>
@@ -120,8 +120,8 @@
     						<td align="center">${os.goodsListing.goodsId }</td>
     						<td align="center"><img src="${os.goodsListing.goodsImage }" width="60px" height="60px"/></td>
     						<td align="center">${os.goodsColor }</td>
-    						<td align="center">${os.goodsSize }</td>
-    						<td align="center">${os.goodsListing.goodsPaiPrice }</td>
+    						<td align="center">${os.goodsAttr }</td>
+    						<td align="center">${os.goodsListing.goodsMarketPrice }</td>
     						<td align="center">${os.goodsNumber }</td>
     						<td align="center">
     							<c:if test="${os.isAccept == 0}">

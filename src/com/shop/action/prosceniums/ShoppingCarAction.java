@@ -42,7 +42,7 @@ public class ShoppingCarAction extends BaseAction{
 		 * 获取购物车
 		 * 如果购物车为null,则new
 		 * 购物车以map形式存在：map<carId,shoppingCar>
-		 * carId=goodsId+goodsColor+goodsSize
+		 * carId=goodsId+goodsColor+goodsAttr
 		 */
 		HttpSession session = request.getSession();
 		Map<String, ShoppingCar> mapCar = (Map<String, ShoppingCar>) session.getAttribute("mapCar");
@@ -58,8 +58,7 @@ public class ShoppingCarAction extends BaseAction{
 		if(mapCar.containsKey(carId)){      //存在该商品，商品数量叠加
 			shoppingCar = mapCar.get(carId);  
 			shoppingCar.setGoodsNumber(shoppingCar.getGoodsNumber()+Integer.valueOf(goodsNumber));
-		}
-		else {
+		}else {
 			shoppingCar = new ShoppingCar();
 			shoppingCar.setCarId(ProduceId.getId());
 			shoppingCar.setGoodsColor(goodsColor);
@@ -82,7 +81,6 @@ public class ShoppingCarAction extends BaseAction{
 				mycar.setUsers(users);
 			}
 		}
-		
 		//将购物车添加到map中
 		mapCar.put(carId, shoppingCar);
 
@@ -93,7 +91,6 @@ public class ShoppingCarAction extends BaseAction{
 				shoppingCarService.updateOrSave(mycar);
 			}
 		}
-		
 		session.setAttribute("mapCar", mapCar);         //更新session
 		int countNumber = mapCar.size();
 		float sum = this.carSum(mapCar);
@@ -102,7 +99,6 @@ public class ShoppingCarAction extends BaseAction{
 		
 		//返回数据
 		this.writeToPage(returnData);
-
 	}
 	
 	/**
@@ -114,13 +110,15 @@ public class ShoppingCarAction extends BaseAction{
 		Map<String, ShoppingCar> mapCar = (Map<String, ShoppingCar>) session.getAttribute("mapCar");
 		//计算总金额
 		double sum = 0;
-		for(Entry<String, ShoppingCar> mycar:mapCar.entrySet()){
-			ShoppingCar car =mycar.getValue();
-			sum = sum+car.getGoodsListing().getGoodsMarketPrice()*car.getGoodsNumber();
+		if(mapCar != null){
+			for(Entry<String, ShoppingCar> mycar:mapCar.entrySet()){
+				ShoppingCar car =mycar.getValue();
+				sum = sum+car.getGoodsListing().getGoodsMarketPrice()*car.getGoodsNumber();
+			}
+			ActionContext.getContext().put("carSize", mapCar.size());
 		}
 		ActionContext.getContext().put("sum", sum);
 		ActionContext.getContext().put("car", mapCar);
-		ActionContext.getContext().put("carSize", mapCar.size());
 		ActionContext.getContext().put("type", "showCar");
 		return "showCar";
 	}
@@ -146,7 +144,6 @@ public class ShoppingCarAction extends BaseAction{
 			ShoppingCar mycar = sc.getValue();
 			shoppingCarService.updateOrSave(mycar);
 		}
-		
 		session.setAttribute("mapCar", mapCar);        //更新数据库
 		
 		float sum = this.carSum(mapCar);
@@ -174,7 +171,6 @@ public class ShoppingCarAction extends BaseAction{
 		if(user!=null){
 			shoppingCarService.deleteCar(mapCar.get(carId));
 		}
-		
 		mapCar.remove(carId);
 		
 		session.setAttribute("mapCar", mapCar);

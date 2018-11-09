@@ -67,7 +67,7 @@ public class OrderServiceImpl implements OrderService{
 		if("dsh".equals(type)||"yfh".equals(type)){    //用户：待收货、管理员：已发货
 			state = "500002";
 		}
-		if("dfk".equals(type)){     //代付款
+		if("dfk".equals(type)){     //待付款
 			state = "500003";
 		} 
 		if("ysh".equals(type)){     //已收货

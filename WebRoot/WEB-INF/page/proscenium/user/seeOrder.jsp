@@ -133,7 +133,7 @@
     							<li style="width: 13.8%">商品数量</li>
     							<li style="width: 13.8%">商品单价</li>
     							<li style="width: 13.8%">总金额</li>
-    							<li style="width: 13.8%">可获得拍鞋币</li>
+    							<li style="width: 13.8%">可获得金币</li>
     							<li style="width: 13.8%">操作</li>
     						</ul>
     					</div>

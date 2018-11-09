@@ -28,10 +28,6 @@
     <div class="list">
         <div id="one_con1">
             <table cellpadding="0" cellspacing="0" id="recommendGoods_table" border="0">
-                    <c:set var="residue" value="${bestSellerGoods.size()%5}"/>
-                    <c:set var="trNum" value="${(bestSellerGoods.size()-residue)/5+1}"/>
-                    <c:forEach begin="1" end="${trNum}" var="i">
-
                     <c:forEach begin="1" end="2" var="i">
                     <tr>
                         <c:forEach begin="1" end="5" var="j">
@@ -60,8 +56,6 @@
                 </c:forEach>
             </table>
         </div>
-
-
         <div id="one_con2" style="display: none;">
             <table cellpadding="0" cellspacing="0" id="recommendGoods_table" border="0">
                 <c:forEach begin="1" end="2" var="i">

@@ -7,8 +7,7 @@ import com.shop.dao.base.BaseHibernateDaoSupport;
 import com.shop.domain.ShoppingCar;
 
 @Repository("shoppingCarDao")
-public class ShoppingCarDaoHibernate extends BaseHibernateDaoSupport implements 
-		ShoppingCarDao{
+public class ShoppingCarDaoHibernate extends BaseHibernateDaoSupport implements ShoppingCarDao{
 
 	/**
 	 * 修改或者保存购物车:如果该购物车存在则修改，否则则保存

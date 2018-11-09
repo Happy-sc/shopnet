@@ -56,8 +56,7 @@ $(document).ready(function(){
 				$(this).css("border","1px solid #DEDEDE");
 		}
 	)
-	
-	//点击尺码
+
 	$("#goods_infor_detail span[class='size']").click(
 		function(){
 			var buyColor = $(this).parent().parent().children();
@@ -156,7 +155,8 @@ $(document).ready(function(){
 	)
 	
 	//点击立即购买
-	$("img[class='goumai']").click(function(){
+    $("#goods_infor_detail img[class='goumai']").click(
+    	function(){
 		var sfyjysp = $("#sfyjysp").val();      //判断是否已经加入购物车了
 		if(sfyjysp!="yjyl"){
 			var flag = "false";
@@ -377,13 +377,13 @@ $(document).ready(function(){
 //定义匿名函数
 $.extend({
 	//加入购物车
-	addCar:function(goodsId,goodsSize,goodsColor,goodsNumber){
+	addCar:function(goodsId,goodsAttr,goodsColor,goodsNumber){
 		var url = "../goods/car_addGoods.action";
 		$.ajax({
 			url:url,
 			data:{
 				goodsId:goodsId,
-				goodsSize:goodsSize,
+                goodsAttr:goodsAttr,
 				goodsColor:goodsColor,
 				goodsNumber:goodsNumber
 			},
